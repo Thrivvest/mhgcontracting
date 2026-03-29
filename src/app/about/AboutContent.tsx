@@ -4,8 +4,16 @@ import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import CharHighlight from "@/components/animations/CharHighlight";
+import ScrollSlider from "@/components/animations/ScrollSlider";
 import { teamMembers } from "@/lib/data";
 import { company } from "@/lib/constants";
+
+const WORK_SLIDES = [
+  { image: "/images/projects/fullreno-01-3.jpg", label: "Full Renovation", title: "Whole-Home Transformation", location: "Hamilton, NJ" },
+  { image: "/images/projects/gallery/kitchen-02/1.jpg", label: "Kitchen Renovation", title: "Transitional Chef's Kitchen", location: "West Windsor, NJ" },
+  { image: "/images/projects/bath-01.jpg", label: "Bathroom Renovation", title: "Spa-Inspired Master Bath", location: "Hamilton, NJ" },
+  { image: "/images/projects/addition-01.jpg", label: "Addition", title: "Sunroom & Family Room Addition", location: "West Windsor, NJ" },
+];
 
 const VALUES = [
   { title: "Quality", description: "We never cut corners. Every joint, every finish, every detail is done right the first time." },
@@ -117,6 +125,29 @@ export default function AboutContent() {
             ))}
           </div>
         </div>
+      </section>
+
+      {/* Work Showcase Slider */}
+      <section>
+        <ScrollSlider showDots={true}>
+          {WORK_SLIDES.map((slide) => (
+            <div key={slide.title} className="relative w-full h-screen flex items-end">
+              <div className="absolute inset-0">
+                <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              </div>
+              <div className="relative z-10 p-8 md:p-14 lg:p-20 max-w-3xl">
+                <span className="inline-block font-body text-xs font-medium text-white/60 uppercase tracking-[0.15em] mb-3">
+                  {slide.label}
+                </span>
+                <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.1]">
+                  {slide.title}
+                </h2>
+                <p className="font-body text-white/50 text-sm tracking-wide">{slide.location}</p>
+              </div>
+            </div>
+          ))}
+        </ScrollSlider>
       </section>
 
       {/* Team */}

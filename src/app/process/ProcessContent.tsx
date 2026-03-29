@@ -3,6 +3,7 @@
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
+import ScrollSlider from "@/components/animations/ScrollSlider";
 import { processSteps, getFeaturedProjects } from "@/lib/data";
 import { company } from "@/lib/constants";
 
@@ -108,29 +109,32 @@ export default function ProcessContent() {
         </div>
       </section>
 
-      {/* Portfolio Preview */}
-      <section className="py-24 md:py-32 px-6 lg:px-10 bg-background-alt">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="text-center mb-14">
-            <LineReveal><h2 className="font-heading text-4xl md:text-5xl font-bold text-text-primary leading-[1.1]">See the Results</h2></LineReveal>
-          </div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
-            {featured.map((project, i) => (
-              <FadeIn key={project.id} delay={i * 0.1}>
-                <Link href={`/portfolio/${project.slug}`} className="block group">
-                  <div className="aspect-[3/4] rounded-lg overflow-hidden relative">
-                    <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-0 left-0 right-0 p-5">
-                      <span className="block font-body text-white/50 text-xs uppercase tracking-[0.1em] mb-1">{project.type.replace("-", " ")}</span>
-                      <h3 className="font-heading text-white text-base font-semibold group-hover:text-primary-light transition-colors">{project.title}</h3>
-                    </div>
-                  </div>
-                </Link>
-              </FadeIn>
-            ))}
-          </div>
+      {/* Portfolio Preview — Scroll Slider */}
+      <section>
+        <div className="py-16 px-6 lg:px-10 text-center">
+          <LineReveal>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-text-primary leading-[1.1]">See the Results</h2>
+          </LineReveal>
         </div>
+        <ScrollSlider showDots={true}>
+          {featured.map((project) => (
+            <div key={project.id} className="relative w-full h-screen flex items-end">
+              <div className="absolute inset-0">
+                <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              </div>
+              <div className="relative z-10 p-8 md:p-14 lg:p-20 max-w-3xl">
+                <span className="inline-block font-body text-xs font-medium text-white/60 uppercase tracking-[0.15em] mb-3">
+                  {project.type.replace(/-/g, " ")}
+                </span>
+                <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.1]">
+                  {project.title}
+                </h3>
+                <p className="font-body text-white/50 text-sm tracking-wide">{project.location}</p>
+              </div>
+            </div>
+          ))}
+        </ScrollSlider>
       </section>
 
       {/* CTA */}

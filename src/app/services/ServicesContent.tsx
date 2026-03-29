@@ -3,8 +3,18 @@
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
+import ScrollSlider from "@/components/animations/ScrollSlider";
 import { services } from "@/lib/data";
 import { company } from "@/lib/constants";
+
+const SERVICE_SLIDES = [
+  { image: "/images/services/kitchen-hero.jpg",          label: "01", title: "Kitchen Renovations",    sub: "Custom cabinetry, countertops, and full layout redesigns." },
+  { image: "/images/services/bathroom-hero.jpg",         label: "02", title: "Bathroom Renovations",   sub: "From powder rooms to spa-like master bathrooms." },
+  { image: "/images/services/basement-hero.jpg",         label: "03", title: "Basement Finishing",     sub: "Transform your basement into usable living space." },
+  { image: "/images/services/full-renovation-hero.jpg",  label: "04", title: "Full Home Renovations",  sub: "Comprehensive whole-home transformations." },
+  { image: "/images/services/addition-hero.jpg",         label: "05", title: "Additions",              sub: "Seamless home additions that match your existing style." },
+  { image: "/images/services/new-construction-hero.jpg", label: "06", title: "New Construction",       sub: "Custom homes built from the ground up." },
+];
 
 const SERVICE_IMAGE_MAP: Record<string, string> = {
   "kitchen-renovations": "/images/services/kitchen-hero.jpg",
@@ -72,6 +82,29 @@ export default function ServicesContent() {
             </FadeIn>
           ))}
         </div>
+      </section>
+
+      {/* Services Showcase Slider */}
+      <section>
+        <ScrollSlider showDots={true}>
+          {SERVICE_SLIDES.map((slide) => (
+            <div key={slide.title} className="relative w-full h-screen flex items-end">
+              <div className="absolute inset-0">
+                <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+              </div>
+              <div className="relative z-10 p-8 md:p-14 lg:p-20 max-w-3xl">
+                <span className="inline-block font-heading text-6xl md:text-7xl font-bold text-white/10 leading-none mb-4">
+                  {slide.label}
+                </span>
+                <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.1]">
+                  {slide.title}
+                </h2>
+                <p className="font-body text-white/60 text-lg">{slide.sub}</p>
+              </div>
+            </div>
+          ))}
+        </ScrollSlider>
       </section>
 
       {/* CTA */}
