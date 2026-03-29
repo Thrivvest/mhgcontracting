@@ -7,12 +7,12 @@ import ScrollSlider from "@/components/animations/ScrollSlider";
 import { company } from "@/lib/constants";
 
 const SERVICE_SLIDES = [
-  { slug: "kitchen-renovations",    image: "/images/services/kitchen-hero.jpg",          label: "01", title: "Kitchen Renovations",   sub: "Custom cabinetry, countertops, and full layout redesigns." },
-  { slug: "bathroom-renovations",   image: "/images/services/bathroom-hero.jpg",         label: "02", title: "Bathroom Renovations",  sub: "From powder rooms to spa-like master bathrooms." },
-  { slug: "basement-finishing",     image: "/images/services/basement-hero.jpg",         label: "03", title: "Basement Finishing",    sub: "Transform your basement into usable living space." },
-  { slug: "full-home-renovations",  image: "/images/services/full-renovation-hero.jpg",  label: "04", title: "Full Home Renovations", sub: "Comprehensive whole-home transformations." },
-  { slug: "additions",              image: "/images/services/addition-hero.jpg",         label: "05", title: "Additions",             sub: "Seamless home additions that match your existing style." },
-  { slug: "new-construction",       image: "/images/services/new-construction-hero.jpg", label: "06", title: "New Construction",      sub: "Custom homes built from the ground up." },
+  { slug: "kitchen-renovations",   image: "/images/projects/kitchen-02-2.jpg",                    label: "01", title: "Kitchen Renovations",   sub: "Custom cabinetry, countertops, and full layout redesigns." },
+  { slug: "bathroom-renovations",  image: "/images/projects/bath-02-1.jpg",                       label: "02", title: "Bathroom Renovations",  sub: "From powder rooms to spa-like master bathrooms." },
+  { slug: "basement-finishing",    image: "/images/projects/basement-01-2.jpg",                   label: "03", title: "Basement Finishing",    sub: "Transform your basement into usable living space." },
+  { slug: "full-home-renovations", image: "/images/projects/gallery/fullreno-01/4.jpg",           label: "04", title: "Full Home Renovations", sub: "Comprehensive whole-home transformations." },
+  { slug: "additions",             image: "/images/projects/addition-01-2.jpg",                   label: "05", title: "Additions",             sub: "Seamless home additions that match your existing style." },
+  { slug: "new-construction",      image: "/images/projects/newbuild-01-1.jpg",                   label: "06", title: "New Construction",      sub: "Custom homes built from the ground up." },
 ];
 
 export default function ServicesContent() {
