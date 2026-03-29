@@ -7,23 +7,35 @@ import ScrollSlider from "@/components/animations/ScrollSlider";
 import { processSteps, getFeaturedProjects } from "@/lib/data";
 import { company } from "@/lib/constants";
 
-const PROCESS_DETAILS = [
-  { subsections: [
-    { title: "What Happens", desc: "We visit your home, take measurements, discuss your ideas and budget, and answer all your questions. Zero pressure." },
-    { title: "What You Get", desc: "A clear understanding of what's possible, a rough timeline, and confidence that MHG is the right fit for your project." },
-  ]},
-  { subsections: [
-    { title: "Collaborative Design", desc: "We work with you on material selections, layout options, and design decisions. You see everything before we start." },
-    { title: "Detailed Scope", desc: "A comprehensive scope of work document, itemized estimate, and realistic project schedule — no ambiguity." },
-  ]},
-  { subsections: [
-    { title: "Daily Progress", desc: "Our skilled team executes the plan with precision. Shahzeb is on-site regularly to ensure quality at every stage." },
-    { title: "Clean & Respectful", desc: "We protect your home, clean up daily, and minimize disruption to your family's routine." },
-  ]},
-  { subsections: [
-    { title: "Quality Check", desc: "We walk through every detail together, make sure everything meets your expectations, and address any final items." },
-    { title: "Your Home, Perfected", desc: "Your home is left spotless and ready to enjoy. Plus, we stand behind our work with a warranty." },
-  ]},
+const PROCESS_SLIDES = [
+  {
+    image: "/images/projects/gallery/kitchen-01/3.jpg",
+    subsections: [
+      { title: "What Happens", desc: "We visit your home, take measurements, discuss your ideas and budget, and answer all your questions. Zero pressure." },
+      { title: "What You Get", desc: "A clear understanding of what's possible, a rough timeline, and confidence that MHG is the right fit for your project." },
+    ],
+  },
+  {
+    image: "/images/projects/gallery/fullreno-01/3.jpg",
+    subsections: [
+      { title: "Collaborative Design", desc: "We work with you on material selections, layout options, and design decisions. You see everything before we start." },
+      { title: "Detailed Scope", desc: "A comprehensive scope of work document, itemized estimate, and realistic project schedule — no ambiguity." },
+    ],
+  },
+  {
+    image: "/images/projects/gallery/bath-02/4.jpg",
+    subsections: [
+      { title: "Daily Progress", desc: "Our skilled team executes the plan with precision. Shahzeb is on-site regularly to ensure quality at every stage." },
+      { title: "Clean & Respectful", desc: "We protect your home, clean up daily, and minimize disruption to your family's routine." },
+    ],
+  },
+  {
+    image: "/images/projects/kitchen-01-3.jpg",
+    subsections: [
+      { title: "Quality Check", desc: "We walk through every detail together, make sure everything meets your expectations, and address any final items." },
+      { title: "Your Home, Perfected", desc: "Your home is left spotless and ready to enjoy. Plus, we stand behind our work with a warranty." },
+    ],
+  },
 ];
 
 export default function ProcessContent() {
@@ -64,49 +76,51 @@ export default function ProcessContent() {
         </div>
       </section>
 
-      {/* Process Phases */}
-      <section className="pb-24 md:pb-32 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto">
-          <div className="space-y-0">
-            {processSteps.map((step, index) => (
-              <FadeIn key={step.id} delay={0.1}>
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 py-16 md:py-20 ${index < processSteps.length - 1 ? "border-b border-border" : ""}`}>
-                  {/* Left: step info */}
-                  <div className={index % 2 === 1 ? "lg:order-2" : ""}>
-                    <span className="font-heading text-6xl md:text-7xl font-bold text-primary/10 block mb-4 leading-none">
-                      {step.number}
-                    </span>
-                    <h3 className="font-heading text-3xl md:text-4xl font-bold text-text-primary mb-4">
-                      {step.title}
-                    </h3>
-                    <p className="font-body text-text-secondary text-lg leading-relaxed mb-8">
-                      {step.description}
-                    </p>
+      {/* Process Steps Slider */}
+      <section>
+        <ScrollSlider showDots={true}>
+          {processSteps.map((step, index) => {
+            const slide = PROCESS_SLIDES[index];
+            return (
+              <div key={step.id} className="relative w-full h-screen flex items-center">
+                {/* Background image */}
+                <div className="absolute inset-0">
+                  <img src={slide.image} alt={step.title} className="w-full h-full object-cover" />
+                  {/* Gradient heavier on left so text is always readable */}
+                  <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/10" />
+                </div>
 
-                    {/* Subsections */}
-                    {PROCESS_DETAILS[index] && (
-                      <div className="space-y-5">
-                        {PROCESS_DETAILS[index].subsections.map((sub) => (
-                          <div key={sub.title} className="pl-5 border-l-2 border-primary/20">
-                            <h4 className="font-heading text-base font-semibold text-text-primary mb-1">{sub.title}</h4>
-                            <p className="font-body text-text-secondary text-sm leading-relaxed">{sub.desc}</p>
-                          </div>
-                        ))}
+                {/* Text content */}
+                <div className="relative z-10 px-8 md:px-14 lg:px-20 max-w-2xl">
+                  {/* Step number */}
+                  <span className="font-heading text-[6rem] md:text-[8rem] font-bold text-white/10 leading-none block mb-2">
+                    {step.number}
+                  </span>
+
+                  {/* Title */}
+                  <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-5">
+                    {step.title}
+                  </h2>
+
+                  {/* Description */}
+                  <p className="font-body text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
+                    {step.description}
+                  </p>
+
+                  {/* Subsections */}
+                  <div className="space-y-5">
+                    {slide.subsections.map((sub) => (
+                      <div key={sub.title} className="pl-5 border-l-2 border-white/30">
+                        <h4 className="font-heading text-base font-semibold text-white mb-1">{sub.title}</h4>
+                        <p className="font-body text-white/55 text-sm leading-relaxed">{sub.desc}</p>
                       </div>
-                    )}
-                  </div>
-
-                  {/* Right: image */}
-                  <div className={index % 2 === 1 ? "lg:order-1" : ""}>
-                    <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                      <img src={`/images/projects/${["kitchen-01", "bath-01", "fullreno-01", "kitchen-02"][index % 4]}.jpg`} alt={step.title} className="w-full h-full object-cover" />
-                    </div>
+                    ))}
                   </div>
                 </div>
-              </FadeIn>
-            ))}
-          </div>
-        </div>
+              </div>
+            );
+          })}
+        </ScrollSlider>
       </section>
 
       {/* Portfolio Preview — Scroll Slider */}
