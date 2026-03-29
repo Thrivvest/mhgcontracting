@@ -2,7 +2,6 @@ import type { Metadata, Viewport } from "next";
 import { Urbanist, Inter } from "next/font/google";
 import SmoothScroll from "@/components/animations/SmoothScroll";
 import PageTransition from "@/components/animations/PageTransition";
-import SplashScreen from "@/components/layout/SplashScreen";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import "./globals.css";
@@ -176,7 +175,6 @@ export default function RootLayout({
       </head>
       <body>
         <SmoothScroll>
-          <SplashScreen />
           <Header />
           <PageTransition>
             {children}
