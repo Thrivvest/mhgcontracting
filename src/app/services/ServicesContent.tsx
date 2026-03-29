@@ -4,26 +4,16 @@ import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import ScrollSlider from "@/components/animations/ScrollSlider";
-import { services } from "@/lib/data";
 import { company } from "@/lib/constants";
 
 const SERVICE_SLIDES = [
-  { image: "/images/services/kitchen-hero.jpg",          label: "01", title: "Kitchen Renovations",    sub: "Custom cabinetry, countertops, and full layout redesigns." },
-  { image: "/images/services/bathroom-hero.jpg",         label: "02", title: "Bathroom Renovations",   sub: "From powder rooms to spa-like master bathrooms." },
-  { image: "/images/services/basement-hero.jpg",         label: "03", title: "Basement Finishing",     sub: "Transform your basement into usable living space." },
-  { image: "/images/services/full-renovation-hero.jpg",  label: "04", title: "Full Home Renovations",  sub: "Comprehensive whole-home transformations." },
-  { image: "/images/services/addition-hero.jpg",         label: "05", title: "Additions",              sub: "Seamless home additions that match your existing style." },
-  { image: "/images/services/new-construction-hero.jpg", label: "06", title: "New Construction",       sub: "Custom homes built from the ground up." },
+  { slug: "kitchen-renovations",    image: "/images/services/kitchen-hero.jpg",          label: "01", title: "Kitchen Renovations",   sub: "Custom cabinetry, countertops, and full layout redesigns." },
+  { slug: "bathroom-renovations",   image: "/images/services/bathroom-hero.jpg",         label: "02", title: "Bathroom Renovations",  sub: "From powder rooms to spa-like master bathrooms." },
+  { slug: "basement-finishing",     image: "/images/services/basement-hero.jpg",         label: "03", title: "Basement Finishing",    sub: "Transform your basement into usable living space." },
+  { slug: "full-home-renovations",  image: "/images/services/full-renovation-hero.jpg",  label: "04", title: "Full Home Renovations", sub: "Comprehensive whole-home transformations." },
+  { slug: "additions",              image: "/images/services/addition-hero.jpg",         label: "05", title: "Additions",             sub: "Seamless home additions that match your existing style." },
+  { slug: "new-construction",       image: "/images/services/new-construction-hero.jpg", label: "06", title: "New Construction",      sub: "Custom homes built from the ground up." },
 ];
-
-const SERVICE_IMAGE_MAP: Record<string, string> = {
-  "kitchen-renovations": "/images/services/kitchen-hero.jpg",
-  "bathroom-renovations": "/images/services/bathroom-hero.jpg",
-  "basement-finishing": "/images/services/basement-hero.jpg",
-  "full-home-renovations": "/images/services/full-renovation-hero.jpg",
-  "additions": "/images/services/addition-hero.jpg",
-  "new-construction": "/images/services/new-construction-hero.jpg",
-};
 
 export default function ServicesContent() {
   return (
@@ -47,48 +37,15 @@ export default function ServicesContent() {
         </div>
       </section>
 
-      {/* Service Cards — stacked full-width */}
-      <section className="py-16 md:py-24 px-6 lg:px-10">
-        <div className="max-w-[1400px] mx-auto space-y-6">
-          {services.map((service, index) => (
-            <FadeIn key={service.id} delay={Math.min(index * 0.08, 0.4)}>
-              <Link href={`/services/${service.slug}`} className="block group">
-                <div className={`grid grid-cols-1 lg:grid-cols-2 gap-0 rounded-lg overflow-hidden border border-border hover:shadow-lg transition-shadow duration-300 ${index % 2 === 1 ? "lg:grid-flow-col-dense" : ""}`}>
-                  {/* Image placeholder */}
-                  <div className={`aspect-[16/10] lg:aspect-auto lg:min-h-[320px] overflow-hidden ${index % 2 === 1 ? "lg:col-start-2" : ""}`}>
-                    <img src={SERVICE_IMAGE_MAP[service.slug] || "/images/services/kitchen-hero.jpg"} alt={service.name} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
-                  </div>
-
-                  {/* Content */}
-                  <div className={`p-8 md:p-12 flex flex-col justify-center bg-white ${index % 2 === 1 ? "lg:col-start-1" : ""}`}>
-                    <span className="font-heading text-5xl font-bold text-primary/10 block mb-3 leading-none">
-                      {String(index + 1).padStart(2, "0")}
-                    </span>
-                    <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary mb-3 group-hover:text-primary transition-colors">
-                      {service.name}
-                    </h2>
-                    <p className="font-body text-text-secondary text-base leading-relaxed mb-6 max-w-lg">
-                      {service.shortDescription}
-                    </p>
-                    <span className="inline-flex items-center gap-2 font-body text-sm font-semibold text-primary group-hover:gap-3 transition-all duration-200">
-                      Learn More
-                      <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </Link>
-            </FadeIn>
-          ))}
-        </div>
-      </section>
-
-      {/* Services Showcase Slider */}
+      {/* Services Slider */}
       <section>
         <ScrollSlider showDots={true}>
           {SERVICE_SLIDES.map((slide) => (
-            <div key={slide.title} className="relative w-full h-screen flex items-end">
+            <Link
+              key={slide.slug}
+              href={`/services/${slide.slug}`}
+              className="block relative w-full h-screen flex items-end"
+            >
               <div className="absolute inset-0">
                 <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
@@ -100,9 +57,15 @@ export default function ServicesContent() {
                 <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.1]">
                   {slide.title}
                 </h2>
-                <p className="font-body text-white/60 text-lg">{slide.sub}</p>
+                <p className="font-body text-white/60 text-lg mb-6">{slide.sub}</p>
+                <span className="inline-flex items-center gap-2 text-white font-body font-medium text-sm group">
+                  View Service
+                  <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                    <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                  </svg>
+                </span>
               </div>
-            </div>
+            </Link>
           ))}
         </ScrollSlider>
       </section>
