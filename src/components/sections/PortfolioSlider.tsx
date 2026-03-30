@@ -27,7 +27,7 @@ export default function PortfolioSlider() {
   const slides = featured.map((project) => (
     <div
       key={project.id}
-      className="relative w-full flex items-end mobile-slide"
+      className="relative w-full h-screen flex items-end mobile-slide"
     >
       {/* Background image */}
       <div className="absolute inset-0">
