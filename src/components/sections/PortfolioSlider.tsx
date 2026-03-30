@@ -27,7 +27,7 @@ export default function PortfolioSlider() {
   const slides = featured.map((project) => (
     <div
       key={project.id}
-      className="relative w-full h-screen md:h-screen flex items-end mobile-slide"
+      className="relative w-full flex items-end mobile-slide"
     >
       {/* Background image */}
       <div className="absolute inset-0">
@@ -42,14 +42,14 @@ export default function PortfolioSlider() {
       <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
 
       {/* Project info */}
-      <div className="relative z-10 p-8 md:p-14 lg:p-20 max-w-3xl">
+      <div className="relative z-10 p-6 md:p-14 lg:p-20 max-w-3xl">
         <span className="inline-block font-body text-xs font-medium text-white/60 uppercase tracking-[0.15em] mb-3">
           {SERVICE_TYPE_LABELS[project.type] || project.type}
         </span>
-        <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-4 leading-[1.1]">
+        <h2 className="font-heading text-2xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.1]">
           {project.title}
         </h2>
-        <p className="font-body text-white/70 text-base md:text-lg mb-6 max-w-xl leading-relaxed">
+        <p className="hidden md:block font-body text-white/70 text-base md:text-lg mb-6 max-w-xl leading-relaxed">
           {project.shortDescription}
         </p>
         <Link
@@ -76,7 +76,7 @@ export default function PortfolioSlider() {
       </div>
 
       {/* Project location pill */}
-      <div className="absolute top-8 right-8 md:top-14 md:right-14 z-10">
+      <div className="absolute top-6 right-6 md:top-14 md:right-14 z-10">
         <span className="font-body text-xs text-white/50 tracking-wide">
           {project.location}
         </span>

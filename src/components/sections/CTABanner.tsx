@@ -15,7 +15,7 @@ export default function CTABanner() {
   return (
     <section
       id="cta-banner"
-      className="relative py-20 md:py-28 lg:py-32 px-6 lg:px-10 overflow-hidden"
+      className="relative py-14 md:py-28 lg:py-32 px-6 lg:px-10 overflow-hidden"
       style={{ backgroundColor: "#2D3380" }}
     >
       {/* Subtle radial glow */}

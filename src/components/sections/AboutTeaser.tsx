@@ -13,9 +13,9 @@ import FadeIn from "@/components/animations/FadeIn";
 
 export default function AboutTeaser() {
   return (
-    <section id="about-teaser" className="py-20 md:py-28 lg:py-32 px-6 lg:px-10 bg-background-alt">
+    <section id="about-teaser" className="py-14 md:py-28 lg:py-32 px-6 lg:px-10 bg-background-alt">
       <div className="max-w-[1400px] mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-5 gap-12 lg:gap-16 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-16 items-center">
           {/* Left column (60%) */}
           <div className="lg:col-span-3">
             <FadeIn>
@@ -71,7 +71,7 @@ export default function AboutTeaser() {
           {/* Right column (40%) — Image placeholder */}
           <div className="lg:col-span-2">
             <FadeIn delay={0.3}>
-              <div className="aspect-[3/4] rounded-lg overflow-hidden relative">
+              <div className="aspect-[16/10] lg:aspect-[3/4] rounded-lg overflow-hidden relative">
                 <img
                   src="/images/projects/fullreno-01.jpg"
                   alt="MHG Contracting — Luxury home renovation"

@@ -41,7 +41,7 @@ const BLOG_POSTS = [
 
 export default function BlogPreview() {
   return (
-    <section id="blog-preview" className="py-24 md:py-32 px-6 lg:px-10 bg-background-alt">
+    <section id="blog-preview" className="py-14 md:py-32 px-6 lg:px-10 bg-background-alt">
       <div className="max-w-[1400px] mx-auto">
         {/* Section header */}
         <div className="mb-14 md:mb-20">

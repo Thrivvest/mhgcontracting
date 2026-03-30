@@ -26,10 +26,10 @@ export default function FeaturedProjects() {
   const projects = getGridProjects().slice(0, 4);
 
   return (
-    <section id="featured-projects" className="py-20 md:py-28 lg:py-32 px-6 lg:px-10">
+    <section id="featured-projects" className="py-14 md:py-28 lg:py-32 px-6 lg:px-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Section header */}
-        <div className="mb-14 md:mb-20">
+        <div className="mb-8 md:mb-20">
           <FadeIn>
             <span className="font-body text-xs font-medium text-primary uppercase tracking-[0.15em] mb-4 block">
               Portfolio
@@ -49,12 +49,12 @@ export default function FeaturedProjects() {
         </div>
 
         {/* 2×2 grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-5">
+        <div className="grid grid-cols-2 md:grid-cols-2 gap-2 md:gap-5">
           {projects.map((project, index) => (
             <FadeIn key={project.id} delay={index * 0.1}>
               <Link href={`/portfolio/${project.slug}`} className="block">
                 <DirectionalHover
-                  className="aspect-[4/3] rounded-lg cursor-pointer"
+                  className="aspect-square md:aspect-[4/3] rounded-lg cursor-pointer"
                   overlayClassName="bg-primary/85 backdrop-blur-sm"
                   overlay={
                     <div className="text-center px-6">
@@ -85,15 +85,15 @@ export default function FeaturedProjects() {
                     {/* Bottom gradient overlay for text readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
                     {/* Bottom-left info */}
-                    <div className="absolute bottom-0 left-0 p-6 md:p-8 z-10">
-                      <span className="block font-body text-white/70 text-xs uppercase tracking-[0.12em] mb-1">
+                    <div className="absolute bottom-0 left-0 p-3 md:p-8 z-10">
+                      <span className="hidden md:block font-body text-white/70 text-xs uppercase tracking-[0.12em] mb-1">
                         {SERVICE_TYPE_LABELS[project.type]}
                       </span>
-                      <h3 className="font-heading text-white text-lg md:text-xl font-bold">
+                      <h3 className="font-heading text-white text-sm md:text-xl font-bold">
                         {project.title}
                       </h3>
                       {/* Mobile-only CTA since DirectionalHover requires mouse */}
-                      <span className="inline-flex md:hidden items-center gap-1.5 text-white/80 font-body text-sm font-medium mt-2">
+                      <span className="hidden items-center gap-1.5 text-white/80 font-body text-sm font-medium mt-2">
                         View Project
                         <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                           <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

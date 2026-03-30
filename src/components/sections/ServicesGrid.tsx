@@ -53,10 +53,10 @@ const SERVICE_ICONS: Record<string, React.ReactNode> = {
 
 export default function ServicesGrid() {
   return (
-    <section id="services-grid" className="py-20 md:py-28 lg:py-32 px-6 lg:px-10">
+    <section id="services-grid" className="py-14 md:py-28 lg:py-32 px-6 lg:px-10">
       <div className="max-w-[1400px] mx-auto">
         {/* Section header */}
-        <div className="text-center mb-14 md:mb-20">
+        <div className="text-center mb-8 md:mb-20">
           <FadeIn>
             <span className="font-body text-xs font-medium text-primary uppercase tracking-[0.15em] mb-4 block">
               Our Services
@@ -76,13 +76,13 @@ export default function ServicesGrid() {
         </div>
 
         {/* 3-col grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-5">
           {services.map((service, index) => (
             <FadeIn key={service.id} delay={index * 0.1}>
               <Link href={`/services/${service.slug}`} className="block group">
-                <div className="p-8 rounded-lg border border-border bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
+                <div className="p-5 md:p-8 rounded-lg border border-border bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300">
                   {/* Icon */}
-                  <div className="w-14 h-14 rounded-md bg-primary/5 flex items-center justify-center text-primary mb-6 group-hover:bg-primary/10 transition-colors duration-300">
+                  <div className="w-11 h-11 md:w-14 md:h-14 rounded-md bg-primary/5 flex items-center justify-center text-primary mb-4 md:mb-6 group-hover:bg-primary/10 transition-colors duration-300">
                     {SERVICE_ICONS[service.icon] || SERVICE_ICONS.home}
                   </div>
 
