@@ -14,7 +14,7 @@
  * - Reverse on mouse leave
  */
 
-import { useRef, useCallback, useEffect } from "react";
+import { useRef, useCallback, useEffect, useState } from "react";
 import { gsap } from "gsap";
 
 type Direction = "top" | "bottom" | "left" | "right";
@@ -75,22 +75,22 @@ export default function DirectionalHover({
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const isInsideRef = useRef(false);
-  const isTouchRef = useRef(false);
+  // useState so the overlay div is conditionally rendered — avoids CSS/GSAP transform conflict
+  const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
-    isTouchRef.current = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    const touch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    setIsTouch(touch);
 
-    // On desktop, let GSAP own the transform (overrides the CSS initial state)
-    if (overlayRef.current && !isTouchRef.current) {
+    // On desktop, position the overlay off-screen via GSAP so it fully owns the transform
+    if (overlayRef.current && !touch) {
       gsap.set(overlayRef.current, { xPercent: -100, yPercent: 0 });
     }
-    // On touch: the CSS transform: translateX(-100%) keeps it hidden — no GSAP needed
   }, []);
 
   // Use onMouseMove instead of onMouseEnter. mousemove only fires on real
   // pointer movement — scroll never triggers it, so no false positives.
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (isTouchRef.current) return; // Skip on touch devices
     if (!containerRef.current || !overlayRef.current) return;
     if (isInsideRef.current) return;
 
@@ -112,7 +112,6 @@ export default function DirectionalHover({
   }, []);
 
   const handleMouseLeave = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    if (isTouchRef.current) return;
     if (!containerRef.current || !overlayRef.current) return;
 
     isInsideRef.current = false;
@@ -138,15 +137,17 @@ export default function DirectionalHover({
       {/* Main content */}
       {children}
 
-      {/* Directional overlay — starts off-screen via CSS transform.
-          On desktop GSAP takes over the transform. On touch it stays hidden. */}
-      <div
-        ref={overlayRef}
-        className={`absolute inset-0 flex items-center justify-center ${overlayClassName}`}
-        style={{ transform: "translateX(-100%)" }}
-      >
-        {overlay}
-      </div>
+      {/* Directional overlay — only rendered on non-touch (desktop) devices.
+          This prevents the CSS/GSAP transform conflict that caused the overlay
+          to show permanently on mobile and fail to animate on desktop. */}
+      {!isTouch && (
+        <div
+          ref={overlayRef}
+          className={`absolute inset-0 flex items-center justify-center ${overlayClassName}`}
+        >
+          {overlay}
+        </div>
+      )}
     </div>
   );
 }
