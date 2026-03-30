@@ -22,7 +22,7 @@ import FeaturedProjects from "@/components/sections/FeaturedProjects";
 import AboutTeaser from "@/components/sections/AboutTeaser";
 import ServicesGrid from "@/components/sections/ServicesGrid";
 import CTABanner from "@/components/sections/CTABanner";
-import Testimonials from "@/components/sections/Testimonials";
+import ReviewsSlider from "@/components/sections/ReviewsSlider";
 import ServiceArea from "@/components/sections/ServiceArea";
 import BlogPreview from "@/components/sections/BlogPreview";
 
@@ -35,7 +35,7 @@ export default function HomePage() {
       <AboutTeaser />
       <ServicesGrid />
       <CTABanner />
-      <Testimonials />
+      <ReviewsSlider />
       <ServiceArea />
       <BlogPreview />
     </main>
