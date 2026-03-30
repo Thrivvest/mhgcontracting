@@ -130,11 +130,20 @@ export const company = {
 export interface NavLink {
   label: string;
   href: string;
+  children?: NavLink[];
 }
 
 export const navLinks: NavLink[] = [
   { label: "Home", href: "/" },
-  { label: "About", href: "/about" },
+  {
+    label: "About",
+    href: "/about",
+    children: [
+      { label: "Our Story", href: "/about" },
+      { label: "Blog", href: "/blog" },
+      { label: "Service Areas", href: "/service-areas" },
+    ],
+  },
   { label: "Services", href: "/services" },
   { label: "Portfolio", href: "/portfolio" },
   { label: "Process", href: "/process" },
