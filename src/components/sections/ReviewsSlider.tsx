@@ -3,8 +3,8 @@
 /**
  * ReviewsSlider — Auto-playing Google Reviews carousel
  *
- * Displays real Google reviews in a smooth, auto-advancing slideshow
- * with GSAP-powered transitions. Shows 1 review on mobile, 3 on desktop.
+ * Displays real Google reviews in a smooth, auto-advancing slideshow.
+ * Shows 1 review on mobile, 3 on desktop. Supports touch swipe on mobile.
  * Matches the site's premium design language with the navy/white palette.
  */
 
@@ -40,50 +40,88 @@ function Stars({ count = 5 }: { count?: number }) {
 
 export default function ReviewsSlider() {
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [isTransitioning, setIsTransitioning] = useState(false);
   const [isPaused, setIsPaused] = useState(false);
-  const intervalRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  const [cardsPerView, setCardsPerView] = useState(1);
+  const trackRef = useRef<HTMLDivElement>(null);
+  const touchStartX = useRef(0);
+  const touchEndX = useRef(0);
 
   const totalReviews = GOOGLE_REVIEWS.length;
-  // Show 3 cards at a time on desktop, 1 on mobile
-  const cardsPerView = typeof window !== "undefined" && window.innerWidth >= 768 ? 3 : 1;
-  const maxIndex = totalReviews - cardsPerView;
+  const maxIndex = Math.max(0, totalReviews - cardsPerView);
+
+  // Responsive cardsPerView
+  useEffect(() => {
+    const update = () => {
+      if (window.innerWidth >= 1024) setCardsPerView(3);
+      else if (window.innerWidth >= 768) setCardsPerView(2);
+      else setCardsPerView(1);
+    };
+    update();
+    window.addEventListener("resize", update);
+    return () => window.removeEventListener("resize", update);
+  }, []);
+
+  // Reset index if it exceeds new maxIndex after resize
+  useEffect(() => {
+    if (currentIndex > maxIndex) setCurrentIndex(maxIndex);
+  }, [maxIndex, currentIndex]);
 
   const goTo = useCallback((index: number) => {
-    setIsTransitioning(true);
-    setTimeout(() => {
-      setCurrentIndex(Math.max(0, Math.min(index, maxIndex)));
-      setIsTransitioning(false);
-    }, 300);
+    setCurrentIndex(Math.max(0, Math.min(index, maxIndex)));
   }, [maxIndex]);
 
   const next = useCallback(() => {
-    goTo(currentIndex >= maxIndex ? 0 : currentIndex + 1);
-  }, [currentIndex, maxIndex, goTo]);
+    setCurrentIndex((prev) => (prev >= maxIndex ? 0 : prev + 1));
+  }, [maxIndex]);
 
   const prev = useCallback(() => {
-    goTo(currentIndex <= 0 ? maxIndex : currentIndex - 1);
-  }, [currentIndex, maxIndex, goTo]);
+    setCurrentIndex((prev) => (prev <= 0 ? maxIndex : prev - 1));
+  }, [maxIndex]);
 
   // Auto-advance every 5 seconds
   useEffect(() => {
     if (isPaused) return;
-    intervalRef.current = setInterval(next, 5000);
-    return () => {
-      if (intervalRef.current) clearInterval(intervalRef.current);
-    };
+    const interval = setInterval(next, 5000);
+    return () => clearInterval(interval);
   }, [next, isPaused]);
+
+  // Touch swipe handlers
+  const handleTouchStart = (e: React.TouchEvent) => {
+    touchStartX.current = e.touches[0].clientX;
+    setIsPaused(true);
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    touchEndX.current = e.touches[0].clientX;
+  };
+
+  const handleTouchEnd = () => {
+    const diff = touchStartX.current - touchEndX.current;
+    const threshold = 50;
+    if (diff > threshold) next();
+    else if (diff < -threshold) prev();
+    setTimeout(() => setIsPaused(false), 3000);
+  };
+
+  // Calculate transform: each card takes up (100/cardsPerView)% + gap
+  const gapPx = 24; // gap-6 = 24px
+  const cardPercent = 100 / cardsPerView;
+
+  // Progress dots — show fewer on mobile by grouping
+  const step = cardsPerView;
+  const dotCount = Math.ceil(totalReviews / step);
+  const activeDot = Math.floor(currentIndex / step);
 
   return (
     <section
-      className="py-20 md:py-28 lg:py-32 px-6 lg:px-10 overflow-hidden"
+      className="py-16 md:py-28 lg:py-32 px-6 lg:px-10 overflow-hidden"
       style={{ backgroundColor: "#0d0d1a" }}
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
     >
       <div className="max-w-[1400px] mx-auto">
         {/* Section header */}
-        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-14 md:mb-20">
+        <div className="flex flex-col md:flex-row md:items-end md:justify-between mb-10 md:mb-20">
           <div>
             <FadeIn>
               <div className="flex items-center gap-2.5 mb-4">
@@ -94,12 +132,12 @@ export default function ReviewsSlider() {
               </div>
             </FadeIn>
             <LineReveal className="mb-3">
-              <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1]">
+              <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1]">
                 What Our Clients Say
               </h2>
             </LineReveal>
             <FadeIn delay={0.3}>
-              <p className="font-body text-white/40 text-lg max-w-lg">
+              <p className="font-body text-white/40 text-base md:text-lg max-w-lg">
                 Real reviews from real homeowners across Central New Jersey.
               </p>
             </FadeIn>
@@ -107,11 +145,11 @@ export default function ReviewsSlider() {
 
           {/* Navigation arrows */}
           <FadeIn delay={0.4}>
-            <div className="flex items-center gap-3 mt-8 md:mt-0">
+            <div className="flex items-center gap-3 mt-6 md:mt-0">
               <button
                 onClick={prev}
                 aria-label="Previous reviews"
-                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/50 transition-all duration-300"
+                className="w-11 h-11 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/50 active:scale-95 transition-all duration-300"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M19 12H5M12 19l-7-7 7-7" />
@@ -120,7 +158,7 @@ export default function ReviewsSlider() {
               <button
                 onClick={next}
                 aria-label="Next reviews"
-                className="w-12 h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/50 transition-all duration-300"
+                className="w-11 h-11 md:w-12 md:h-12 rounded-full border border-white/20 flex items-center justify-center text-white/60 hover:text-white hover:border-white/50 active:scale-95 transition-all duration-300"
               >
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
                   <path d="M5 12h14M12 5l7 7-7 7" />
@@ -131,36 +169,43 @@ export default function ReviewsSlider() {
         </div>
 
         {/* Reviews carousel */}
-        <div className="relative">
+        <div
+          className="relative overflow-hidden"
+          onTouchStart={handleTouchStart}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={handleTouchEnd}
+        >
           <div
-            className="flex gap-6 transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]"
-            style={{ transform: `translateX(-${currentIndex * (100 / cardsPerView + (6 * (cardsPerView - 1)) / cardsPerView)}%)` }}
+            ref={trackRef}
+            className="flex transition-transform duration-700 ease-[cubic-bezier(0.25,0.1,0.25,1)]"
+            style={{
+              gap: `${gapPx}px`,
+              transform: `translateX(calc(-${currentIndex * cardPercent}% - ${currentIndex * gapPx}px))`,
+            }}
           >
-            {GOOGLE_REVIEWS.map((review, index) => (
+            {GOOGLE_REVIEWS.map((review) => (
               <div
                 key={review.id}
-                className={`flex-shrink-0 w-full md:w-[calc(33.333%-16px)] transition-opacity duration-500 ${
-                  isTransitioning ? "opacity-0" : "opacity-100"
-                }`}
+                className="flex-shrink-0"
+                style={{ width: `calc(${cardPercent}% - ${gapPx * (cardsPerView - 1) / cardsPerView}px)` }}
               >
-                <div className="h-full rounded-xl p-8 md:p-9 flex flex-col border border-white/10 bg-white/[0.03] backdrop-blur-sm hover:bg-white/[0.06] transition-colors duration-300">
+                <div className="h-full rounded-xl p-6 md:p-9 flex flex-col border border-white/10 bg-white/[0.03] backdrop-blur-sm">
                   {/* Stars + Google */}
-                  <div className="flex items-center justify-between mb-6">
+                  <div className="flex items-center justify-between mb-5 md:mb-6">
                     <Stars />
                     <GoogleLogo className="opacity-40" />
                   </div>
 
                   {/* Quote */}
-                  <blockquote className="font-body text-white/80 text-[15px] leading-relaxed mb-8 flex-1">
+                  <blockquote className="font-body text-white/80 text-sm md:text-[15px] leading-relaxed mb-6 md:mb-8 flex-1">
                     &ldquo;{review.text}&rdquo;
                   </blockquote>
 
                   {/* Attribution */}
-                  <div className="pt-6 border-t border-white/10">
+                  <div className="pt-5 md:pt-6 border-t border-white/10">
                     <div className="flex items-center gap-3">
-                      {/* Avatar circle with initials */}
-                      <div className="w-10 h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
-                        <span className="font-heading text-sm font-bold text-primary-light">
+                      <div className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-primary/20 flex items-center justify-center flex-shrink-0">
+                        <span className="font-heading text-xs md:text-sm font-bold text-primary-light">
                           {review.name.split(" ").map(n => n[0]).join("").slice(0, 2)}
                         </span>
                       </div>
@@ -169,7 +214,7 @@ export default function ReviewsSlider() {
                           {review.name}
                         </p>
                         <p className="font-body text-xs text-white/40">
-                          {review.projectType} · {review.timeAgo}
+                          {review.projectType}
                         </p>
                       </div>
                     </div>
@@ -180,15 +225,15 @@ export default function ReviewsSlider() {
           </div>
         </div>
 
-        {/* Progress dots */}
-        <div className="flex items-center justify-center gap-2 mt-10">
-          {Array.from({ length: maxIndex + 1 }).map((_, i) => (
+        {/* Progress dots — grouped so mobile shows manageable count */}
+        <div className="flex items-center justify-center gap-2 mt-8 md:mt-10">
+          {Array.from({ length: dotCount }).map((_, i) => (
             <button
               key={i}
-              onClick={() => goTo(i)}
+              onClick={() => goTo(i * step)}
               aria-label={`Go to review set ${i + 1}`}
               className={`h-1.5 rounded-full transition-all duration-500 ${
-                i === currentIndex
+                i === activeDot
                   ? "w-8 bg-primary"
                   : "w-1.5 bg-white/20 hover:bg-white/40"
               }`}
@@ -198,13 +243,13 @@ export default function ReviewsSlider() {
 
         {/* Overall rating badge */}
         <FadeIn delay={0.5}>
-          <div className="flex items-center justify-center gap-4 mt-10 pt-10 border-t border-white/10">
+          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-8 md:mt-10 pt-8 md:pt-10 border-t border-white/10">
             <div className="flex items-center gap-2">
               <GoogleLogo />
-              <span className="font-heading text-2xl font-bold text-white">5.0</span>
+              <span className="font-heading text-xl md:text-2xl font-bold text-white">5.0</span>
             </div>
             <Stars />
-            <span className="font-body text-sm text-white/40">
+            <span className="font-body text-xs md:text-sm text-white/40">
               {totalReviews}+ reviews on Google
             </span>
           </div>

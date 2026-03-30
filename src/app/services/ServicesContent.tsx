@@ -44,7 +44,7 @@ export default function ServicesContent() {
             <Link
               key={slide.slug}
               href={`/services/${slide.slug}`}
-              className="block relative w-full h-screen flex items-end"
+              className="block relative w-full h-screen flex items-end mobile-slide"
             >
               <div className="absolute inset-0">
                 <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />

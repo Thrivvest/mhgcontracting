@@ -75,6 +75,7 @@
     scroll-behavior: auto; /* Lenis handles smooth scroll */
     scrollbar-width: thin;
     scrollbar-color: var(--color-primary) var(--color-background-alt);
+    overflow-x: hidden; /* Prevent horizontal scroll from 100vw hero */
   }
 
   body {

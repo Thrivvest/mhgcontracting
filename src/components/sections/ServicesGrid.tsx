@@ -94,8 +94,8 @@ export default function ServicesGrid() {
                     {service.shortDescription}
                   </p>
 
-                  {/* Arrow */}
-                  <span className="inline-flex items-center gap-1.5 text-primary font-body text-sm font-medium opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                  {/* Arrow — visible on mobile, hover-reveal on desktop */}
+                  <span className="inline-flex items-center gap-1.5 text-primary font-body text-sm font-medium opacity-100 md:opacity-0 md:group-hover:opacity-100 transition-opacity duration-200">
                     Learn More
                     <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
                       <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />

@@ -168,9 +168,9 @@ export default function ScrollSlider({
   if (isMobile) {
     return (
       <div className={`scroll-slider-mobile ${className}`}>
-        <div className="flex flex-col gap-8">
+        <div className="flex flex-col gap-4">
           {children.map((child, i) => (
-            <div key={i} className="w-full">
+            <div key={i} className="w-full [&_.mobile-slide]:h-[70vh] [&_.mobile-slide]:min-h-[400px]">
               {child}
             </div>
           ))}

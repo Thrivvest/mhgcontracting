@@ -91,6 +91,13 @@ export default function FeaturedProjects() {
                       <h3 className="font-heading text-white text-lg md:text-xl font-bold">
                         {project.title}
                       </h3>
+                      {/* Mobile-only CTA since DirectionalHover requires mouse */}
+                      <span className="inline-flex md:hidden items-center gap-1.5 text-white/80 font-body text-sm font-medium mt-2">
+                        View Project
+                        <svg width="14" height="14" viewBox="0 0 16 16" fill="none">
+                          <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                        </svg>
+                      </span>
                     </div>
                   </div>
                 </DirectionalHover>

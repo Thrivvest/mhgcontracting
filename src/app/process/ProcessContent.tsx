@@ -82,7 +82,7 @@ export default function ProcessContent() {
           {processSteps.map((step, index) => {
             const slide = PROCESS_SLIDES[index];
             return (
-              <div key={step.id} className="relative w-full h-screen flex items-center">
+              <div key={step.id} className="relative w-full h-screen flex items-center mobile-slide">
                 {/* Background image */}
                 <div className="absolute inset-0">
                   <img src={slide.image} alt={step.title} className="w-full h-full object-cover" />
@@ -132,7 +132,7 @@ export default function ProcessContent() {
         </div>
         <ScrollSlider showDots={true}>
           {featured.map((project) => (
-            <div key={project.id} className="relative w-full h-screen flex items-end">
+            <div key={project.id} className="relative w-full h-screen flex items-end mobile-slide">
               <div className="absolute inset-0">
                 <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

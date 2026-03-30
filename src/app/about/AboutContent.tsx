@@ -131,7 +131,7 @@ export default function AboutContent() {
       <section>
         <ScrollSlider showDots={true}>
           {WORK_SLIDES.map((slide) => (
-            <div key={slide.title} className="relative w-full h-screen flex items-end">
+            <div key={slide.title} className="relative w-full h-screen flex items-end mobile-slide">
               <div className="absolute inset-0">
                 <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />

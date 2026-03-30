@@ -42,7 +42,8 @@ export default function Hero() {
       className="relative flex items-center justify-center overflow-hidden"
       style={{
         width: "100vw",
-        minHeight: "100vh",
+        maxWidth: "100vw",
+        minHeight: "100dvh",
         marginLeft: "calc(-50vw + 50%)",
       }}
     >
