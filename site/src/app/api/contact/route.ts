@@ -30,18 +30,18 @@ interface ContactPayload {
   source?: string;
 }
 
-// ── Rate limiting (per IP: 3 submissions per 10 min) ─────────────────────────
+// ── Rate limiting (per IP: 10 submissions per 5 min) ────────────────────────
 const rateMap = new Map<string, { count: number; reset: number }>();
 
 function checkRateLimit(ip: string): boolean {
   const now = Date.now();
-  const window = 10 * 60 * 1000;
+  const window = 5 * 60 * 1000;
   const entry = rateMap.get(ip);
   if (!entry || now > entry.reset) {
     rateMap.set(ip, { count: 1, reset: now + window });
     return true;
   }
-  if (entry.count >= 3) return false;
+  if (entry.count >= 10) return false;
   entry.count++;
   return true;
 }
