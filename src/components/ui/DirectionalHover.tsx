@@ -80,9 +80,11 @@ export default function DirectionalHover({
   useEffect(() => {
     isTouchRef.current = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
+    // On desktop, let GSAP own the transform (overrides the CSS initial state)
     if (overlayRef.current && !isTouchRef.current) {
       gsap.set(overlayRef.current, { xPercent: -100, yPercent: 0 });
     }
+    // On touch: the CSS transform: translateX(-100%) keeps it hidden — no GSAP needed
   }, []);
 
   // Use onMouseMove instead of onMouseEnter. mousemove only fires on real
@@ -136,11 +138,12 @@ export default function DirectionalHover({
       {/* Main content */}
       {children}
 
-      {/* Directional overlay — hidden on touch devices */}
+      {/* Directional overlay — starts off-screen via CSS transform.
+          On desktop GSAP takes over the transform. On touch it stays hidden. */}
       <div
         ref={overlayRef}
-        className={`absolute inset-0 flex items-center justify-center touch:hidden ${overlayClassName}`}
-        style={{ display: isTouchRef.current ? "none" : undefined }}
+        className={`absolute inset-0 flex items-center justify-center ${overlayClassName}`}
+        style={{ transform: "translateX(-100%)" }}
       >
         {overlay}
       </div>
