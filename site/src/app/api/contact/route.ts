@@ -15,6 +15,7 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
+// Force rebuild — cache bust 2026-03-30
 const GHL_API_BASE = "https://services.leadconnectorhq.com";
 const GHL_API_VERSION = "2021-07-28";
 
