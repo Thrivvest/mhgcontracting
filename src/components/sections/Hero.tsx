@@ -25,10 +25,10 @@ export default function Hero() {
     const section = sectionRef.current;
 
     if (isMobile) {
-      // Mobile: skip heavy clip-path animation, just fade in fast
+      // Mobile: instant fade — no delay
       section.style.opacity = "0";
       requestAnimationFrame(() => {
-        section.style.transition = "opacity 0.5s ease-out";
+        section.style.transition = "opacity 0.3s ease-out";
         section.style.opacity = "1";
       });
       return;
@@ -41,8 +41,8 @@ export default function Hero() {
 
     gsap.to(section, {
       clipPath: "inset(0% 0 0 0)",
-      duration: 1,
-      delay: 1.7,
+      duration: 0.9,
+      delay: 0.1,
       ease: "power3.inOut",
     });
   }, []);
@@ -74,7 +74,7 @@ export default function Hero() {
 
       {/* Content — pt-20 clears the fixed header */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
-        <LineReveal trigger="load" delay={2.0} className="mb-6">
+        <LineReveal trigger="load" delay={0.4} className="mb-6">
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.05] tracking-tight">
             Building With Pride,
             <br />
@@ -82,7 +82,7 @@ export default function Hero() {
           </h1>
         </LineReveal>
 
-        <FadeIn y={20} delay={2.6}>
+        <FadeIn y={20} delay={0.8}>
           <p className="font-body text-lg md:text-xl text-white/70 max-w-2xl mx-auto mb-10 leading-relaxed">
             Family-owned residential contracting serving Central New Jersey.
             Kitchen renovations, bathroom remodels, basement finishing, and
@@ -90,7 +90,7 @@ export default function Hero() {
           </p>
         </FadeIn>
 
-        <FadeIn y={15} delay={2.9}>
+        <FadeIn y={15} delay={1.0}>
           <Link
             href="/contact"
             className="inline-flex items-center gap-2 bg-white text-[#1A1A2E] font-body font-semibold text-base px-10 py-4.5 rounded-lg hover:bg-white/90 hover:scale-[1.02] hover:shadow-xl transition-all duration-300"
