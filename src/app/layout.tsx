@@ -138,6 +138,57 @@ const jsonLd = {
         { "@type": "City", name: "Yardley", containedIn: "PA" },
       ],
       priceRange: "$$",
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: "5.0",
+        reviewCount: "15",
+        bestRating: "5",
+        worstRating: "1",
+      },
+      review: [
+        {
+          "@type": "Review",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          author: {
+            "@type": "Person",
+            name: "Sarah & Michael R.",
+          },
+          reviewBody:
+            "Shahzeb and his team completely transformed our kitchen. From the initial design meeting to the final walk-through, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding — our neighbors keep asking for their number.",
+        },
+        {
+          "@type": "Review",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          author: {
+            "@type": "Person",
+            name: "David & Jennifer L.",
+          },
+          reviewBody:
+            "We wanted to turn our unfinished basement into a space our family could actually use. MHG delivered beyond our expectations. The home theater is incredible, and the wet bar is now our favorite spot for entertaining. They treated our home like it was their own.",
+        },
+        {
+          "@type": "Review",
+          reviewRating: {
+            "@type": "Rating",
+            ratingValue: "5",
+            bestRating: "5",
+          },
+          author: {
+            "@type": "Person",
+            name: "The Patel Family",
+          },
+          reviewBody:
+            "Our whole-home renovation was a huge undertaking, but MHG made it manageable. Shahzeb was on-site almost every day, and the team kept us updated throughout the entire process. The finished result is stunning — it feels like a brand new home.",
+        },
+      ],
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -168,6 +219,7 @@ export default function RootLayout({
       className={`${urbanist.variable} ${inter.variable}`}
     >
       <head>
+        <link rel="alternate" hrefLang="en-us" href="https://mhgcon.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

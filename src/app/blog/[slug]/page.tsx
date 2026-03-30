@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import BlogPostContent from "./BlogPostContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -33,5 +34,20 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const { slug } = await params;
   const post = BLOG_POSTS.find((p) => p.slug === slug);
   if (!post) notFound();
-  return <BlogPostContent post={post} />;
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Blog", href: "/blog" },
+    { name: post.title, href: `/blog/${slug}` },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <BlogPostContent post={post} />
+    </>
+  );
 }

@@ -28,27 +28,41 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
   return (
     <main>
-      {/* JSON-LD Service Schema */}
+      {/* JSON-LD Service + FAQPage Schema */}
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            "@context": "https://schema.org",
-            "@type": "Service",
-            name: service.name,
-            description: service.description,
-            provider: {
-              "@type": "LocalBusiness",
-              "@id": "https://mhgcon.com/#localbusiness",
-              name: "MHG Contracting",
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "Service",
+              name: service.name,
+              description: service.description,
+              provider: {
+                "@type": "LocalBusiness",
+                "@id": "https://mhgcon.com/#localbusiness",
+                name: "MHG Contracting",
+              },
+              areaServed: [
+                { "@type": "City", name: "Hamilton", containedIn: "NJ" },
+                { "@type": "City", name: "Princeton", containedIn: "NJ" },
+                { "@type": "City", name: "West Windsor", containedIn: "NJ" },
+                { "@type": "City", name: "Lawrenceville", containedIn: "NJ" },
+                { "@type": "City", name: "Plainsboro", containedIn: "NJ" },
+                { "@type": "City", name: "Yardley", containedIn: "PA" },
+              ],
+              url: `https://mhgcon.com/services/${service.slug}`,
             },
-            areaServed: [
-              { "@type": "City", name: "Hamilton", containedIn: "NJ" },
-              { "@type": "City", name: "Princeton", containedIn: "NJ" },
-              { "@type": "City", name: "West Windsor", containedIn: "NJ" },
-            ],
-            url: `https://mhgcon.com/services/${service.slug}`,
-          }),
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              mainEntity: service.faqs.map((faq) => ({
+                "@type": "Question",
+                name: faq.question,
+                acceptedAnswer: { "@type": "Answer", text: faq.answer },
+              })),
+            },
+          ]),
         }}
       />
       {/* Hero */}

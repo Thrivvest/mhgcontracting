@@ -2,6 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { services, getServiceBySlug } from "@/lib/data";
 import ServiceDetail from "./ServiceDetail";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
 
 export function generateStaticParams() {
   return services.map((service) => ({
@@ -32,5 +33,20 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
   const { slug } = await params;
   const service = getServiceBySlug(slug);
   if (!service) notFound();
-  return <ServiceDetail service={service} />;
+
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: service.name, href: `/services/${slug}` },
+  ]);
+
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <ServiceDetail service={service} />
+    </>
+  );
 }

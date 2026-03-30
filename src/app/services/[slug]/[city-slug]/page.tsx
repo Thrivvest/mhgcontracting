@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAreaPage, getAllAreaParams } from "@/lib/area-pages-data";
 import AreaPageContent from "./AreaPageContent";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
 
 type Params = { slug: string; "city-slug": string };
 
@@ -106,11 +107,22 @@ export default async function AreaPage({
     },
   ];
 
+  const breadcrumbSchema = buildBreadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "Services", href: "/services" },
+    { name: page.serviceName, href: `/services/${slug}` },
+    { name: `${page.cityName}, ${page.state}`, href: `/services/${slug}/${citySlug}` },
+  ]);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
       <AreaPageContent page={page} />
     </>
