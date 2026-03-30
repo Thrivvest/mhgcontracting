@@ -8,8 +8,9 @@
  *   GHL_API_KEY          — Private integration key
  *   GHL_LOCATION_ID      — GHL location ID
  *   GHL_FIELD_*          — Custom field IDs (see .env.local)
- *   GHL_PIPELINE_ID      — Pipeline ID (optional, set after creating pipeline)
- *   GHL_STAGE_NEW_LEAD_ID — First stage ID (optional)
+ *   GHL_PIPELINE_ID        — Pipeline ID
+ *   GHL_STAGE_NEW_LEAD_ID  — First stage ID
+ *   N8N_WEBHOOK_NEW_LEAD   — n8n webhook URL for new lead email notification
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -190,6 +191,17 @@ export async function POST(req: NextRequest) {
       console.error("GHL opportunity creation failed:", err);
       // Non-fatal
     }
+  }
+
+  // ── Step 3: Fire n8n notification webhook (non-blocking) ───────────────────
+  const n8nWebhook = process.env.N8N_WEBHOOK_NEW_LEAD;
+  if (n8nWebhook) {
+    fetch(n8nWebhook, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ ...body, contactId }),
+    }).catch((err) => console.error("n8n webhook fire failed:", err));
+    // Intentionally not awaited — don't block the response
   }
 
   return NextResponse.json({ success: true, contactId });
