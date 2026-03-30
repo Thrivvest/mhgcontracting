@@ -61,7 +61,7 @@ export default function ProcessContent() {
       </section>
 
       {/* Intro */}
-      <section className="py-24 md:py-32 px-6 lg:px-10">
+      <section className="py-14 md:py-32 px-6 lg:px-10">
         <div className="max-w-[800px] mx-auto text-center">
           <LineReveal className="mb-6">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-text-primary leading-[1.1]">We Keep It Simple</h2>
@@ -82,7 +82,7 @@ export default function ProcessContent() {
           {processSteps.map((step, index) => {
             const slide = PROCESS_SLIDES[index];
             return (
-              <div key={step.id} className="relative w-full h-screen flex items-center mobile-slide">
+              <div key={step.id} className="relative w-full h-screen flex items-center mobile-slide overflow-hidden">
                 {/* Background image */}
                 <div className="absolute inset-0">
                   <img src={slide.image} alt={step.title} className="w-full h-full object-cover" loading="lazy" />
@@ -91,28 +91,28 @@ export default function ProcessContent() {
                 </div>
 
                 {/* Text content */}
-                <div className="relative z-10 px-8 md:px-14 lg:px-20 max-w-2xl">
-                  {/* Step number */}
-                  <span className="font-heading text-[6rem] md:text-[8rem] font-bold text-white/10 leading-none block mb-2">
+                <div className="relative z-10 px-6 md:px-14 lg:px-20 max-w-2xl">
+                  {/* Step number — decorative, smaller on mobile */}
+                  <span className="font-heading text-[3.5rem] md:text-[8rem] font-bold text-white/10 leading-none block mb-1 md:mb-2">
                     {step.number}
                   </span>
 
                   {/* Title */}
-                  <h2 className="font-heading text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-5">
+                  <h2 className="font-heading text-2xl md:text-5xl lg:text-6xl font-bold text-white leading-[1.1] mb-3 md:mb-5">
                     {step.title}
                   </h2>
 
-                  {/* Description */}
-                  <p className="font-body text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
+                  {/* Description — hidden on mobile to save space */}
+                  <p className="hidden md:block font-body text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
                     {step.description}
                   </p>
 
                   {/* Subsections */}
-                  <div className="space-y-5">
+                  <div className="space-y-3 md:space-y-5">
                     {slide.subsections.map((sub) => (
-                      <div key={sub.title} className="pl-5 border-l-2 border-white/30">
-                        <h4 className="font-heading text-base font-semibold text-white mb-1">{sub.title}</h4>
-                        <p className="font-body text-white/55 text-sm leading-relaxed">{sub.desc}</p>
+                      <div key={sub.title} className="pl-4 md:pl-5 border-l-2 border-white/30">
+                        <h4 className="font-heading text-sm md:text-base font-semibold text-white mb-0.5 md:mb-1">{sub.title}</h4>
+                        <p className="font-body text-white/55 text-xs md:text-sm leading-relaxed">{sub.desc}</p>
                       </div>
                     ))}
                   </div>
@@ -152,7 +152,7 @@ export default function ProcessContent() {
       </section>
 
       {/* CTA */}
-      <section className="py-24 md:py-32 px-6 lg:px-10" style={{ backgroundColor: "#2D3380" }}>
+      <section className="py-14 md:py-32 px-6 lg:px-10" style={{ backgroundColor: "#2D3380" }}>
         <div className="max-w-[900px] mx-auto text-center">
           <LineReveal className="mb-6">
             <h2 className="font-heading text-4xl md:text-5xl font-bold text-white leading-[1.1]">Start Your Project</h2>
