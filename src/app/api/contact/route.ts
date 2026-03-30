@@ -15,8 +15,10 @@
 
 import { NextRequest, NextResponse } from "next/server";
 
+const ROUTE_VERSION = "v4-upsert-2026-03-30";
 const GHL_API_BASE = "https://services.leadconnectorhq.com";
 const GHL_API_VERSION = "2021-07-28";
+const UPSERT_ENDPOINT = `${GHL_API_BASE}/contacts/upsert`;
 
 interface ContactPayload {
   first_name: string;
@@ -30,20 +32,28 @@ interface ContactPayload {
   source?: string;
 }
 
-// ── Rate limiting (per IP: 3 submissions per 10 min) ─────────────────────────
+// ── Rate limiting (per IP: 10 submissions per 5 min) ────────────────────────
 const rateMap = new Map<string, { count: number; reset: number }>();
 
 function checkRateLimit(ip: string): boolean {
   const now = Date.now();
-  const window = 10 * 60 * 1000;
+  const window = 5 * 60 * 1000;
   const entry = rateMap.get(ip);
   if (!entry || now > entry.reset) {
     rateMap.set(ip, { count: 1, reset: now + window });
     return true;
   }
-  if (entry.count >= 3) return false;
+  if (entry.count >= 10) return false;
   entry.count++;
   return true;
+}
+
+// ── Normalize phone to E.164 (required by GHL) ───────────────────────────────
+function normalizePhone(raw: string): string {
+  const digits = raw.replace(/\D/g, "");
+  if (digits.length === 10) return `+1${digits}`;
+  if (digits.length === 11 && digits.startsWith("1")) return `+${digits}`;
+  return `+${digits}`; // best effort for international
 }
 
 // ── Build tag list from project type ─────────────────────────────────────────
@@ -56,6 +66,8 @@ function buildTags(projectType?: string): string[] {
 }
 
 export async function POST(req: NextRequest) {
+  console.log(`[contact route ${ROUTE_VERSION}] incoming request`);
+
   // Rate limit
   const ip = req.headers.get("x-forwarded-for")?.split(",")[0].trim() ?? "unknown";
   if (!checkRateLimit(ip)) {
@@ -119,7 +131,7 @@ export async function POST(req: NextRequest) {
     firstName: first_name,
     lastName: last_name,
     email,
-    phone,
+    phone: normalizePhone(phone),
     locationId,
     source: sourceLabel,
     tags: buildTags(body.project_type),
@@ -132,29 +144,32 @@ export async function POST(req: NextRequest) {
     Version: GHL_API_VERSION,
   };
 
-  // ── Step 1: Create contact in GHL ───────────────────────────────────────────
+  // ── Step 1: Upsert contact in GHL (creates or updates if duplicate) ────────
   let contactId: string;
   try {
-    const res = await fetch(`${GHL_API_BASE}/contacts/`, {
+    console.log(`[${ROUTE_VERSION}] GHL upsert → ${UPSERT_ENDPOINT} for ${first_name} ${last_name} (phone: ${normalizePhone(phone)}, email: ${email})`);
+
+    const res = await fetch(UPSERT_ENDPOINT, {
       method: "POST",
       headers,
       body: JSON.stringify(ghlPayload),
     });
 
+    const data = await res.json().catch(() => null);
+
     if (!res.ok) {
-      const errText = await res.text();
-      console.error(`GHL contact API error ${res.status}:`, errText);
+      console.error(`[${ROUTE_VERSION}] GHL upsert error ${res.status}:`, JSON.stringify(data));
       return NextResponse.json(
         { error: "CRM submission failed. Please call us directly." },
         { status: 502 }
       );
     }
 
-    const data = await res.json();
     contactId = data?.contact?.id;
-    console.log(`GHL contact created: ${contactId} — ${first_name} ${last_name}`);
+    const isNew = data?.new === true;
+    console.log(`[${ROUTE_VERSION}] GHL contact ${isNew ? "created" : "updated"}: ${contactId} — ${first_name} ${last_name}`);
   } catch (err) {
-    console.error("GHL contact creation failed:", err);
+    console.error(`[${ROUTE_VERSION}] GHL contact upsert failed:`, err);
     return NextResponse.json({ error: "Server error." }, { status: 500 });
   }
 
@@ -181,15 +196,13 @@ export async function POST(req: NextRequest) {
 
       if (!oppRes.ok) {
         const errText = await oppRes.text();
-        console.error(`GHL opportunity API error ${oppRes.status}:`, errText);
-        // Non-fatal — contact was still created successfully
+        console.error(`[${ROUTE_VERSION}] GHL opportunity error ${oppRes.status}:`, errText);
       } else {
         const oppData = await oppRes.json();
-        console.log(`GHL opportunity created: ${oppData?.opportunity?.id} in pipeline "New Lead"`);
+        console.log(`[${ROUTE_VERSION}] GHL opportunity created: ${oppData?.opportunity?.id}`);
       }
     } catch (err) {
-      console.error("GHL opportunity creation failed:", err);
-      // Non-fatal
+      console.error(`[${ROUTE_VERSION}] GHL opportunity creation failed:`, err);
     }
   }
 
@@ -200,8 +213,7 @@ export async function POST(req: NextRequest) {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ ...body, contactId }),
-    }).catch((err) => console.error("n8n webhook fire failed:", err));
-    // Intentionally not awaited — don't block the response
+    }).catch((err) => console.error(`[${ROUTE_VERSION}] n8n webhook failed:`, err));
   }
 
   return NextResponse.json({ success: true, contactId });
