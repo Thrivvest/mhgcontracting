@@ -57,26 +57,27 @@ export default function ContactContent() {
   const onSubmit = async (data: ContactFormData) => {
     setIsSubmitting(true);
     try {
-      const webhookUrl = process.env.NEXT_PUBLIC_GHL_WEBHOOK_URL;
-      if (webhookUrl) {
-        await fetch(webhookUrl, {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            first_name: data.firstName,
-            last_name: data.lastName,
-            email: data.email,
-            phone: data.phone,
-            project_type: data.projectType,
-            project_address: data.projectAddress,
-            timeline: data.timeline,
-            message: data.message,
-            source: "mhgcon.com Contact Form",
-          }),
-        });
-      } else {
-        console.log("Contact form submission:", data);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          first_name: data.firstName,
+          last_name: data.lastName,
+          email: data.email,
+          phone: data.phone,
+          project_type: data.projectType,
+          project_address: data.projectAddress,
+          timeline: data.timeline,
+          message: data.message,
+          source: "mhgcon.com Contact Form",
+        }),
+      });
+
+      if (!res.ok) {
+        const { error } = await res.json().catch(() => ({}));
+        throw new Error(error ?? "Submission failed");
       }
+
       setIsSubmitted(true);
     } catch (error) {
       console.error("Form submission error:", error);
