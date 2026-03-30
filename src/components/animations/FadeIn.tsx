@@ -3,19 +3,12 @@
 /**
  * FadeIn — Scroll-triggered fade animation
  *
- * Elements fade in with an optional upward Y offset when they
- * enter the viewport. Clean and simple — the workhorse animation
- * used for most content blocks across the site.
- *
- * Specs from mhg-rules.md:
- * - opacity: 0 → 1
- * - Duration: 0.6s
- * - Easing: power2.out
- * - ScrollTrigger start: "top 85%"
- * - Optional Y offset (default 20px)
+ * On desktop: uses GSAP + ScrollTrigger for precise control.
+ * On mobile: uses lightweight IntersectionObserver + CSS transitions
+ * to avoid the performance cost of dozens of ScrollTrigger instances.
  */
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
   gsap,
   registerGSAP,
@@ -26,15 +19,10 @@ import {
 
 interface FadeInProps {
   children: React.ReactNode;
-  /** Vertical offset in pixels (default 20) */
   y?: number;
-  /** Delay before animation starts (seconds) */
   delay?: number;
-  /** Stagger between child elements (seconds) — use with data-fade-item on children */
   stagger?: number;
-  /** Duration override */
   duration?: number;
-  /** Additional CSS classes */
   className?: string;
 }
 
@@ -48,9 +36,38 @@ export default function FadeIn({
 }: FadeInProps) {
   const ref = useRef<HTMLDivElement>(null);
   const ctxRef = useRef<gsap.Context | null>(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
+  // Detect mobile once on mount
   useEffect(() => {
     if (typeof window === "undefined") return;
+    const touch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    setIsMobile(touch);
+  }, []);
+
+  // Mobile: lightweight IntersectionObserver
+  useEffect(() => {
+    if (!isMobile || !ref.current) return;
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.1 }
+    );
+
+    observer.observe(ref.current);
+    return () => observer.disconnect();
+  }, [isMobile]);
+
+  // Desktop: GSAP ScrollTrigger
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (isMobile) return;
     if (!ref.current) return;
 
     registerGSAP();
@@ -58,7 +75,6 @@ export default function FadeIn({
     const el = ref.current;
 
     ctxRef.current = gsap.context(() => {
-      // Determine targets: if stagger is set, animate children individually
       let finalTargets: gsap.DOMTarget = el;
 
       if (stagger > 0) {
@@ -91,7 +107,25 @@ export default function FadeIn({
         ctxRef.current = null;
       }
     };
-  }, [y, delay, stagger, duration]);
+  }, [y, delay, stagger, duration, isMobile]);
+
+  // Mobile render: CSS transition
+  if (isMobile) {
+    return (
+      <div
+        ref={ref}
+        className={className}
+        style={{
+          opacity: isVisible ? 1 : 0,
+          transform: isVisible ? "translateY(0)" : `translateY(${y}px)`,
+          transition: `opacity ${duration}s ease-out ${delay}s, transform ${duration}s ease-out ${delay}s`,
+          willChange: "opacity, transform",
+        }}
+      >
+        {children}
+      </div>
+    );
+  }
 
   return (
     <div ref={ref} className={className}>

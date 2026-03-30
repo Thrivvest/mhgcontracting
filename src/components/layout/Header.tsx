@@ -128,9 +128,11 @@ function MHGLogo({ scrolled }: MHGLogoProps) {
   return (
     <div className="flex items-center">
       <img
-        src="/images/logo/mhg-logo.png"
+        src="/images/logo/mhg-logo-web.png"
         alt="MHG Contracting"
-        className={`h-14 w-auto transition-all duration-300 ${
+        width={140}
+        height={56}
+        className={`h-10 sm:h-14 w-auto transition-all duration-300 ${
           scrolled ? "" : "brightness-0 invert"
         }`}
       />

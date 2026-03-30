@@ -28,7 +28,7 @@ export default function Footer() {
           {/* Logo (white version) */}
           <Link href="/" className="flex items-center group" aria-label="MHG Contracting Home">
             <img
-              src="/images/logo/mhg-logo.png"
+              src="/images/logo/mhg-logo-web.png"
               alt="MHG Contracting"
               className="h-10 w-auto brightness-0 invert"
             />

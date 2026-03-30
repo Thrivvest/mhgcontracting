@@ -86,7 +86,7 @@ export default function ContactContent() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/projects/fullreno-01-1.jpg" alt="Contact MHG Contracting" className="w-full h-full object-cover object-center" />
+          <img src="/images/projects/fullreno-01-1.jpg" alt="Contact MHG Contracting" className="w-full h-full object-cover object-center" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">

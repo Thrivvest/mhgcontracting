@@ -47,12 +47,24 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
     registerGSAP();
 
     // Create Lenis instance
+    // Detect mobile/touch device
+    const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    // Skip Lenis entirely on mobile — native scroll is faster and more responsive
+    if (isTouchDevice) {
+      // Still register GSAP so ScrollTrigger works with native scroll
+      ScrollTrigger.config({ ignoreMobileResize: true });
+      return;
+    }
+
     const lenis = new Lenis({
       duration: 1.1,
       easing: LENIS_EASING,
       orientation: "vertical",
-      touchMultiplier: 1.5,
+      touchMultiplier: 1,
       smoothWheel: true,
+      // @ts-expect-error -- smoothTouch exists at runtime in Lenis but missing from type defs
+      smoothTouch: false,
     });
 
     lenisRef.current = lenis;

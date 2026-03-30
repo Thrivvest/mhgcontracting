@@ -43,7 +43,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
       {/* Hero */}
       <section className="relative py-32 md:py-44 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/projects/fullreno-02.jpg" alt={post.title} className="w-full h-full object-cover" />
+          <img src="/images/projects/fullreno-02.jpg" alt={post.title} className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] via-[#1A1A2E]/70 to-[#1A1A2E]/50" />
         </div>
         <div className="relative z-10 max-w-[800px] mx-auto">
@@ -125,7 +125,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
                 <Link href={`/blog/${rp.slug}`} className="block group">
                   <article className="bg-white rounded-lg overflow-hidden border border-border hover:shadow-md transition-shadow duration-300">
                     <div className="aspect-[16/10] overflow-hidden">
-                      <img src={`/images/projects/${["kitchen-02", "bath-02", "fullreno-01"][i % 3]}.jpg`} alt={rp.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <img src={`/images/projects/${["kitchen-02", "bath-02", "fullreno-01"][i % 3]}.jpg`} alt={rp.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                     </div>
                     <div className="p-6">
                       <time className="font-body text-xs text-text-light mb-2 block">{rp.date}</time>

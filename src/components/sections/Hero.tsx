@@ -20,14 +20,25 @@ export default function Hero() {
 
   useEffect(() => {
     if (typeof window === "undefined" || !sectionRef.current) return;
-    registerGSAP();
 
+    const isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
     const section = sectionRef.current;
 
-    // Set initial clipped state
+    if (isMobile) {
+      // Mobile: skip heavy clip-path animation, just fade in fast
+      section.style.opacity = "0";
+      requestAnimationFrame(() => {
+        section.style.transition = "opacity 0.5s ease-out";
+        section.style.opacity = "1";
+      });
+      return;
+    }
+
+    registerGSAP();
+
+    // Desktop: full clip-path reveal
     gsap.set(section, { clipPath: "inset(100% 0 0 0)" });
 
-    // Reveal animation after splash delay
     gsap.to(section, {
       clipPath: "inset(0% 0 0 0)",
       duration: 1,
@@ -53,6 +64,8 @@ export default function Hero() {
           src="/images/hero-bg.jpg"
           alt=""
           className="w-full h-full object-cover"
+          loading="eager"
+          fetchPriority="high"
         />
       </div>
 

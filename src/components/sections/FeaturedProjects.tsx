@@ -80,6 +80,7 @@ export default function FeaturedProjects() {
                       src={project.imagePath}
                       alt={project.title}
                       className="absolute inset-0 w-full h-full object-cover"
+                      loading="lazy"
                     />
                     {/* Bottom gradient overlay for text readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

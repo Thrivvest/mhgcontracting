@@ -54,7 +54,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} className="w-full h-full object-cover" />
+          <img src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -85,7 +85,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             </div>
             <FadeIn delay={0.2}>
               <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} className="w-full h-full object-cover" />
+                <img src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} className="w-full h-full object-cover" loading="lazy" />
               </div>
             </FadeIn>
           </div>
@@ -148,7 +148,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                 <FadeIn key={project.id} delay={i * 0.1}>
                   <Link href={`/portfolio/${project.slug}`} className="block group">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
-                      <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+                      <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       <span className="absolute bottom-5 left-5 font-body text-white/70 text-xs">{project.location}</span>
                     </div>

@@ -74,13 +74,13 @@ export default function DirectionalHover({
 }: DirectionalHoverProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
-  // Tracks whether the mouse is genuinely inside the element.
-  // Prevents scroll from re-triggering enter (Lenis moves elements under the
-  // cursor, which fires onMouseEnter/onMouseLeave on every scroll tick).
   const isInsideRef = useRef(false);
+  const isTouchRef = useRef(false);
 
   useEffect(() => {
-    if (overlayRef.current) {
+    isTouchRef.current = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+
+    if (overlayRef.current && !isTouchRef.current) {
       gsap.set(overlayRef.current, { xPercent: -100, yPercent: 0 });
     }
   }, []);
@@ -88,8 +88,9 @@ export default function DirectionalHover({
   // Use onMouseMove instead of onMouseEnter. mousemove only fires on real
   // pointer movement — scroll never triggers it, so no false positives.
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (isTouchRef.current) return; // Skip on touch devices
     if (!containerRef.current || !overlayRef.current) return;
-    if (isInsideRef.current) return; // Already entered — don't re-trigger
+    if (isInsideRef.current) return;
 
     isInsideRef.current = true;
     const direction = getDirection(e, containerRef.current);
@@ -109,6 +110,7 @@ export default function DirectionalHover({
   }, []);
 
   const handleMouseLeave = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    if (isTouchRef.current) return;
     if (!containerRef.current || !overlayRef.current) return;
 
     isInsideRef.current = false;
@@ -134,10 +136,11 @@ export default function DirectionalHover({
       {/* Main content */}
       {children}
 
-      {/* Directional overlay */}
+      {/* Directional overlay — hidden on touch devices */}
       <div
         ref={overlayRef}
-        className={`absolute inset-0 flex items-center justify-center ${overlayClassName}`}
+        className={`absolute inset-0 flex items-center justify-center touch:hidden ${overlayClassName}`}
+        style={{ display: isTouchRef.current ? "none" : undefined }}
       >
         {overlay}
       </div>

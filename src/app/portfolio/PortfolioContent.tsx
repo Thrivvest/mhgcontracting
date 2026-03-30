@@ -30,7 +30,7 @@ export default function PortfolioContent() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/projects/gallery/kitchen-02/1.jpg" alt="Our portfolio" className="w-full h-full object-cover" />
+          <img src="/images/projects/gallery/kitchen-02/1.jpg" alt="Our portfolio" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -88,7 +88,7 @@ export default function PortfolioContent() {
                     }
                   >
                     <div className="w-full h-full relative">
-                      <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" />
+                      <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <span className="block font-body text-white/50 text-xs uppercase tracking-[0.12em] mb-1">
