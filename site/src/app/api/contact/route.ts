@@ -140,37 +140,32 @@ export async function POST(req: NextRequest) {
     Version: GHL_API_VERSION,
   };
 
-  // ── Step 1: Create contact in GHL ───────────────────────────────────────────
+  // ── Step 1: Upsert contact in GHL (creates or updates if duplicate) ────────
   let contactId: string;
   try {
-    const res = await fetch(`${GHL_API_BASE}/contacts/`, {
+    console.log(`GHL upsert request for ${first_name} ${last_name} — phone: ${normalizePhone(phone)}, email: ${email}`);
+
+    const res = await fetch(`${GHL_API_BASE}/contacts/upsert`, {
       method: "POST",
       headers,
       body: JSON.stringify(ghlPayload),
     });
 
-    if (!res.ok) {
-      const errBody = await res.json().catch(() => null);
-      const errMsg = errBody?.message ?? "";
+    const data = await res.json().catch(() => null);
 
-      // GHL returns 400 when duplicate contacts are disabled — extract the existing contactId
-      if (res.status === 400 && errMsg.toLowerCase().includes("duplicate") && errBody?.meta?.contactId) {
-        contactId = errBody.meta.contactId;
-        console.log(`GHL duplicate contact detected — reusing existing: ${contactId} — ${first_name} ${last_name}`);
-      } else {
-        console.error(`GHL contact API error ${res.status}:`, JSON.stringify(errBody));
-        return NextResponse.json(
-          { error: "CRM submission failed. Please call us directly." },
-          { status: 502 }
-        );
-      }
-    } else {
-      const data = await res.json();
-      contactId = data?.contact?.id;
-      console.log(`GHL contact created: ${contactId} — ${first_name} ${last_name}`);
+    if (!res.ok) {
+      console.error(`GHL upsert API error ${res.status}:`, JSON.stringify(data));
+      return NextResponse.json(
+        { error: "CRM submission failed. Please call us directly." },
+        { status: 502 }
+      );
     }
+
+    contactId = data?.contact?.id;
+    const isNew = data?.new === true;
+    console.log(`GHL contact ${isNew ? "created" : "updated"}: ${contactId} — ${first_name} ${last_name}`);
   } catch (err) {
-    console.error("GHL contact creation failed:", err);
+    console.error("GHL contact upsert failed:", err);
     return NextResponse.json({ error: "Server error." }, { status: 500 });
   }
 
