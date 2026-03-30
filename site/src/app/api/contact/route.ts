@@ -150,17 +150,25 @@ export async function POST(req: NextRequest) {
     });
 
     if (!res.ok) {
-      const errText = await res.text();
-      console.error(`GHL contact API error ${res.status}:`, errText);
-      return NextResponse.json(
-        { error: "CRM submission failed. Please call us directly." },
-        { status: 502 }
-      );
-    }
+      const errBody = await res.json().catch(() => null);
+      const errMsg = errBody?.message ?? "";
 
-    const data = await res.json();
-    contactId = data?.contact?.id;
-    console.log(`GHL contact created: ${contactId} — ${first_name} ${last_name}`);
+      // GHL returns 400 when duplicate contacts are disabled — extract the existing contactId
+      if (res.status === 400 && errMsg.toLowerCase().includes("duplicate") && errBody?.meta?.contactId) {
+        contactId = errBody.meta.contactId;
+        console.log(`GHL duplicate contact detected — reusing existing: ${contactId} — ${first_name} ${last_name}`);
+      } else {
+        console.error(`GHL contact API error ${res.status}:`, JSON.stringify(errBody));
+        return NextResponse.json(
+          { error: "CRM submission failed. Please call us directly." },
+          { status: 502 }
+        );
+      }
+    } else {
+      const data = await res.json();
+      contactId = data?.contact?.id;
+      console.log(`GHL contact created: ${contactId} — ${first_name} ${last_name}`);
+    }
   } catch (err) {
     console.error("GHL contact creation failed:", err);
     return NextResponse.json({ error: "Server error." }, { status: 500 });
