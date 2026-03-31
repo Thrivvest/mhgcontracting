@@ -52,10 +52,10 @@ export default function ProcessContent() {
         <div className="relative z-10 max-w-[1400px] mx-auto">
           <FadeIn><span className="font-body text-xs font-medium text-white/40 uppercase tracking-[0.15em] mb-4 block">How We Work</span></FadeIn>
           <LineReveal trigger="load" delay={0.3}>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">Our Process</h1>
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">Our Renovation Process — From Free Estimate to Final Walkthrough</h1>
           </LineReveal>
           <FadeIn delay={0.6}>
-            <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">From Vision to Reality</p>
+            <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">Free consultation, collaborative design, expert build, and a thorough final walkthrough — four clear steps with no surprises for your kitchen, bathroom, or home renovation in Central NJ.</p>
           </FadeIn>
         </div>
       </section>

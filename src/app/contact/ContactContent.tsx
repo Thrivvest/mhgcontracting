@@ -109,9 +109,14 @@ export default function ContactContent() {
           </FadeIn>
           <LineReveal trigger="load" delay={0.3}>
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">
-              Let&apos;s Talk About Your Project
+              Get a Free Renovation Estimate — Hamilton, NJ
             </h1>
           </LineReveal>
+          <FadeIn delay={0.6}>
+            <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">
+              Contact MHG Contracting for a free estimate on your kitchen renovation, bathroom remodel, basement finishing, home addition, or new construction project in Central New Jersey. Call (609) 712-2474 or fill out the form below.
+            </p>
+          </FadeIn>
         </div>
       </section>
 
