@@ -10,7 +10,10 @@ import ServiceAreasContent from "./ServiceAreasContent";
 import { CITIES, SERVICE_SLUGS, AREA_PAGES } from "@/lib/area-pages-data";
 
 export const metadata: Metadata = {
-  title: "Service Areas | MHG Contracting",
+  title: {
+    absolute:
+      "Service Areas | Princeton, Hamilton, West Windsor & Central NJ | MHG Contracting",
+  },
   description:
     "MHG Contracting serves Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley PA with expert kitchen and bathroom renovations, basement finishing, home additions, full-home renovations, and new construction.",
   alternates: {

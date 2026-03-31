@@ -2,7 +2,10 @@ import type { Metadata } from "next";
 import ContactContent from "./ContactContent";
 
 export const metadata: Metadata = {
-  title: "Contact Us | Get a Free Estimate — MHG Contracting",
+  title: {
+    absolute:
+      "Get a Free Estimate | MHG Contracting — (609) 712-2474 | Hamilton, NJ",
+  },
   description:
     "Request your free estimate from MHG Contracting. Call (609) 712-2474 or fill out our form. We serve Hamilton, Princeton, West Windsor, and Central NJ.",
   alternates: { canonical: "https://mhgcon.com/contact" },

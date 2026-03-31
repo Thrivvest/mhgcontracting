@@ -27,7 +27,7 @@ export function generateMetadata({
     if (!page) return { title: "Page Not Found" };
 
     return {
-      title: page.title,
+      title: { absolute: page.title },
       description: page.metaDescription,
       alternates: {
         canonical: `https://mhgcon.com/services/${slug}/${citySlug}`,

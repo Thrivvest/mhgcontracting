@@ -3,7 +3,10 @@ import PortfolioContent from "./PortfolioContent";
 import { portfolioProjects } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Portfolio | Our Work — MHG Contracting",
+  title: {
+    absolute:
+      "Renovation Portfolio | Kitchen, Bath & Basement Projects | MHG Contracting",
+  },
   description:
     "Browse our portfolio of kitchen renovations, bathroom remodels, basement finishing, full home renovations, additions, and new construction projects across Central NJ.",
   alternates: { canonical: "https://mhgcon.com/portfolio" },

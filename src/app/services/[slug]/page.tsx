@@ -16,7 +16,9 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     if (!service) return { title: "Service Not Found" };
 
     return {
-      title: `${service.name} | MHG Contracting`,
+      title: {
+        absolute: `${service.name} in Central NJ | MHG Contracting`,
+      },
       description: service.description,
       alternates: { canonical: `https://mhgcon.com/services/${slug}` },
       openGraph: {

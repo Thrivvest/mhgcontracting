@@ -3,7 +3,9 @@ import BlogContent from "./BlogContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
 
 export const metadata: Metadata = {
-  title: "Blog | Home Renovation Tips & Insights — MHG Contracting",
+  title: {
+    absolute: "Home Renovation Tips & Expert Advice | MHG Contracting Blog",
+  },
   description:
     "Read expert tips, renovation advice, and project insights from MHG Contracting. Learn about kitchen renovations, bathroom remodels, and home improvement in Central NJ.",
   alternates: { canonical: "https://mhgcon.com/blog" },

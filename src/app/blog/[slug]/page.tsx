@@ -16,7 +16,9 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     if (!post) return { title: "Post Not Found" };
 
     return {
-      title: `${post.title} | MHG Contracting Blog`,
+      title: {
+        absolute: `${post.title} | MHG Contracting`,
+      },
       description: post.excerpt,
       alternates: { canonical: `https://mhgcon.com/blog/${slug}` },
       openGraph: {

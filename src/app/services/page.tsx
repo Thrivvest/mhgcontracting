@@ -3,7 +3,10 @@ import ServicesContent from "./ServicesContent";
 import { services } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Services | Kitchen, Bathroom, Basement & More — MHG Contracting",
+  title: {
+    absolute:
+      "Kitchen Renovations, Bathroom Remodels & More | MHG Contracting",
+  },
   description:
     "Explore our residential contracting services: kitchen renovations, bathroom remodels, basement finishing, full home renovations, additions, and new construction in Central NJ.",
   alternates: { canonical: "https://mhgcon.com/services" },

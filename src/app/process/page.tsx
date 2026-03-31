@@ -3,7 +3,10 @@ import ProcessContent from "./ProcessContent";
 import { processSteps } from "@/lib/data";
 
 export const metadata: Metadata = {
-  title: "Our Process | How MHG Contracting Works",
+  title: {
+    absolute:
+      "Our Renovation Process | Estimate to Final Walkthrough | MHG Contracting",
+  },
   description:
     "From free consultation to final walkthrough — learn how MHG Contracting guides you through every step of your renovation. Clear communication, quality craftsmanship, no surprises.",
   alternates: { canonical: "https://mhgcon.com/process" },

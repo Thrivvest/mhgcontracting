@@ -18,7 +18,9 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     if (!project) return { title: "Project Not Found" };
 
     return {
-      title: `${project.title} | MHG Contracting Portfolio`,
+      title: {
+        absolute: `${project.title} | MHG Contracting Portfolio`,
+      },
       description: project.description,
       alternates: { canonical: `https://mhgcon.com/portfolio/${slug}` },
       openGraph: {
