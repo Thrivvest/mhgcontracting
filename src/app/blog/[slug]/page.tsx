@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import BlogPostContent from "./BlogPostContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import SeoPrerender from "@/components/seo/SeoPrerender";
+import { generateBlogSeoContent } from "@/lib/seo-content-generator";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -43,12 +45,17 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     { name: post.title, href: `/blog/${slug}` },
   ]);
 
+  const seoHtml = generateBlogSeoContent(post);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <SeoPrerender>
+        <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
+      </SeoPrerender>
       <BlogPostContent post={post} />
     </>
   );

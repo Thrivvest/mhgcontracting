@@ -10,6 +10,8 @@ import type { Metadata } from "next";
 import { getAreaPage, getAllAreaParams } from "@/lib/area-pages-data";
 import AreaPageContent from "./AreaPageContent";
 import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import SeoPrerender from "@/components/seo/SeoPrerender";
+import { generateAreaSeoContent } from "@/lib/seo-content-generator";
 
 type Params = { slug: string; "city-slug": string };
 
@@ -114,6 +116,8 @@ export default async function AreaPage({
     { name: `${page.cityName}, ${page.state}`, href: `/services/${slug}/${citySlug}` },
   ]);
 
+  const seoHtml = generateAreaSeoContent(page);
+
   return (
     <>
       <script
@@ -124,6 +128,9 @@ export default async function AreaPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <SeoPrerender>
+        <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
+      </SeoPrerender>
       <AreaPageContent page={page} />
     </>
   );

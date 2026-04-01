@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { services, getServiceBySlug } from "@/lib/data";
 import ServiceDetail from "./ServiceDetail";
 import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import SeoPrerender from "@/components/seo/SeoPrerender";
+import { generateServiceSeoContent } from "@/lib/seo-content-generator";
 
 export function generateStaticParams() {
   return services.map((service) => ({
@@ -42,12 +44,17 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     { name: service.name, href: `/services/${slug}` },
   ]);
 
+  const seoHtml = generateServiceSeoContent(service);
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <SeoPrerender>
+        <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
+      </SeoPrerender>
       <ServiceDetail service={service} />
     </>
   );

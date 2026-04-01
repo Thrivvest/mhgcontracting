@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import { portfolioProjects, getProjectBySlug } from "@/lib/data";
 import ProjectDetail from "./ProjectDetail";
 import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import SeoPrerender from "@/components/seo/SeoPrerender";
+import { generatePortfolioSeoContent } from "@/lib/seo-content-generator";
 
 // Generate static routes for all projects
 export function generateStaticParams() {
@@ -62,6 +64,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     { name: project.title, href: `/portfolio/${slug}` },
   ]);
 
+  const seoHtml = generatePortfolioSeoContent(project);
+
   return (
     <>
       <script
@@ -72,6 +76,9 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      <SeoPrerender>
+        <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
+      </SeoPrerender>
       <ProjectDetail project={project} />
     </>
   );

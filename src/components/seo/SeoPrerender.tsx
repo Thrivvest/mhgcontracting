@@ -1,11 +1,12 @@
 /**
  * SeoPrerender — Hidden pre-rendered content for search engine crawlers
  *
- * Renders keyword-rich content off-screen so Google's crawler sees rich,
- * unique HTML for each page. Also provides a <noscript> fallback with
- * the same content styled for readability.
+ * Renders keyword-rich content using the industry-standard sr-only
+ * (screen-reader only) pattern. This approach uses clip-rect, width/height 1px,
+ * and overflow hidden — recognized by Google as accessible content rather than
+ * hidden SEO spam. Content is in the static HTML at build time.
  *
- * This is a server component — content is in the static HTML at build time.
+ * Also provides a <noscript> fallback with the same content styled for readability.
  */
 
 interface SeoPrerenderProps {
@@ -19,8 +20,14 @@ export default function SeoPrerender({ children }: SeoPrerenderProps) {
         id="seo-prerender"
         style={{
           position: "absolute",
-          left: "-9999px",
+          width: "1px",
+          height: "1px",
+          padding: 0,
+          margin: "-1px",
           overflow: "hidden",
+          clip: "rect(0, 0, 0, 0)",
+          whiteSpace: "nowrap",
+          borderWidth: 0,
         }}
       >
         {children}
