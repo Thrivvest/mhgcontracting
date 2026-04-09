@@ -45,6 +45,16 @@ export const metadata: Metadata = {
   authors: [{ name: "MHG Contracting" }],
   creator: "MHG Contracting",
   metadataBase: new URL("https://mhgcon.com"),
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "48x48", type: "image/x-icon" },
+      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: "/favicon.ico",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -100,7 +110,7 @@ const jsonLd = {
       name: "MHG Contracting",
       legalName: "Malik Holding Group LLC DBA MHG Contracting",
       url: "https://mhgcon.com",
-      logo: "https://mhgcon.com/images/logo.png",
+      logo: "https://mhgcon.com/images/logo/mhg-logo-web.png",
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+1-609-712-2474",
@@ -119,7 +129,7 @@ const jsonLd = {
       "@type": "LocalBusiness",
       "@id": "https://mhgcon.com/#localbusiness",
       name: "MHG Contracting",
-      image: "https://mhgcon.com/images/logo.png",
+      image: "https://mhgcon.com/images/og-image.jpg",
       telephone: "(609) 712-2474",
       email: "shahzeb@mhgcon.com",
       url: "https://mhgcon.com",
@@ -158,7 +168,7 @@ const jsonLd = {
             name: "Sarah & Michael R.",
           },
           reviewBody:
-            "Shahzeb and his team completely transformed our kitchen. From the initial design meeting to the final walk-through, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding — our neighbors keep asking for their number.",
+            "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding — our neighbors keep asking for their number.",
         },
         {
           "@type": "Review",
@@ -186,7 +196,7 @@ const jsonLd = {
             name: "The Patel Family",
           },
           reviewBody:
-            "Our whole-home renovation was a huge undertaking, but MHG made it manageable. Shahzeb was on-site almost every day, and the team kept us updated throughout the entire process. The finished result is stunning — it feels like a brand new home.",
+            "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day and kept us updated throughout the entire process. The finished result is stunning — it feels like a brand new home.",
         },
       ],
       openingHoursSpecification: {
