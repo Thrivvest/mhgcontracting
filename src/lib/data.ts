@@ -83,17 +83,17 @@ export const portfolioProjects: PortfolioProject[] = [
   },
   {
     id: "project-2",
-    title: "Transitional Chef's Kitchen",
-    slug: "transitional-chefs-kitchen",
+    title: "Traditional Chef's Kitchen",
+    slug: "traditional-chefs-kitchen",
     type: "kitchen",
     description:
-      "This chef-inspired kitchen features professional-grade appliances, a custom range hood, and a waterfall edge quartz island. Dark navy lower cabinets contrast beautifully with white uppers, creating a sophisticated two-tone design.",
-    shortDescription: "Professional-grade appliances with a two-tone cabinet design.",
+      "This chef-inspired kitchen features professional-grade appliances, a custom range hood, and a waterfall edge quartz island. Warm wood beams and a spacious dining area make this the heart of the home.",
+    shortDescription: "Professional-grade appliances with warm wood beams and a waterfall island.",
     location: "West Windsor, NJ",
     year: "2024",
     imagePath: "/images/projects/kitchen-02.jpg",
     galleryImages: Array.from({ length: 8 }, (_, i) => `/images/projects/gallery/kitchen-02/${i + 1}.jpg`),
-    featured: false,
+    featured: true,
     gridFeatured: true,
   },
   {
@@ -466,7 +466,7 @@ export const testimonials: Testimonial[] = [
     location: "Princeton, NJ",
     projectType: "kitchen",
     quote:
-      "Shahzeb and his team completely transformed our kitchen. From the initial design meeting to the final walk-through, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding — our neighbors keep asking for their number.",
+      "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding — our neighbors keep asking for their number.",
     rating: 5,
   },
   {
@@ -484,7 +484,7 @@ export const testimonials: Testimonial[] = [
     location: "West Windsor, NJ",
     projectType: "full-renovation",
     quote:
-      "Our whole-home renovation was a huge undertaking, but MHG made it manageable. Shahzeb was on-site almost every day, and the team kept us updated throughout the entire process. The finished result is stunning — it feels like a brand new home.",
+      "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day, and they kept us updated throughout the entire process. The finished result is stunning — it feels like a brand new home.",
     rating: 5,
   },
 ];
@@ -496,22 +496,36 @@ export const teamMembers: TeamMember[] = [
     id: "team-1",
     name: "Shahzeb Malik",
     title: "Co-Owner & Founder",
-    bio: "Shahzeb founded MHG Contracting with a simple mission: deliver quality craftsmanship with a personal touch. With a hands-on approach and deep knowledge of residential construction, he oversees every project to ensure it meets MHG's standards. Shahzeb believes in treating every client's home with the same care he'd give his own family's.",
+    bio: "With a hands-on approach and deep knowledge of residential construction, Shahzeb oversees every project to ensure it meets MHG's standards. His commitment to quality craftsmanship and personal service is at the core of everything we build.",
     imagePath: "/images/team/shahzeb.jpg",
   },
   {
     id: "team-2",
-    name: "Project Manager",
-    title: "Project Manager",
-    bio: "Our dedicated project manager ensures every renovation stays on schedule and on budget, coordinating between our skilled tradespeople and clients to deliver a seamless renovation experience.",
-    imagePath: "/images/team/pm-placeholder.jpg",
+    name: "Shahmi Malik",
+    title: "Co-Owner & Founder",
+    bio: "Shahmi brings a sharp eye for design and an unwavering focus on client satisfaction to every project. Together with Shahzeb, he ensures that MHG's family-owned values are present in every home we touch.",
+    imagePath: "/images/team/shahmi.jpg",
   },
   {
     id: "team-3",
-    name: "Lead Carpenter",
-    title: "Lead Carpenter",
-    bio: "With years of experience in fine carpentry and custom millwork, our lead carpenter brings precision and artistry to every project — from custom cabinetry to intricate trim details.",
-    imagePath: "/images/team/carpenter-placeholder.jpg",
+    name: "Bear",
+    title: "Team Lead",
+    bio: "A trusted member of the MHG crew, Bear leads job site operations with precision and pride. Clients know they're in good hands when Bear is on-site.",
+    imagePath: "/images/team/bear.jpg",
+  },
+  {
+    id: "team-4",
+    name: "Pedro",
+    title: "Team Lead",
+    bio: "Pedro's attention to detail and years of hands-on experience make him an invaluable part of every build. He takes ownership of each project from start to finish.",
+    imagePath: "/images/team/pedro.jpg",
+  },
+  {
+    id: "team-5",
+    name: "Juan",
+    title: "Team Lead",
+    bio: "Juan brings skill and dedication to every job site. His craftsmanship speaks for itself — and his clients know they can count on him to get it done right.",
+    imagePath: "/images/team/juan.jpg",
   },
 ];
 
@@ -530,14 +544,14 @@ export const processSteps: ProcessStep[] = [
     number: "01",
     title: "Free Consultation",
     description:
-      "We visit your home, listen to your ideas, assess the space, and discuss your budget and timeline. No pressure, no obligations — just an honest conversation about what's possible.",
+      "It starts with a phone call to hear about your project, followed by an in-person visit to assess your space and provide an honest estimate. No pressure, no obligations — just a real conversation about what's possible.",
   },
   {
     id: "step-2",
     number: "02",
     title: "Design & Planning",
     description:
-      "We develop a detailed scope of work, select materials together, and create a realistic project timeline. You'll know exactly what to expect before any work begins.",
+      "We invest 2-3 weeks in detailed design work — drawings, renderings, and material selections — so you can visualize the finished result before we break ground. For larger projects, you receive a week-by-week schedule so there are never any surprises.",
   },
   {
     id: "step-3",
@@ -545,13 +559,6 @@ export const processSteps: ProcessStep[] = [
     title: "Build & Craft",
     description:
       "Our skilled team brings the plan to life. We keep you informed with regular updates and maintain a clean, respectful worksite throughout the entire build process.",
-  },
-  {
-    id: "step-4",
-    number: "04",
-    title: "Final Walkthrough",
-    description:
-      "We walk through the completed project together, address any final details, and make sure you're completely satisfied. Your home is left spotless and ready to enjoy.",
   },
 ];
 

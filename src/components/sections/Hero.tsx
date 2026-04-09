@@ -61,7 +61,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/images/hero-bg.jpg"
+          src="/images/projects/kitchen-02.jpg"
           alt=""
           className="w-full h-full object-cover"
           loading="eager"

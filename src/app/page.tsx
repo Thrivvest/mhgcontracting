@@ -28,7 +28,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MHG Contracting — Hamilton, NJ",
+        alt: "MHG Contracting, Hamilton, NJ",
       },
     ],
   },
@@ -86,7 +86,7 @@ export default function HomePage() {
         <h1>MHG Contracting — Kitchen, Bath &amp; Home Renovations in Hamilton, NJ</h1>
 
         <h2>Family-Owned Residential Contracting in Central New Jersey</h2>
-        <p>MHG Contracting is a family-owned and operated residential contracting company based in Hamilton, New Jersey. Founded by Shahzeb Malik, MHG Contracting has built a reputation for exceptional craftsmanship, transparent communication, and a personal approach to every home renovation project. We specialize in kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction throughout Central New Jersey and Bucks County, Pennsylvania.</p>
+        <p>MHG Contracting is a family-owned and operated residential contracting company based in Hamilton, New Jersey. MHG Contracting has built a reputation for exceptional craftsmanship, transparent communication, and a personal approach to every home renovation project. We specialize in kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction throughout Central New Jersey and Bucks County, Pennsylvania.</p>
 
         <h2>Kitchen Renovations in Central NJ</h2>
         <p>Our kitchen renovations transform outdated spaces into modern, functional kitchens that become the heart of your home. From custom cabinetry and quartz countertops to open-concept layouts and professional-grade appliances, MHG Contracting handles every detail of your kitchen remodel. We serve homeowners in Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, and Yardley with kitchen renovation projects ranging from cosmetic refreshes to complete gut renovations.</p>
@@ -101,7 +101,7 @@ export default function HomePage() {
         <p>Need more space? MHG Contracting designs and builds seamless home additions that blend with your existing architecture. We also specialize in full-home renovations covering structural changes, HVAC, electrical, and plumbing upgrades, as well as ground-up new construction for homeowners who want a custom-built home from foundation to finishing touches.</p>
 
         <h2>Serving Hamilton, Princeton, West Windsor &amp; Central NJ</h2>
-        <p>From our base in Hamilton, New Jersey, MHG Contracting serves homeowners across Central New Jersey and Bucks County, PA. Our service area includes Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley, and surrounding communities. Shahzeb Malik personally oversees every project — when you call MHG, you talk to the people who will actually build your renovation.</p>
+        <p>From our base in Hamilton, New Jersey, MHG Contracting serves homeowners across Central New Jersey and Bucks County, PA. Our service area includes Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley, and surrounding communities. When you call MHG, you talk to the people who will actually build your renovation.</p>
 
         <p>Contact MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> for a free estimate on your kitchen renovation, bathroom remodel, basement finishing, home addition, or new construction project in Central NJ.</p>
       </SeoPrerender>

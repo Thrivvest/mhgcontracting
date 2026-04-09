@@ -42,10 +42,9 @@ export default function AboutTeaser() {
 
             <FadeIn delay={0.3}>
               <p className="font-body text-text-secondary text-lg leading-relaxed mb-8 max-w-xl">
-                Founded by Shahzeb Malik, we take pride in every project — treating each
-                home as if it were our own. Our hands-on approach means you work directly
-                with the people building your space, ensuring quality you can see and
-                service you can trust.
+                We take pride in every project, treating each home as if it were our own.
+                Our hands-on approach means you work directly with the people building your
+                space, ensuring quality you can see and service you can trust.
               </p>
             </FadeIn>
 
@@ -68,7 +67,7 @@ export default function AboutTeaser() {
             </FadeIn>
           </div>
 
-          {/* Right column (40%) — Image placeholder */}
+          {/* Right column (40%) — Image */}
           <div className="lg:col-span-2">
             <FadeIn delay={0.3}>
               <div className="aspect-[16/10] lg:aspect-[3/4] rounded-lg overflow-hidden relative">

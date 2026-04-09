@@ -5,6 +5,7 @@
  *
  * "Our Recent Work" heading + 4 project tiles with directional
  * hover overlay revealing "View Project" link.
+ * First tile uses a vertical-friendly image.
  */
 
 import Link from "next/link";
@@ -21,6 +22,9 @@ const SERVICE_TYPE_LABELS: Record<string, string> = {
   addition: "Addition",
   "new-construction": "New Construction",
 };
+
+// Override for the first grid tile: use a vertical-friendly kitchen image
+const FIRST_TILE_IMAGE = "/images/projects/kitchen-02-1.jpg";
 
 export default function FeaturedProjects() {
   const projects = getGridProjects().slice(0, 4);
@@ -75,9 +79,9 @@ export default function FeaturedProjects() {
                 >
                   {/* Project card */}
                   <div className="relative w-full h-full">
-                    {/* Real project image */}
+                    {/* Use vertical-friendly image for first tile, project image for rest */}
                     <img
-                      src={project.imagePath}
+                      src={index === 0 ? FIRST_TILE_IMAGE : project.imagePath}
                       alt={project.title}
                       className="absolute inset-0 w-full h-full object-cover"
                       loading="lazy"
@@ -131,4 +135,3 @@ export default function FeaturedProjects() {
     </section>
   );
 }
-
