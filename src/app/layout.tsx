@@ -44,6 +44,15 @@ export const metadata: Metadata = {
   ],
   authors: [{ name: "MHG Contracting" }],
   creator: "MHG Contracting",
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+    ],
+    apple: "/apple-touch-icon.png",
+    other: [
+      { rel: "icon", url: "/icon-192.png", sizes: "192x192", type: "image/png" },
+    ],
+  },
   metadataBase: new URL("https://mhgcon.com"),
   icons: {
     icon: [
