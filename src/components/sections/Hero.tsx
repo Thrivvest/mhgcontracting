@@ -6,9 +6,14 @@
  * Uses a fixed-position full-screen approach to guarantee edge-to-edge coverage.
  * GSAP clip-path reveal on load, LineReveal headline, CTA button, scroll chevron.
  * Padding-top accounts for the fixed 72px header.
+ *
+ * NOTE: Uses Next.js <Image> with fill + priority so the hero is served as
+ * optimised WebP at exactly the right size for every screen — avoids the
+ * blurriness that occurs when a plain <img> is stretched across large viewports.
  */
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -25,7 +30,6 @@ export default function Hero() {
     const section = sectionRef.current;
 
     if (isMobile) {
-      // Mobile: instant fade — no delay
       section.style.opacity = "0";
       requestAnimationFrame(() => {
         section.style.transition = "opacity 0.3s ease-out";
@@ -36,9 +40,7 @@ export default function Hero() {
 
     registerGSAP();
 
-    // Desktop: full clip-path reveal
     gsap.set(section, { clipPath: "inset(100% 0 0 0)" });
-
     gsap.to(section, {
       clipPath: "inset(0% 0 0 0)",
       duration: 0.9,
@@ -58,14 +60,16 @@ export default function Hero() {
         marginLeft: "calc(-50vw + 50%)",
       }}
     >
-      {/* Background image */}
+      {/* Background image — Next.js Image for WebP + responsive sizing */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/images/projects/kitchen-02.jpg"
+        <Image
+          src="/images/projects/kitchen-02-2.jpg"
           alt=""
-          className="w-full h-full object-cover"
-          loading="eager"
-          fetchPriority="high"
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          className="object-cover"
         />
       </div>
 
