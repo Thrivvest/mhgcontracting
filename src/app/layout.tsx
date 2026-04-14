@@ -229,6 +229,12 @@ export default function RootLayout({
       className={`${urbanist.variable} ${inter.variable}`}
     >
       <head>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z75PBPTC4T" />
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-Z75PBPTC4T');`,
+          }}
+        />
         <link rel="alternate" hrefLang="en-us" href="https://mhgcon.com" />
         <script
           type="application/ld+json"
