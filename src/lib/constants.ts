@@ -1,5 +1,5 @@
 /**
- * MHG Contracting — Brand Constants
+ * MHG Contracting - Brand Constants
  *
  * Single source of truth for all design tokens, breakpoints,
  * animation timings, and configuration values.

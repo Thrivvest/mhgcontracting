@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     "Browse our portfolio of kitchen renovations, bathroom remodels, basement finishing, full home renovations, additions, and new construction projects across Central NJ.",
   alternates: { canonical: "https://mhgcon.com/portfolio" },
   openGraph: {
-    title: "Portfolio | Our Work — MHG Contracting",
+    title: "Portfolio | Our Work - MHG Contracting",
     description:
       "Browse our kitchen, bathroom, basement, and full home renovation projects across Central NJ.",
     url: "https://mhgcon.com/portfolio",
@@ -32,7 +32,7 @@ const jsonLd = {
   "@type": "ItemList",
   name: "MHG Contracting Portfolio",
   description:
-    "Completed renovation projects by MHG Contracting across Central NJ — kitchens, bathrooms, basements, full home renovations, and additions.",
+    "Completed renovation projects by MHG Contracting across Central NJ - kitchens, bathrooms, basements, full home renovations, and additions.",
   url: "https://mhgcon.com/portfolio",
   numberOfItems: portfolioProjects.length,
   itemListElement: portfolioProjects.map((project, i) => ({
@@ -66,7 +66,7 @@ export default function PortfolioPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SeoPrerender>
-        <h1>Renovation Portfolio — Kitchen, Bath &amp; Basement Projects | MHG Contracting</h1>
+        <h1>Renovation Portfolio - Kitchen, Bath &amp; Basement Projects | MHG Contracting</h1>
 
         <h2>Kitchen Renovation Projects in Central NJ</h2>
         <p>Browse completed kitchen renovation projects by MHG Contracting throughout Central New Jersey. Our kitchen remodeling portfolio showcases custom cabinetry installations, quartz and granite countertop fabrication, open-concept layout conversions, professional-grade appliance integration, custom tile backsplashes, and complete kitchen gut renovations. From modern farmhouse kitchens in Princeton to sleek contemporary designs in West Windsor, every project reflects our commitment to quality craftsmanship and attention to detail. Each kitchen renovation is personally overseen by owner Shahzeb Malik from design consultation through final walkthrough.</p>
@@ -81,7 +81,7 @@ export default function PortfolioPage() {
         <p>Our portfolio features seamless home additions and complete whole-house renovations throughout Central New Jersey and Bucks County, PA. Featured projects include family room additions, second-story additions, sunroom builds, and full-home gut renovations covering structural modifications, HVAC upgrades, electrical rewiring, plumbing overhauls, and interior design finishes. MHG Contracting handles every phase from architectural planning through construction to final inspection.</p>
 
         <h2>Why Homeowners Trust MHG Contracting</h2>
-        <p>Every project in our renovation portfolio represents a homeowner who trusted MHG Contracting to transform their home. As a family-owned residential contracting company based in Hamilton, New Jersey, we bring a personal approach to every renovation. Owner Shahzeb Malik is on-site throughout the build — you always know who is working on your home. Our portfolio spans Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, Yardley, and surrounding Central NJ communities.</p>
+        <p>Every project in our renovation portfolio represents a homeowner who trusted MHG Contracting to transform their home. As a family-owned residential contracting company based in Hamilton, New Jersey, we bring a personal approach to every renovation. Owner Shahzeb Malik is on-site throughout the build - you always know who is working on your home. Our portfolio spans Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, Yardley, and surrounding Central NJ communities.</p>
 
         <p>Ready to start your renovation? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> for a free estimate and see how your home could be our next featured project.</p>
       </SeoPrerender>

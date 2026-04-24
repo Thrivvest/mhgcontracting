@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ClipReveal — Section entrance animation
+ * ClipReveal - Section entrance animation
  *
  * Wraps a section and reveals it via clip-path expansion.
  * Children content shifts upward simultaneously for a parallax feel.

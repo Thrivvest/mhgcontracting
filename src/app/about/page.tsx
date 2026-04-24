@@ -8,12 +8,12 @@ export const metadata: Metadata = {
       "About MHG Contracting | Family-Owned Contractor in Hamilton, NJ",
   },
   description:
-    "Learn about MHG Contracting — a family-owned residential contracting company in Hamilton, NJ led by Shahzeb Malik. Quality craftsmanship, personal service, and a commitment to building homes the right way.",
+    "Learn about MHG Contracting - a family-owned residential contracting company in Hamilton, NJ led by Shahzeb Malik. Quality craftsmanship, personal service, and a commitment to building homes the right way.",
   alternates: { canonical: "https://mhgcon.com/about" },
   openGraph: {
     title: "About MHG Contracting | Family-Owned Renovations",
     description:
-      "Meet Shahzeb Malik and the MHG team. Family-owned residential contracting in Hamilton, NJ — quality craftsmanship and personal service.",
+      "Meet Shahzeb Malik and the MHG team. Family-owned residential contracting in Hamilton, NJ - quality craftsmanship and personal service.",
     url: "https://mhgcon.com/about",
     images: [
       {
@@ -69,16 +69,16 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SeoPrerender>
-        <h1>About MHG Contracting — Family-Owned Residential Contractor in Hamilton, NJ</h1>
+        <h1>About MHG Contracting - Family-Owned Residential Contractor in Hamilton, NJ</h1>
 
         <h2>Meet Shahzeb Malik, Founder &amp; Owner</h2>
-        <p>MHG Contracting was founded by Shahzeb Malik with a simple commitment: deliver exceptional craftsmanship with honest, transparent communication on every project. As a hands-on owner, Shahzeb personally oversees every renovation from the initial free estimate through design, construction, and final walkthrough. When you work with MHG Contracting, you deal directly with the person responsible for building your renovation — not a salesperson, not a franchise manager, and not a subcontractor you have never met.</p>
+        <p>MHG Contracting was founded by Shahzeb Malik with a simple commitment: deliver exceptional craftsmanship with honest, transparent communication on every project. As a hands-on owner, Shahzeb personally oversees every renovation from the initial free estimate through design, construction, and final walkthrough. When you work with MHG Contracting, you deal directly with the person responsible for building your renovation - not a salesperson, not a franchise manager, and not a subcontractor you have never met.</p>
 
         <h2>Family-Owned &amp; Locally Operated in Central New Jersey</h2>
-        <p>Based in Hamilton, New Jersey, MHG Contracting is a family-owned and operated residential contracting company. We are not a national franchise or a sales-driven operation. Our reputation has been built through word-of-mouth referrals from satisfied homeowners across Central NJ and Bucks County, PA. We believe in doing every job the right way — using quality materials, employing skilled tradespeople, and maintaining open communication throughout every phase of your renovation project.</p>
+        <p>Based in Hamilton, New Jersey, MHG Contracting is a family-owned and operated residential contracting company. We are not a national franchise or a sales-driven operation. Our reputation has been built through word-of-mouth referrals from satisfied homeowners across Central NJ and Bucks County, PA. We believe in doing every job the right way - using quality materials, employing skilled tradespeople, and maintaining open communication throughout every phase of your renovation project.</p>
 
         <h2>Our Approach to Home Renovation</h2>
-        <p>MHG Contracting takes a personal, detail-oriented approach to every home renovation. We begin each project with a thorough in-home consultation to understand your vision, budget, and timeline. Our team then develops a comprehensive scope of work with transparent pricing — no hidden fees, no surprise change orders. During construction, Shahzeb is on-site daily to ensure quality standards are met and your project stays on schedule. We specialize in kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction.</p>
+        <p>MHG Contracting takes a personal, detail-oriented approach to every home renovation. We begin each project with a thorough in-home consultation to understand your vision, budget, and timeline. Our team then develops a comprehensive scope of work with transparent pricing - no hidden fees, no surprise change orders. During construction, Shahzeb is on-site daily to ensure quality standards are met and your project stays on schedule. We specialize in kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction.</p>
 
         <h2>Serving Central NJ &amp; Bucks County, PA</h2>
         <p>MHG Contracting proudly serves homeowners throughout Central New Jersey and Bucks County, Pennsylvania. Our primary service area includes Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, and Yardley. From historic homes in Princeton to new developments in West Windsor, we bring the same level of care and craftsmanship to every project regardless of size or scope. Our local knowledge of Central NJ building codes, permit requirements, and architectural styles ensures a smooth renovation experience.</p>

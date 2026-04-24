@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * SplashScreen — Video logo reveal overlay
+ * SplashScreen - Video logo reveal overlay
  *
  * Full-screen fixed overlay that plays the MHG logo animation video.
  * After the logo is fully formed (~4.5s), GSAP transitions the overlay

@@ -24,10 +24,10 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
       description: service.description,
       alternates: { canonical: `https://mhgcon.com/services/${slug}` },
       openGraph: {
-        title: `${service.name} — MHG Contracting`,
+        title: `${service.name} - MHG Contracting`,
         description: service.shortDescription,
         url: `https://mhgcon.com/services/${slug}`,
-        images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${service.name} — MHG Contracting` }],
+        images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${service.name} - MHG Contracting` }],
       },
     };
   });

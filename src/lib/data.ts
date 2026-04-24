@@ -1,5 +1,5 @@
 /**
- * MHG Contracting — Placeholder Data
+ * MHG Contracting - Placeholder Data
  *
  * Typed placeholder content for all site sections.
  * Replace image paths and descriptions with real content when available.
@@ -265,7 +265,7 @@ export const services: Service[] = [
     name: "Bathroom Renovations",
     slug: "bathroom-renovations",
     description:
-      "Transform your bathroom into a personal retreat. From powder room refreshes to full master bathroom overhauls, we handle every detail — tile work, fixtures, vanities, lighting, and more. Our attention to waterproofing and proper ventilation ensures your renovation lasts for years to come.",
+      "Transform your bathroom into a personal retreat. From powder room refreshes to full master bathroom overhauls, we handle every detail - tile work, fixtures, vanities, lighting, and more. Our attention to waterproofing and proper ventilation ensures your renovation lasts for years to come.",
     shortDescription:
       "From powder rooms to spa-like master bathrooms.",
     icon: "bathroom",
@@ -304,7 +304,7 @@ export const services: Service[] = [
     name: "Basement Finishing",
     slug: "basement-finishing",
     description:
-      "Unlock the potential of your unfinished basement. We transform dark, unused spaces into beautiful living areas — home theaters, guest suites, home offices, gyms, and entertainment lounges. Our basements include proper insulation, moisture management, and quality finishes.",
+      "Unlock the potential of your unfinished basement. We transform dark, unused spaces into beautiful living areas - home theaters, guest suites, home offices, gyms, and entertainment lounges. Our basements include proper insulation, moisture management, and quality finishes.",
     shortDescription:
       "Transform your basement into usable living space.",
     icon: "basement",
@@ -343,7 +343,7 @@ export const services: Service[] = [
     name: "Full Home Renovations",
     slug: "full-home-renovations",
     description:
-      "When one room isn't enough, we take on whole-home transformations. Our full renovation service covers everything — structural changes, system upgrades (HVAC, electrical, plumbing), interior finishes, and everything in between. We manage the entire project so you have one team and one point of contact.",
+      "When one room isn't enough, we take on whole-home transformations. Our full renovation service covers everything - structural changes, system upgrades (HVAC, electrical, plumbing), interior finishes, and everything in between. We manage the entire project so you have one team and one point of contact.",
     shortDescription:
       "Comprehensive whole-home transformations.",
     icon: "home",
@@ -368,7 +368,7 @@ export const services: Service[] = [
       {
         question: "How do you handle subcontractors?",
         answer:
-          "We manage all subcontractors — plumbers, electricians, HVAC techs — directly. You deal with us and only us. All subs are licensed, insured, and vetted by our team.",
+          "We manage all subcontractors - plumbers, electricians, HVAC techs - directly. You deal with us and only us. All subs are licensed, insured, and vetted by our team.",
       },
       {
         question: "What does a full renovation cost?",
@@ -382,7 +382,7 @@ export const services: Service[] = [
     name: "Additions",
     slug: "additions",
     description:
-      "Need more space? We design and build home additions that blend seamlessly with your existing architecture. From family rooms and sunrooms to second-story additions, we handle the entire process — architectural planning, engineering, permitting, and construction.",
+      "Need more space? We design and build home additions that blend seamlessly with your existing architecture. From family rooms and sunrooms to second-story additions, we handle the entire process - architectural planning, engineering, permitting, and construction.",
     shortDescription:
       "Seamless home additions that match your existing style.",
     icon: "addition",
@@ -421,7 +421,7 @@ export const services: Service[] = [
     name: "New Construction",
     slug: "new-construction",
     description:
-      "Build the home you have always envisioned. Our new construction service takes you from an empty lot to a finished, move-in ready home. We partner with top architects and handle every phase — site prep, foundation, framing, systems, finishes, and landscaping.",
+      "Build the home you have always envisioned. Our new construction service takes you from an empty lot to a finished, move-in ready home. We partner with top architects and handle every phase - site prep, foundation, framing, systems, finishes, and landscaping.",
     shortDescription:
       "Custom homes built from the ground up.",
     icon: "construction",
@@ -466,7 +466,7 @@ export const testimonials: Testimonial[] = [
     location: "Princeton, NJ",
     projectType: "kitchen",
     quote:
-      "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding — our neighbors keep asking for their number.",
+      "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding - our neighbors keep asking for their number.",
     rating: 5,
   },
   {
@@ -484,7 +484,7 @@ export const testimonials: Testimonial[] = [
     location: "West Windsor, NJ",
     projectType: "full-renovation",
     quote:
-      "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day, and they kept us updated throughout the entire process. The finished result is stunning — it feels like a brand new home.",
+      "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day, and they kept us updated throughout the entire process. The finished result is stunning - it feels like a brand new home.",
     rating: 5,
   },
 ];
@@ -524,7 +524,7 @@ export const teamMembers: TeamMember[] = [
     id: "team-5",
     name: "Juan",
     title: "Team Lead",
-    bio: "Juan brings skill and dedication to every job site. His craftsmanship speaks for itself — and his clients know they can count on him to get it done right.",
+    bio: "Juan brings skill and dedication to every job site. His craftsmanship speaks for itself - and his clients know they can count on him to get it done right.",
     imagePath: "/images/team/juan.jpg",
   },
 ];
@@ -544,14 +544,14 @@ export const processSteps: ProcessStep[] = [
     number: "01",
     title: "Free Consultation",
     description:
-      "It starts with a phone call to hear about your project, followed by an in-person visit to assess your space and provide an honest estimate. No pressure, no obligations — just a real conversation about what's possible.",
+      "It starts with a phone call to hear about your project, followed by an in-person visit to assess your space and provide an honest estimate. No pressure, no obligations - just a real conversation about what's possible.",
   },
   {
     id: "step-2",
     number: "02",
     title: "Design & Planning",
     description:
-      "We invest 2-3 weeks in detailed design work — drawings, renderings, and material selections — so you can visualize the finished result before we break ground. For larger projects, you receive a week-by-week schedule so there are never any surprises.",
+      "We invest 2-3 weeks in detailed design work - drawings, renderings, and material selections - so you can visualize the finished result before we break ground. For larger projects, you receive a week-by-week schedule so there are never any surprises.",
   },
   {
     id: "step-3",

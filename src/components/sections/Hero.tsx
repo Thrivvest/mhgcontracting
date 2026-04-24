@@ -1,14 +1,14 @@
 "use client";
 
 /**
- * Hero — Full-viewport homepage hero
+ * Hero - Full-viewport homepage hero
  *
  * Uses a fixed-position full-screen approach to guarantee edge-to-edge coverage.
  * GSAP clip-path reveal on load, LineReveal headline, CTA button, scroll chevron.
  * Padding-top accounts for the fixed 72px header.
  *
  * NOTE: Uses Next.js <Image> with fill + priority so the hero is served as
- * optimised WebP at exactly the right size for every screen — avoids the
+ * optimised WebP at exactly the right size for every screen - avoids the
  * blurriness that occurs when a plain <img> is stretched across large viewports.
  */
 
@@ -60,7 +60,7 @@ export default function Hero() {
         marginLeft: "calc(-50vw + 50%)",
       }}
     >
-      {/* Background image — Next.js Image for WebP + responsive sizing */}
+      {/* Background image - Next.js Image for WebP + responsive sizing */}
       <div className="absolute inset-0 z-0">
         <Image
           src="/images/projects/kitchen-02-2.jpg"
@@ -76,7 +76,7 @@ export default function Hero() {
       {/* Dark overlay for text readability */}
       <div className="absolute inset-0 z-[1] bg-black/50" />
 
-      {/* Content — pt-20 clears the fixed header */}
+      {/* Content - pt-20 clears the fixed header */}
       <div className="relative z-10 text-center px-6 max-w-4xl mx-auto pt-20">
         <LineReveal trigger="load" delay={0.4} className="mb-6">
           <h1 className="font-heading text-5xl sm:text-6xl md:text-7xl lg:text-[5.5rem] font-bold text-white leading-[1.05] tracking-tight">

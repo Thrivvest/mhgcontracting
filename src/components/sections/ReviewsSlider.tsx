@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ReviewsSlider — Auto-playing Google Reviews carousel
+ * ReviewsSlider - Auto-playing Google Reviews carousel
  *
  * Displays real Google reviews in a smooth, auto-advancing slideshow.
  * Shows 1 review on mobile, 3 on desktop. Supports touch swipe on mobile.
@@ -107,7 +107,7 @@ export default function ReviewsSlider() {
   const gapPx = 24; // gap-6 = 24px
   const cardPercent = 100 / cardsPerView;
 
-  // Progress dots — show fewer on mobile by grouping
+  // Progress dots - show fewer on mobile by grouping
   const step = cardsPerView;
   const dotCount = Math.ceil(totalReviews / step);
   const activeDot = Math.floor(currentIndex / step);
@@ -225,7 +225,7 @@ export default function ReviewsSlider() {
           </div>
         </div>
 
-        {/* Progress dots — grouped so mobile shows manageable count */}
+        {/* Progress dots - grouped so mobile shows manageable count */}
         <div className="flex items-center justify-center gap-2 mt-8 md:mt-10">
           {Array.from({ length: dotCount }).map((_, i) => (
             <button

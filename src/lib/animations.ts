@@ -1,5 +1,5 @@
 /**
- * MHG Contracting — Shared GSAP Animation Utilities
+ * MHG Contracting - Shared GSAP Animation Utilities
  *
  * Central module for GSAP plugin registration, ScrollTrigger helpers,
  * and animation timing constants. Import this once in your root layout
@@ -50,7 +50,7 @@ export const SCROLL_TRIGGER = {
   SCRUB: 1,
 } as const;
 
-/** Lenis easing function — exponential decay */
+/** Lenis easing function - exponential decay */
 export const lenisEasing = (t: number): number => 1 - Math.pow(2, -10 * t);
 
 /** Mobile breakpoint below which ScrollSlider is disabled */
@@ -62,7 +62,7 @@ let pluginsRegistered = false;
 
 /**
  * Registers all GSAP plugins exactly once.
- * Safe to call multiple times — subsequent calls are no-ops.
+ * Safe to call multiple times - subsequent calls are no-ops.
  * Must be called client-side only (guarded internally).
  */
 export function registerGSAP(): void {

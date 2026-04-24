@@ -1,5 +1,5 @@
 /**
- * Button — Primary UI button component
+ * Button - Primary UI button component
  * Supports primary, secondary, and outline variants.
  */
 

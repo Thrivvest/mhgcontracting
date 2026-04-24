@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * PortfolioSlider — Scroll-driven portfolio showcase
+ * PortfolioSlider - Scroll-driven portfolio showcase
  *
  * Uses the ScrollSlider animation component with featured projects.
  * Each slide is a full-viewport card with project info overlay.

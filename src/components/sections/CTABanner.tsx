@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * CTABanner — Full-width call-to-action
+ * CTABanner - Full-width call-to-action
  *
  * Navy #2D3380 background. LineReveal heading, subtext,
  * white outlined button → filled on hover. Links to /contact.

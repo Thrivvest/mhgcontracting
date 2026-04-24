@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import ScrollSlider from "@/components/animations/ScrollSlider";
@@ -21,7 +22,7 @@ export default function ServicesContent() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/services/bathroom-hero.jpg" alt="Our services" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src="/images/services/bathroom-hero.jpg" alt="Our services" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -31,7 +32,7 @@ export default function ServicesContent() {
           </LineReveal>
           <FadeIn delay={0.6}>
             <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">
-              Kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction — serving Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, and Yardley, PA.
+              Kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction - serving Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, and Yardley, PA.
             </p>
           </FadeIn>
         </div>
@@ -47,7 +48,7 @@ export default function ServicesContent() {
               className="block relative w-full h-screen flex items-end mobile-slide"
             >
               <div className="absolute inset-0">
-                <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" loading="lazy" />
+                <Image src={slide.image} alt={slide.title} fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               </div>
               <div className="relative z-10 p-8 md:p-14 lg:p-20 max-w-3xl">

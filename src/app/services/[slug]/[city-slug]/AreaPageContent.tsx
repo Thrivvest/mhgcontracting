@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * AreaPageContent — Client component for geo-targeted area pages
+ * AreaPageContent - Client component for geo-targeted area pages
  *
  * Renders the full area page with hero, content, FAQs, and CTAs.
  * Follows the ServiceDetail component pattern.

@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * MobileMenu — Full-screen overlay navigation
+ * MobileMenu - Full-screen overlay navigation
  *
  * Full-screen fixed overlay with dark background, large stacked links
  * with staggered GSAP animation, social links at bottom.

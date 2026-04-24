@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ServiceAreasContent — Client component for the /service-areas page
+ * ServiceAreasContent - Client component for the /service-areas page
  *
  * Displays all 6 service areas with links to each service × city page.
  */
@@ -49,7 +49,7 @@ export default function ServiceAreasContent() {
           </LineReveal>
           <FadeIn delay={0.6}>
             <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">
-              MHG Contracting provides kitchen renovations, bathroom remodels, basement finishing, home additions, and new construction throughout Central New Jersey and Bucks County, PA — within 25 minutes of our Hamilton headquarters.
+              MHG Contracting provides kitchen renovations, bathroom remodels, basement finishing, home additions, and new construction throughout Central New Jersey and Bucks County, PA - within 25 minutes of our Hamilton headquarters.
             </p>
           </FadeIn>
         </div>

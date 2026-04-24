@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { BLOG_POSTS } from "@/lib/blog-data";
@@ -21,7 +22,7 @@ export default function BlogContent() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/services/kitchen-hero.jpg" alt="MHG Blog" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src="/images/services/kitchen-hero.jpg" alt="MHG Blog" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -44,8 +45,8 @@ export default function BlogContent() {
                 <Link href={`/blog/${post.slug}`} className="block group h-full">
                   <article className="bg-white rounded-lg overflow-hidden border border-border h-full flex flex-col hover:shadow-md transition-shadow duration-300">
                     {/* Image placeholder */}
-                    <div className="aspect-[16/10] overflow-hidden">
-                      <img src={BLOG_IMAGES[post.category] || "/images/projects/kitchen-01.jpg"} alt={post.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <div className="aspect-[16/10] overflow-hidden relative">
+                      <Image src={BLOG_IMAGES[post.category] || "/images/projects/kitchen-01.jpg"} alt={post.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     {/* Content */}
                     <div className="p-6 flex-1 flex flex-col">

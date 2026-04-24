@@ -1,5 +1,5 @@
 /**
- * /services/[slug]/[city-slug] — Geo-targeted service area page
+ * /services/[slug]/[city-slug] - Geo-targeted service area page
  *
  * Dynamic route for 36 service × city landing pages.
  * Each page has unique content, FAQs, and JSON-LD.

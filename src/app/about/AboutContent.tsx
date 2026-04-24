@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import CharHighlight from "@/components/animations/CharHighlight";
@@ -18,7 +19,7 @@ const WORK_SLIDES = [
 const VALUES = [
   { title: "Quality", description: "We never cut corners. Every joint, every finish, every detail is done right the first time." },
   { title: "Transparency", description: "No surprises. Clear pricing, honest timelines, and open communication from day one." },
-  { title: "Family", description: "We treat your home like our own — with care, respect, and genuine pride in every project." },
+  { title: "Family", description: "We treat your home like our own - with care, respect, and genuine pride in every project." },
   { title: "Craftsmanship", description: "Years of hands-on experience combined with an eye for detail that elevates every space." },
   { title: "Communication", description: "You'll always know what's happening. Regular updates, responsive answers, easy to reach." },
 ];
@@ -38,7 +39,7 @@ export default function AboutContent() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/projects/fullreno-01-2.jpg" alt="MHG Contracting craftsmanship" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src="/images/projects/fullreno-01-2.jpg" alt="MHG Contracting craftsmanship" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -66,8 +67,8 @@ export default function AboutContent() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             {/* Photo */}
             <FadeIn>
-              <div className="aspect-[3/4] rounded-lg overflow-hidden">
-                <img src="/images/projects/kitchen-02.jpg" alt="MHG Contracting craftsmanship" className="w-full h-full object-cover" loading="lazy" />
+              <div className="aspect-[3/4] rounded-lg overflow-hidden relative">
+                <Image src="/images/projects/kitchen-02.jpg" alt="MHG Contracting craftsmanship" fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               </div>
             </FadeIn>
 
@@ -85,7 +86,7 @@ export default function AboutContent() {
               </LineReveal>
 
               <CharHighlight className="font-heading text-2xl md:text-3xl font-semibold text-text-primary leading-snug mb-8" start="top 90%" end="top 40%">
-                &ldquo;Family-owned, quality driven — that&rsquo;s not just a tagline, it&rsquo;s how we work.&rdquo;
+                &ldquo;Family-owned, quality driven - that&rsquo;s not just a tagline, it&rsquo;s how we work.&rdquo;
               </CharHighlight>
 
               <FadeIn delay={0.2}>
@@ -147,7 +148,7 @@ export default function AboutContent() {
           {WORK_SLIDES.map((slide) => (
             <div key={slide.title} className="relative w-full h-screen flex items-end mobile-slide">
               <div className="absolute inset-0">
-                <img src={slide.image} alt={slide.title} className="w-full h-full object-cover" loading="lazy" />
+                <Image src={slide.image} alt={slide.title} fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               </div>
               <div className="relative z-10 p-8 md:p-14 lg:p-20 max-w-3xl">
@@ -189,12 +190,13 @@ export default function AboutContent() {
             {teamMembers.map((member, index) => (
               <FadeIn key={member.id} delay={index * 0.1}>
                 <div className="group">
-                  <div className="aspect-[3/4] rounded-lg overflow-hidden mb-5 bg-background-alt">
-                    <img
+                  <div className="aspect-[3/4] rounded-lg overflow-hidden mb-5 bg-background-alt relative">
+                    <Image
                       src={TEAM_PLACEHOLDER_IMAGES[index % TEAM_PLACEHOLDER_IMAGES.length]}
                       alt={member.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
                   <h3 className="font-heading text-xl font-semibold text-text-primary mb-1">

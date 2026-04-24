@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * FadeIn — Scroll-triggered fade animation
+ * FadeIn - Scroll-triggered fade animation
  *
  * On desktop: uses GSAP + ScrollTrigger for precise control.
  * On mobile: uses lightweight IntersectionObserver + CSS transitions

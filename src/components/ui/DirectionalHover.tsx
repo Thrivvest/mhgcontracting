@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * DirectionalHover — Mouse direction-aware hover overlay
+ * DirectionalHover - Mouse direction-aware hover overlay
  *
  * Detects which edge the mouse enters from and slides an overlay
  * in from that direction. On mouse leave, the overlay exits toward
@@ -75,7 +75,7 @@ export default function DirectionalHover({
   const containerRef = useRef<HTMLDivElement>(null);
   const overlayRef = useRef<HTMLDivElement>(null);
   const isInsideRef = useRef(false);
-  // useState so the overlay div is conditionally rendered — avoids CSS/GSAP transform conflict
+  // useState so the overlay div is conditionally rendered - avoids CSS/GSAP transform conflict
   const [isTouch, setIsTouch] = useState(false);
 
   useEffect(() => {
@@ -89,7 +89,7 @@ export default function DirectionalHover({
   }, []);
 
   // Use onMouseMove instead of onMouseEnter. mousemove only fires on real
-  // pointer movement — scroll never triggers it, so no false positives.
+  // pointer movement - scroll never triggers it, so no false positives.
   const handleMouseMove = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
     if (!containerRef.current || !overlayRef.current) return;
     if (isInsideRef.current) return;
@@ -137,7 +137,7 @@ export default function DirectionalHover({
       {/* Main content */}
       {children}
 
-      {/* Directional overlay — only rendered on non-touch (desktop) devices.
+      {/* Directional overlay - only rendered on non-touch (desktop) devices.
           This prevents the CSS/GSAP transform conflict that caused the overlay
           to show permanently on mobile and fail to animate on desktop. */}
       {!isTouch && (

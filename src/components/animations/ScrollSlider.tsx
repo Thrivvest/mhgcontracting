@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ScrollSlider — Portfolio scroll slider (most complex animation)
+ * ScrollSlider - Portfolio scroll slider (most complex animation)
  *
  * A pinned, scroll-driven portfolio slider. On desktop (≥992px), the container
  * is pinned and slides wipe over each other using clip-path expansion.
@@ -12,7 +12,7 @@
  * - Slides stacked, each wipes over previous using clip-path
  * - Content parallax: yPercent 5 → 0 inside each slide
  * - scrub: 1 with snap to discrete states
- * - DISABLED below 991px — show stacked layout
+ * - DISABLED below 991px - show stacked layout
  * - Navigation indicators update at state thresholds
  */
 

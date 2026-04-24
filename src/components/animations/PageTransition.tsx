@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * PageTransition — Route change animation wrapper
+ * PageTransition - Route change animation wrapper
  *
  * Wraps page content and animates opacity on route changes.
  * On route change: fade out 200ms, then fade in 300ms.
@@ -55,7 +55,7 @@ export default function PageTransition({ children }: PageTransitionProps) {
         }
       );
     } else {
-      // First mount — just show content
+      // First mount - just show content
       setDisplayChildren(children);
     }
   }, [pathname, children]);

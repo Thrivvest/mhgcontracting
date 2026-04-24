@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Header — Fixed navigation bar
+ * Header - Fixed navigation bar
  *
  * Fixed top-of-page nav with logo, nav links, location tag.
  * On scroll past 50px: adds backdrop blur and border.
@@ -196,7 +196,7 @@ export default function Header() {
 
           {/* Right side: location + mobile trigger */}
           <div className="flex items-center gap-6">
-            {/* Call button — desktop only */}
+            {/* Call button - desktop only */}
             <a
               href="tel:+16097122474"
               className={`hidden lg:inline-flex items-center gap-2 font-body text-sm font-semibold px-4 py-2 rounded-md border transition-all duration-300 ${

@@ -68,7 +68,7 @@ export const metadata: Metadata = {
         url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "MHG Contracting — Premium Home Renovations in Hamilton, NJ",
+        alt: "MHG Contracting - Premium Home Renovations in Hamilton, NJ",
       },
     ],
   },
@@ -168,7 +168,7 @@ const jsonLd = {
             name: "Sarah & Michael R.",
           },
           reviewBody:
-            "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding — our neighbors keep asking for their number.",
+            "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding - our neighbors keep asking for their number.",
         },
         {
           "@type": "Review",
@@ -196,7 +196,7 @@ const jsonLd = {
             name: "The Patel Family",
           },
           reviewBody:
-            "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day and kept us updated throughout the entire process. The finished result is stunning — it feels like a brand new home.",
+            "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day and kept us updated throughout the entire process. The finished result is stunning - it feels like a brand new home.",
         },
       ],
       openingHoursSpecification: {

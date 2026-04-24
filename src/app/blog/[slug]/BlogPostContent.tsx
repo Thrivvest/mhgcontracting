@@ -1,10 +1,10 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { type BlogPost, BLOG_POSTS } from "@/lib/blog-data";
-import { company } from "@/lib/constants";
 
 interface BlogPostContentProps {
   post: BlogPost;
@@ -43,7 +43,7 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
       {/* Hero */}
       <section className="relative py-32 md:py-44 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/projects/fullreno-02.jpg" alt={post.title} className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src="/images/projects/fullreno-02.jpg" alt={post.title} fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-gradient-to-t from-[#1A1A2E] via-[#1A1A2E]/70 to-[#1A1A2E]/50" />
         </div>
         <div className="relative z-10 max-w-[800px] mx-auto">
@@ -72,43 +72,10 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
       <section className="py-16 md:py-24 px-6 lg:px-10">
         <div className="max-w-[700px] mx-auto">
           <FadeIn>
-            <div className="prose prose-lg max-w-none">
-              <p className="font-body text-text-secondary text-lg leading-relaxed mb-6">
-                {post.excerpt}
-              </p>
-
-              <p className="font-body text-text-secondary text-lg leading-relaxed mb-6">
-                At MHG Contracting, we&apos;ve guided hundreds of homeowners through their renovation
-                journey. Every project teaches us something new, and we believe in sharing that
-                knowledge with our community. Whether you&apos;re planning your first renovation or
-                your fifth, understanding the process makes all the difference.
-              </p>
-
-              <h2 className="font-heading text-2xl font-bold text-text-primary mt-10 mb-4">
-                Why This Matters
-              </h2>
-              <p className="font-body text-text-secondary text-lg leading-relaxed mb-6">
-                The decisions you make before your renovation begins are often more important than
-                the ones you make during construction. Taking time to plan, research, and choose
-                the right team will save you time, money, and stress down the road.
-              </p>
-
-              <h2 className="font-heading text-2xl font-bold text-text-primary mt-10 mb-4">
-                Our Approach
-              </h2>
-              <p className="font-body text-text-secondary text-lg leading-relaxed mb-6">
-                We start every project with an honest conversation about your goals, budget, and
-                timeline. No sales pressure, no inflated promises — just straightforward guidance
-                from a team that cares about doing the job right. We believe in transparency at
-                every stage, from the initial estimate to the final walkthrough.
-              </p>
-
-              <p className="font-body text-text-secondary text-lg leading-relaxed mb-6">
-                If you have questions about your upcoming project, we&apos;re always here to help.
-                Give us a call at <a href={company.phoneHref} className="text-primary hover:text-primary-dark underline">{company.phone}</a> or{" "}
-                <Link href="/contact" className="text-primary hover:text-primary-dark underline">request a free estimate</Link>.
-              </p>
-            </div>
+            <div
+              className="blog-content font-body text-text-secondary text-lg leading-relaxed max-w-none"
+              dangerouslySetInnerHTML={{ __html: post.content }}
+            />
           </FadeIn>
         </div>
       </section>
@@ -124,8 +91,8 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
               <FadeIn key={rp.slug} delay={i * 0.1}>
                 <Link href={`/blog/${rp.slug}`} className="block group">
                   <article className="bg-white rounded-lg overflow-hidden border border-border hover:shadow-md transition-shadow duration-300">
-                    <div className="aspect-[16/10] overflow-hidden">
-                      <img src={`/images/projects/${["kitchen-02", "bath-02", "fullreno-01"][i % 3]}.jpg`} alt={rp.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                    <div className="aspect-[16/10] overflow-hidden relative">
+                      <Image src={`/images/projects/${["kitchen-02", "bath-02", "fullreno-01"][i % 3]}.jpg`} alt={rp.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                     </div>
                     <div className="p-6">
                       <time className="font-body text-xs text-text-light mb-2 block">{rp.date}</time>

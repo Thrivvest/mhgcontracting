@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * BlogPreview — Homepage blog teaser
+ * BlogPreview - Homepage blog teaser
  *
  * "From Our Blog" heading + 3 placeholder article cards.
  * Each: title, date, excerpt, "Read More →" link.
@@ -14,7 +14,7 @@ import FadeIn from "@/components/animations/FadeIn";
 
 const BLOG_POSTS = [
   {
-    slug: "5-things-to-consider-before-kitchen-renovation",
+    slug: "kitchen-remodel-cost",
     title: "5 Things to Consider Before Your Kitchen Renovation",
     date: "March 15, 2026",
     excerpt:
@@ -22,7 +22,7 @@ const BLOG_POSTS = [
     image: "/images/projects/kitchen-01.jpg",
   },
   {
-    slug: "how-long-does-bathroom-remodel-take",
+    slug: "bathroom-remodel-cost",
     title: "How Long Does a Bathroom Remodel Take?",
     date: "March 8, 2026",
     excerpt:
@@ -30,7 +30,7 @@ const BLOG_POSTS = [
     image: "/images/projects/bath-01.jpg",
   },
   {
-    slug: "choosing-the-right-contractor",
+    slug: "choosing-a-contractor",
     title: "Choosing the Right Contractor: What to Look For",
     date: "February 28, 2026",
     excerpt:

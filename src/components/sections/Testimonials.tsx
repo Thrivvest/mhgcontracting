@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * Testimonials — Client review quotes
+ * Testimonials - Client review quotes
  *
  * "What Our Clients Say" heading + 3 testimonial cards in a row.
  * Each: quote, client name, project type, 5 stars. FadeIn stagger.

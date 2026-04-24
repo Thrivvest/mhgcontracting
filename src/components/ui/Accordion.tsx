@@ -1,5 +1,5 @@
 /**
- * Accordion — Expandable FAQ/content component
+ * Accordion - Expandable FAQ/content component
  * Used on service detail pages for FAQ sections.
  */
 

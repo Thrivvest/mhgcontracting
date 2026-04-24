@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * SmoothScroll — Lenis smooth scrolling provider
+ * SmoothScroll - Lenis smooth scrolling provider
  *
  * Wraps page content with buttery-smooth scrolling via Lenis.
  * Integrates with GSAP ScrollTrigger so scroll-driven animations
@@ -50,7 +50,7 @@ export default function SmoothScroll({ children }: SmoothScrollProps) {
     // Detect mobile/touch device
     const isTouchDevice = "ontouchstart" in window || navigator.maxTouchPoints > 0;
 
-    // Skip Lenis entirely on mobile — native scroll is faster and more responsive
+    // Skip Lenis entirely on mobile - native scroll is faster and more responsive
     if (isTouchDevice) {
       // Still register GSAP so ScrollTrigger works with native scroll
       ScrollTrigger.config({ ignoreMobileResize: true });

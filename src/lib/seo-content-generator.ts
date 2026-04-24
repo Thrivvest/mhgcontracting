@@ -1,5 +1,5 @@
 /**
- * SEO Content Generator — Auto-generate keyword-rich HTML for SeoPrerender blocks
+ * SEO Content Generator - Auto-generate keyword-rich HTML for SeoPrerender blocks
  *
  * These functions produce structured, keyword-rich HTML from existing data
  * for each dynamic page type. The content is injected via SeoPrerender and
@@ -102,7 +102,7 @@ export function generatePortfolioSeoContent(project: PortfolioProject): string {
 
   return `
     <article>
-      <h1>${project.title} — ${typeLabel} in ${project.location} | ${COMPANY} Portfolio</h1>
+      <h1>${project.title} - ${typeLabel} in ${project.location} | ${COMPANY} Portfolio</h1>
       <p>${project.description}</p>
 
       <h2>Project Details</h2>

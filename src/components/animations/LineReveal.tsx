@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * LineReveal — Text line-by-line reveal animation
+ * LineReveal - Text line-by-line reveal animation
  *
  * Uses GSAP SplitText to split children text into lines, then reveals
  * each line with a clip-path + yPercent animation for a premium
@@ -87,7 +87,7 @@ export default function LineReveal({
           },
         });
       } else {
-        // "load" — play immediately
+        // "load" - play immediately
         gsap.to(lines, animationConfig);
       }
     }, el);

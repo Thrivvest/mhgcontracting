@@ -26,7 +26,7 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
       description: project.description,
       alternates: { canonical: `https://mhgcon.com/portfolio/${slug}` },
       openGraph: {
-        title: `${project.title} — MHG Contracting`,
+        title: `${project.title} - MHG Contracting`,
         description: project.description,
         url: `https://mhgcon.com/portfolio/${slug}`,
         images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: project.title }],

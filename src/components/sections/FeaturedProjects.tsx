@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * FeaturedProjects — 2×2 grid with DirectionalHover tiles
+ * FeaturedProjects - 2×2 grid with DirectionalHover tiles
  *
  * "Our Recent Work" heading + 4 project tiles with directional
  * hover overlay revealing "View Project" link.

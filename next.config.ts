@@ -9,6 +9,16 @@ const nextConfig: NextConfig = {
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
   },
 
+  async redirects() {
+    return [
+      { source: "/blog/5-things-to-consider-before-kitchen-renovation", destination: "/blog/kitchen-remodel-cost", permanent: true },
+      { source: "/blog/kitchen-renovation-cost-breakdown", destination: "/blog/kitchen-remodel-cost", permanent: true },
+      { source: "/blog/how-long-does-bathroom-remodel-take", destination: "/blog/kitchen-timeline", permanent: true },
+      { source: "/blog/choosing-the-right-contractor", destination: "/blog/choosing-a-contractor", permanent: true },
+      { source: "/blog/basement-finishing-guide-central-nj", destination: "/blog/basement-finishing-cost", permanent: true },
+    ];
+  },
+
   async headers() {
     return [
       {

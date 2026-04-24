@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * CharHighlight — Character-by-character scroll reveal
+ * CharHighlight - Character-by-character scroll reveal
  *
  * Uses GSAP SplitText to split text into individual characters.
  * As the user scrolls through the section, characters progressively

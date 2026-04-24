@@ -37,7 +37,7 @@ const jsonLd = {
   estimatedCost: {
     "@type": "MonetaryAmount",
     currency: "USD",
-    description: "Varies by project scope — free estimate available",
+    description: "Varies by project scope - free estimate available",
   },
   performer: {
     "@type": "LocalBusiness",
@@ -64,7 +64,7 @@ export default function ProcessPage() {
         <h1>Our Renovation Process: From Free Estimate to Completed Project | MHG Contracting</h1>
 
         <h2>Step 1: Free In-Home Consultation &amp; Estimate</h2>
-        <p>Every MHG Contracting project begins with a free consultation. We start with a quick phone call to learn about your project, then schedule an in-person visit to your home in Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley, or anywhere in Central NJ. During this visit, we assess the existing space, discuss your vision and budget, take measurements, and provide an honest evaluation of what is possible. Within a few days, you receive a detailed written estimate with transparent pricing — no hidden fees or vague allowances.</p>
+        <p>Every MHG Contracting project begins with a free consultation. We start with a quick phone call to learn about your project, then schedule an in-person visit to your home in Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley, or anywhere in Central NJ. During this visit, we assess the existing space, discuss your vision and budget, take measurements, and provide an honest evaluation of what is possible. Within a few days, you receive a detailed written estimate with transparent pricing - no hidden fees or vague allowances.</p>
 
         <h2>Step 2: Design &amp; Planning</h2>
         <p>Once you are ready to move forward, our team invests 2-3 weeks in detailed design work, including drawings, renderings, and material selections, so you can visualize the finished result before any construction begins. We coordinate material selections, finalize layouts, and create a comprehensive project timeline. For larger projects, clients receive a week-by-week schedule so there are never any surprises. MHG Contracting handles all permit applications and approvals required by your local municipality in Central New Jersey.</p>

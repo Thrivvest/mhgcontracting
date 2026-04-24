@@ -1,5 +1,5 @@
 /**
- * ContactForm — Form with React Hook Form + GoHighLevel webhook
+ * ContactForm - Form with React Hook Form + GoHighLevel webhook
  * Full validation and GHL field mapping.
  */
 

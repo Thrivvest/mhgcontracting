@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import ScrollSlider from "@/components/animations/ScrollSlider";
@@ -19,7 +20,7 @@ const PROCESS_SLIDES = [
     image: "/images/projects/gallery/fullreno-01/3.jpg",
     subsections: [
       { title: "Design First", desc: "We spend 2-3 weeks on detailed drawings, renderings, and material selections so you can visualize the finished result before any work begins." },
-      { title: "Week-by-Week Schedule", desc: "For larger projects, you receive a written week-by-week timeline so you always know what to expect — no guesswork, no surprises." },
+      { title: "Week-by-Week Schedule", desc: "For larger projects, you receive a written week-by-week timeline so you always know what to expect - no guesswork, no surprises." },
     ],
   },
   {
@@ -39,7 +40,7 @@ export default function ProcessContent() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/services/kitchen-hero.jpg" alt="Our renovation process" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src="/images/services/kitchen-hero.jpg" alt="Our renovation process" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -78,14 +79,14 @@ export default function ProcessContent() {
               <div key={step.id} className="relative w-full h-screen flex items-center mobile-slide overflow-hidden">
                 {/* Background image */}
                 <div className="absolute inset-0">
-                  <img src={slide.image} alt={step.title} className="w-full h-full object-cover" loading="lazy" />
+                  <Image src={slide.image} alt={step.title} fill sizes="100vw" className="object-cover" />
                   {/* Gradient heavier on left so text is always readable */}
                   <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-black/10" />
                 </div>
 
                 {/* Text content */}
                 <div className="relative z-10 px-6 md:px-14 lg:px-20 max-w-2xl">
-                  {/* Step number — decorative, smaller on mobile */}
+                  {/* Step number - decorative, smaller on mobile */}
                   <span className="font-heading text-[3.5rem] md:text-[8rem] font-bold text-white/10 leading-none block mb-1 md:mb-2">
                     {step.number}
                   </span>
@@ -95,7 +96,7 @@ export default function ProcessContent() {
                     {step.title}
                   </h2>
 
-                  {/* Description — hidden on mobile to save space */}
+                  {/* Description - hidden on mobile to save space */}
                   <p className="hidden md:block font-body text-white/70 text-lg leading-relaxed mb-8 max-w-lg">
                     {step.description}
                   </p>
@@ -116,7 +117,7 @@ export default function ProcessContent() {
         </ScrollSlider>
       </section>
 
-      {/* Portfolio Preview — Scroll Slider */}
+      {/* Portfolio Preview - Scroll Slider */}
       <section>
         <div className="py-16 px-6 lg:px-10 text-center">
           <LineReveal>
@@ -127,7 +128,7 @@ export default function ProcessContent() {
           {featured.map((project) => (
             <div key={project.id} className="relative w-full h-screen flex items-end mobile-slide">
               <div className="absolute inset-0">
-                <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
+                <Image src={project.imagePath} alt={project.title} fill sizes="100vw" className="object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
               </div>
               <div className="relative z-10 p-8 md:p-14 lg:p-20 max-w-3xl">

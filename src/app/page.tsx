@@ -83,7 +83,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <SeoPrerender>
-        <h1>MHG Contracting — Kitchen, Bath &amp; Home Renovations in Hamilton, NJ</h1>
+        <h1>MHG Contracting - Kitchen, Bath &amp; Home Renovations in Hamilton, NJ</h1>
 
         <h2>Family-Owned Residential Contracting in Central New Jersey</h2>
         <p>MHG Contracting is a family-owned and operated residential contracting company based in Hamilton, New Jersey. MHG Contracting has built a reputation for exceptional craftsmanship, transparent communication, and a personal approach to every home renovation project. We specialize in kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction throughout Central New Jersey and Bucks County, Pennsylvania.</p>

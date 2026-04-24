@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ServiceArea — Coverage area display
+ * ServiceArea - Coverage area display
  *
  * "Proudly Serving Central New Jersey" with primary and expanded
  * area listings. Clean, minimal layout with accent styling for
@@ -34,7 +34,7 @@ export default function ServiceArea() {
             <FadeIn delay={0.2}>
               <p className="font-body text-text-secondary text-lg leading-relaxed max-w-lg">
                 Based in Hamilton, NJ, we serve homeowners within 25 minutes of
-                our home base — ensuring we&apos;re always close, responsive, and
+                our home base - ensuring we&apos;re always close, responsive, and
                 invested in our local community.
               </p>
             </FadeIn>

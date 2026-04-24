@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * ServicesGrid — 6-card service overview
+ * ServicesGrid - 6-card service overview
  *
  * "What We Do" heading + 3-col grid (2-col tablet, 1-col mobile).
  * Each card: service image thumbnail, icon area, service name, short description, subtle hover lift.

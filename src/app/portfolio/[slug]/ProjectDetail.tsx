@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { type PortfolioProject, portfolioProjects } from "@/lib/data";
@@ -35,7 +36,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src={project.imagePath} alt={project.title} fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -83,8 +84,8 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
         <div className="max-w-[1400px] mx-auto">
           {/* Main image */}
           <FadeIn>
-            <div className="aspect-[16/9] rounded-lg overflow-hidden mb-5">
-              <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
+            <div className="aspect-[16/9] rounded-lg overflow-hidden mb-5 relative">
+              <Image src={project.imagePath} alt={project.title} fill sizes="(max-width: 1200px) 100vw, 1400px" className="object-cover" />
             </div>
           </FadeIn>
 
@@ -92,8 +93,8 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
             {project.galleryImages.map((img, i) => (
               <FadeIn key={i} delay={i * 0.08}>
-                <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                  <img src={img} alt={`${project.title} — Photo ${i + 1}`} className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" loading="lazy" />
+                <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                  <Image src={img} alt={`${project.title} - Photo ${i + 1}`} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
               </FadeIn>
             ))}
@@ -123,7 +124,7 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 <FadeIn key={rp.id} delay={i * 0.1}>
                   <Link href={`/portfolio/${rp.slug}`} className="block group">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
-                      <img src={rp.imagePath} alt={rp.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                      <Image src={rp.imagePath} alt={rp.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       <span className="absolute bottom-5 left-5 font-body text-white/70 text-xs uppercase tracking-[0.1em]">{rp.type.replace("-", " ")}</span>
                     </div>

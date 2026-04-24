@@ -1,9 +1,9 @@
 /**
- * SeoPrerender — Hidden pre-rendered content for search engine crawlers
+ * SeoPrerender - Hidden pre-rendered content for search engine crawlers
  *
  * Renders keyword-rich content using the industry-standard sr-only
  * (screen-reader only) pattern. This approach uses clip-rect, width/height 1px,
- * and overflow hidden — recognized by Google as accessible content rather than
+ * and overflow hidden - recognized by Google as accessible content rather than
  * hidden SEO spam. Content is in the static HTML at build time.
  *
  * Also provides a <noscript> fallback with the same content styled for readability.

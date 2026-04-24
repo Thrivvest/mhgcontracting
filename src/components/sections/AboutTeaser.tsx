@@ -1,7 +1,7 @@
 "use client";
 
 /**
- * AboutTeaser — Home page about preview
+ * AboutTeaser - Home page about preview
  *
  * Two-column layout (60/40 split). Left: heading, description,
  * CTA link. Right: placeholder image area. All FadeIn on scroll.
@@ -67,13 +67,13 @@ export default function AboutTeaser() {
             </FadeIn>
           </div>
 
-          {/* Right column (40%) — Image */}
+          {/* Right column (40%) - Image */}
           <div className="lg:col-span-2">
             <FadeIn delay={0.3}>
               <div className="aspect-[16/10] lg:aspect-[3/4] rounded-lg overflow-hidden relative">
                 <img
                   src="/images/projects/fullreno-01.jpg"
-                  alt="MHG Contracting — Luxury home renovation"
+                  alt="MHG Contracting - Luxury home renovation"
                   className="w-full h-full object-cover"
                 />
                 {/* Overlay with stat */}

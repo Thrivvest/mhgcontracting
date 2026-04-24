@@ -5,7 +5,7 @@ import SeoPrerender from "@/components/seo/SeoPrerender";
 export const metadata: Metadata = {
   title: {
     absolute:
-      "Get a Free Estimate | MHG Contracting — (609) 712-2474 | Hamilton, NJ",
+      "Get a Free Estimate | MHG Contracting - (609) 712-2474",
   },
   description:
     "Request your free estimate from MHG Contracting. Call (609) 712-2474 or fill out our form. We serve Hamilton, Princeton, West Windsor, and Central NJ.",
@@ -29,7 +29,7 @@ export const metadata: Metadata = {
 const jsonLd = {
   "@context": "https://schema.org",
   "@type": "ContactPage",
-  name: "Contact MHG Contracting — Get a Free Estimate",
+  name: "Contact MHG Contracting - Get a Free Estimate",
   url: "https://mhgcon.com/contact",
   description:
     "Contact MHG Contracting to request a free estimate for your kitchen renovation, bathroom remodel, basement finishing, addition, or new construction project in Central NJ.",
@@ -78,13 +78,13 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SeoPrerender>
-        <h1>Contact MHG Contracting — Get a Free Renovation Estimate in Hamilton, NJ</h1>
+        <h1>Contact MHG Contracting - Get a Free Renovation Estimate</h1>
 
         <h2>Request Your Free Estimate Today</h2>
         <p>Contact MHG Contracting to schedule your free in-home consultation and estimate for any residential renovation project in Central New Jersey. Whether you are planning a kitchen renovation, bathroom remodel, basement finishing, home addition, full-home renovation, or new construction, owner Shahzeb Malik will personally visit your home to discuss your project, assess the space, and provide a detailed, transparent estimate with no hidden fees or obligations.</p>
 
         <h2>Call Us Directly at (609) 712-2474</h2>
-        <p>The fastest way to reach MHG Contracting is by calling <a href="tel:+16097122474">(609) 712-2474</a>. When you call, you speak directly with our team — not a call center, not an answering service. We are available Monday through Friday from 8:00 AM to 6:00 PM and Saturday from 9:00 AM to 3:00 PM. You can also email us at <a href="mailto:info@mhgcon.com">info@mhgcon.com</a> or fill out the contact form on this page and we will respond within one business day.</p>
+        <p>The fastest way to reach MHG Contracting is by calling <a href="tel:+16097122474">(609) 712-2474</a>. When you call, you speak directly with our team - not a call center, not an answering service. We are available Monday through Friday from 8:00 AM to 6:00 PM and Saturday from 9:00 AM to 3:00 PM. You can also email us at <a href="mailto:info@mhgcon.com">info@mhgcon.com</a> or fill out the contact form on this page and we will respond within one business day.</p>
 
         <h2>Our Office Location</h2>
         <p>MHG Contracting is based in Hamilton, New Jersey and serves homeowners throughout Central NJ and Bucks County, PA. Our service area includes Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley, and surrounding communities. We are locally owned and operated, which means we are never far from your project site and can respond quickly to consultations, questions, and service needs.</p>

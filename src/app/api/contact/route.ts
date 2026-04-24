@@ -5,12 +5,12 @@
  * Keeps GHL credentials off the client. Adds rate limiting + validation.
  *
  * Env vars required:
- *   GHL_API_KEY          — Private integration key
- *   GHL_LOCATION_ID      — GHL location ID
- *   GHL_FIELD_*          — Custom field IDs (see .env.local)
- *   GHL_PIPELINE_ID        — Pipeline ID
- *   GHL_STAGE_NEW_LEAD_ID  — First stage ID
- *   N8N_WEBHOOK_NEW_LEAD   — n8n webhook URL for new lead email notification
+ *   GHL_API_KEY          - Private integration key
+ *   GHL_LOCATION_ID      - GHL location ID
+ *   GHL_FIELD_*          - Custom field IDs (see .env.local)
+ *   GHL_PIPELINE_ID        - Pipeline ID
+ *   GHL_STAGE_NEW_LEAD_ID  - First stage ID
+ *   N8N_WEBHOOK_NEW_LEAD   - n8n webhook URL for new lead email notification
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -101,7 +101,7 @@ export async function POST(req: NextRequest) {
   const locationId = process.env.GHL_LOCATION_ID;
 
   if (!apiKey || !locationId) {
-    console.warn("GHL credentials not configured — logging submission only.");
+    console.warn("GHL credentials not configured - logging submission only.");
     console.log("Form submission:", body);
     return NextResponse.json({ success: true, mode: "dev" });
   }
@@ -167,7 +167,7 @@ export async function POST(req: NextRequest) {
 
     contactId = data?.contact?.id;
     const isNew = data?.new === true;
-    console.log(`[${ROUTE_VERSION}] GHL contact ${isNew ? "created" : "updated"}: ${contactId} — ${first_name} ${last_name}`);
+    console.log(`[${ROUTE_VERSION}] GHL contact ${isNew ? "created" : "updated"}: ${contactId} - ${first_name} ${last_name}`);
   } catch (err) {
     console.error(`[${ROUTE_VERSION}] GHL contact upsert failed:`, err);
     return NextResponse.json({ error: "Server error." }, { status: 500 });
@@ -179,7 +179,7 @@ export async function POST(req: NextRequest) {
 
   if (pipelineId && stageId && contactId) {
     try {
-      const oppName = `${first_name} ${last_name}${body.project_type ? ` — ${body.project_type}` : ""}`;
+      const oppName = `${first_name} ${last_name}${body.project_type ? ` - ${body.project_type}` : ""}`;
       const oppRes = await fetch(`${GHL_API_BASE}/opportunities/`, {
         method: "POST",
         headers,

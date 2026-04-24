@@ -1,9 +1,9 @@
 /**
- * Footer — Dark background site footer
+ * Footer - Dark background site footer
  *
  * Three-row layout on #1A1A2E background:
  * - Top: Logo + "Get Your Free Estimate" outlined button
- * - Middle: 4 columns — Nav | Services | Contact | Social
+ * - Middle: 4 columns - Nav | Services | Contact | Social
  * - Bottom: Copyright
  *
  * Generous padding, underline hover animations on links.

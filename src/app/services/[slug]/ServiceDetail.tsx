@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { type Service, getProjectsByType, type ServiceType, services } from "@/lib/data";
@@ -68,7 +69,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
@@ -98,8 +99,8 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               </FadeIn>
             </div>
             <FadeIn delay={0.2}>
-              <div className="aspect-[4/3] rounded-lg overflow-hidden">
-                <img src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} className="w-full h-full object-cover" loading="lazy" />
+              <div className="aspect-[4/3] rounded-lg overflow-hidden relative">
+                <Image src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} fill sizes="(max-width: 1024px) 100vw, 50vw" className="object-cover" />
               </div>
             </FadeIn>
           </div>
@@ -162,7 +163,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                 <FadeIn key={project.id} delay={i * 0.1}>
                   <Link href={`/portfolio/${project.slug}`} className="block group">
                     <div className="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
-                      <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
+                      <Image src={project.imagePath} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
                       <span className="absolute bottom-5 left-5 font-body text-white/70 text-xs">{project.location}</span>
                     </div>

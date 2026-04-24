@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import DirectionalHover from "@/components/ui/DirectionalHover";
@@ -30,13 +31,13 @@ export default function PortfolioContent() {
       {/* Hero */}
       <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img src="/images/projects/gallery/kitchen-02/1.jpg" alt="Our portfolio" className="w-full h-full object-cover" loading="eager" fetchPriority="high" />
+          <Image src="/images/projects/gallery/kitchen-02/1.jpg" alt="Our portfolio" fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
         </div>
         <div className="relative z-10 max-w-[1400px] mx-auto">
           <FadeIn><span className="font-body text-xs font-medium text-white/40 uppercase tracking-[0.15em] mb-4 block">Portfolio</span></FadeIn>
           <LineReveal trigger="load" delay={0.3}>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">Renovation Portfolio — Kitchen, Bath &amp; Basement Projects</h1>
+            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">Renovation Portfolio - Kitchen, Bath &amp; Basement Projects</h1>
           </LineReveal>
           <FadeIn delay={0.6}>
             <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">
@@ -93,7 +94,7 @@ export default function PortfolioContent() {
                     }
                   >
                     <div className="w-full h-full relative">
-                      <img src={project.imagePath} alt={project.title} className="w-full h-full object-cover" loading="lazy" />
+                      <Image src={project.imagePath} alt={project.title} fill sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw" className="object-cover" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <span className="block font-body text-white/50 text-xs uppercase tracking-[0.12em] mb-1">

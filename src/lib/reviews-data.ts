@@ -1,5 +1,5 @@
 /**
- * MHG Contracting — Google Reviews
+ * MHG Contracting - Google Reviews
  *
  * Curated real Google reviews from satisfied clients.
  * Only 5-star reviews with meaningful content are included.
@@ -26,7 +26,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
   {
     id: 2,
     name: "Keith Dyke",
-    text: "A Complete Transformation — Couldn't Be Happier. We hired MHG Contracting to do a full basement finish along with some additional work, and they absolutely delivered. Professional, communicative, and skilled from start to finish.",
+    text: "A Complete Transformation - Couldn't Be Happier. We hired MHG Contracting to do a full basement finish along with some additional work, and they absolutely delivered. Professional, communicative, and skilled from start to finish.",
     projectType: "Basement Finishing",
     timeAgo: "2 weeks ago",
     rating: 5,
@@ -42,7 +42,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
   {
     id: 4,
     name: "Josue Paul",
-    text: "We used MHG Contracting to completely remodel our kitchen. They did an amazing job. They showed up on time, they communicated clearly with us and they were respectful. MHG Contracting provides high quality work — our kitchen looks amazing.",
+    text: "We used MHG Contracting to completely remodel our kitchen. They did an amazing job. They showed up on time, they communicated clearly with us and they were respectful. MHG Contracting provides high quality work - our kitchen looks amazing.",
     projectType: "Kitchen Remodel",
     timeAgo: "4 years ago",
     rating: 5,
@@ -66,7 +66,7 @@ export const GOOGLE_REVIEWS: GoogleReview[] = [
   {
     id: 7,
     name: "MoeBreezy",
-    text: "Saw the reviews and gave them a try on short notice. These guys are legit. Did my whole bathroom in 2 days, left the place spotless. Great work and NO surprises — just all good. Trust me, you can't go wrong with MHG.",
+    text: "Saw the reviews and gave them a try on short notice. These guys are legit. Did my whole bathroom in 2 days, left the place spotless. Great work and NO surprises - just all good. Trust me, you can't go wrong with MHG.",
     projectType: "Bathroom Remodel",
     timeAgo: "4 years ago",
     rating: 5,
