@@ -5,8 +5,7 @@ import SeoPrerender from "@/components/seo/SeoPrerender";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Our Renovation Process | Free Consultation to Project Completion | MHG Contracting",
+    absolute: "Our Renovation Process | MHG Contracting NJ",
   },
   description:
     "From free consultation to project completion, learn how MHG Contracting guides you through every step of your renovation. Clear communication, quality craftsmanship, no surprises.",

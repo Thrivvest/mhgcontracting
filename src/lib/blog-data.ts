@@ -17,7 +17,7 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "kitchen-remodel-cost",
-    title: "Kitchen Remodel Cost in NJ: What You'll Actually Spend in 2026",
+    title: "Kitchen Remodel Cost in NJ (2026 Guide)",
     date: "April 10, 2026",
     excerpt: "We quote kitchens every week in Central NJ. Here are the real numbers, where the money actually goes, and the places homeowners get surprised.",
     metaDescription: "Real kitchen remodel cost in NJ, broken down by tier and category. Written by MHG Contracting in Hamilton. Serving Princeton, West Windsor, and Central NJ.",
@@ -77,7 +77,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-cost",
-    title: "Bathroom Remodel Cost in NJ: Real Numbers by Scope",
+    title: "Bathroom Remodel Cost in NJ",
     date: "April 3, 2026",
     excerpt: "Powder room, hall bath, master suite. The gap between them is bigger than most homeowners realize. Here's what each actually costs in Central NJ.",
     metaDescription: "Bathroom remodel cost in NJ broken down by room type and scope. Real numbers from MHG Contracting in Hamilton, serving Princeton, West Windsor, and Central NJ.",
@@ -143,7 +143,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "basement-finishing-cost",
-    title: "Basement Finishing Cost in Central NJ: What to Expect in 2026",
+    title: "Basement Finishing Cost in Central NJ",
     date: "March 27, 2026",
     excerpt: "A finished basement in NJ runs $45 to $90 per square foot for most projects. Here's what drives that range and what you're actually paying for.",
     metaDescription: "Basement finishing cost in NJ. Real per-square-foot pricing, moisture management, egress requirements. MHG Contracting serving Hamilton, Princeton, and Central NJ.",
@@ -211,7 +211,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "choosing-a-contractor",
-    title: "How to Choose a Contractor in NJ Without Getting Burned",
+    title: "How to Choose a Contractor in NJ",
     date: "March 20, 2026",
     excerpt: "Three things will tell you almost everything you need to know about a contractor in NJ. Here's what to look for and the questions that separate the pros from the hacks.",
     metaDescription: "How to choose a contractor in NJ. Licensing, red flags, and the questions to ask before you sign anything. From MHG Contracting in Hamilton, NJ.",
@@ -289,7 +289,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "kitchen-trends",
-    title: "Kitchen Remodeling Trends We're Actually Building in 2026",
+    title: "Kitchen Remodeling Trends for 2026",
     date: "March 13, 2026",
     excerpt: "Not what the magazines are pushing. What real homeowners in Central NJ are signing off on this year, and which trends we think will age well.",
     metaDescription: "Kitchen remodeling trends 2026, based on what MHG Contracting is actually building in Hamilton, Princeton, and Central NJ. Real homeowner choices.",
@@ -343,7 +343,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-ideas",
-    title: "Bathroom Remodeling Ideas That Hold Up Over Time",
+    title: "Bathroom Remodeling Ideas That Last",
     date: "March 6, 2026",
     excerpt: "Trend-proof bathroom ideas that will still look right in 2035. Built from what our clients actually love two years after we finish the project.",
     metaDescription: "Bathroom remodeling ideas that age well. Real design choices from MHG Contracting projects across Hamilton, Princeton, and Central NJ.",
@@ -407,7 +407,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "basement-ideas",
-    title: "Finished Basement Ideas for Central NJ Homes",
+    title: "Finished Basement Ideas for NJ Homes",
     date: "February 27, 2026",
     excerpt: "Your basement doesn't have to be just a carpeted rec room. Here are the basement finishing ideas our Central NJ clients are loving in 2026.",
     metaDescription: "Basement finishing ideas for Central NJ homes. Real examples from MHG Contracting projects in Hamilton, Princeton, West Windsor, and surrounding towns.",
@@ -475,7 +475,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "kitchen-timeline",
-    title: "How Long Does a Kitchen Remodel Take? A Real Timeline",
+    title: "How Long Does a Kitchen Remodel Take?",
     date: "February 20, 2026",
     excerpt: "A full kitchen remodel in NJ takes six to twelve weeks on site. Here's the real week-by-week breakdown and what causes the delays nobody warns you about.",
     metaDescription: "How long does a kitchen remodel take in NJ. Honest week-by-week timeline and delay causes from MHG Contracting in Hamilton, NJ.",
@@ -561,7 +561,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "permits-nj",
-    title: "Do You Need a Permit for Your NJ Home Renovation?",
+    title: "Do You Need a Permit in NJ?",
     date: "February 13, 2026",
     excerpt: "The short answer is probably yes. The longer answer matters because unpermitted work will haunt you at resale. Here's what NJ actually requires.",
     metaDescription: "NJ home renovation permits explained. When you need one, who pulls them, what happens if you skip them. From MHG Contracting in Hamilton, NJ.",
@@ -639,7 +639,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "remodel-roi",
-    title: "Which Home Renovations Have the Best ROI in NJ?",
+    title: "Best Home Renovation ROI in NJ",
     date: "February 6, 2026",
     excerpt: "Not all renovations return equal value. Here are the real ROI numbers for kitchen, bath, basement, and addition projects in Central NJ, and which ones actually move the needle.",
     metaDescription: "Home renovation ROI in NJ. Real return-on-investment numbers for kitchens, bathrooms, basements, and additions from MHG Contracting in Hamilton.",

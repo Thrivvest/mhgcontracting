@@ -12,8 +12,7 @@ import SeoPrerender from "@/components/seo/SeoPrerender";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "MHG Contracting | Kitchen, Bath & Home Renovations in Hamilton, NJ",
+    absolute: "Kitchen & Bath Renovations Hamilton NJ | MHG Contracting",
   },
   description:
     "MHG Contracting is a family-owned residential contracting company serving Hamilton, Princeton, West Windsor, and Central NJ. Specializing in kitchen renovations, bathroom remodels, basement finishing, home additions, and new construction.",

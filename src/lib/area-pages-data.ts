@@ -102,7 +102,7 @@ export const AREA_PAGES: AreaPage[] = [
         answer: "Absolutely. We specialize in designing modern kitchens that complement the architectural style of older Princeton homes. We can incorporate period-appropriate trim details, crown molding, and design elements that blend seamlessly with your home's character.",
       },
     ],
-    relatedPortfolioSlugs: ["modern-farmhouse-kitchen", "transitional-chefs-kitchen"],
+    relatedPortfolioSlugs: ["modern-farmhouse-kitchen", "traditional-chefs-kitchen"],
     relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-timeline"],
   },
   {
@@ -161,7 +161,7 @@ export const AREA_PAGES: AreaPage[] = [
 <p>In developments like Princeton Walk and The Village, we often work with builder-grade kitchens that have good bones but basic finishes. Replacing laminate counters with natural stone, swapping out stock cabinets for custom or semi-custom options, and adding under-cabinet and pendant lighting can transform a purely functional space into the centerpiece of your home.</p>
 
 <h2>Why West Windsor Homeowners Choose MHG</h2>
-<p>We have completed multiple kitchen renovations in West Windsor, including our <a href="/portfolio/transitional-chefs-kitchen">Transitional Chef's Kitchen</a> - a project featuring professional appliances, a custom range hood, and a stunning two-tone cabinet design. That project, like all our work, was built with meticulous attention to detail and a commitment to timelines.</p>
+<p>We have completed multiple kitchen renovations in West Windsor, including our <a href="/portfolio/traditional-chefs-kitchen">Traditional Chef's Kitchen</a> - a project featuring professional appliances, a custom range hood, and a stunning two-tone cabinet design. That project, like all our work, was built with meticulous attention to detail and a commitment to timelines.</p>
 <p>West Windsor is just a short drive from our Hamilton headquarters, which means we are on-site when you need us. Shahzeb personally manages every West Windsor project, ensuring quality control and clear communication from start to finish. We also understand West Windsor Township's permitting requirements and coordinate with their building department directly.</p>
 
 <h2>Investment in Your West Windsor Home</h2>
@@ -180,7 +180,7 @@ export const AREA_PAGES: AreaPage[] = [
         answer: "Yes, we have completed numerous projects in Princeton Junction, Princeton Walk, West Windsor Village, and other West Windsor neighborhoods. We are very familiar with the home styles and common renovation needs in these communities.",
       },
     ],
-    relatedPortfolioSlugs: ["transitional-chefs-kitchen", "modern-farmhouse-kitchen"],
+    relatedPortfolioSlugs: ["traditional-chefs-kitchen", "modern-farmhouse-kitchen"],
     relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-timeline"],
   },
   {
@@ -252,7 +252,7 @@ export const AREA_PAGES: AreaPage[] = [
         answer: "Plainsboro Township requires construction permits for plumbing, electrical, and structural work. We handle the full permitting process through the Plainsboro Construction Office and coordinate all required inspections.",
       },
     ],
-    relatedPortfolioSlugs: ["custom-colonial-new-build", "transitional-chefs-kitchen"],
+    relatedPortfolioSlugs: ["custom-colonial-new-build", "traditional-chefs-kitchen"],
     relatedBlogSlugs: ["kitchen-timeline", "kitchen-remodel-cost"],
   },
   {

@@ -4,8 +4,7 @@ import SeoPrerender from "@/components/seo/SeoPrerender";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "About MHG Contracting | Family-Owned Contractor in Hamilton, NJ",
+    absolute: "About MHG Contracting | Hamilton NJ Renovations",
   },
   description:
     "Learn about MHG Contracting - a family-owned residential contracting company in Hamilton, NJ led by Shahzeb Malik. Quality craftsmanship, personal service, and a commitment to building homes the right way.",

@@ -6,7 +6,7 @@ import { buildBreadcrumbSchema } from "@/lib/seo-utils";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "FAQ | MHG Contracting - Home Renovation Questions in Central NJ",
+    absolute: "Renovation FAQ | MHG Contracting NJ",
   },
   description:
     "Answers to common questions about kitchen renovations, bathroom remodels, basement finishing, additions, and home construction in Central NJ. From MHG Contracting in Hamilton.",

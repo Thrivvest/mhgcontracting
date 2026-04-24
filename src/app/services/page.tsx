@@ -5,8 +5,7 @@ import SeoPrerender from "@/components/seo/SeoPrerender";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Kitchen Renovations, Bathroom Remodels & More | MHG Contracting",
+    absolute: "Home Renovation Services | MHG Contracting NJ",
   },
   description:
     "Explore our residential contracting services: kitchen renovations, bathroom remodels, basement finishing, full home renovations, additions, and new construction in Central NJ.",

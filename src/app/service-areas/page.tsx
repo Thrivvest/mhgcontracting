@@ -12,8 +12,7 @@ import SeoPrerender from "@/components/seo/SeoPrerender";
 
 export const metadata: Metadata = {
   title: {
-    absolute:
-      "Service Areas | Princeton, Hamilton, West Windsor & Central NJ | MHG Contracting",
+    absolute: "Service Areas | MHG Contracting Central NJ",
   },
   description:
     "MHG Contracting serves Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley PA with expert kitchen and bathroom renovations, basement finishing, home additions, full-home renovations, and new construction.",
