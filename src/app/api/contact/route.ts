@@ -206,14 +206,27 @@ export async function POST(req: NextRequest) {
     }
   }
 
-  // ── Step 3: Fire n8n notification webhook (non-blocking) ───────────────────
+  // ── Step 3: Fire n8n notification webhook ──────────────────────────────────
+  // Must be awaited. Vercel's serverless runtime terminates the lambda after the
+  // response returns, which kills any unawaited promises before they reach n8n.
   const n8nWebhook = process.env.N8N_WEBHOOK_NEW_LEAD;
   if (n8nWebhook) {
-    fetch(n8nWebhook, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ ...body, contactId }),
-    }).catch((err) => console.error(`[${ROUTE_VERSION}] n8n webhook failed:`, err));
+    try {
+      const n8nRes = await fetch(n8nWebhook, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ ...body, contactId }),
+      });
+      if (!n8nRes.ok) {
+        console.error(`[${ROUTE_VERSION}] n8n webhook returned ${n8nRes.status}`);
+      } else {
+        console.log(`[${ROUTE_VERSION}] n8n webhook fired successfully`);
+      }
+    } catch (err) {
+      console.error(`[${ROUTE_VERSION}] n8n webhook failed:`, err);
+    }
+  } else {
+    console.warn(`[${ROUTE_VERSION}] N8N_WEBHOOK_NEW_LEAD not set, skipping notification`);
   }
 
   return NextResponse.json({ success: true, contactId });
