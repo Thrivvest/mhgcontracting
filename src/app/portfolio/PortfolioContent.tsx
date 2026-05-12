@@ -7,6 +7,7 @@ import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import DirectionalHover from "@/components/ui/DirectionalHover";
 import { portfolioProjects, type ServiceType } from "@/lib/data";
+import { company } from "@/lib/constants";
 
 const FILTERS: { label: string; value: ServiceType | "all" }[] = [
   { label: "All", value: "all" },
@@ -114,6 +115,38 @@ export default function PortfolioContent() {
               <p className="font-body text-text-secondary text-lg">No projects found for this category.</p>
             </div>
           )}
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 md:py-32 px-6 lg:px-10" style={{ backgroundColor: "#2D3380" }}>
+        <div className="max-w-[900px] mx-auto text-center">
+          <LineReveal className="mb-6">
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white leading-[1.1]">
+              Could Your Home Be Next?
+            </h2>
+          </LineReveal>
+          <FadeIn delay={0.2}>
+            <p className="font-body text-white/60 text-lg mb-10 max-w-xl mx-auto">
+              Free in-home consultation. 24-hour response. Family-owned and based in Hamilton, NJ.
+            </p>
+          </FadeIn>
+          <FadeIn delay={0.4}>
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+              <Link
+                href="/contact"
+                className="inline-flex items-center gap-2 bg-white text-primary font-body font-semibold text-sm px-10 py-4 rounded-md hover:bg-white/90 transition-all duration-300"
+              >
+                {company.ctaPrimary}
+              </Link>
+              <a
+                href={company.phoneHref}
+                className="inline-flex items-center gap-2 border-2 border-white text-white font-body font-semibold text-sm px-10 py-4 rounded-md hover:bg-white hover:text-primary transition-all duration-300"
+              >
+                Call {company.phone}
+              </a>
+            </div>
+          </FadeIn>
         </div>
       </section>
     </main>

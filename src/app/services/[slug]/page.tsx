@@ -17,14 +17,15 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const service = getServiceBySlug(slug);
     if (!service) return { title: "Service Not Found" };
 
+    const title = service.seoTitle ?? `${service.name} in Central NJ | MHG Contracting`;
+    const description = service.seoDescription ?? service.description;
+
     return {
-      title: {
-        absolute: `${service.name} in Central NJ | MHG Contracting`,
-      },
-      description: service.description,
+      title: { absolute: title },
+      description,
       alternates: { canonical: `https://mhgcon.com/services/${slug}` },
       openGraph: {
-        title: `${service.name} - MHG Contracting`,
+        title,
         description: service.shortDescription,
         url: `https://mhgcon.com/services/${slug}`,
         images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${service.name} - MHG Contracting` }],

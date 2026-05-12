@@ -755,5 +755,309 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Shahzeb Malik, Co-Owner, MHG Contracting</p>
 `,
   },
+  {
+    slug: "bathroom-remodel-ideas-nj",
+    title: "15 Bathroom Remodel Ideas for NJ Homes in 2026",
+    date: "May 11, 2026",
+    excerpt: "After 200+ bathroom renovations across Central NJ, these are the ideas that actually work in real homes. Not the Pinterest fantasies. The ones our clients are still happy with three years later.",
+    metaDescription: "15 bathroom remodel ideas tested in real NJ homes by MHG Contracting. Walk-in showers, custom tile, vanities, and the upgrades that actually deliver. Serving Hamilton, Princeton, and Central NJ.",
+    category: "Bathroom",
+    readTime: "9 min read",
+    content: `
+<p>Bathroom remodel ideas are everywhere online. Most of them look great in a photo and fall apart in real life. After more than 200 bathroom renovations across Central NJ, we have a clear sense of which ideas actually deliver and which ones look amazing for 18 months and then start to bug homeowners.</p>
+
+<p>These 15 are the ones we recommend without hesitation. Some are classic. Some are newer. All of them are working in real homes right now in Hamilton, Princeton, West Windsor, Lawrenceville, and across the area.</p>
+
+<h2>1. Frameless walk-in shower with a built-in niche</h2>
+
+<p>If you only have budget for one upgrade in a primary bathroom, this is the one. A frameless glass walk-in shower opens up the room visually, requires almost zero maintenance compared to a tub-shower combo with a curtain or sliding doors, and instantly modernizes the entire bathroom. Add a recessed tile niche for shampoo and soap so nothing sits on the floor or hangs off a metal caddy.</p>
+
+<p>Cost in NJ: $6,500 to $12,000 depending on tile selection and glass spec.</p>
+
+<h2>2. Floating vanity with a stone top</h2>
+
+<p>A wall-mounted vanity makes a small bathroom feel 30 percent larger because the floor extends visually under the cabinet. Pair it with a quartz or natural stone top and integrated sinks for a clean modern look. Skip the heavily veined exotic stones in bathrooms with hard water because mineral deposits will fight you on the visual texture.</p>
+
+<h2>3. Heated tile floor</h2>
+
+<p>This is the upgrade homeowners thank us for the most. Radiant floor heating runs under the tile, takes about 20 minutes to install during the renovation, and costs $400 to $900 for a typical bathroom footprint. Once you step onto a warm tile floor on a 22-degree January morning, you will not go back.</p>
+
+<h2>4. Large-format tile to reduce grout lines</h2>
+
+<p>Twelve-by-twelve tile is dated. Twelve-by-twenty-four and twenty-four-by-forty-eight tiles are now standard. Fewer grout lines means less cleaning, less mildew, and a more contemporary look. The installation is more demanding because flat planes have to be perfect, but the finished result lasts decades visually.</p>
+
+<h2>5. Single-piece skirted toilet</h2>
+
+<p>A skirted toilet hides the trapway and presents as a single clean form. It is dramatically easier to clean than a traditional two-piece. The skirt-to-floor seal also eliminates the dust collection point that no one talks about. Cost difference over a basic two-piece: $150 to $400.</p>
+
+<h2>6. Smart toilet with bidet function</h2>
+
+<p>Five years ago this was a luxury. Now it is approaching standard in new primary baths. Heated seat, bidet wash, night light, and self-cleaning functions. We have installed dozens across Princeton and West Windsor. Once homeowners experience them, they refuse to go without. Budget $1,500 to $4,500 for the unit, plus an outlet behind the toilet.</p>
+
+<h2>7. Pendant lights over a freestanding tub</h2>
+
+<p>If you have the space for a freestanding soaker tub, drop two pendant lights above it. The room becomes intentional and finished. A single overhead light or a row of recessed cans makes the tub feel like an afterthought. The pendants do not have to be expensive. They have to be considered.</p>
+
+<h2>8. Wet room layout for small primary baths</h2>
+
+<p>In a tight primary bathroom, ditch the door between the toilet and the rest of the room and instead create a wet zone with a curbless shower and waterproof flooring throughout. Add a single glass panel to keep spray contained. The result feels twice as large as a conventional layout in the same footprint.</p>
+
+<h2>9. Custom wood vanity in a powder room</h2>
+
+<p>Powder rooms are the highest design-to-dollar ratio in your home. Skip the stock vanity. Have a local cabinet maker build a small custom piece in walnut, white oak, or rift-cut quarter sawn maple. Pair with a vessel sink or an undermount with a stone top. You will spend $1,800 to $3,500 on the vanity alone, but the powder room becomes the favorite room in the house for guests.</p>
+
+<h2>10. Backlit mirrors with built-in defog</h2>
+
+<p>LED mirrors with edge lighting and built-in defog are now affordable and look enormously more expensive than they cost. The defog feature is the surprise hero. Step out of the shower and the mirror is already clear. Cost: $400 to $1,200 depending on size and brand.</p>
+
+<h2>11. Linear shower drain</h2>
+
+<p>A long, slim drain along one wall of the shower replaces the center round drain. It allows the entire shower floor to slope in one direction instead of four, which lets you use larger floor tiles and creates a more refined look. Required for any curbless or wet-room design. Installation adds about $500 to $900.</p>
+
+<h2>12. Mixed metals done intentionally</h2>
+
+<p>Pick two finishes and commit. Brushed brass on the faucet and lighting, matte black on the shower hardware, towel bars, and toilet flush plate. The contrast reads as designed. The opposite, where every fixture is a slightly different shade of chrome, looks like nobody planned it.</p>
+
+<h2>13. Tile up to the ceiling</h2>
+
+<p>In a primary bath, run the shower tile all the way up. Stopping the tile at standard shower height and painting above looks unfinished. Continuing the tile to the ceiling reads as intentional and makes the shower feel like an enclosed room within the bathroom. The added cost is modest because you are mostly adding tile, not labor.</p>
+
+<h2>14. Hidden storage in the vanity</h2>
+
+<p>Standard vanity drawers are flat space with one tray. A custom-built vanity has dividers for toothbrushes, drawers cut around the plumbing rough-in, and pull-out trays for hair tools with built-in outlets. Storage you actually use beats square footage you do not.</p>
+
+<h2>15. Real ventilation</h2>
+
+<p>The most underrated upgrade in the entire bathroom industry. A properly sized fan ducted directly to the outside, on a humidity sensor switch, will save you from the mildew and paint issues that plague NJ homes. The original builder-installed bath fan in most homes is undersized and often ducted into the attic instead of through the roof. Replacing the fan is $300 to $700 and prevents thousands in future damage.</p>
+
+<h2>Two bathroom remodel ideas we do not recommend</h2>
+
+<p>We have built dozens of these and watched them disappoint homeowners. Skip them.</p>
+
+<p><strong>Jet tubs.</strong> Nobody uses them. They collect biofilm in the lines. The motors fail. If you want a soaking experience, get a freestanding tub. If you want hydrotherapy, get a shower with body sprays.</p>
+
+<p><strong>White subway tile with dark grout.</strong> It was a trend. It still is in some markets. But dark grout on white tile in a bathroom shows every drip, every splash, every spot of toothpaste within a week of installation. Match the grout color to the tile or run an off-white grout that hides everyday use.</p>
+
+<h2>How to use this list</h2>
+
+<p>You do not need all 15. The bathrooms we are proudest of usually combine three to five of these ideas executed properly. Pick the ones that match how you actually use the room and how long you plan to be in the home, and skip the rest.</p>
+
+<p>If you want a free in-home walkthrough where we tell you which of these ideas would actually work in your space and budget, call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">schedule a consultation</a>. We will give you a real opinion, not a sales pitch.</p>
+
+<p>For more on what a bathroom remodel actually costs in NJ, read <a href="/blog/bathroom-remodel-cost">our cost breakdown</a>. To see finished bathrooms we have built across Central NJ, check the <a href="/portfolio">portfolio</a>.</p>
+`,
+  },
+  {
+    slug: "basement-finishing-ideas",
+    title: "Basement Finishing Ideas: 12 Ways to Use Your Lower Level",
+    date: "May 11, 2026",
+    excerpt: "Your unfinished basement is the cheapest square footage you will ever add to your home. Here are 12 ways homeowners across Central NJ are actually using theirs.",
+    metaDescription: "12 basement finishing ideas tested in real Central NJ homes by MHG Contracting. Home theaters, gyms, in-law suites, and the layouts that actually get used. Serving Hamilton, Princeton, and surrounding areas.",
+    category: "Basement",
+    readTime: "8 min read",
+    content: `
+<p>If you own a home in Central NJ with an unfinished basement, you are sitting on the cheapest square footage you will ever add to your house. Finishing a basement runs roughly $50 to $120 per square foot, while building an addition runs $200 to $400 per square foot. Same livable space. A fraction of the cost.</p>
+
+<p>The question is not whether to finish it. The question is what to put in it. After finishing dozens of basements across Hamilton, Princeton, Lawrenceville, and the surrounding area, here are the 12 layouts that actually get used every day. Not the ones that look good in a real estate listing and then sit empty.</p>
+
+<h2>1. Family great room with media zone</h2>
+
+<p>The most common and most-used basement finish we build. One large open space with a 75 to 85 inch TV on a feature wall, a sectional sofa, built-in cabinets for game storage, and a dedicated kids zone with a small play area or homework station. No theater room. No separate bar. One room that does it all and gets used every evening.</p>
+
+<p>This works because most families do not actually want a dedicated theater. They want a casual second living room where the kids can spread out and the parents can relax without worrying about a perfectly staged upstairs.</p>
+
+<h2>2. Home theater with proper acoustics</h2>
+
+<p>If you are a real movie person, build a real theater. Tiered seating, a 4K projector with a 120 inch screen, blackout treatment on the door, soundproofing in the walls, and a calibrated 5.1 or 7.1 system. We have built these in Princeton and West Windsor and they are spectacular when used by households that watch movies as an event.</p>
+
+<p>Honest warning: 70 percent of dedicated home theaters we finish end up underused after the first year. They become impressive showrooms. If you are not committed to actually using it weekly, the great room with a big TV is the better call.</p>
+
+<h2>3. Full gym with rubber flooring and a mirror wall</h2>
+
+<p>The pandemic permanently changed how often basements become gyms. Three-quarter-inch rubber flooring rolled out wall to wall, a mirror wall on the longest section, a ceiling-mounted pull-up bar or rig, and space for a Peloton, a treadmill, and a stack of dumbbells. Add a TV facing the workout area so cardio actually happens.</p>
+
+<p>The trick is ceiling height. NJ basements typically run 7 to 8 feet. Anything below 7 feet is too tight for most rigs and any overhead work. We can sometimes lower the slab in older homes to gain headroom, but it is a meaningful project.</p>
+
+<h2>4. In-law suite with bedroom, bathroom, and kitchenette</h2>
+
+<p>Multi-generational living is rising fast in NJ. Building out the basement as a self-contained in-law suite gives an aging parent or an adult child their own space without the cost of an addition. The full setup needs a code-compliant egress window or door for the bedroom, a 3/4 bathroom, and a small kitchenette with a sink, microwave, and beverage fridge.</p>
+
+<p>Done well, this adds real value to the home and saves a family member tens of thousands in assisted living or rent.</p>
+
+<h2>5. Home office with sound isolation</h2>
+
+<p>If you work from home and your upstairs office shares walls with kids or kitchen noise, build the office downstairs. Add proper sound isolation in the walls, an insulated ceiling for impact noise from above, a hardwired ethernet drop, and dedicated 20 amp circuits for monitors and equipment. Daylight is the only downside, which we address with quality lighting and sometimes an egress window enlargement for natural light.</p>
+
+<h2>6. Playroom designed to grow with the kids</h2>
+
+<p>The 8-year-old wants a Lego table. The 14-year-old wants a hangout space. The 18-year-old wants a place for friends. Build a playroom that can transition through all three stages with durable finishes, good lighting, modular storage, and clear sightlines for parents. Skip the elaborate themed buildouts that look great in a 5-year-old's life and become embarrassing two years later.</p>
+
+<h2>7. Wet bar that works as a coffee station</h2>
+
+<p>Build the wet bar as a coffee and beverage station, not just an evening bar. A small sink, an undercounter beverage fridge, an espresso machine, glassware storage, and counter space. It serves coffee in the morning and bourbon at night. Used twice a day instead of twice a year.</p>
+
+<p>Skip the full undercounter ice maker. Almost nobody uses them. A countertop ice maker or your kitchen freezer handles the rare actual bar-night need.</p>
+
+<h2>8. Music or band room</h2>
+
+<p>If anyone in the house plays an instrument seriously, this is one of the most rewarding uses of a basement. Proper acoustic treatment on the walls and ceiling, a floating floor to decouple from upstairs, sound isolation in the door, and dedicated outlets. Drum kits, guitar amps, and piano practice that would drive the rest of the family insane upstairs become a non-issue.</p>
+
+<h2>9. Guest suite for short stays</h2>
+
+<p>Lighter than a full in-law suite. One bedroom with an egress window, a 3/4 bathroom, and a sitting area. Used for visiting family and friends. Functions as a fifth bedroom for resale even though it is below grade. Common in Princeton, West Windsor, and Hopewell where homeowners host extended family.</p>
+
+<h2>10. Wine cellar or tasting room</h2>
+
+<p>For homeowners who actually collect wine, a temperature and humidity-controlled cellar in the basement is the right place to put it. Built-in racks, a small tasting table, dim lighting, and proper insulation. We have built a few of these in Pennington and Princeton estates. Niche, but absolutely worth it for the right homeowner.</p>
+
+<h2>11. Hobby workshop or studio</h2>
+
+<p>Woodworking shop, pottery studio, sewing room, painting studio. Anything that benefits from a dedicated space with good lighting, durable flooring, dust control, and some level of separation from the rest of the house. We design these around the specific hobby and its real requirements.</p>
+
+<h2>12. Storage with an actual organization system</h2>
+
+<p>Not every square foot of the basement needs to become living space. Sometimes the best move is finished living areas for the front 60 percent and built-in organized storage in the back 40 percent. Custom shelving, labeled bins, holiday decoration zones, and seasonal sports equipment storage. A working storage system is more valuable than 200 square feet of unused living space.</p>
+
+<h2>What to figure out before you start</h2>
+
+<p>Three things determine what is possible in your basement.</p>
+
+<p><strong>Ceiling height.</strong> Anything below 7 feet 6 inches starts to feel cramped. Below 7 feet limits what you can build comfortably.</p>
+
+<p><strong>Moisture.</strong> If your basement has any water issues, those get solved before any finishing happens. Sump pump, exterior waterproofing, interior French drain, or a vapor barrier system depending on the source. Finishing over a wet basement is throwing money away.</p>
+
+<p><strong>Mechanicals.</strong> Where the furnace, water heater, and electrical panel live determines your layout. We design around them or sometimes relocate them as part of the project to free up the most usable space.</p>
+
+<h2>Permits and code in NJ</h2>
+
+<p>Every NJ municipality requires permits for basement finishing because you are adding habitable square footage. Egress windows are required in any room used as a bedroom. Smoke and carbon monoxide detectors are mandatory. We handle all of this. The permit process adds two to four weeks before construction starts, depending on the town.</p>
+
+<h2>Picking the right idea for your family</h2>
+
+<p>The biggest mistake we see is homeowners building the basement they think they should have instead of the basement they will actually use. A theater room for a family that watches one movie a month. A gym for a household that does not work out. A wet bar that becomes a graveyard for unused glassware.</p>
+
+<p>Start from how your family actually lives and work backward. The best basements we have built are the ones where the homeowner could tell us, in concrete detail, what they planned to do down there on a Tuesday night.</p>
+
+<p>If you want help thinking through what would actually work in your home, call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free in-home consultation</a>. To see finished basements we have built, browse the <a href="/portfolio">portfolio</a>. For cost details, read <a href="/blog/basement-finishing-cost">our basement finishing cost guide</a>.</p>
+`,
+  },
+  {
+    slug: "kitchen-renovation-timeline-nj",
+    title: "How Long Does a Kitchen Renovation Take in NJ? Real Timelines from Real Projects",
+    date: "May 11, 2026",
+    excerpt: "The honest answer to how long your kitchen renovation will take, broken down week by week. Based on 50+ projects across Hamilton, Princeton, and Central NJ.",
+    metaDescription: "Real kitchen renovation timeline in NJ, week by week. From planning through completion based on actual projects by MHG Contracting in Hamilton, Princeton, and Central NJ.",
+    category: "Kitchen",
+    readTime: "7 min read",
+    content: `
+<p>The most common question we get on a first kitchen consultation is how long it will take. The answer most contractors give is some vague range like "8 to 12 weeks" and a shrug.</p>
+
+<p>That is technically not wrong. But it is also useless if you are trying to plan around it. Here is the actual timeline for a typical Central NJ kitchen renovation, broken down by phase, with the lead times that drive the schedule and the surprises that push it longer.</p>
+
+<h2>The honest total: 4 to 8 months from first call to final walkthrough</h2>
+
+<p>Most homeowners underestimate the timeline because they think about construction only. The construction phase is 8 to 14 weeks. The planning, design, and ordering that comes before construction is another 6 to 14 weeks. Add them together and the realistic window from the day you call us to the day you cook in your new kitchen is roughly 4 to 8 months.</p>
+
+<p>If your kitchen needs to be done for a specific date like Thanksgiving or a wedding, that decision needs to happen by April or May at the latest for a fall finish.</p>
+
+<h2>Phase 1: Design and material selection (3 to 6 weeks)</h2>
+
+<p>Starts with the in-home consultation. We measure, walk through what you want, and talk through realistic budgets and timelines. If we are a fit, we move to design.</p>
+
+<p>The design phase covers layout, cabinet plan, appliance specification, counter selection, tile, flooring, hardware, lighting, and finish choices. This is where most timelines actually live or die. Homeowners who can make decisions and commit to a direction finish design in three weeks. Homeowners who keep revisiting cabinet door styles and cannot pick between three quartz slabs stretch design to six or eight weeks.</p>
+
+<p>Our recommendation: come into the design phase with a clear vision of what you want functionally. The exact tile pattern can be decided in week two. Whether you want an island, where the sink goes, and what the layout looks like needs to be settled in the first meeting.</p>
+
+<h2>Phase 2: Permits and ordering (3 to 8 weeks)</h2>
+
+<p>The big driver here is cabinet lead time. Semi-custom cabinets from quality manufacturers run 6 to 10 weeks from order to delivery in 2026. Fully custom cabinets from a local shop can run 8 to 14 weeks. This is the longest single timeline item in the whole project.</p>
+
+<p>While cabinets are being made, we file permits with your municipality. Hamilton, Lawrenceville, Princeton, and most other Central NJ townships turn around residential building permits in 1 to 3 weeks. Permits are pulled in parallel with cabinet manufacturing so they do not extend the overall timeline.</p>
+
+<p>We also order long lead time items in this phase: stone slab counters, specialty tile from overseas, custom range hoods, and any appliances on backorder. We line up the calendar so everything arrives before its install date.</p>
+
+<h2>Phase 3: Demolition (3 to 5 days)</h2>
+
+<p>Day one of construction. Old cabinets come out, old appliances are removed, flooring is pulled up, and the room goes back to its bones. We protect floors in the adjacent rooms, hang plastic sheeting to control dust, and set up a temporary kitchen for you somewhere else in the house with the microwave, coffee maker, and a hot plate.</p>
+
+<p>Demolition often surprises us. We have pulled cabinets off walls in older Trenton and Ewing homes and found knob-and-tube wiring still in service. We have pulled up vinyl in 1970s Hamilton kitchens and discovered three layers of flooring stacked on top of a sagging subfloor. We build a 5 to 10 percent contingency into every estimate specifically for what demo reveals.</p>
+
+<h2>Phase 4: Rough plumbing and electrical (1 to 2 weeks)</h2>
+
+<p>If the layout is changing, this is when plumbing gets moved and electrical gets re-routed. New island circuits, dedicated lines for the dishwasher and disposal, range outlet upgrades from 220 to 240 volt where needed, and any new can lighting locations all happen now.</p>
+
+<p>In older Central NJ homes built before 1980, this phase sometimes includes an electrical panel upgrade. A 100 amp panel cannot reliably power a modern kitchen with induction range, dishwasher, microwave, disposal, and under-cabinet lighting all on the same circuit topology. The upgrade to 200 amp service costs $2,500 to $4,500 and adds 3 to 5 days to the schedule.</p>
+
+<p>Inspections from the township happen at the end of this phase. Rough plumbing inspection, rough electrical inspection. Both have to pass before walls close up.</p>
+
+<h2>Phase 5: Drywall, paint, and flooring (1 to 2 weeks)</h2>
+
+<p>Walls close up. Drywall goes on, tape and mud, sanding, and primer. Then the flooring is installed if it runs through the kitchen. Then the walls and ceiling get their finish coats of paint.</p>
+
+<p>Order matters here. Some contractors paint after cabinets, which leads to visible roll marks where cabinets and walls meet. We paint before cabinet install and touch up after. The finish is cleaner.</p>
+
+<h2>Phase 6: Cabinet install (3 to 5 days)</h2>
+
+<p>The day the cabinets arrive is one of the most satisfying days of any renovation. The room transforms from a construction zone back into a kitchen in 3 to 5 days. Wall cabinets first, then base cabinets, then the island.</p>
+
+<p>This is where craftsmanship matters most. Cabinets installed level, plumb, and tight to each other will look perfect for 30 years. Cabinets installed poorly will reveal every gap and misalignment under the harsh light of finished countertops.</p>
+
+<h2>Phase 7: Counter templating, fabrication, and install (2 to 3 weeks)</h2>
+
+<p>The counter fabricator comes out the day after cabinets are installed and templates the exact measurements with a laser. Templating to install runs 7 to 14 days depending on the fabricator's queue and the material. Quartz is fastest. Granite and marble run a few days longer because slabs need to be selected and book-matched.</p>
+
+<p>The counter install day is when sinks get dropped in, faucets get hooked up, and the kitchen starts to look like a finished space.</p>
+
+<h2>Phase 8: Backsplash and trim (1 week)</h2>
+
+<p>Backsplash tile goes in after counters because the bottom edge needs to land cleanly on the stone. Tile setting is 2 to 3 days for installation, then grout cures for 24 to 48 hours, then sealing. Trim work happens in parallel: crown molding, light rail under cabinets, toe kicks, and any decorative trim around the island.</p>
+
+<h2>Phase 9: Appliances, plumbing fixtures, and final electrical (3 to 5 days)</h2>
+
+<p>Appliances are installed and hooked up. Garbage disposal connected, dishwasher hard-wired or plugged in, range hood vented and turned on, fridge slid into place. Final electrical work for under-cabinet lighting, pendants over the island, and any decorative lighting gets finished. Then final inspections from the township.</p>
+
+<h2>Phase 10: Punch list and final walkthrough (3 to 7 days)</h2>
+
+<p>Every project has a punch list. Touch-up paint where something got bumped, a cabinet door that needs adjustment, a drawer that closes too quickly. We walk the kitchen with you, write down anything that needs attention, and our team takes 3 to 7 days to clear the list. Then we hand you the keys and a binder with all your warranty and manual paperwork.</p>
+
+<h2>What pushes a kitchen timeline longer</h2>
+
+<p>The most common surprises that add weeks to a project:</p>
+
+<p><strong>Indecision in the design phase.</strong> Adds 2 to 4 weeks. The biggest driver of every timeline overrun we see.</p>
+
+<p><strong>Custom cabinet manufacturer running late.</strong> Adds 2 to 6 weeks. We try to use suppliers with reliable lead times, but spring and fall are their busiest seasons.</p>
+
+<p><strong>Discoveries behind walls.</strong> Adds 1 to 3 weeks. Knob-and-tube wiring, rotten subfloor, undersized plumbing supply lines, asbestos floor tile under vinyl. Mostly in homes built before 1980.</p>
+
+<p><strong>Panel upgrade required.</strong> Adds 3 to 5 days. Triggers a separate electrical inspection.</p>
+
+<p><strong>Stone slab issues.</strong> Adds 1 to 2 weeks. The first slab you fall in love with cracks during fabrication, and you have to pick another.</p>
+
+<p><strong>Holidays.</strong> Adds 1 to 2 weeks. Cabinet shops slow down between Thanksgiving and the first week of January.</p>
+
+<h2>The realistic schedule for a typical Central NJ kitchen</h2>
+
+<p>Putting it all together for an average $75,000 mid-range kitchen renovation in Hamilton, Princeton, West Windsor, or Lawrenceville:</p>
+
+<p>Design and selection: 4 weeks. Cabinet ordering and permitting: 7 weeks. Construction: 10 weeks. Total: 21 weeks, or about 5 months from first call to finished kitchen.</p>
+
+<p>For a simpler refresh without layout changes, knock 3 to 5 weeks off. For a full gut and reconfigure with custom cabinets and structural work, add 4 to 8 weeks.</p>
+
+<h2>How to keep your kitchen project on schedule</h2>
+
+<p>Three things you control:</p>
+
+<p>Decide quickly during design. Two-week selection windows beat eight-week dithering.</p>
+
+<p>Order cabinets early. The longer lead time gets locked in earlier, the less it can derail later phases.</p>
+
+<p>Communicate cleanly with your contractor. If we know your real deadline, we can schedule trades, inspections, and material deliveries to hit it.</p>
+
+<p>If you want a realistic schedule for your specific kitchen, call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">schedule a free in-home consultation</a>. We will walk through your scope and give you a date-by-date timeline before any work starts.</p>
+
+<p>For cost details, read <a href="/blog/kitchen-remodel-cost">our kitchen remodel cost guide</a>. For finished kitchens we have built across Central NJ, browse the <a href="/portfolio">portfolio</a>.</p>
+`,
+  },
 ];
 

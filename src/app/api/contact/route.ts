@@ -30,7 +30,15 @@ interface ContactPayload {
   timeline?: string;
   message?: string;
   source?: string;
+  website?: string;
+  human_verified?: boolean;
+  mouse_events?: number;
+  verified_at_ms?: number;
+  form_duration_ms?: number;
 }
+
+const MIN_FORM_FILL_MS = 2500;
+const MIN_MOUSE_EVENTS = 2;
 
 // ── Rate limiting (per IP: 10 submissions per 5 min) ────────────────────────
 const rateMap = new Map<string, { count: number; reset: number }>();
@@ -95,6 +103,46 @@ export async function POST(req: NextRequest) {
   }
   if (!/^\S+@\S+\.\S+$/.test(email)) {
     return NextResponse.json({ error: "Invalid email address." }, { status: 400 });
+  }
+
+  // Honeypot: any value in `website` = bot. Return success to avoid tipping them off.
+  if (body.website && body.website.trim() !== "") {
+    console.log(`[${ROUTE_VERSION}] honeypot triggered, dropping submission silently`);
+    return NextResponse.json({ success: true });
+  }
+
+  // Timing check: form filled in < 2.5s is almost certainly a bot.
+  if (typeof body.form_duration_ms === "number" && body.form_duration_ms < MIN_FORM_FILL_MS) {
+    console.log(`[${ROUTE_VERSION}] timing check failed (${body.form_duration_ms}ms), dropping`);
+    return NextResponse.json({ success: true });
+  }
+
+  // Human verification: checkbox clicked + mouse moved + verified before submit.
+  if (
+    body.human_verified !== true ||
+    typeof body.mouse_events !== "number" ||
+    body.mouse_events < MIN_MOUSE_EVENTS ||
+    typeof body.verified_at_ms !== "number" ||
+    body.verified_at_ms <= 0
+  ) {
+    console.log(`[${ROUTE_VERSION}] human verification missing/invalid, dropping silently`, {
+      human_verified: body.human_verified,
+      mouse_events: body.mouse_events,
+      verified_at_ms: body.verified_at_ms,
+    });
+    return NextResponse.json({ success: true });
+  }
+
+  // Sanity: verification must happen before submission (verified_at_ms is a wall-clock
+  // value, so we can't compare across requests, but we can require it falls within
+  // the form_duration window).
+  if (typeof body.form_duration_ms === "number") {
+    const submittedAt = Date.now();
+    const verifiedAgo = submittedAt - body.verified_at_ms;
+    if (verifiedAgo < 0 || verifiedAgo > body.form_duration_ms + 5000) {
+      console.log(`[${ROUTE_VERSION}] verification timestamp out of window (${verifiedAgo}ms), dropping silently`);
+      return NextResponse.json({ success: true });
+    }
   }
 
   const apiKey = process.env.GHL_API_KEY;

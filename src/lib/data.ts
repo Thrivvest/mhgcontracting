@@ -39,6 +39,8 @@ export interface Service {
   icon: string;
   scopeItems: string[];
   faqs: FAQ[];
+  seoTitle?: string;
+  seoDescription?: string;
 }
 
 export interface FAQ {
@@ -229,6 +231,9 @@ export const services: Service[] = [
       "Your kitchen is the heart of your home, and we treat it that way. From custom cabinetry and stone countertops to full layout redesigns, our kitchen renovations blend beauty, function, and quality craftsmanship. Whether you want a modern open concept or a timeless classic look, we bring your vision to life.",
     shortDescription:
       "Custom cabinetry, countertops, and full layout redesigns.",
+    seoTitle: "Kitchen Remodeling in Central NJ | Free Estimate | MHG Contracting",
+    seoDescription:
+      "Family-owned kitchen remodeling contractor serving Hamilton, Princeton, Lawrenceville, and Central NJ. Custom cabinetry, quartz counters, full layouts. Free estimate: (609) 712-2474.",
     icon: "kitchen",
     scopeItems: [
       "Custom cabinetry design and installation",
@@ -268,6 +273,9 @@ export const services: Service[] = [
       "Transform your bathroom into a personal retreat. From powder room refreshes to full master bathroom overhauls, we handle every detail - tile work, fixtures, vanities, lighting, and more. Our attention to waterproofing and proper ventilation ensures your renovation lasts for years to come.",
     shortDescription:
       "From powder rooms to spa-like master bathrooms.",
+    seoTitle: "Bathroom Remodeling in Central NJ | Free Estimate | MHG Contracting",
+    seoDescription:
+      "Family-owned bathroom remodeling contractor serving Hamilton, Princeton, Lawrenceville, and Central NJ. Walk-in showers, custom tile, vanities. Free estimate: (609) 712-2474.",
     icon: "bathroom",
     scopeItems: [
       "Custom tile showers and tub surrounds",
@@ -307,6 +315,9 @@ export const services: Service[] = [
       "Unlock the potential of your unfinished basement. We transform dark, unused spaces into beautiful living areas - home theaters, guest suites, home offices, gyms, and entertainment lounges. Our basements include proper insulation, moisture management, and quality finishes.",
     shortDescription:
       "Transform your basement into usable living space.",
+    seoTitle: "Basement Finishing in Central NJ | Free Estimate | MHG Contracting",
+    seoDescription:
+      "Family-owned basement finishing contractor serving Hamilton, Princeton, Lawrenceville, and Central NJ. Home theaters, in-law suites, gyms. Free estimates: (609) 712-2474.",
     icon: "basement",
     scopeItems: [
       "Framing and insulation",

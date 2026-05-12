@@ -43,6 +43,11 @@ export const CITIES: CityInfo[] = [
   { slug: "lawrenceville-nj", name: "Lawrenceville", state: "New Jersey", stateAbbr: "NJ" },
   { slug: "plainsboro-nj", name: "Plainsboro", state: "New Jersey", stateAbbr: "NJ" },
   { slug: "yardley-pa", name: "Yardley", state: "Pennsylvania", stateAbbr: "PA" },
+  { slug: "robbinsville-nj", name: "Robbinsville", state: "New Jersey", stateAbbr: "NJ" },
+  { slug: "east-windsor-nj", name: "East Windsor", state: "New Jersey", stateAbbr: "NJ" },
+  { slug: "hopewell-nj", name: "Hopewell", state: "New Jersey", stateAbbr: "NJ" },
+  { slug: "pennington-nj", name: "Pennington", state: "New Jersey", stateAbbr: "NJ" },
+  { slug: "ewing-nj", name: "Ewing", state: "New Jersey", stateAbbr: "NJ" },
 ];
 
 // ─── Service Slugs for cross-ref ────────────────────────
@@ -189,8 +194,8 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "lawrenceville-nj",
     cityName: "Lawrenceville",
     state: "NJ",
-    title: "Kitchen Renovations in Lawrenceville, NJ | MHG Contracting",
-    metaDescription: "Kitchen renovation contractor in Lawrenceville, NJ. MHG Contracting delivers custom kitchen remodels with quality cabinetry, stone countertops, and modern layouts. Free estimates.",
+    title: "Kitchen Remodel in Lawrenceville, NJ | Free Estimate | MHG Contracting",
+    metaDescription: "Lawrenceville, NJ kitchen remodeling contractor. Custom cabinetry, quartz countertops, full layout redesigns. Family-owned. Free estimate: (609) 712-2474.",
     h1: "Kitchen Renovations in Lawrenceville, NJ",
     content: `<h2>Lawrenceville Kitchen Renovation Contractor</h2>
 <p>Lawrenceville sits at the crossroads of history and modern suburban living. From the charming older homes along Main Street and the colonial-era properties near The Lawrenceville School to the contemporary developments off Route 206, Lawrenceville offers a diverse mix of housing that keeps our renovation work interesting. MHG Contracting has served Lawrenceville homeowners with kitchen renovations that respect the character of each home while delivering the functionality today's families demand.</p>
@@ -329,8 +334,8 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "hamilton-nj",
     cityName: "Hamilton",
     state: "NJ",
-    title: "Bathroom Renovations in Hamilton, NJ | MHG Contracting",
-    metaDescription: "Hamilton NJ bathroom renovation experts. MHG Contracting specializes in master bath remodels, shower upgrades, and custom tile work. Based in Hamilton. Free estimates.",
+    title: "Bathroom Remodel in Hamilton, NJ | Free Estimate | MHG Contracting",
+    metaDescription: "Hamilton, NJ bathroom remodeling contractor. Master bath remodels, walk-in showers, and custom tile work. Family-owned, based in Hamilton. Free estimate: (609) 712-2474.",
     h1: "Bathroom Renovations in Hamilton, NJ",
     content: `<h2>Hamilton's Go-To Bathroom Renovation Contractor</h2>
 <p>As a Hamilton-based company, we have renovated bathrooms across every corner of the township - Mercerville, Hamilton Square, Yardville, Groveville, and White Horse. We know the typical bathroom layouts in Hamilton's split-levels, bi-levels, and colonials. We know where the plumbing runs, what the common issues are, and how to transform a dated bathroom into a modern retreat without unnecessary surprises.</p>
@@ -920,8 +925,8 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "lawrenceville-nj",
     cityName: "Lawrenceville",
     state: "NJ",
-    title: "Home Additions in Lawrenceville, NJ | MHG Contracting",
-    metaDescription: "Home addition contractor in Lawrenceville, NJ. Room additions, sunrooms, and second-story additions by MHG Contracting. Free estimates.",
+    title: "Home Additions in Lawrenceville, NJ | Free Estimate | MHG Contracting",
+    metaDescription: "Family-owned home addition contractor in Lawrenceville, NJ. Room additions, sunrooms, in-law suites, and second-story builds. Free estimate: (609) 712-2474.",
     h1: "Home Additions in Lawrenceville, NJ",
     content: `<h2>Lawrenceville Home Addition Services</h2>
 <p>Lawrenceville homeowners who need more space have an excellent alternative to moving: a professionally designed and built home addition. MHG Contracting has built additions throughout the region that solve space challenges - from growing families who need bedrooms to remote workers who need a real office - while maintaining the architectural integrity of the existing home.</p>
@@ -1068,8 +1073,8 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "west-windsor-nj",
     cityName: "West Windsor",
     state: "NJ",
-    title: "New Home Construction in West Windsor, NJ | MHG Contracting",
-    metaDescription: "Custom new home construction in West Windsor, NJ. Premium custom homes built by MHG Contracting with exceptional quality and attention to detail. Free consultations.",
+    title: "Custom Home Builder in West Windsor, NJ | Free Consultation | MHG",
+    metaDescription: "Family-owned custom home builder in West Windsor, NJ. Premium new construction in Princeton Junction and West Windsor Village. Free consultation: (609) 712-2474.",
     h1: "New Home Construction in West Windsor, NJ",
     content: `<h2>West Windsor Custom Home Builder</h2>
 <p>West Windsor's top-rated schools, excellent transit access via Princeton Junction, and family-friendly neighborhoods make it one of Central New Jersey's most desirable communities for custom home construction. MHG Contracting builds custom homes in West Windsor that match the community's high standards - with premium materials, thoughtful design, and meticulous craftsmanship.</p>
@@ -1178,6 +1183,501 @@ export const AREA_PAGES: AreaPage[] = [
     relatedPortfolioSlugs: ["custom-colonial-new-build"],
     relatedBlogSlugs: ["choosing-a-contractor", "kitchen-timeline"],
   },
+
+  // ═══════════════════════════════════════════════════════
+  // TIER 4-7 EXPANSION: ROBBINSVILLE, EAST WINDSOR, HOPEWELL, PENNINGTON, EWING
+  // ═══════════════════════════════════════════════════════
+
+  // ─── Kitchen: Robbinsville ──────────────────────────────
+  {
+    serviceSlug: "kitchen-renovations",
+    serviceName: "Kitchen Renovations",
+    citySlug: "robbinsville-nj",
+    cityName: "Robbinsville",
+    state: "NJ",
+    title: "Kitchen Remodeling in Robbinsville, NJ | MHG Contracting",
+    metaDescription: "Kitchen remodeling in Robbinsville, NJ. MHG Contracting builds custom kitchens for Town Center, Foxmoor, and Washington Town Center homes. Free estimates from a local Mercer County contractor.",
+    h1: "Kitchen Remodeling in Robbinsville, NJ",
+    content: `<h2>Robbinsville Kitchen Remodeling Contractor</h2>
+<p>Robbinsville Township has grown faster than almost any community in Mercer County over the past two decades. Neighborhoods like Town Center, Foxmoor, Washington Town Center, and the homes along Route 526 are filled with families who want kitchens that match the quality of their homes. MHG Contracting is a Hamilton-based remodeling company that has built and renovated kitchens throughout Robbinsville, and we understand both the newer builder-grade construction and the older farmhouses tucked back along Sharon Road.</p>
+
+<h2>What Robbinsville Kitchen Remodels Typically Look Like</h2>
+<p>Many Robbinsville homes were built between 2000 and 2015 with open floor plans but standard builder finishes. Homeowners come to us when they are ready to elevate the space - swapping out laminate or basic granite for quartz, upgrading stock cabinets to custom or semi-custom, and adding an island that actually functions as a prep and gathering hub. We also handle full reconfigurations in older Robbinsville colonials where the kitchen was closed off from the living areas.</p>
+<p>Newer Robbinsville homes often have unused space in oversized pantries or awkward butler areas. We frequently incorporate these into the working kitchen to create more counter space, a coffee station, or built-in beverage storage. Small structural tweaks paired with high-quality finishes deliver outsized results.</p>
+
+<h2>Why Robbinsville Families Choose MHG</h2>
+<p>We are based less than 15 minutes from every Robbinsville neighborhood. That proximity matters - it means Shahzeb Malik, our founder, is on-site regularly and the crew can respond fast when questions come up. We pull permits through Robbinsville Township directly and have worked with their building department on multiple projects, so we know what to expect on inspections and timelines.</p>
+<p>Take a look at our <a href="/portfolio/open-concept-kitchen-living">Open Concept Kitchen & Living</a> project for an example of the kind of layout transformation we deliver. We focus on craftsmanship, clean job sites, and honest pricing - no upsells, no surprises.</p>
+
+<h2>Robbinsville Kitchen Remodel Scope</h2>
+<p>Our Robbinsville kitchen projects range from cosmetic refreshes to full gut renovations. We handle custom and semi-custom cabinetry, quartz and natural stone countertops, full tile work, plumbing rough-ins, electrical upgrades, lighting design, appliance integration, and any structural changes required to open up the space. Read our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> for current Mercer County pricing benchmarks.</p>`,
+    faqs: [
+      {
+        question: "How much does a kitchen remodel cost in Robbinsville, NJ?",
+        answer: "Kitchen remodels in Robbinsville typically run $40,000 to $110,000. Newer homes with good bones often fall in the $40,000-$70,000 range for a quality refresh, while full gut renovations with custom cabinetry and structural changes land between $80,000 and $110,000. We provide line-item estimates so you know exactly what you are paying for.",
+      },
+      {
+        question: "Do you handle permits with Robbinsville Township?",
+        answer: "Yes. Robbinsville requires permits for plumbing, electrical, and any structural modifications. We file all permits, coordinate inspections, and ensure the project closes out cleanly with the township.",
+      },
+      {
+        question: "How long will a Robbinsville kitchen renovation take?",
+        answer: "Most Robbinsville kitchens take 8-12 weeks from demolition to final walkthrough. Custom cabinet lead times can add 4-6 weeks before construction starts. We give you a full schedule before any work begins.",
+      },
+    ],
+    relatedPortfolioSlugs: ["open-concept-kitchen-living", "modern-farmhouse-kitchen"],
+    relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-timeline"],
+  },
+
+  // ─── Kitchen: East Windsor ──────────────────────────────
+  {
+    serviceSlug: "kitchen-renovations",
+    serviceName: "Kitchen Renovations",
+    citySlug: "east-windsor-nj",
+    cityName: "East Windsor",
+    state: "NJ",
+    title: "Kitchen Remodeling in East Windsor, NJ | MHG Contracting",
+    metaDescription: "Kitchen remodeling in East Windsor, NJ. MHG Contracting renovates kitchens in Twin Rivers, Hickory Acres, and across East Windsor with custom cabinetry and quality craftsmanship.",
+    h1: "Kitchen Remodeling in East Windsor, NJ",
+    content: `<h2>East Windsor Kitchen Renovation Experts</h2>
+<p>East Windsor is one of the most architecturally diverse townships in Mercer County. Twin Rivers, the country's first planned residential community, sits alongside older ranches and split-levels in Hickory Acres, newer construction off Route 130, and traditional colonials throughout the township. MHG Contracting has remodeled kitchens across every East Windsor neighborhood, and we adapt our approach to the specific era and style of your home.</p>
+
+<h2>Common East Windsor Kitchen Challenges</h2>
+<p>Twin Rivers townhomes were built in the early 1970s with kitchens that feel narrow and dated by today's standards. Limited counter space, dark wood cabinetry, and outdated appliance placements are common complaints. Our most popular Twin Rivers projects involve reconfiguring the layout to create a working triangle, opening sight lines into the dining area, and modernizing finishes without losing the practical footprint.</p>
+<p>In single-family East Windsor homes, especially the older ranches and bi-levels off Route 33 and Old Trenton Road, we frequently tackle full layout overhauls. Removing a wall between the kitchen and family room, installing an island where there used to be a peninsula, and replacing 30-year-old cabinetry with custom work can completely change how a family uses the space.</p>
+
+<h2>What Sets MHG Apart</h2>
+<p>We are based in Hamilton, less than 20 minutes from any East Windsor neighborhood. That means real proximity, real responsiveness, and the same crew on your job from start to finish. Shahzeb Malik personally manages every project - you talk directly to the person making decisions, not a sales rep or a rotating cast of project managers.</p>
+<p>Our portfolio includes work that spans the full range of East Windsor styles, from clean modern designs to traditional colonial-appropriate finishes. See our <a href="/portfolio/modern-farmhouse-kitchen">Modern Farmhouse Kitchen</a> project for one example of how we balance contemporary function with timeless design.</p>
+
+<h2>Permits, Process, and Pricing</h2>
+<p>East Windsor Township requires permits for the electrical, plumbing, and any structural work involved in a kitchen renovation. We handle every permit and inspection so you do not have to. Our process starts with a free in-home consultation, moves through detailed design and material selection, and continues with weekly check-ins during construction. For pricing context, review our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost breakdown</a>.</p>`,
+    faqs: [
+      {
+        question: "How much does a kitchen remodel cost in East Windsor, NJ?",
+        answer: "East Windsor kitchen remodels typically range from $35,000 to $95,000. Twin Rivers townhomes and smaller kitchens often land in the $35,000-$60,000 range, while larger single-family renovations with custom cabinetry and layout changes run $65,000 to $95,000 or more.",
+      },
+      {
+        question: "Can you work on Twin Rivers townhomes?",
+        answer: "Yes. We have worked on multiple Twin Rivers projects. We are familiar with the homeowners association's renovation guidelines and the structural realities of the original 1970s construction.",
+      },
+      {
+        question: "How long does an East Windsor kitchen renovation take?",
+        answer: "Plan on 8-12 weeks of active construction. Custom cabinetry can add 4-6 weeks of lead time on the front end. We provide a detailed schedule during design so you can plan meals and family routines accordingly.",
+      },
+    ],
+    relatedPortfolioSlugs: ["modern-farmhouse-kitchen", "open-concept-kitchen-living"],
+    relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-timeline"],
+  },
+
+  // ─── Kitchen: Hopewell ──────────────────────────────────
+  {
+    serviceSlug: "kitchen-renovations",
+    serviceName: "Kitchen Renovations",
+    citySlug: "hopewell-nj",
+    cityName: "Hopewell",
+    state: "NJ",
+    title: "Kitchen Remodeling in Hopewell, NJ | MHG Contracting",
+    metaDescription: "Kitchen remodeling in Hopewell, NJ. MHG Contracting renovates historic farmhouses and modern homes throughout Hopewell Borough and Hopewell Township with custom craftsmanship.",
+    h1: "Kitchen Remodeling in Hopewell, NJ",
+    content: `<h2>Hopewell Kitchen Renovation Specialists</h2>
+<p>Hopewell is one of the most distinctive communities in Mercer County. The borough itself features charming 19th-century homes along Broad Street and Greenwood Avenue, while Hopewell Township stretches out into farmland with historic farmhouses, modern estates, and everything in between. MHG Contracting respects the architectural heritage of Hopewell homes while building kitchens that work for how today's families actually live.</p>
+
+<h2>Renovating Older Hopewell Homes</h2>
+<p>Many Hopewell homes were built in the late 1800s or early 1900s. They have small, isolated kitchens that were originally designed as workspaces for hired help, not as the heart of family life. Our most common Hopewell renovations involve thoughtful expansion - sometimes by removing a wall to absorb an adjacent pantry or maid's room, sometimes by adding square footage with a small addition off the back of the house. We always work carefully around plaster walls, original trim, and structural systems that can be a century old or more.</p>
+<p>For newer homes in developments like Brandon Farms or the estates off Pennington-Hopewell Road, our work tends toward elevated finishes and reconfigurations that maximize the existing footprint. Custom cabinetry, natural stone counters, and professional-grade appliances are common upgrades.</p>
+
+<h2>Why Hopewell Homeowners Choose MHG</h2>
+<p>Renovating an older Hopewell home requires patience, skill, and respect for what already exists. We do not gut and replace just to make the job easier. We work with the home, preserving original details where they add value and modernizing where needed. Shahzeb Malik personally oversees every Hopewell project, and we treat each home like the irreplaceable structure it often is.</p>
+<p>Our <a href="/portfolio/modern-farmhouse-kitchen">Modern Farmhouse Kitchen</a> project is a good example of blending contemporary function with traditional character - exactly the kind of work that fits Hopewell's housing stock.</p>
+
+<h2>Permits and Local Knowledge</h2>
+<p>Hopewell Borough and Hopewell Township have separate building departments. We handle permitting for both, and we understand the special considerations for any homes in the historic district. Read our <a href="/blog/permits-nj">guide to NJ remodeling permits</a> for more on what the process looks like.</p>`,
+    faqs: [
+      {
+        question: "How much does a kitchen remodel cost in Hopewell, NJ?",
+        answer: "Kitchen remodels in Hopewell typically range from $45,000 to $130,000. Renovating older historic homes often costs more due to plaster repair, custom millwork, and the care required to preserve original features. Newer Hopewell homes fall in the $45,000-$80,000 range for most projects.",
+      },
+      {
+        question: "Do you work on historic Hopewell homes?",
+        answer: "Yes. We have experience renovating 19th and early 20th century homes throughout Hopewell. We handle plaster walls carefully, match original trim profiles where needed, and respect the architectural character of the home.",
+      },
+      {
+        question: "Which Hopewell building department handles my permits?",
+        answer: "It depends on whether your home is in Hopewell Borough or Hopewell Township. We confirm the correct jurisdiction during our consultation and handle all permitting and inspections from there.",
+      },
+    ],
+    relatedPortfolioSlugs: ["modern-farmhouse-kitchen", "traditional-chefs-kitchen"],
+    relatedBlogSlugs: ["kitchen-remodel-cost", "permits-nj"],
+  },
+
+  // ─── Kitchen: Pennington ────────────────────────────────
+  {
+    serviceSlug: "kitchen-renovations",
+    serviceName: "Kitchen Renovations",
+    citySlug: "pennington-nj",
+    cityName: "Pennington",
+    state: "NJ",
+    title: "Kitchen Remodeling in Pennington, NJ | MHG Contracting",
+    metaDescription: "Kitchen remodeling in Pennington, NJ. MHG Contracting renovates historic borough homes and newer estates throughout Pennington with custom cabinetry and craftsmanship.",
+    h1: "Kitchen Remodeling in Pennington, NJ",
+    content: `<h2>Pennington Kitchen Renovation Contractor</h2>
+<p>Pennington Borough is a small, walkable community surrounded by Hopewell Township, with one of the most charming Main Streets in Central New Jersey. The homes range from Victorian-era and colonial revival cottages near the borough center to larger estates on the outskirts. MHG Contracting has remodeled kitchens across this range, and we know how to deliver modern function inside homes that are sometimes more than a century old.</p>
+
+<h2>What Pennington Kitchen Renovations Involve</h2>
+<p>Older Pennington homes typically have small, compartmentalized kitchens that were never meant to be the social hub they are today. Counter space is limited, storage is minimal, and the kitchen is often closed off from the dining room and family areas. Our most popular Pennington renovations open these spaces up, install custom cabinetry that maximizes every inch, and bring in modern lighting and ventilation - all while respecting the architectural integrity of the home.</p>
+<p>In the newer estates along Federal City Road and the outer reaches of Hopewell Township, our work focuses on premium upgrades: oversized islands with waterfall stone edges, custom range hoods, integrated appliances, and layered lighting design. Pennington homeowners tend to expect excellent materials and craftsmanship, and we deliver both.</p>
+
+<h2>Why Pennington Families Trust MHG</h2>
+<p>Shahzeb Malik personally manages every Pennington project. We do not run a high-volume shop where you get handed off to a project manager you have never met. You talk directly to the person who is making decisions about your home. That direct relationship matters when you are putting tens of thousands of dollars and weeks of your life into a renovation.</p>
+<p>Our <a href="/portfolio/traditional-chefs-kitchen">Traditional Chef's Kitchen</a> project shows the kind of craftsmanship we bring to every job. We take care of your home, your time, and your investment.</p>
+
+<h2>Permits, Pricing, and Process</h2>
+<p>Pennington Borough has its own building department and permitting requirements separate from Hopewell Township. We handle all permits and inspections directly. For a sense of current pricing, review our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a>. We provide free, detailed estimates so you know exactly what to expect before any work starts.</p>`,
+    faqs: [
+      {
+        question: "How much does a kitchen remodel cost in Pennington, NJ?",
+        answer: "Pennington kitchen remodels typically range from $50,000 to $135,000. The borough's mix of historic homes and high-end newer construction means projects often involve premium materials and custom work, which drives toward the higher end of the range.",
+      },
+      {
+        question: "Do you work on historic Pennington homes?",
+        answer: "Yes. We have experience with Victorian-era and colonial revival homes throughout Pennington. We carefully preserve original trim, plaster, and architectural details while modernizing function.",
+      },
+      {
+        question: "How long does a Pennington kitchen renovation take?",
+        answer: "Plan on 10-14 weeks of active construction for most Pennington kitchen renovations. Historic homes sometimes take longer due to careful prep work and unexpected discoveries during demolition. We build buffer into every schedule.",
+      },
+    ],
+    relatedPortfolioSlugs: ["traditional-chefs-kitchen", "modern-farmhouse-kitchen"],
+    relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-timeline"],
+  },
+
+  // ─── Kitchen: Ewing ─────────────────────────────────────
+  {
+    serviceSlug: "kitchen-renovations",
+    serviceName: "Kitchen Renovations",
+    citySlug: "ewing-nj",
+    cityName: "Ewing",
+    state: "NJ",
+    title: "Kitchen Remodeling in Ewing, NJ | MHG Contracting",
+    metaDescription: "Kitchen remodeling in Ewing, NJ. MHG Contracting renovates Cape Cods, ranches, and colonials across Ewing Township with custom cabinetry and quality craftsmanship.",
+    h1: "Kitchen Remodeling in Ewing, NJ",
+    content: `<h2>Ewing Kitchen Remodeling Contractor</h2>
+<p>Ewing Township sits at the western edge of Mercer County and includes a wide mix of housing - post-WWII Cape Cods and ranches in neighborhoods like Mountainview and Ewingville, larger colonials in West Trenton, and newer townhomes and developments scattered throughout. MHG Contracting has renovated kitchens across every Ewing neighborhood, and we tailor our approach to the home you actually have.</p>
+
+<h2>Common Ewing Kitchen Renovations</h2>
+<p>Many Ewing homes were built in the 1940s through 1960s with small, isolated kitchens designed for a different era. Today's homeowners want open layouts, more storage, better lighting, and modern function. Our most common Ewing renovations involve removing a wall between the kitchen and dining or living room, installing custom or semi-custom cabinetry, upgrading to quartz or granite countertops, and modernizing the electrical and plumbing systems that often have not been touched in decades.</p>
+<p>In newer Ewing developments, we focus on quality upgrades that elevate builder-grade kitchens to something that feels truly custom. Replacing stock cabinets with painted or stained custom doors, swapping laminate for stone, and adding under-cabinet lighting and a tile backsplash can transform a perfectly functional kitchen into a showpiece.</p>
+
+<h2>Why Choose MHG for Your Ewing Kitchen</h2>
+<p>We are a Hamilton-based remodeling company, about 15 minutes from most Ewing neighborhoods. That means real proximity, quick response times, and the same crew on your job from demolition through final touches. Shahzeb Malik is personally involved in every project. There is no sales rep handing you off after the contract gets signed.</p>
+<p>Take a look at our <a href="/portfolio/open-concept-kitchen-living">Open Concept Kitchen & Living</a> project for an example of the kind of layout transformation that works well in older Ewing homes.</p>
+
+<h2>Permits and Pricing</h2>
+<p>Ewing Township requires permits for electrical, plumbing, and any structural changes involved in a kitchen renovation. We file all permits and coordinate inspections directly with the township. For current Mercer County pricing benchmarks, see our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a>.</p>`,
+    faqs: [
+      {
+        question: "How much does a kitchen remodel cost in Ewing, NJ?",
+        answer: "Ewing kitchen remodels typically range from $30,000 to $85,000. A targeted refresh with new surfaces and fixtures starts around $25,000, while a full gut renovation with custom cabinetry and structural changes falls between $55,000 and $85,000.",
+      },
+      {
+        question: "Do you work on older Ewing Cape Cods and ranches?",
+        answer: "Yes. We renovate older Ewing homes regularly. We are familiar with the structural quirks of mid-century construction, the older electrical and plumbing systems that often need updating, and the design choices that bring these homes into the present without erasing their character.",
+      },
+      {
+        question: "How long does an Ewing kitchen renovation take?",
+        answer: "Most Ewing kitchen projects take 8-12 weeks of active construction. Custom cabinetry can add 4-6 weeks of lead time before work begins. We provide a complete schedule before any demolition starts.",
+      },
+    ],
+    relatedPortfolioSlugs: ["open-concept-kitchen-living", "modern-farmhouse-kitchen"],
+    relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-timeline"],
+  },
+
+  // ─── Bathroom: Robbinsville ─────────────────────────────
+  {
+    serviceSlug: "bathroom-renovations",
+    serviceName: "Bathroom Renovations",
+    citySlug: "robbinsville-nj",
+    cityName: "Robbinsville",
+    state: "NJ",
+    title: "Bathroom Remodeling in Robbinsville, NJ | MHG Contracting",
+    metaDescription: "Bathroom remodeling in Robbinsville, NJ. MHG Contracting builds luxury primary baths, guest baths, and powder rooms across Town Center, Foxmoor, and Washington Town Center.",
+    h1: "Bathroom Remodeling in Robbinsville, NJ",
+    content: `<h2>Robbinsville Bathroom Renovation Contractor</h2>
+<p>Robbinsville's growth over the past 20 years means most of the homes here are relatively new - but newer does not mean perfect. Builder-grade bathrooms with small vanities, fiberglass tub surrounds, and basic tile work feel dated quickly. MHG Contracting renovates bathrooms across every Robbinsville neighborhood, from Town Center and Foxmoor to the larger estates along Sharon Road.</p>
+
+<h2>Common Robbinsville Bathroom Renovations</h2>
+<p>Most Robbinsville bathroom projects fall into one of three categories: primary bath transformations, guest bath upgrades, and powder room refreshes. Primary baths often involve converting a corner garden tub into a large walk-in shower with frameless glass, replacing standard double vanities with custom or semi-custom cabinetry, and upgrading to heated floors and high-end fixtures. Guest baths typically get a full tear-out and replacement with modernized finishes. Powder rooms are the easiest wins - new vanity, mirror, lighting, tile, and a fresh paint scheme can completely change the first impression of your home.</p>
+
+<h2>Why Robbinsville Homeowners Choose MHG</h2>
+<p>We are based in Hamilton, less than 15 minutes from any Robbinsville address. Bathroom renovations involve a lot of small details - tile alignment, grout consistency, plumbing fixture height, the precise placement of a niche - and proximity means we can be on-site when those decisions need to be made. Shahzeb Malik personally manages every project.</p>
+<p>See our <a href="/portfolio/luxury-primary-bath-retreat">Luxury Primary Bath Retreat</a> and <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> projects for examples of the level of craftsmanship we bring.</p>
+
+<h2>Bathroom Renovation Scope and Process</h2>
+<p>Our Robbinsville bathroom projects include full tear-outs and rebuilds, custom tile work, plumbing reconfigurations, electrical and lighting upgrades, custom or semi-custom vanities, stone countertops, frameless shower enclosures, heated flooring, and proper ventilation. We pull permits with Robbinsville Township and handle every inspection. Review our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a> for current pricing.</p>`,
+    faqs: [
+      {
+        question: "How much does a bathroom remodel cost in Robbinsville, NJ?",
+        answer: "Bathroom remodels in Robbinsville typically range from $18,000 to $55,000. Powder rooms start around $8,000-$12,000, guest baths fall in the $20,000-$35,000 range, and primary bath transformations with premium finishes run $35,000 to $55,000 or more.",
+      },
+      {
+        question: "How long does a Robbinsville bathroom renovation take?",
+        answer: "Most bathroom renovations take 3-6 weeks. Powder rooms can be done in 2-3 weeks; full primary bath rebuilds with custom tile and structural changes typically take 5-7 weeks. We provide a complete schedule during design.",
+      },
+      {
+        question: "Can you convert a tub to a walk-in shower in Robbinsville?",
+        answer: "Yes. Tub-to-shower conversions are one of our most common bathroom projects. We handle the plumbing relocation, structural waterproofing, custom tile work, and frameless glass installation as a complete package.",
+      },
+    ],
+    relatedPortfolioSlugs: ["luxury-primary-bath-retreat", "spa-inspired-master-bath"],
+    relatedBlogSlugs: ["bathroom-remodel-cost", "bathroom-ideas"],
+  },
+
+  // ─── Bathroom: East Windsor ─────────────────────────────
+  {
+    serviceSlug: "bathroom-renovations",
+    serviceName: "Bathroom Renovations",
+    citySlug: "east-windsor-nj",
+    cityName: "East Windsor",
+    state: "NJ",
+    title: "Bathroom Remodeling in East Windsor, NJ | MHG Contracting",
+    metaDescription: "Bathroom remodeling in East Windsor, NJ. MHG Contracting renovates baths in Twin Rivers, Hickory Acres, and across East Windsor with custom tile and quality craftsmanship.",
+    h1: "Bathroom Remodeling in East Windsor, NJ",
+    content: `<h2>East Windsor Bathroom Renovation Experts</h2>
+<p>East Windsor homes span six decades of construction, and so do their bathrooms. Twin Rivers townhomes have compact baths from the early 1970s. Mid-century ranches in Hickory Acres have small original baths that have rarely been touched. Newer single-family homes off Route 130 have builder-grade primary suites ready for upgrades. MHG Contracting renovates bathrooms in every type of East Windsor home.</p>
+
+<h2>What East Windsor Bathroom Renovations Look Like</h2>
+<p>For Twin Rivers townhomes, the priority is usually making compact spaces feel bigger and more functional. We use light tile, large-format mirrors, and clean modern fixtures to open up tight footprints. In older single-family homes, full tear-outs and reconfigurations are common - replacing combination tub-showers with custom walk-in showers, converting small linen closets into expanded vanity areas, and bringing the plumbing and electrical up to current code. Newer East Windsor homes typically get premium finish upgrades: custom vanities, stone tops, frameless shower glass, and heated floors.</p>
+
+<h2>Why East Windsor Homeowners Choose MHG</h2>
+<p>We are a Hamilton-based remodeling company, less than 20 minutes from any East Windsor neighborhood. Bathrooms are detail-heavy projects, and being nearby matters when a tile alignment question or a fixture height decision comes up. Shahzeb Malik personally manages every project, and we run the same trusted crew on every job.</p>
+<p>Take a look at our <a href="/portfolio/contemporary-guest-bath">Contemporary Guest Bath</a> and <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> for examples of the craftsmanship we bring to every project.</p>
+
+<h2>Permits and Pricing</h2>
+<p>East Windsor Township requires permits for plumbing and electrical changes - which essentially every bathroom renovation includes. We file all permits and coordinate inspections directly. For current pricing on bathroom projects across Mercer County, read our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a>.</p>`,
+    faqs: [
+      {
+        question: "How much does a bathroom remodel cost in East Windsor, NJ?",
+        answer: "East Windsor bathroom remodels typically range from $15,000 to $45,000. Twin Rivers and other compact baths often fall in the $15,000-$25,000 range. Full primary bath rebuilds with custom tile, stone tops, and frameless glass typically run $30,000 to $45,000.",
+      },
+      {
+        question: "Can you renovate Twin Rivers townhome bathrooms?",
+        answer: "Yes. We have completed multiple Twin Rivers bathroom projects. We are familiar with the homeowners association guidelines, the unit layouts, and the structural realities of the original 1970s construction.",
+      },
+      {
+        question: "How long does an East Windsor bathroom renovation take?",
+        answer: "Most East Windsor bathroom projects take 3-5 weeks. Larger primary bath rebuilds with custom tile and reconfigurations can take 5-7 weeks. We provide a detailed schedule before any work begins.",
+      },
+    ],
+    relatedPortfolioSlugs: ["contemporary-guest-bath", "spa-inspired-master-bath"],
+    relatedBlogSlugs: ["bathroom-remodel-cost", "bathroom-ideas"],
+  },
+
+  // ─── Bathroom: Hopewell ─────────────────────────────────
+  {
+    serviceSlug: "bathroom-renovations",
+    serviceName: "Bathroom Renovations",
+    citySlug: "hopewell-nj",
+    cityName: "Hopewell",
+    state: "NJ",
+    title: "Bathroom Remodeling in Hopewell, NJ | MHG Contracting",
+    metaDescription: "Bathroom remodeling in Hopewell, NJ. MHG Contracting renovates baths in historic borough homes and modern township estates with custom tile and craftsmanship.",
+    h1: "Bathroom Remodeling in Hopewell, NJ",
+    content: `<h2>Hopewell Bathroom Renovation Specialists</h2>
+<p>Hopewell's housing mix - 19th century homes near the borough center, farmhouses scattered through the township, and modern estates along the outer roads - means no two bathroom projects look alike. MHG Contracting brings the same craftsmanship to every Hopewell bathroom, whether we are carefully renovating a 100-year-old bath with limited plumbing access or installing a frameless wet room in a contemporary primary suite.</p>
+
+<h2>Renovating Older Hopewell Bathrooms</h2>
+<p>Bathrooms in older Hopewell homes were often added decades after the original construction, which means inconsistent layouts, undersized plumbing, and creative routing. Our most common challenge is improving function within the space available - converting a cramped tub-shower combo into a more useful walk-in shower, replacing pedestal sinks with vanities that actually offer storage, and updating the electrical to support modern lighting and ventilation. We do all of this while preserving the character of the home.</p>
+<p>For newer Hopewell homes, our work is more about elevating finishes and reconfiguring layouts. Custom vanities, stone counters, frameless shower glass, heated floors, and integrated lighting are common upgrades.</p>
+
+<h2>Why MHG for Your Hopewell Bath</h2>
+<p>Older homes need a contractor who slows down, looks closely, and understands what is behind a wall before opening it up. That is how we work. Shahzeb Malik personally oversees every Hopewell project, and we use the same trusted crew that has done historic renovations across Mercer County.</p>
+<p>See our <a href="/portfolio/luxury-primary-bath-retreat">Luxury Primary Bath Retreat</a> project for an example of the level of detail and craftsmanship we bring.</p>
+
+<h2>Permits and Process</h2>
+<p>Hopewell Borough and Hopewell Township have separate building departments. We handle permitting and inspections for both, and we understand the additional considerations for any homes in the historic district. Read our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a> for current pricing benchmarks.</p>`,
+    faqs: [
+      {
+        question: "How much does a bathroom remodel cost in Hopewell, NJ?",
+        answer: "Bathroom remodels in Hopewell typically range from $20,000 to $60,000. Renovating older historic baths often costs more due to plumbing reroutes, structural prep, and custom millwork. Newer Hopewell baths typically fall in the $25,000-$45,000 range.",
+      },
+      {
+        question: "Do you work on historic Hopewell homes?",
+        answer: "Yes. We have experience renovating bathrooms in 19th and early 20th century homes throughout Hopewell. We work carefully around original plaster, trim, and structural elements.",
+      },
+      {
+        question: "How long does a Hopewell bathroom renovation take?",
+        answer: "Plan on 4-7 weeks. Historic homes sometimes take longer due to discoveries during demolition - old plumbing, knob-and-tube wiring, or framing surprises. We build buffer into every schedule and communicate clearly when issues come up.",
+      },
+    ],
+    relatedPortfolioSlugs: ["luxury-primary-bath-retreat", "contemporary-guest-bath"],
+    relatedBlogSlugs: ["bathroom-remodel-cost", "permits-nj"],
+  },
+
+  // ─── Bathroom: Pennington ───────────────────────────────
+  {
+    serviceSlug: "bathroom-renovations",
+    serviceName: "Bathroom Renovations",
+    citySlug: "pennington-nj",
+    cityName: "Pennington",
+    state: "NJ",
+    title: "Bathroom Remodeling in Pennington, NJ | MHG Contracting",
+    metaDescription: "Bathroom remodeling in Pennington, NJ. MHG Contracting renovates baths in historic borough homes and modern estates with custom tile, stone, and craftsmanship.",
+    h1: "Bathroom Remodeling in Pennington, NJ",
+    content: `<h2>Pennington Bathroom Renovation Contractor</h2>
+<p>Pennington Borough's homes range from charming Victorian and colonial revival cottages near Main Street to larger newer estates along the outer roads. The bathrooms in these homes have wildly different starting points, and our job is to design and build the right renovation for each. MHG Contracting has renovated bathrooms across Pennington with the patience and craftsmanship the work demands.</p>
+
+<h2>What Pennington Bathroom Renovations Involve</h2>
+<p>Older Pennington bathrooms are often small, with original cast iron tubs, pedestal sinks, and tile that has seen better decades. Updating these spaces requires careful planning - rerouting plumbing that was never designed for modern fixtures, adding electrical for proper lighting and ventilation, and waterproofing in ways that the original construction simply did not include. We do all of this while keeping the architectural character of the home intact.</p>
+<p>In newer Pennington homes, our work is about elevating finishes and reconfiguring layouts. Oversized walk-in showers, freestanding tubs, custom vanities with integrated lighting, and frameless shower glass are the kinds of upgrades that turn a builder-grade bath into a true retreat.</p>
+
+<h2>Why Pennington Homeowners Choose MHG</h2>
+<p>Bathrooms are detail-heavy projects, and Pennington homeowners expect excellent craftsmanship. We deliver it. Shahzeb Malik personally manages every project, and our crew has the experience to handle both delicate historic work and high-end modern installations.</p>
+<p>Our <a href="/portfolio/luxury-primary-bath-retreat">Luxury Primary Bath Retreat</a> and <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> projects show the level of finish we bring to every bathroom we build.</p>
+
+<h2>Permits and Pricing</h2>
+<p>Pennington Borough has its own building department separate from Hopewell Township. We file all permits and coordinate inspections directly. For current bathroom remodel pricing across Mercer County, see our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a>.</p>`,
+    faqs: [
+      {
+        question: "How much does a bathroom remodel cost in Pennington, NJ?",
+        answer: "Pennington bathroom remodels typically range from $22,000 to $65,000. The borough's mix of historic homes and high-end newer construction means projects often involve premium materials and custom work, pushing toward the higher end of the range.",
+      },
+      {
+        question: "Do you renovate historic Pennington baths?",
+        answer: "Yes. We have experience working in Victorian and colonial revival homes throughout Pennington. We preserve original details where possible and modernize function carefully and respectfully.",
+      },
+      {
+        question: "How long does a Pennington bathroom renovation take?",
+        answer: "Most Pennington bathroom renovations take 4-7 weeks. Historic homes sometimes extend the timeline due to careful prep work and discoveries during demolition. We provide a complete schedule during design.",
+      },
+    ],
+    relatedPortfolioSlugs: ["luxury-primary-bath-retreat", "spa-inspired-master-bath"],
+    relatedBlogSlugs: ["bathroom-remodel-cost", "bathroom-ideas"],
+  },
+
+  // ─── Bathroom: Ewing ────────────────────────────────────
+  {
+    serviceSlug: "bathroom-renovations",
+    serviceName: "Bathroom Renovations",
+    citySlug: "ewing-nj",
+    cityName: "Ewing",
+    state: "NJ",
+    title: "Bathroom Remodeling in Ewing, NJ | MHG Contracting",
+    metaDescription: "Bathroom remodeling in Ewing, NJ. MHG Contracting renovates Cape Cod and ranch bathrooms across Mountainview, Ewingville, and West Trenton with custom tile and craftsmanship.",
+    h1: "Bathroom Remodeling in Ewing, NJ",
+    content: `<h2>Ewing Bathroom Renovation Contractor</h2>
+<p>Ewing Township's housing stock is dominated by post-WWII Cape Cods, ranches, and bi-levels in neighborhoods like Mountainview and Ewingville, with colonials and larger homes in West Trenton and newer townhomes scattered throughout. Most of these bathrooms have either never been renovated or were last touched decades ago. MHG Contracting renovates Ewing bathrooms with the durability, function, and finish quality these homes deserve.</p>
+
+<h2>What Ewing Bathroom Renovations Look Like</h2>
+<p>Older Ewing bathrooms are typically small, with original tub-shower combos, single vanities, and tile work from a different era. The most common Ewing project involves a full tear-out: new plumbing, new electrical, modern ventilation, custom or semi-custom vanity, stone countertop, large-format tile, and a walk-in shower or new soaking tub. We also handle the rare full reconfiguration where we expand the bathroom by absorbing an adjacent closet or hallway space.</p>
+<p>For newer Ewing homes and townhomes, our work focuses on upgrading builder-grade finishes - custom tile, stone tops, frameless shower glass, designer fixtures, and integrated lighting that elevates a basic bath into a true retreat.</p>
+
+<h2>Why Ewing Homeowners Trust MHG</h2>
+<p>We are based in Hamilton, about 15 minutes from most Ewing neighborhoods. Proximity matters on bathroom projects - the details are dense, and being able to be on-site quickly when a question comes up keeps projects moving. Shahzeb Malik personally manages every Ewing project, and we run the same trusted crew on every job.</p>
+<p>Our <a href="/portfolio/contemporary-guest-bath">Contemporary Guest Bath</a> project shows the craftsmanship we bring to every bathroom we build.</p>
+
+<h2>Permits and Pricing</h2>
+<p>Ewing Township requires permits for plumbing and electrical work - which every bathroom renovation involves. We handle every permit and inspection directly. For current Mercer County bathroom pricing, review our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a>.</p>`,
+    faqs: [
+      {
+        question: "How much does a bathroom remodel cost in Ewing, NJ?",
+        answer: "Bathroom remodels in Ewing typically range from $14,000 to $40,000. Hall and guest baths fall in the $14,000-$25,000 range. Full primary bath rebuilds with custom tile, stone tops, and frameless glass typically run $30,000 to $40,000.",
+      },
+      {
+        question: "Can you renovate older Ewing Cape Cod and ranch bathrooms?",
+        answer: "Yes. We renovate older Ewing bathrooms regularly. We are familiar with the structural and plumbing realities of mid-century construction, and we know how to upgrade these spaces without creating unexpected issues elsewhere in the home.",
+      },
+      {
+        question: "How long does an Ewing bathroom renovation take?",
+        answer: "Most Ewing bathroom projects take 3-5 weeks. Larger or more complex renovations with reconfigured layouts can take 5-6 weeks. We provide a complete schedule before any work begins.",
+      },
+    ],
+    relatedPortfolioSlugs: ["contemporary-guest-bath", "luxury-primary-bath-retreat"],
+    relatedBlogSlugs: ["bathroom-remodel-cost", "bathroom-ideas"],
+  },
+
+  // ─── Basement: Robbinsville ─────────────────────────────
+  {
+    serviceSlug: "basement-finishing",
+    serviceName: "Basement Finishing",
+    citySlug: "robbinsville-nj",
+    cityName: "Robbinsville",
+    state: "NJ",
+    title: "Basement Finishing in Robbinsville, NJ | MHG Contracting",
+    metaDescription: "Basement finishing in Robbinsville, NJ. MHG Contracting transforms unfinished basements into family rooms, home theaters, gyms, and guest suites for Town Center and Foxmoor homes.",
+    h1: "Basement Finishing in Robbinsville, NJ",
+    content: `<h2>Robbinsville Basement Finishing Contractor</h2>
+<p>Robbinsville's newer homes often come with full unfinished basements that double the usable square footage of the house - if you finish them right. MHG Contracting has finished basements throughout Robbinsville, turning concrete shells into family rooms, home theaters, gyms, playrooms, home offices, guest suites, and full in-law setups.</p>
+
+<h2>What Robbinsville Basement Finishing Includes</h2>
+<p>Every basement finish starts with the unsexy but critical work: moisture control, proper vapor barriers, code-compliant insulation, and a framed system that does not trap water against the foundation. From there we build the space the family actually wants - an open great room, a sectioned-off theater with proper acoustic treatment, a fitness area with rubber flooring and mirror walls, or a guest suite with a full bedroom, bathroom, and kitchenette.</p>
+<p>Robbinsville's newer construction usually has tall ceilings, large egress windows, and well-positioned mechanical rooms - all of which make for excellent basement finishing. We design around the existing HVAC, plumbing rough-ins, and electrical panels to maximize usable space.</p>
+
+<h2>Why MHG for Your Robbinsville Basement</h2>
+<p>Basements are full of trade coordination - framing, electrical, plumbing, HVAC, drywall, flooring, and finish work. We manage every trade in-house or with long-standing partners, which means cleaner schedules, fewer surprises, and a project that actually finishes on time. Shahzeb Malik personally oversees every Robbinsville project.</p>
+<p>See our <a href="/portfolio/entertainment-basement-suite">Entertainment Basement Suite</a> project for an example of what a full Robbinsville-area basement transformation looks like.</p>
+
+<h2>Permits and Pricing</h2>
+<p>Robbinsville Township requires permits for basement finishing because it adds habitable square footage. We file all permits, coordinate inspections, and ensure the project closes out cleanly. For current pricing, review our <a href="/blog/basement-finishing-cost">basement finishing cost guide</a>.</p>`,
+    faqs: [
+      {
+        question: "How much does it cost to finish a basement in Robbinsville, NJ?",
+        answer: "Basement finishing in Robbinsville typically runs $45,000 to $130,000. A simple open finish with carpet, drywall, lighting, and a few outlets falls in the $45,000-$70,000 range. Adding a full bathroom, kitchenette, theater, or bedroom suite pushes the project toward $90,000-$130,000.",
+      },
+      {
+        question: "Do I need a permit to finish my Robbinsville basement?",
+        answer: "Yes. Robbinsville Township requires building, electrical, plumbing, and mechanical permits for basement finishing. We handle all permits and inspections directly so you do not have to coordinate with the township.",
+      },
+      {
+        question: "How long does a Robbinsville basement finish take?",
+        answer: "Most Robbinsville basement projects take 8-14 weeks. Simple open finishes complete on the shorter end; full builds with bathrooms, theaters, and bedroom suites take longer. We provide a complete schedule during design.",
+      },
+    ],
+    relatedPortfolioSlugs: ["entertainment-basement-suite"],
+    relatedBlogSlugs: ["basement-finishing-cost", "basement-ideas"],
+  },
+
+  // ─── Basement: East Windsor ─────────────────────────────
+  {
+    serviceSlug: "basement-finishing",
+    serviceName: "Basement Finishing",
+    citySlug: "east-windsor-nj",
+    cityName: "East Windsor",
+    state: "NJ",
+    title: "Basement Finishing in East Windsor, NJ | MHG Contracting",
+    metaDescription: "Basement finishing in East Windsor, NJ. MHG Contracting transforms unfinished basements into family rooms, home theaters, and guest suites for Twin Rivers and East Windsor homes.",
+    h1: "Basement Finishing in East Windsor, NJ",
+    content: `<h2>East Windsor Basement Finishing Contractor</h2>
+<p>East Windsor homes range from Twin Rivers townhomes with limited lower levels to single-family homes with full unfinished basements waiting to be transformed. MHG Contracting has finished basements across East Windsor, and we tailor our approach to what each space can become.</p>
+
+<h2>What East Windsor Basement Projects Look Like</h2>
+<p>Most East Windsor basement finishes involve framing out the foundation walls with proper moisture barriers, installing insulation that meets current energy code, finishing the ceiling around existing mechanicals, and building out the family-friendly spaces homeowners actually use - playrooms, home offices, family rooms, theaters, gyms, and guest suites with full bathrooms. We design around the existing HVAC, the location of the panel, and the rough-in plumbing if it exists, to deliver the most usable layout possible.</p>
+<p>Older East Windsor homes sometimes have lower ceilings or older mechanical systems that need updating before the basement can be safely finished. We assess all of that during the initial consultation and give you a clear plan and price.</p>
+
+<h2>Why Choose MHG</h2>
+<p>Basement projects are coordination-heavy, and our in-house management of framing, electrical, plumbing, drywall, and finish work keeps the schedule tight. Shahzeb Malik personally manages every East Windsor project, and the same crew works your job from start to finish.</p>
+<p>Take a look at our <a href="/portfolio/entertainment-basement-suite">Entertainment Basement Suite</a> for a sense of what a full transformation looks like.</p>
+
+<h2>Permits and Pricing</h2>
+<p>East Windsor Township requires permits for basement finishing because it adds habitable square footage. We handle building, electrical, plumbing, and mechanical permits directly. Read our <a href="/blog/basement-finishing-cost">basement finishing cost guide</a> for current pricing.</p>`,
+    faqs: [
+      {
+        question: "How much does it cost to finish a basement in East Windsor, NJ?",
+        answer: "Basement finishing in East Windsor typically runs $40,000 to $115,000. Simple open finishes start around $40,000-$60,000. Full builds with bathrooms, theaters, and bedroom suites can reach $90,000-$115,000.",
+      },
+      {
+        question: "Can you finish a Twin Rivers townhome lower level?",
+        answer: "Yes, where structurally and permit-wise feasible. Twin Rivers lower levels vary unit by unit. We assess each one during the consultation and let you know what is possible within the homeowners association guidelines.",
+      },
+      {
+        question: "How long does an East Windsor basement finish take?",
+        answer: "Most projects take 8-14 weeks. Simpler finishes complete faster; full builds with multiple rooms and a bathroom take longer. We provide a complete schedule before any work starts.",
+      },
+    ],
+    relatedPortfolioSlugs: ["entertainment-basement-suite"],
+    relatedBlogSlugs: ["basement-finishing-cost", "basement-ideas"],
+  },
+
 ];
 
 // ─── Helpers ────────────────────────────────────────────

@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -15,6 +15,7 @@ interface ContactFormData {
   projectAddress: string;
   timeline: string;
   message: string;
+  website: string;
 }
 
 const PROJECT_TYPES = [
@@ -44,9 +45,16 @@ const baseInputClass =
 const errorInputClass =
   "w-full bg-transparent border-0 border-b border-red-400 rounded-none px-0 py-3 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-red-400 transition-colors duration-200";
 
+type VerifyState = "idle" | "verifying" | "verified";
+
 export default function ContactContent() {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [verifyState, setVerifyState] = useState<VerifyState>("idle");
+  const [verifyError, setVerifyError] = useState<string | null>(null);
+  const formStartRef = useRef<number>(Date.now());
+  const mouseEventsRef = useRef<number>(0);
+  const verifiedAtRef = useRef<number | null>(null);
 
   const {
     register,
@@ -54,7 +62,42 @@ export default function ContactContent() {
     formState: { errors },
   } = useForm<ContactFormData>();
 
+  useEffect(() => {
+    formStartRef.current = Date.now();
+    const onMove = () => {
+      mouseEventsRef.current += 1;
+    };
+    window.addEventListener("mousemove", onMove, { passive: true });
+    window.addEventListener("touchstart", onMove, { passive: true });
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("touchstart", onMove);
+    };
+  }, []);
+
+  const handleVerifyClick = () => {
+    if (verifyState !== "idle") return;
+    if (mouseEventsRef.current < 2) {
+      setVerifyError("Please move your cursor over the page before verifying.");
+      return;
+    }
+    setVerifyState("verifying");
+    setVerifyError(null);
+    setTimeout(() => {
+      setVerifyState("verified");
+      verifiedAtRef.current = Date.now();
+    }, 900);
+  };
+
   const onSubmit = async (data: ContactFormData) => {
+    if (data.website && data.website.trim() !== "") {
+      setIsSubmitted(true);
+      return;
+    }
+    if (verifyState !== "verified") {
+      setVerifyError("Please confirm you are not a robot.");
+      return;
+    }
     setIsSubmitting(true);
     try {
       const res = await fetch("/api/contact", {
@@ -70,6 +113,10 @@ export default function ContactContent() {
           timeline: data.timeline,
           message: data.message,
           source: "mhgcon.com Contact Form",
+          human_verified: true,
+          mouse_events: mouseEventsRef.current,
+          verified_at_ms: verifiedAtRef.current ?? 0,
+          form_duration_ms: Date.now() - formStartRef.current,
         }),
       });
 
@@ -82,6 +129,8 @@ export default function ContactContent() {
     } catch (error) {
       console.error("Form submission error:", error);
       alert("There was an error submitting the form. Please try again or call us directly.");
+      setVerifyState("idle");
+      verifiedAtRef.current = null;
     } finally {
       setIsSubmitting(false);
     }
@@ -129,7 +178,7 @@ export default function ContactContent() {
             <FadeIn>
               <div>
                 {/* Section intro */}
-                <div className="mb-12">
+                <div className="mb-8">
                   <span className="font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.15em] block mb-4">
                     Free Consultation
                   </span>
@@ -137,6 +186,22 @@ export default function ContactContent() {
                     Tell Us About<br />Your Vision
                   </h2>
                   <div className="w-10 h-[2px] bg-primary mt-5" />
+                </div>
+
+                {/* Trust bar */}
+                <div className="mb-12 grid grid-cols-3 gap-3 border-y border-[#E5E5E5] py-4">
+                  <div className="text-center">
+                    <p className="font-heading text-lg font-bold text-primary leading-none">24hr</p>
+                    <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">Response time</p>
+                  </div>
+                  <div className="text-center border-x border-[#E5E5E5]">
+                    <p className="font-heading text-lg font-bold text-primary leading-none">Free</p>
+                    <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">In-home estimate</p>
+                  </div>
+                  <div className="text-center">
+                    <p className="font-heading text-lg font-bold text-primary leading-none">5&#9733;</p>
+                    <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">Google rated</p>
+                  </div>
                 </div>
 
                 {isSubmitted ? (
@@ -164,6 +229,19 @@ export default function ContactContent() {
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
+
+                    {/* Honeypot: hidden from humans, bots fill it in */}
+                    <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
+                      <label htmlFor="website">Website</label>
+                      <input
+                        id="website"
+                        type="text"
+                        tabIndex={-1}
+                        autoComplete="off"
+                        {...register("website")}
+                      />
+                    </div>
+
 
                     {/* Name */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -302,6 +380,44 @@ export default function ContactContent() {
                         className={`${baseInputClass} resize-none`}
                         placeholder="Tell us about your project..."
                       />
+                    </div>
+
+                    {/* Human verification */}
+                    <div className="pt-2">
+                      <div className="flex items-center gap-3 border border-[#D8D8D8] bg-white px-4 py-3.5 max-w-sm">
+                        <button
+                          type="button"
+                          onClick={handleVerifyClick}
+                          disabled={verifyState !== "idle"}
+                          aria-checked={verifyState === "verified"}
+                          role="checkbox"
+                          className={`relative w-6 h-6 border ${
+                            verifyState === "verified" ? "border-primary bg-primary" : "border-[#999] bg-white"
+                          } flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${
+                            verifyState === "idle" ? "cursor-pointer hover:border-primary" : "cursor-default"
+                          }`}
+                        >
+                          {verifyState === "verifying" && (
+                            <span className="block w-3 h-3 border-2 border-[#999] border-t-primary rounded-full animate-spin" />
+                          )}
+                          {verifyState === "verified" && (
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+                              <path d="M20 6L9 17l-5-5" />
+                            </svg>
+                          )}
+                        </button>
+                        <label
+                          onClick={handleVerifyClick}
+                          className={`font-body text-sm text-text-primary select-none ${
+                            verifyState === "idle" ? "cursor-pointer" : "cursor-default"
+                          }`}
+                        >
+                          I am not a robot
+                        </label>
+                      </div>
+                      {verifyError && (
+                        <p className="text-red-500 text-[11px] mt-2 font-body">{verifyError}</p>
+                      )}
                     </div>
 
                     {/* Submit */}

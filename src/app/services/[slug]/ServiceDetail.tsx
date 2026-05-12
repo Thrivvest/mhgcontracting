@@ -5,6 +5,7 @@ import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { type Service, getProjectsByType, type ServiceType, services } from "@/lib/data";
+import { getAreaPagesByService } from "@/lib/area-pages-data";
 import { company } from "@/lib/constants";
 
 const SERVICE_TYPE_MAP: Record<string, ServiceType> = {
@@ -26,6 +27,9 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
 
   // Other services for cross-linking
   const otherServices = services.filter((s) => s.id !== service.id).slice(0, 3);
+
+  // City pages for this service (drives internal linking → SEO)
+  const areaPages = getAreaPagesByService(service.slug);
 
   return (
     <main>
@@ -169,6 +173,41 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                     </div>
                     <h3 className="font-heading text-lg font-semibold text-text-primary group-hover:text-primary transition-colors">{project.title}</h3>
                     <p className="font-body text-text-secondary text-sm mt-1">{project.shortDescription}</p>
+                  </Link>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
+      {/* Areas We Serve */}
+      {areaPages.length > 0 && (
+        <section className="py-24 md:py-32 px-6 lg:px-10 bg-background-alt">
+          <div className="max-w-[1400px] mx-auto">
+            <LineReveal className="mb-6">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">
+                {service.name} by City
+              </h2>
+            </LineReveal>
+            <FadeIn>
+              <p className="font-body text-text-secondary text-lg mb-12 max-w-2xl">
+                MHG Contracting delivers {service.name.toLowerCase()} across Central New Jersey and Bucks County, PA. Explore our service area pages for details specific to your town.
+              </p>
+            </FadeIn>
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3">
+              {areaPages.map((page, i) => (
+                <FadeIn key={`${page.serviceSlug}-${page.citySlug}`} delay={Math.min(i * 0.04, 0.4)}>
+                  <Link
+                    href={`/services/${page.serviceSlug}/${page.citySlug}`}
+                    className="group flex items-center justify-between px-5 py-4 bg-white border border-border hover:border-primary hover:shadow-sm transition-all duration-200"
+                  >
+                    <span className="font-body text-sm font-medium text-text-primary group-hover:text-primary transition-colors">
+                      {service.name} in {page.cityName}, {page.state}
+                    </span>
+                    <svg width="14" height="14" viewBox="0 0 16 16" fill="none" className="text-text-secondary group-hover:text-primary transition-colors">
+                      <path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+                    </svg>
                   </Link>
                 </FadeIn>
               ))}
