@@ -175,9 +175,22 @@ export default function Footer() {
 
       {/* ─── Bottom Row: Copyright ───────────────────────── */}
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-6 border-t border-white/10">
-        <p className="text-white/30 text-xs font-body text-center sm:text-left">
-          © {currentYear} {company.name}. All rights reserved.
-        </p>
+        <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
+          <p className="text-white/30 text-xs font-body">
+            © {currentYear} {company.name}. All rights reserved.
+          </p>
+          <p className="text-white/30 text-xs font-body">
+            Marketing by{" "}
+            <a
+              href="https://thrivvest.com"
+              target="_blank"
+              rel="noopener"
+              className="hover:text-white/60 transition-colors underline-offset-2 hover:underline"
+            >
+              Thrivvest
+            </a>
+          </p>
+        </div>
       </div>
     </footer>
   );
