@@ -45,10 +45,52 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     { name: post.title, href: `/blog/${slug}` },
   ]);
 
+  const wordCount = (post.content.match(/\w+/g) || []).length;
+  const isoDate = (() => {
+    const d = new Date(post.date);
+    return isNaN(d.getTime()) ? undefined : d.toISOString();
+  })();
+
+  const articleSchema = {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "@id": `https://mhgcon.com/blog/${slug}#article`,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": `https://mhgcon.com/blog/${slug}`,
+    },
+    headline: post.title,
+    description: post.metaDescription || post.excerpt,
+    articleSection: post.category,
+    keywords: post.category,
+    wordCount,
+    datePublished: isoDate,
+    dateModified: isoDate,
+    image: {
+      "@type": "ImageObject",
+      url: "https://mhgcon.com/images/og-image.jpg",
+      width: 1200,
+      height: 630,
+    },
+    author: {
+      "@type": "Person",
+      "@id": "https://mhgcon.com/#founder",
+      name: "Shahzeb Malik",
+      url: "https://mhgcon.com/about",
+    },
+    publisher: { "@id": "https://mhgcon.com/#organization" },
+    inLanguage: "en-US",
+    isAccessibleForFree: true,
+  };
+
   const seoHtml = generateBlogSeoContent(post);
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}

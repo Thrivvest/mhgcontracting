@@ -1059,5 +1059,188 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>For cost details, read <a href="/blog/kitchen-remodel-cost">our kitchen remodel cost guide</a>. For finished kitchens we have built across Central NJ, browse the <a href="/portfolio">portfolio</a>.</p>
 `,
   },
+  {
+    slug: "home-additions-cost-mercer-county-nj",
+    title: "Home Addition Cost in Mercer County NJ (2026)",
+    date: "May 21, 2026",
+    excerpt: "What home additions actually cost in Hamilton, Princeton, Lawrenceville, and the rest of Mercer County, broken down by addition type and what drives the price up or down.",
+    metaDescription: "Real home addition cost in Mercer County NJ for 2026. Single-story, two-story, bump-outs, sunrooms, and garage conversions. From MHG Contracting in Hamilton.",
+    category: "Additions",
+    readTime: "8 min read",
+    content: `
+<p>Homeowners in Mercer County ask us about home addition cost more than almost anything else. The answer "it depends" is true and useless. Here is what additions actually cost in Hamilton, Princeton, West Windsor, Lawrenceville, Pennington, and the surrounding towns, based on projects we have built or bid in the last twenty-four months.</p>
+
+<h2>The five most common additions we build</h2>
+
+<p>Almost every addition we quote in Mercer County is one of these five. Cost depends more on which type and how many systems you touch than on the square footage alone.</p>
+
+<p><strong>Bump-out (50 to 150 sq ft): $40,000 to $90,000.</strong> A kitchen bump-out for a breakfast nook, a bathroom expansion for a double vanity, or a primary bedroom push to fit a sitting area. No new roofline complications and usually no new bathroom fixtures. The cheapest way to add usable space without changing the house footprint dramatically.</p>
+
+<p><strong>Single-story room addition (200 to 400 sq ft): $90,000 to $200,000.</strong> A new family room, sunroom, in-law suite, or first-floor bedroom. Foundation, framing, full HVAC extension, electrical, sometimes plumbing if it's a suite. This is our most common addition in Hamilton, Lawrenceville, and Ewing where homeowners are aging in place or growing the family.</p>
+
+<p><strong>Two-story addition (500 to 900 sq ft total): $200,000 to $425,000.</strong> A bedroom + bathroom upstairs over an expanded family room downstairs is the classic example. Bigger foundation work, structural integration with the existing house, new staircase tie-ins, sometimes a tear-off and rebuild of part of the existing roof. We see these most in Princeton, West Windsor, Plainsboro, and Hopewell.</p>
+
+<p><strong>Garage conversion or rebuild: $55,000 to $140,000.</strong> Converting an attached garage to living space costs less than building new, because the slab and walls are mostly there. But you are adding insulation, drywall, flooring, HVAC, often new windows, and a code-compliant entry from the house. If the garage was unheated and built loosely, count on the higher end.</p>
+
+<p><strong>Sunroom or three-season room (180 to 280 sq ft): $65,000 to $160,000.</strong> Glass-heavy three-season room is cheaper. Four-season (insulated, climate-controlled) doubles. We have built both across Pennington, Yardley PA, and the Princeton ridge.</p>
+
+<h2>Where the money actually goes on an addition</h2>
+
+<p>Different cost mix than a kitchen or bathroom. A typical $180,000 single-story addition in Mercer County breaks down roughly as:</p>
+
+<p><strong>Foundation and site work: 12 to 18 percent.</strong> Mercer County soil is variable. Princeton ridge has bedrock close to the surface, which is expensive to excavate. Hamilton and Ewing tend to have cooperative soil. The site condition can swing this line item by 10 to 20 thousand dollars.</p>
+
+<p><strong>Framing and structure: 18 to 25 percent.</strong> This is the most labor-intensive phase. Tying a new structure into an existing house roof is more expensive than building the same square footage from scratch on an open lot.</p>
+
+<p><strong>Mechanicals (HVAC, electrical, plumbing): 15 to 22 percent.</strong> An addition that doesn't extend HVAC and electrical properly is a comfort and resale disaster. We always run a load calculation. If your existing furnace is already at capacity, the addition cost should include a system upgrade or a dedicated mini-split.</p>
+
+<p><strong>Windows and exterior: 10 to 15 percent.</strong> Higher in glass-heavy sunrooms.</p>
+
+<p><strong>Interior finishes: 18 to 25 percent.</strong> Flooring, trim, paint, doors, fixtures. The line item where homeowner choice has the biggest swing.</p>
+
+<p><strong>Permits and engineering: 3 to 5 percent.</strong> More on this below. Mercer County permitting is reasonable but specific.</p>
+
+<h2>What drives Mercer County addition costs up</h2>
+
+<p>Three factors do most of the damage to the budget. None of them are about finish material choices.</p>
+
+<p><strong>Extending plumbing to a far wall.</strong> A bathroom addition on the opposite side of the house from existing plumbing can add fifteen to twenty-five thousand dollars just in waste-line routing and venting. We always check this on the first walkthrough.</p>
+
+<p><strong>HVAC system at capacity.</strong> Your current furnace and ducts may be sized for the existing house. Adding 300 square feet of conditioned space often requires either an upgrade to the main system or a dedicated mini-split. The mini-split route runs five to nine thousand dollars but saves a system upgrade.</p>
+
+<p><strong>Hidden structural issues.</strong> When we cut into an existing exterior wall, we sometimes find rotted sheathing, undersized headers, or termite damage. Older Hamilton and Trenton-adjacent homes can hide a lot. We always carry a contingency for this and write it into the contract clearly.</p>
+
+<h2>Permits in Mercer County</h2>
+
+<p>Every addition in Mercer County needs a building permit and likely a zoning review. Hamilton Township, Lawrence Township, West Windsor, Princeton, Plainsboro, and Robbinsville all run their own process. Permit timelines run two to eight weeks depending on the municipality and how complete the application is on submission.</p>
+
+<p>You will likely need: a survey or current site plan, architectural drawings sealed by a licensed architect or engineer, a zoning permit confirming setback and lot coverage compliance, then the building permit. Sub-permits for electrical, plumbing, and HVAC follow.</p>
+
+<p>A common mistake: starting work before the permit is issued. Mercer County inspectors do red-tag jobs, and removing a red tag is more expensive and slower than waiting the extra two weeks. We never start excavation or framing without the permit in hand.</p>
+
+<h2>What an addition is worth at resale</h2>
+
+<p>This part matters because most homeowners are doing the math both ways. Recent Mercer County data on remodel return on investment:</p>
+
+<p>A first-floor primary suite addition typically returns 55 to 75 percent of cost at resale, with the highest returns in Princeton and West Windsor where the floor plan is otherwise dated. A family room addition returns 50 to 65 percent. A garage conversion is usually the lowest return at 40 to 55 percent because buyers in this market still want the garage.</p>
+
+<p>The number that matters more than ROI is "how long do you plan to stay." If the answer is more than seven years, the lived-in value of the new space dwarfs the resale calculus.</p>
+
+<h2>Real timeline for an addition</h2>
+
+<p>From contract to keys-back for a typical 250 to 350 sq ft single-story addition in Mercer County:</p>
+
+<p>Design and engineering: 4 to 8 weeks. Permitting: 2 to 6 weeks (often runs parallel to the end of design). Excavation and foundation: 1 to 2 weeks. Framing and roof: 2 to 4 weeks. Mechanicals rough-in and inspections: 2 to 3 weeks. Insulation, drywall, finishes: 4 to 6 weeks. Final inspections and walkthrough: 1 week.</p>
+
+<p>Total: about 16 to 30 weeks from signed contract to occupancy. Two-story additions add 6 to 10 weeks.</p>
+
+<h2>The first-call checklist</h2>
+
+<p>If you are thinking about an addition in Mercer County, the questions worth answering before you bring a contractor in:</p>
+
+<p>What is the actual function you need (extra bedroom, primary suite, in-law, family room, office)? The function dictates almost everything about scope.</p>
+
+<p>How long do you plan to be in this house? Drives whether to optimize for personal use or resale.</p>
+
+<p>Have you talked to your township zoning office about setback and lot coverage rules? Twenty minutes there can save you a month of design rework.</p>
+
+<p>What is your real budget, including a 10 to 15 percent contingency? Most additions hit at least one surprise. Carrying the contingency means it doesn't become a fight.</p>
+
+<h2>Ready to talk numbers on your specific addition</h2>
+
+<p>For a real quote on your addition in Hamilton, Princeton, West Windsor, Lawrenceville, Pennington, Hopewell, Plainsboro, Robbinsville, Ewing, East Windsor, or Yardley PA, call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free in-home consultation</a>. We will walk your home, talk through what you actually need, and give you a transparent estimate within a few business days.</p>
+
+<p>For related reading, see our <a href="/blog/permits-nj">guide to permits in NJ</a> and <a href="/blog/remodel-roi">best home renovation ROI in NJ</a>. For the additions service overview, visit <a href="/services/additions">our additions page</a>.</p>
+`,
+  },
+  {
+    slug: "general-contractor-vs-handyman-hamilton-nj",
+    title: "General Contractor vs Handyman in Hamilton NJ: When to Hire Which",
+    date: "May 21, 2026",
+    excerpt: "Hiring the wrong one wastes money and time. Here is how to know which you actually need for your project in Hamilton, Princeton, or anywhere in Central NJ.",
+    metaDescription: "When to hire a general contractor vs a handyman in Hamilton NJ. Licensing, scope, cost, and the projects where each makes sense. From MHG Contracting.",
+    category: "Hiring",
+    readTime: "7 min read",
+    content: `
+<p>We get calls every week from homeowners who hired the wrong person for the job. A handyman started a kitchen remodel and walked off when he hit the plumbing. A general contractor priced a closet shelf install at $1,800. Both situations are avoidable if you know which one to call.</p>
+
+<p>Here is how to think about it for projects in Hamilton, Princeton, West Windsor, Lawrenceville, and the rest of Central NJ.</p>
+
+<h2>The simple test: does the project pull a permit?</h2>
+
+<p>This single question solves 80 percent of the confusion.</p>
+
+<p>If the project requires a building, electrical, or plumbing permit in your township, you need a licensed general contractor. Hamilton, Princeton, West Windsor, Lawrence Township, and every Mercer County municipality require permits for structural work, electrical changes beyond like-for-like replacement, plumbing changes, additions, and significant renovations. A handyman is not licensed to pull these permits and cannot legally do the work.</p>
+
+<p>If the project is repair, replacement, or small finish work that does not require a permit, a handyman is the better fit. You will pay less per hour and they can start sooner.</p>
+
+<h2>What a handyman is right for in Central NJ</h2>
+
+<p>Real examples of what we recommend a handyman for, not a GC:</p>
+
+<p>Mounting a TV or installing shelves. Replacing a faucet, garbage disposal, or showerhead with like-for-like. Patching drywall (anything under maybe a 4 ft square). Painting interior rooms. Repairing a sticking door or window. Replacing a broken outlet or switch (same location, same type). Installing a ceiling fan where wiring already exists. Touching up trim, base shoe, quarter-round. Hanging mirrors or art that needs anchors.</p>
+
+<p>Typical handyman rate in Mercer County: $75 to $130 per hour, often with a minimum. Many cap out at one or two-day jobs.</p>
+
+<h2>What a general contractor is right for</h2>
+
+<p>A licensed general contractor is the right call when the project involves any of these:</p>
+
+<p><strong>Structural work.</strong> Removing walls, adding load-bearing supports, raising ceilings, cutting new openings in exterior walls. A handyman cannot legally do this and homeowner insurance won't cover the damage if something fails.</p>
+
+<p><strong>Plumbing rerouting.</strong> Moving a sink, toilet, or shower more than a foot from its current location. Adding a new bathroom. Running new supply or waste lines. Permit required, plumber must be licensed, and the GC coordinates.</p>
+
+<p><strong>Electrical beyond like-for-like.</strong> Adding circuits, upgrading the panel, running new wiring for a kitchen, hardwiring smart home devices, anything 240V. Permit required, licensed electrician must do the work.</p>
+
+<p><strong>Kitchen or bathroom renovations beyond cosmetic.</strong> If you are touching cabinets and plumbing and tile and electrical, that is four trades to coordinate. A GC sequences them so each shows up at the right phase and doesn't damage the previous trade's work.</p>
+
+<p><strong>Any addition or new construction.</strong> Foundation, framing, mechanicals, roofing, finishes. Always a GC.</p>
+
+<p><strong>Whole-home renovations.</strong> Even if individual pieces could be done by single trades, the coordination cost of doing it yourself across plumbing, electrical, HVAC, drywall, flooring, painting, and inspections wipes out any savings.</p>
+
+<h2>NJ licensing rules that matter</h2>
+
+<p>New Jersey requires anyone doing home improvement work over $500 to be registered as a Home Improvement Contractor with the NJ Division of Consumer Affairs. A registered HIC has a 13HC number. You can verify any contractor at the NJ Division of Consumer Affairs website.</p>
+
+<p>Beyond HIC registration, specific trades require their own licenses. Electricians must be NJ-licensed. Plumbers must be NJ-licensed. HVAC contractors must be NJ-licensed. A handyman doing electrical work without a license is illegal and uninsurable.</p>
+
+<p>MHG Contracting carries an active NJ Home Improvement Contractor registration, $1,000,000 general liability insurance, and workers comp for all employees. Any contractor you consider should produce these documents on the first visit. If they hesitate, that is your answer.</p>
+
+<h2>Where the cost math actually breaks for homeowners</h2>
+
+<p>The mistake we see most often: hiring a handyman for a project that should have a GC, then paying twice when it goes wrong.</p>
+
+<p>Example from last year. A Hamilton homeowner hired a handyman to "just install a new vanity and toilet" in a powder room. The handyman cut the existing waste pipe wrong, didn't vent the new sink properly, and finished the tile before the floor was leveled. We were called in to redo it. The original quote was $2,800. The actual final cost to make it right was $9,400, including demolition of the new but bad work. If they had called a GC first, the whole project would have been $5,500 to $7,000 done right.</p>
+
+<p>The other direction is rarer but happens. A GC will sometimes quote a $400 handyman task at $1,500 because the GC's overhead, insurance, and crew costs aren't structured for small jobs. If the project is a single afternoon of work with no permits, get a handyman or call us and we will refer you to one we trust.</p>
+
+<h2>The four-question pre-call test</h2>
+
+<p>Before you decide who to call, run your project through these:</p>
+
+<p>1. Does it require a permit in your township? If yes, GC.</p>
+<p>2. Does it involve more than one trade (plumbing, electrical, framing, finish)? If yes, GC.</p>
+<p>3. Will the work take more than two full days? If yes, probably GC.</p>
+<p>4. Does the project's "if it fails" risk include water damage, fire, or structural failure? If yes, GC, every time.</p>
+
+<p>If you answered no to all four, you probably want a handyman.</p>
+
+<h2>Why family-owned matters more than franchise</h2>
+
+<p>This is the question every Hamilton, Princeton, and West Windsor homeowner asks once they have decided on a GC. Family-owned local contractors live in the towns they build in. The owner is on the job site. The crew is consistent across projects. If something goes wrong two years later, the same person who signed the contract picks up the phone.</p>
+
+<p>Franchise GCs have salespeople, project managers, and revolving-door crews. The person who quoted your job is not the person doing the work. There is no continuity, and the warranty is only as good as the franchise location's tenure.</p>
+
+<p>For most kitchens, bathrooms, basements, additions, and renovations in Central NJ, family-owned beats franchise on quality, communication, and accountability. The franchise advantage is national marketing, which doesn't help you when the floor is uneven.</p>
+
+<h2>When you're ready to call MHG</h2>
+
+<p>If your project is on the GC side of the line, MHG Contracting is a family-owned, NJ-registered general contractor based in Hamilton. We work across Mercer County and parts of Bucks County PA. Free in-home estimates, transparent written pricing, no surprise change orders.</p>
+
+<p>Call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free consultation</a>. We will walk your project, give you an honest answer about whether you need a GC or a handyman, and quote it from there.</p>
+
+<p>For related reading, see <a href="/blog/choosing-a-contractor">how to choose a contractor in NJ</a> and <a href="/blog/permits-nj">do you need a permit in NJ</a>. To see what a GC project actually looks like start to finish, browse <a href="/portfolio">our portfolio</a>.</p>
+`,
+  },
 ];
 

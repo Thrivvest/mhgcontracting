@@ -30,9 +30,9 @@ export const SERVICE_BLOG_MAP: Record<string, string[]> = {
   "kitchen-renovations": ["kitchen-remodel-cost", "kitchen-trends", "kitchen-timeline"],
   "bathroom-renovations": ["bathroom-remodel-cost", "bathroom-ideas"],
   "basement-finishing": ["basement-finishing-cost", "basement-ideas"],
-  "full-home-renovations": ["choosing-a-contractor", "remodel-roi"],
-  additions: ["permits-nj", "remodel-roi"],
-  "new-construction": ["choosing-a-contractor", "permits-nj"],
+  "full-home-renovations": ["choosing-a-contractor", "remodel-roi", "general-contractor-vs-handyman-hamilton-nj"],
+  additions: ["home-additions-cost-mercer-county-nj", "permits-nj", "remodel-roi"],
+  "new-construction": ["choosing-a-contractor", "permits-nj", "general-contractor-vs-handyman-hamilton-nj"],
 };
 
 export const BLOG_SERVICE_MAP: Record<string, string> = {
@@ -47,4 +47,6 @@ export const BLOG_SERVICE_MAP: Record<string, string> = {
   "permits-nj": "/services/additions",
   "remodel-roi": "/services/full-home-renovations",
   "why-we-love-what-we-do": "/services",
+  "home-additions-cost-mercer-county-nj": "/services/additions",
+  "general-contractor-vs-handyman-hamilton-nj": "/services",
 };
