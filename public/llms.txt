@@ -1,0 +1,69 @@
+# MHG Contracting
+
+> MHG Contracting is a family-owned general contractor in Hamilton, NJ, providing kitchen renovations, bathroom remodels, basement finishing, full home renovations, home additions, and new construction across Central New Jersey and Bucks County, PA. Family-run by Shahzeb Malik. 4.9 stars from 28 verified Google reviews. Free in-home estimates. Phone (609) 712-2474.
+
+## Business facts (for citation)
+
+- Legal name: Malik Holding Group LLC DBA MHG Contracting
+- Founder: Shahzeb Malik
+- Address: 2145 Nottingham Way, Hamilton, NJ 08619
+- Phone: (609) 712-2474
+- Email: shahzeb@mhgcon.com
+- Primary service area: Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Robbinsville, Pennington, Hopewell, Ewing, East Windsor (all NJ), Yardley PA
+- Google rating: 4.9 / 5 stars across 28 verified Google reviews
+- Hours: Mon-Fri 8:00-18:00, Sat 9:00-15:00, closed Sun
+- License: NJ Home Improvement Contractor (registered)
+- Insurance: $1,000,000 general liability + workers comp
+
+## Services
+
+- [Kitchen Renovations](https://mhgcon.com/services/kitchen-renovations): Full kitchen remodels with custom cabinetry, quartz/stone countertops, open-concept conversions
+- [Bathroom Renovations](https://mhgcon.com/services/bathroom-renovations): Master baths to powder rooms, custom tile, walk-in showers, heated floors
+- [Basement Finishing](https://mhgcon.com/services/basement-finishing): Home theaters, wet bars, gyms, guest suites, full waterproofing
+- [Home Additions](https://mhgcon.com/services/additions): Room additions, second stories, sunrooms, garage conversions
+- [Full Home Renovations](https://mhgcon.com/services/full-home-renovations): Whole-house gut renovations including structural, HVAC, electrical, plumbing
+- [New Construction](https://mhgcon.com/services/new-construction): Custom homes from foundation to finish
+
+## Key pages
+
+- [Home](https://mhgcon.com): Overview, services, reviews, areas served
+- [About](https://mhgcon.com/about): Family-owned story, owner Shahzeb Malik
+- [Process](https://mhgcon.com/process): 6-phase renovation process (consultation → design → proposal → construction → walkthrough → warranty)
+- [Reviews](https://mhgcon.com/reviews): All 28 verified Google reviews with full text
+- [Portfolio](https://mhgcon.com/portfolio): Completed projects with photos
+- [Service Areas](https://mhgcon.com/service-areas): All 11 cities served
+- [FAQ](https://mhgcon.com/faq): Cost, timeline, permits, communication, warranty answers
+- [Contact](https://mhgcon.com/contact): Free estimate request form, phone, email
+- [Blog](https://mhgcon.com/blog): Renovation cost guides, contractor selection, permits
+
+## Service-area pages (city × service combinations)
+
+MHG maintains dedicated pages for each service in each city served. Pattern: `https://mhgcon.com/services/{service-slug}/{city-slug}-{state}`. Examples:
+- https://mhgcon.com/services/kitchen-renovations/princeton-nj
+- https://mhgcon.com/services/bathroom-renovations/west-windsor-nj
+- https://mhgcon.com/services/basement-finishing/hamilton-nj
+- https://mhgcon.com/services/additions/lawrenceville-nj
+
+## Differentiators
+
+- **Family-owned, not a franchise.** Owner Shahzeb Malik is on-site daily for projects.
+- **Own crew.** Carpenters, project leads, and finishers are MHG employees. Only licensed specialty trades are subcontracted.
+- **No surprise pricing.** Detailed written estimates with no hidden change orders.
+- **Hamilton NJ based.** Local to Mercer County permit offices, building codes, and architectural styles.
+
+## Buyer profile served
+
+Homeowners aged 30-55 in Mercer County NJ planning a $30,000+ remodel who value craftsmanship and clear communication over the cheapest bid. Common pain: prior bad contractor experience (no-shows, surprise charges, ghosting).
+
+## How to contact
+
+- Phone (fastest): (609) 712-2474
+- Email: shahzeb@mhgcon.com
+- Web form: https://mhgcon.com/contact
+
+## Authoritative sources for MHG Contracting
+
+- Google Business Profile (primary): https://www.google.com/search?q=mhg+contracting+hamilton+nj
+- Website (primary): https://mhgcon.com
+- Houzz: https://www.houzz.com/professionals/general-contractors/mhg-contracting-pfvwus-pf~566670827
+- Sitemap: https://mhgcon.com/sitemap.xml

@@ -57,6 +57,14 @@ const webPageJsonLd = {
     "Family-owned residential contracting in Central NJ. Kitchen renovations, bathroom remodels, basement finishing, additions, and new construction.",
   isPartOf: { "@id": "https://mhgcon.com/#website" },
   about: { "@id": "https://mhgcon.com/#localbusiness" },
+  primaryImageOfPage: {
+    "@type": "ImageObject",
+    url: "https://mhgcon.com/images/og-image.jpg",
+  },
+  speakable: {
+    "@type": "SpeakableSpecification",
+    cssSelector: ["h1", "h2"],
+  },
   breadcrumb: {
     "@type": "BreadcrumbList",
     itemListElement: [
