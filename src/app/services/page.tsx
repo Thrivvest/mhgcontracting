@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import ServicesContent from "./ServicesContent";
 import { services } from "@/lib/data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+
+const breadcrumbJsonLd = buildBreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: "Services", href: "/services" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -59,6 +65,10 @@ export default function ServicesPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
         <h1>Home Renovation Services in Central NJ - MHG Contracting</h1>

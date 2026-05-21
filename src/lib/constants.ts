@@ -140,6 +140,7 @@ export const navLinks: NavLink[] = [
     href: "/about",
     children: [
       { label: "Our Story", href: "/about" },
+      { label: "Reviews", href: "/reviews" },
       { label: "Blog", href: "/blog" },
       { label: "Service Areas", href: "/service-areas" },
     ],

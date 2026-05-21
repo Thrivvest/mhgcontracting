@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import BlogContent from "./BlogContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+
+const breadcrumbJsonLd = buildBreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: "Blog", href: "/blog" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -58,6 +64,10 @@ export default function BlogPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
         <h1>Home Renovation Tips &amp; Expert Advice - MHG Contracting Blog</h1>

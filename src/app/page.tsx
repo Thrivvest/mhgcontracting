@@ -12,10 +12,10 @@ import SeoPrerender from "@/components/seo/SeoPrerender";
 
 export const metadata: Metadata = {
   title: {
-    absolute: "Kitchen & Bath Renovations Hamilton NJ | MHG Contracting",
+    absolute: "General Contractor Hamilton NJ | Kitchen, Bath, Basement & Additions | MHG Contracting",
   },
   description:
-    "MHG Contracting is a family-owned residential contracting company serving Hamilton, Princeton, West Windsor, and Central NJ. Specializing in kitchen renovations, bathroom remodels, basement finishing, home additions, and new construction.",
+    "Family-owned general contractor in Hamilton NJ. Kitchen renovations, bathroom remodels, basement finishing, home additions, and new construction across Central NJ. 4.9 stars, 28 Google reviews. Free in-home estimates. Call (609) 712-2474.",
   alternates: { canonical: "https://mhgcon.com" },
   openGraph: {
     title: "MHG Contracting | Kitchen, Bath & Home Renovations in Hamilton, NJ",
