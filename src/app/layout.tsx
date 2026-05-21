@@ -102,16 +102,51 @@ export const viewport: Viewport = {
 
 // ─── JSON-LD Structured Data ────────────────────────────
 
+const SERVICE_AREA_CITIES = [
+  { name: "Hamilton", state: "NJ" },
+  { name: "Princeton", state: "NJ" },
+  { name: "West Windsor", state: "NJ" },
+  { name: "Lawrenceville", state: "NJ" },
+  { name: "Plainsboro", state: "NJ" },
+  { name: "Robbinsville", state: "NJ" },
+  { name: "Pennington", state: "NJ" },
+  { name: "Hopewell", state: "NJ" },
+  { name: "Ewing", state: "NJ" },
+  { name: "East Windsor", state: "NJ" },
+  { name: "Yardley", state: "PA" },
+];
+
+const SERVICE_OFFERINGS = [
+  { name: "Kitchen Renovations", slug: "kitchen-renovations" },
+  { name: "Bathroom Renovations", slug: "bathroom-renovations" },
+  { name: "Basement Finishing", slug: "basement-finishing" },
+  { name: "Full Home Renovations", slug: "full-home-renovations" },
+  { name: "Home Additions", slug: "additions" },
+  { name: "New Construction", slug: "new-construction" },
+];
+
 const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
+      "@type": "WebSite",
+      "@id": "https://mhgcon.com/#website",
+      url: "https://mhgcon.com",
+      name: "MHG Contracting",
+      description:
+        "Family-owned general contractor in Hamilton NJ. Kitchen, bathroom, basement, addition, and new construction services across Central NJ.",
+      publisher: { "@id": "https://mhgcon.com/#organization" },
+      inLanguage: "en-US",
+    },
+    {
       "@type": "Organization",
       "@id": "https://mhgcon.com/#organization",
       name: "MHG Contracting",
+      alternateName: ["MHG Construction", "Malik Holding Group", "MHG"],
       legalName: "Malik Holding Group LLC DBA MHG Contracting",
       url: "https://mhgcon.com",
       logo: "https://mhgcon.com/images/logo/mhg-logo-web.png",
+      foundingLocation: { "@type": "Place", name: "Hamilton, NJ" },
       contactPoint: {
         "@type": "ContactPoint",
         telephone: "+1-609-712-2474",
@@ -120,6 +155,19 @@ const jsonLd = {
         areaServed: "US",
         availableLanguage: "English",
       },
+      knowsAbout: [
+        "Kitchen renovation",
+        "Bathroom remodeling",
+        "Basement finishing",
+        "Home additions",
+        "Full home renovation",
+        "New residential construction",
+        "Custom cabinetry",
+        "Tile installation",
+        "Residential general contracting",
+        "Mercer County NJ building permits",
+        "Central New Jersey home renovation",
+      ],
       sameAs: [
         "https://instagram.com/mhgcontracting",
         "https://facebook.com/mhgcontracting",
@@ -148,14 +196,35 @@ const jsonLd = {
         longitude: -74.6914,
       },
       hasMap: "https://www.google.com/maps/search/?api=1&query=MHG+Contracting+2145+Nottingham+Way+Hamilton+NJ",
-      areaServed: [
-        { "@type": "City", name: "Hamilton", containedIn: "NJ" },
-        { "@type": "City", name: "Princeton", containedIn: "NJ" },
-        { "@type": "City", name: "West Windsor", containedIn: "NJ" },
-        { "@type": "City", name: "Lawrenceville", containedIn: "NJ" },
-        { "@type": "City", name: "Plainsboro", containedIn: "NJ" },
-        { "@type": "City", name: "Yardley", containedIn: "PA" },
-      ],
+      areaServed: SERVICE_AREA_CITIES.map((c) => ({
+        "@type": "City",
+        name: c.name,
+        containedInPlace: { "@type": "State", name: c.state === "NJ" ? "New Jersey" : "Pennsylvania" },
+      })),
+      hasOfferCatalog: {
+        "@type": "OfferCatalog",
+        name: "MHG Contracting Services",
+        itemListElement: SERVICE_OFFERINGS.map((s) => ({
+          "@type": "Offer",
+          itemOffered: {
+            "@type": "Service",
+            name: s.name,
+            url: `https://mhgcon.com/services/${s.slug}`,
+            provider: { "@id": "https://mhgcon.com/#localbusiness" },
+            areaServed: SERVICE_AREA_CITIES.map((c) => c.name),
+          },
+          areaServed: SERVICE_AREA_CITIES.map((c) => `${c.name}, ${c.state}`),
+          availability: "https://schema.org/InStock",
+        })),
+      },
+      makesOffer: SERVICE_OFFERINGS.map((s) => ({
+        "@type": "Offer",
+        itemOffered: {
+          "@type": "Service",
+          name: s.name,
+          url: `https://mhgcon.com/services/${s.slug}`,
+        },
+      })),
       priceRange: "$$",
       aggregateRating: {
         "@type": "AggregateRating",
@@ -175,8 +244,33 @@ const jsonLd = {
       "@type": "Person",
       "@id": "https://mhgcon.com/#founder",
       name: "Shahzeb Malik",
-      jobTitle: "Co-Owner",
+      jobTitle: "Owner",
       worksFor: { "@id": "https://mhgcon.com/#organization" },
+      affiliation: { "@id": "https://mhgcon.com/#organization" },
+      knowsAbout: [
+        "Residential general contracting",
+        "Kitchen renovation",
+        "Bathroom remodeling",
+        "Basement finishing",
+        "Home additions",
+        "Construction project management",
+        "Mercer County NJ building codes",
+      ],
+      hasOccupation: {
+        "@type": "Occupation",
+        name: "General Contractor",
+        occupationLocation: {
+          "@type": "City",
+          name: "Hamilton",
+          containedInPlace: { "@type": "State", name: "New Jersey" },
+        },
+      },
+      address: {
+        "@type": "PostalAddress",
+        addressLocality: "Hamilton",
+        addressRegion: "NJ",
+        addressCountry: "US",
+      },
     },
   ],
 };
