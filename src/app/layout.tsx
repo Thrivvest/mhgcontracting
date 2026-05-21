@@ -4,6 +4,7 @@ import SmoothScroll from "@/components/animations/SmoothScroll";
 import PageTransition from "@/components/animations/PageTransition";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
+import EventTracker from "@/components/analytics/EventTracker";
 import "./globals.css";
 
 // ─── Font Configuration ─────────────────────────────────
@@ -150,55 +151,11 @@ const jsonLd = {
       priceRange: "$$",
       aggregateRating: {
         "@type": "AggregateRating",
-        ratingValue: "5.0",
-        reviewCount: "15",
+        ratingValue: "4.9",
+        reviewCount: "28",
         bestRating: "5",
         worstRating: "1",
       },
-      review: [
-        {
-          "@type": "Review",
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5",
-          },
-          author: {
-            "@type": "Person",
-            name: "Sarah & Michael R.",
-          },
-          reviewBody:
-            "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding - our neighbors keep asking for their number.",
-        },
-        {
-          "@type": "Review",
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5",
-          },
-          author: {
-            "@type": "Person",
-            name: "David & Jennifer L.",
-          },
-          reviewBody:
-            "We wanted to turn our unfinished basement into a space our family could actually use. MHG delivered beyond our expectations. The home theater is incredible, and the wet bar is now our favorite spot for entertaining. They treated our home like it was their own.",
-        },
-        {
-          "@type": "Review",
-          reviewRating: {
-            "@type": "Rating",
-            ratingValue: "5",
-            bestRating: "5",
-          },
-          author: {
-            "@type": "Person",
-            name: "The Patel Family",
-          },
-          reviewBody:
-            "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day and kept us updated throughout the entire process. The finished result is stunning - it feels like a brand new home.",
-        },
-      ],
       openingHoursSpecification: {
         "@type": "OpeningHoursSpecification",
         dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -242,6 +199,7 @@ export default function RootLayout({
         />
       </head>
       <body>
+        <EventTracker />
         <SmoothScroll>
           <Header />
           <PageTransition>
