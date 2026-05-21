@@ -9,6 +9,12 @@ import type { Metadata } from "next";
 import ServiceAreasContent from "./ServiceAreasContent";
 import { CITIES, SERVICE_SLUGS, AREA_PAGES } from "@/lib/area-pages-data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+
+const breadcrumbJsonLd = buildBreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: "Service Areas", href: "/service-areas" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -56,6 +62,10 @@ export default function ServiceAreasPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
         <h1>Service Areas - Kitchen, Bath &amp; Home Renovations in Central NJ &amp; Bucks County, PA</h1>

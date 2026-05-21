@@ -127,7 +127,7 @@ const jsonLd = {
       ],
     },
     {
-      "@type": "LocalBusiness",
+      "@type": "GeneralContractor",
       "@id": "https://mhgcon.com/#localbusiness",
       name: "MHG Contracting",
       image: "https://mhgcon.com/images/og-image.jpg",
@@ -136,10 +136,18 @@ const jsonLd = {
       url: "https://mhgcon.com",
       address: {
         "@type": "PostalAddress",
+        streetAddress: "2145 Nottingham Way",
         addressLocality: "Hamilton",
         addressRegion: "NJ",
+        postalCode: "08619",
         addressCountry: "US",
       },
+      geo: {
+        "@type": "GeoCoordinates",
+        latitude: 40.2354,
+        longitude: -74.6914,
+      },
+      hasMap: "https://www.google.com/maps/search/?api=1&query=MHG+Contracting+2145+Nottingham+Way+Hamilton+NJ",
       areaServed: [
         { "@type": "City", name: "Hamilton", containedIn: "NJ" },
         { "@type": "City", name: "Princeton", containedIn: "NJ" },

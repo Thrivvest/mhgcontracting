@@ -2,6 +2,12 @@ import type { Metadata } from "next";
 import ProcessContent from "./ProcessContent";
 import { processSteps } from "@/lib/data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+
+const breadcrumbJsonLd = buildBreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: "Process", href: "/process" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -58,6 +64,10 @@ export default function ProcessPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
         <h1>Our Renovation Process: From Free Estimate to Completed Project | MHG Contracting</h1>

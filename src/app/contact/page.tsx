@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
 import ContactContent from "./ContactContent";
 import SeoPrerender from "@/components/seo/SeoPrerender";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+
+const breadcrumbJsonLd = buildBreadcrumbSchema([
+  { name: "Home", href: "/" },
+  { name: "Contact", href: "/contact" },
+]);
 
 export const metadata: Metadata = {
   title: {
@@ -76,6 +82,10 @@ export default function ContactPage() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
         <h1>Contact MHG Contracting - Get a Free Renovation Estimate</h1>

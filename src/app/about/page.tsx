@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import AboutContent from "./AboutContent";
 import SeoPrerender from "@/components/seo/SeoPrerender";
+import { buildBreadcrumbSchema } from "@/lib/seo-utils";
 
 export const metadata: Metadata = {
   title: {
@@ -58,6 +59,10 @@ const jsonLd = [
       addressCountry: "US",
     },
   },
+  buildBreadcrumbSchema([
+    { name: "Home", href: "/" },
+    { name: "About", href: "/about" },
+  ]),
 ];
 
 export default function AboutPage() {
