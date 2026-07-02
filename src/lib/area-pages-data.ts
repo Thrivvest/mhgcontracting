@@ -74,7 +74,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Princeton",
     state: "NJ",
     title: "Kitchen Renovations in Princeton, NJ | MHG Contracting",
-    metaDescription: "Expert kitchen renovations in Princeton, NJ. MHG Contracting transforms Princeton kitchens with custom cabinetry, quartz countertops, and open-concept designs. Free estimates.",
+    metaDescription: "Expert kitchen renovations in Princeton, NJ. MHG Contracting transforms Princeton kitchens with custom cabinetry, quartz countertops, and open-concept designs.",
     h1: "Kitchen Renovations in Princeton, NJ",
     content: `<h2>Princeton Kitchen Renovation Experts</h2>
 <p>Princeton homeowners have high standards - and so do we. MHG Contracting has completed numerous kitchen renovations throughout Princeton, from the tree-lined streets near Nassau Street to the spacious colonials in the Western Section and the stately homes in the Princeton Ridge neighborhood. We understand the architectural character of Princeton homes and design kitchens that honor that heritage while delivering modern performance.</p>
@@ -117,7 +117,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Hamilton",
     state: "NJ",
     title: "Kitchen Renovations in Hamilton, NJ | MHG Contracting",
-    metaDescription: "Hamilton NJ kitchen renovation experts. MHG Contracting is based in Hamilton and specializes in custom kitchen remodels, open-concept designs, and full gut renovations. Free estimates.",
+    metaDescription: "Hamilton NJ kitchen renovation experts. MHG Contracting is based in Hamilton and specializes in custom kitchen remodels, open-concept designs.",
     h1: "Kitchen Renovations in Hamilton, NJ",
     content: `<h2>Hamilton's Trusted Kitchen Renovation Contractor</h2>
 <p>Hamilton Township is our home base, and we take special pride in transforming kitchens right here in our own community. MHG Contracting has renovated kitchens across Hamilton - from the established neighborhoods of Mercerville and Yardville to the family-friendly developments of Hamilton Square and Society Hill. We know the housing stock, we know the local codes, and we know what Hamilton homeowners need from their kitchens.</p>
@@ -156,7 +156,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "West Windsor",
     state: "NJ",
     title: "Kitchen Renovations in West Windsor, NJ | MHG Contracting",
-    metaDescription: "Premium kitchen renovations in West Windsor, NJ. MHG Contracting delivers custom cabinetry, stone countertops, and chef-inspired kitchen designs for West Windsor homeowners.",
+    metaDescription: "Premium kitchen renovations in West Windsor, NJ. MHG Contracting delivers custom cabinetry, stone countertops, and chef-inspired kitchen designs for West.",
     h1: "Kitchen Renovations in West Windsor, NJ",
     content: `<h2>West Windsor Kitchen Renovation Specialists</h2>
 <p>West Windsor Township is home to some of Central New Jersey's most desirable neighborhoods - Princeton Junction, West Windsor Village, The Windrows, and the estates along Clarksville Road. The homes here tend to be larger, newer, and built with upscale finishes. But even relatively new kitchens can feel dated after 15-20 years. MHG Contracting specializes in elevating West Windsor kitchens from functional to exceptional, with designs that match the neighborhood's high standards.</p>
@@ -194,7 +194,7 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "lawrenceville-nj",
     cityName: "Lawrenceville",
     state: "NJ",
-    title: "Kitchen Remodel in Lawrenceville, NJ | Free Estimate | MHG Contracting",
+    title: "Kitchen Remodel in Lawrenceville, NJ | MHG Contracting",
     metaDescription: "Lawrenceville, NJ kitchen remodeling contractor. Custom cabinetry, quartz countertops, full layout redesigns. Family-owned. Free estimate: (609) 712-2474.",
     h1: "Kitchen Renovations in Lawrenceville, NJ",
     content: `<h2>Lawrenceville Kitchen Renovation Contractor</h2>
@@ -231,7 +231,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Plainsboro",
     state: "NJ",
     title: "Kitchen Renovations in Plainsboro, NJ | MHG Contracting",
-    metaDescription: "Kitchen renovation services in Plainsboro, NJ. MHG Contracting transforms Plainsboro kitchens with custom designs, premium materials, and expert craftsmanship. Free estimates.",
+    metaDescription: "Kitchen renovation services in Plainsboro, NJ. MHG Contracting transforms Plainsboro kitchens with custom designs, premium materials, and expert craftsmanship.",
     h1: "Kitchen Renovations in Plainsboro, NJ",
     content: `<h2>Plainsboro Kitchen Renovation Services</h2>
 <p>Plainsboro Township has grown significantly over the past few decades, with master-planned communities like Princeton Collection, Aspen, Tamarron, and Princeton Crossing creating a vibrant suburban landscape. While these homes were well-built, many are now 20-30 years old, and their kitchens are showing their age. MHG Contracting specializes in bringing Plainsboro kitchens into the present - with modern layouts, premium materials, and thoughtful designs that elevate daily life.</p>
@@ -267,7 +267,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Yardley",
     state: "PA",
     title: "Kitchen Renovations in Yardley, PA | MHG Contracting",
-    metaDescription: "Kitchen renovation contractor serving Yardley, PA. MHG Contracting delivers custom kitchen remodels with premium cabinetry, countertops, and modern designs. Free estimates.",
+    metaDescription: "Kitchen renovation contractor serving Yardley, PA. MHG Contracting delivers custom kitchen remodels with premium cabinetry, countertops, and modern designs.",
     h1: "Kitchen Renovations in Yardley, PA",
     content: `<h2>Yardley Kitchen Renovation Contractor</h2>
 <p>Yardley Borough and the surrounding Lower Makefield Township area offer some of Bucks County's most charming and desirable neighborhoods. From the historic homes along Main Street and Afton Avenue to the spacious colonials in developments like Makefield Glen and Edgewood Village, Yardley homeowners take pride in their properties. MHG Contracting brings our Central New Jersey expertise across the Delaware River to deliver premium kitchen renovations for Yardley families.</p>
@@ -306,7 +306,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Princeton",
     state: "NJ",
     title: "Bathroom Renovations in Princeton, NJ | MHG Contracting",
-    metaDescription: "Luxury bathroom renovations in Princeton, NJ. MHG Contracting creates spa-inspired bathrooms with custom tile, freestanding tubs, and frameless glass showers. Free estimates.",
+    metaDescription: "Luxury bathroom renovations in Princeton, NJ. MHG Contracting creates spa-inspired bathrooms with custom tile, freestanding tubs, and frameless glass showers.",
     h1: "Bathroom Renovations in Princeton, NJ",
     content: `<h2>Princeton Bathroom Renovation Specialists</h2>
 <p>Princeton homeowners expect bathrooms that match the elegance of their homes. Whether you own a historic Victorian near Palmer Square, a mid-century ranch in the Littlebrook neighborhood, or a newer home in Princeton Chase, MHG Contracting designs and builds bathrooms that elevate your daily routine into something approaching a spa experience. We have completed multiple bathroom renovations throughout Princeton and understand the unique challenges and opportunities that Princeton homes present.</p>
@@ -334,8 +334,8 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "hamilton-nj",
     cityName: "Hamilton",
     state: "NJ",
-    title: "Bathroom Remodel in Hamilton, NJ | Free Estimate | MHG Contracting",
-    metaDescription: "Hamilton, NJ bathroom remodeling contractor. Master bath remodels, walk-in showers, and custom tile work. Family-owned, based in Hamilton. Free estimate: (609) 712-2474.",
+    title: "Bathroom Remodel in Hamilton, NJ | MHG Contracting",
+    metaDescription: "Hamilton, NJ bathroom remodeling contractor. Master bath remodels, walk-in showers, and custom tile work. Family-owned, based in Hamilton.",
     h1: "Bathroom Renovations in Hamilton, NJ",
     content: `<h2>Hamilton's Go-To Bathroom Renovation Contractor</h2>
 <p>As a Hamilton-based company, we have renovated bathrooms across every corner of the township - Mercerville, Hamilton Square, Yardville, Groveville, and White Horse. We know the typical bathroom layouts in Hamilton's split-levels, bi-levels, and colonials. We know where the plumbing runs, what the common issues are, and how to transform a dated bathroom into a modern retreat without unnecessary surprises.</p>
@@ -483,7 +483,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Princeton",
     state: "NJ",
     title: "Basement Finishing in Princeton, NJ | MHG Contracting",
-    metaDescription: "Expert basement finishing in Princeton, NJ. MHG Contracting transforms unfinished basements into home theaters, guest suites, and entertainment spaces. Free estimates.",
+    metaDescription: "Expert basement finishing in Princeton, NJ. MHG Contracting transforms unfinished basements into home theaters, guest suites, and entertainment spaces.",
     h1: "Basement Finishing in Princeton, NJ",
     content: `<h2>Princeton Basement Finishing Experts</h2>
 <p>Princeton homes often sit on generous lots with spacious basements that represent enormous untapped potential. Whether your home is in the Princeton Ridge neighborhood, along the tree-lined streets of the Western Section, or in a newer development near Cherry Valley Road, MHG Contracting can transform your unfinished basement into a beautiful, functional living space that adds real value to your home.</p>
@@ -513,7 +513,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Hamilton",
     state: "NJ",
     title: "Basement Finishing in Hamilton, NJ | MHG Contracting",
-    metaDescription: "Hamilton NJ basement finishing contractor. MHG Contracting transforms unfinished basements into entertainment areas, home offices, and guest suites. Free estimates.",
+    metaDescription: "Hamilton NJ basement finishing contractor. MHG Contracting transforms unfinished basements into entertainment areas, home offices, and guest suites.",
     h1: "Basement Finishing in Hamilton, NJ",
     content: `<h2>Hamilton Basement Finishing Services</h2>
 <p>Hamilton Township is full of split-levels, bi-levels, and colonials with partially finished or completely unfinished basements. These lower levels represent hundreds of square feet of potential living space - space you are already paying to heat and cool. MHG Contracting helps Hamilton homeowners unlock that potential with professionally finished basements that expand your usable living area and add real value to your property.</p>
@@ -572,7 +572,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Lawrenceville",
     state: "NJ",
     title: "Basement Finishing in Lawrenceville, NJ | MHG Contracting",
-    metaDescription: "Basement finishing in Lawrenceville, NJ. Transform your unfinished basement into living space with MHG Contracting. Home offices, rec rooms, and guest suites. Free estimates.",
+    metaDescription: "Basement finishing in Lawrenceville, NJ. Transform your unfinished basement into living space with MHG Contracting. Home offices, rec rooms, and guest suites.",
     h1: "Basement Finishing in Lawrenceville, NJ",
     content: `<h2>Lawrenceville Basement Finishing Services</h2>
 <p>Lawrenceville homeowners are sitting on valuable untapped space in their basements. Whether you live in an older colonial near the town center, a ranch along Lawrenceville-Pennington Road, or a newer home in the developments off Route 206, your unfinished basement can be transformed into functional living space that your family will use every day. MHG Contracting brings the expertise and craftsmanship to make it happen.</p>
@@ -662,7 +662,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Princeton",
     state: "NJ",
     title: "Full Home Renovations in Princeton, NJ | MHG Contracting",
-    metaDescription: "Whole-home renovations in Princeton, NJ. MHG Contracting handles complete residential transformations - kitchens, bathrooms, structural changes, and system upgrades. Free estimates.",
+    metaDescription: "Whole-home renovations in Princeton, NJ. MHG Contracting handles complete residential transformations - kitchens, bathrooms, structural changes.",
     h1: "Full Home Renovations in Princeton, NJ",
     content: `<h2>Princeton Whole-Home Renovation Contractor</h2>
 <p>Princeton's older homes are architectural treasures, but many need comprehensive updates to meet modern living standards. MHG Contracting specializes in whole-home renovations that preserve the character of Princeton homes while upgrading every system, surface, and space. From Victorians near the university to mid-century homes in Riverside and colonials in the Western Section, we bring Princeton homes into the 21st century without losing what makes them special.</p>
@@ -691,7 +691,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Hamilton",
     state: "NJ",
     title: "Full Home Renovations in Hamilton, NJ | MHG Contracting",
-    metaDescription: "Complete home renovations in Hamilton, NJ. MHG Contracting transforms Hamilton homes with full gut renovations, system upgrades, and modern designs. Free estimates.",
+    metaDescription: "Complete home renovations in Hamilton, NJ. MHG Contracting transforms Hamilton homes with full gut renovations, system upgrades, and modern designs.",
     h1: "Full Home Renovations in Hamilton, NJ",
     content: `<h2>Hamilton's Whole-Home Renovation Experts</h2>
 <p>Hamilton Township's housing stock is dominated by homes built from the 1950s through the 1990s - split-levels, bi-levels, ranches, and colonials that served their era well but now need comprehensive updating. MHG Contracting is Hamilton's trusted partner for whole-home renovations that bring these homes into the modern era. Based right here in Hamilton, we know these homes inside and out.</p>
@@ -720,7 +720,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "West Windsor",
     state: "NJ",
     title: "Full Home Renovations in West Windsor, NJ | MHG Contracting",
-    metaDescription: "Premium whole-home renovations in West Windsor, NJ. Complete residential transformations by MHG Contracting - kitchens, baths, systems, and finishes. Free estimates.",
+    metaDescription: "Premium whole-home renovations in West Windsor, NJ. Complete residential transformations by MHG Contracting - kitchens, baths, systems, and finishes.",
     h1: "Full Home Renovations in West Windsor, NJ",
     content: `<h2>West Windsor Whole-Home Renovations</h2>
 <p>West Windsor's homes - built primarily in the 1980s and 1990s - are now reaching the age where comprehensive renovation makes sense. The bones are good, the neighborhoods are established, and the location is unbeatable. MHG Contracting helps West Windsor homeowners reinvent their homes with full renovations that update every room, system, and surface to today's standards.</p>
@@ -839,7 +839,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Princeton",
     state: "NJ",
     title: "Home Additions in Princeton, NJ | MHG Contracting",
-    metaDescription: "Home additions in Princeton, NJ. MHG Contracting designs and builds room additions, second-story additions, and sunroom additions that blend with your home. Free estimates.",
+    metaDescription: "Home additions in Princeton, NJ. MHG Contracting designs and builds room additions, second-story additions, and sunroom additions that blend with your home.",
     h1: "Home Additions in Princeton, NJ",
     content: `<h2>Princeton Home Addition Contractor</h2>
 <p>Princeton homeowners love their neighborhoods but sometimes need more space than their current home provides. Whether your family is growing, you need a dedicated home office, or you want to add a primary suite, a well-designed addition can solve your space challenges without the disruption and expense of moving. MHG Contracting designs and builds home additions throughout Princeton that blend seamlessly with the existing architecture.</p>
@@ -925,7 +925,7 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "lawrenceville-nj",
     cityName: "Lawrenceville",
     state: "NJ",
-    title: "Home Additions in Lawrenceville, NJ | Free Estimate | MHG Contracting",
+    title: "Home Additions in Lawrenceville, NJ | MHG Contracting",
     metaDescription: "Family-owned home addition contractor in Lawrenceville, NJ. Room additions, sunrooms, in-law suites, and second-story builds. Free estimate: (609) 712-2474.",
     h1: "Home Additions in Lawrenceville, NJ",
     content: `<h2>Lawrenceville Home Addition Services</h2>
@@ -1073,8 +1073,8 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "west-windsor-nj",
     cityName: "West Windsor",
     state: "NJ",
-    title: "Custom Home Builder in West Windsor, NJ | Free Consultation | MHG",
-    metaDescription: "Family-owned custom home builder in West Windsor, NJ. Premium new construction in Princeton Junction and West Windsor Village. Free consultation: (609) 712-2474.",
+    title: "Custom Home Builder in West Windsor, NJ | MHG",
+    metaDescription: "Family-owned custom home builder in West Windsor, NJ. Premium new construction in Princeton Junction and West Windsor Village. Free consultation: (609).",
     h1: "New Home Construction in West Windsor, NJ",
     content: `<h2>West Windsor Custom Home Builder</h2>
 <p>West Windsor's top-rated schools, excellent transit access via Princeton Junction, and family-friendly neighborhoods make it one of Central New Jersey's most desirable communities for custom home construction. MHG Contracting builds custom homes in West Windsor that match the community's high standards - with premium materials, thoughtful design, and meticulous craftsmanship.</p>
@@ -1196,7 +1196,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Robbinsville",
     state: "NJ",
     title: "Kitchen Remodeling in Robbinsville, NJ | MHG Contracting",
-    metaDescription: "Kitchen remodeling in Robbinsville, NJ. MHG Contracting builds custom kitchens for Town Center, Foxmoor, and Washington Town Center homes. Free estimates from a local Mercer County contractor.",
+    metaDescription: "Kitchen remodeling in Robbinsville, NJ. MHG Contracting builds custom kitchens for Town Center, Foxmoor, and Washington Town Center homes.",
     h1: "Kitchen Remodeling in Robbinsville, NJ",
     content: `<h2>Robbinsville Kitchen Remodeling Contractor</h2>
 <p>Robbinsville Township has grown faster than almost any community in Mercer County over the past two decades. Neighborhoods like Town Center, Foxmoor, Washington Town Center, and the homes along Route 526 are filled with families who want kitchens that match the quality of their homes. MHG Contracting is a Hamilton-based remodeling company that has built and renovated kitchens throughout Robbinsville, and we understand both the newer builder-grade construction and the older farmhouses tucked back along Sharon Road.</p>
@@ -1237,7 +1237,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "East Windsor",
     state: "NJ",
     title: "Kitchen Remodeling in East Windsor, NJ | MHG Contracting",
-    metaDescription: "Kitchen remodeling in East Windsor, NJ. MHG Contracting renovates kitchens in Twin Rivers, Hickory Acres, and across East Windsor with custom cabinetry and quality craftsmanship.",
+    metaDescription: "Kitchen remodeling in East Windsor, NJ. MHG Contracting renovates kitchens in Twin Rivers, Hickory Acres, and across East Windsor with custom cabinetry and.",
     h1: "Kitchen Remodeling in East Windsor, NJ",
     content: `<h2>East Windsor Kitchen Renovation Experts</h2>
 <p>East Windsor is one of the most architecturally diverse townships in Mercer County. Twin Rivers, the country's first planned residential community, sits alongside older ranches and split-levels in Hickory Acres, newer construction off Route 130, and traditional colonials throughout the township. MHG Contracting has remodeled kitchens across every East Windsor neighborhood, and we adapt our approach to the specific era and style of your home.</p>
@@ -1278,7 +1278,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Hopewell",
     state: "NJ",
     title: "Kitchen Remodeling in Hopewell, NJ | MHG Contracting",
-    metaDescription: "Kitchen remodeling in Hopewell, NJ. MHG Contracting renovates historic farmhouses and modern homes throughout Hopewell Borough and Hopewell Township with custom craftsmanship.",
+    metaDescription: "Kitchen remodeling in Hopewell, NJ. MHG Contracting renovates historic farmhouses and modern homes throughout Hopewell Borough and Hopewell Township with.",
     h1: "Kitchen Remodeling in Hopewell, NJ",
     content: `<h2>Hopewell Kitchen Renovation Specialists</h2>
 <p>Hopewell is one of the most distinctive communities in Mercer County. The borough itself features charming 19th-century homes along Broad Street and Greenwood Avenue, while Hopewell Township stretches out into farmland with historic farmhouses, modern estates, and everything in between. MHG Contracting respects the architectural heritage of Hopewell homes while building kitchens that work for how today's families actually live.</p>
@@ -1319,7 +1319,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Pennington",
     state: "NJ",
     title: "Kitchen Remodeling in Pennington, NJ | MHG Contracting",
-    metaDescription: "Kitchen remodeling in Pennington, NJ. MHG Contracting renovates historic borough homes and newer estates throughout Pennington with custom cabinetry and craftsmanship.",
+    metaDescription: "Kitchen remodeling in Pennington, NJ. MHG Contracting renovates historic borough homes and newer estates throughout Pennington with custom cabinetry and.",
     h1: "Kitchen Remodeling in Pennington, NJ",
     content: `<h2>Pennington Kitchen Renovation Contractor</h2>
 <p>Pennington Borough is a small, walkable community surrounded by Hopewell Township, with one of the most charming Main Streets in Central New Jersey. The homes range from Victorian-era and colonial revival cottages near the borough center to larger estates on the outskirts. MHG Contracting has remodeled kitchens across this range, and we know how to deliver modern function inside homes that are sometimes more than a century old.</p>
@@ -1360,7 +1360,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Ewing",
     state: "NJ",
     title: "Kitchen Remodeling in Ewing, NJ | MHG Contracting",
-    metaDescription: "Kitchen remodeling in Ewing, NJ. MHG Contracting renovates Cape Cods, ranches, and colonials across Ewing Township with custom cabinetry and quality craftsmanship.",
+    metaDescription: "Kitchen remodeling in Ewing, NJ. MHG Contracting renovates Cape Cods, ranches, and colonials across Ewing Township with custom cabinetry and quality.",
     h1: "Kitchen Remodeling in Ewing, NJ",
     content: `<h2>Ewing Kitchen Remodeling Contractor</h2>
 <p>Ewing Township sits at the western edge of Mercer County and includes a wide mix of housing - post-WWII Cape Cods and ranches in neighborhoods like Mountainview and Ewingville, larger colonials in West Trenton, and newer townhomes and developments scattered throughout. MHG Contracting has renovated kitchens across every Ewing neighborhood, and we tailor our approach to the home you actually have.</p>
@@ -1401,7 +1401,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Robbinsville",
     state: "NJ",
     title: "Bathroom Remodeling in Robbinsville, NJ | MHG Contracting",
-    metaDescription: "Bathroom remodeling in Robbinsville, NJ. MHG Contracting builds luxury primary baths, guest baths, and powder rooms across Town Center, Foxmoor, and Washington Town Center.",
+    metaDescription: "Bathroom remodeling in Robbinsville, NJ. MHG Contracting builds luxury primary baths, guest baths, and powder rooms across Town Center, Foxmoor.",
     h1: "Bathroom Remodeling in Robbinsville, NJ",
     content: `<h2>Robbinsville Bathroom Renovation Contractor</h2>
 <p>Robbinsville's growth over the past 20 years means most of the homes here are relatively new - but newer does not mean perfect. Builder-grade bathrooms with small vanities, fiberglass tub surrounds, and basic tile work feel dated quickly. MHG Contracting renovates bathrooms across every Robbinsville neighborhood, from Town Center and Foxmoor to the larger estates along Sharon Road.</p>
@@ -1441,7 +1441,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "East Windsor",
     state: "NJ",
     title: "Bathroom Remodeling in East Windsor, NJ | MHG Contracting",
-    metaDescription: "Bathroom remodeling in East Windsor, NJ. MHG Contracting renovates baths in Twin Rivers, Hickory Acres, and across East Windsor with custom tile and quality craftsmanship.",
+    metaDescription: "Bathroom remodeling in East Windsor, NJ. MHG Contracting renovates baths in Twin Rivers, Hickory Acres, and across East Windsor with custom tile and quality.",
     h1: "Bathroom Remodeling in East Windsor, NJ",
     content: `<h2>East Windsor Bathroom Renovation Experts</h2>
 <p>East Windsor homes span six decades of construction, and so do their bathrooms. Twin Rivers townhomes have compact baths from the early 1970s. Mid-century ranches in Hickory Acres have small original baths that have rarely been touched. Newer single-family homes off Route 130 have builder-grade primary suites ready for upgrades. MHG Contracting renovates bathrooms in every type of East Windsor home.</p>
@@ -1563,7 +1563,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Ewing",
     state: "NJ",
     title: "Bathroom Remodeling in Ewing, NJ | MHG Contracting",
-    metaDescription: "Bathroom remodeling in Ewing, NJ. MHG Contracting renovates Cape Cod and ranch bathrooms across Mountainview, Ewingville, and West Trenton with custom tile and craftsmanship.",
+    metaDescription: "Bathroom remodeling in Ewing, NJ. MHG Contracting renovates Cape Cod and ranch bathrooms across Mountainview, Ewingville, and West Trenton with custom tile and.",
     h1: "Bathroom Remodeling in Ewing, NJ",
     content: `<h2>Ewing Bathroom Renovation Contractor</h2>
 <p>Ewing Township's housing stock is dominated by post-WWII Cape Cods, ranches, and bi-levels in neighborhoods like Mountainview and Ewingville, with colonials and larger homes in West Trenton and newer townhomes scattered throughout. Most of these bathrooms have either never been renovated or were last touched decades ago. MHG Contracting renovates Ewing bathrooms with the durability, function, and finish quality these homes deserve.</p>
@@ -1604,7 +1604,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "Robbinsville",
     state: "NJ",
     title: "Basement Finishing in Robbinsville, NJ | MHG Contracting",
-    metaDescription: "Basement finishing in Robbinsville, NJ. MHG Contracting transforms unfinished basements into family rooms, home theaters, gyms, and guest suites for Town Center and Foxmoor homes.",
+    metaDescription: "Basement finishing in Robbinsville, NJ. MHG Contracting transforms unfinished basements into family rooms, home theaters, gyms, and guest suites for Town.",
     h1: "Basement Finishing in Robbinsville, NJ",
     content: `<h2>Robbinsville Basement Finishing Contractor</h2>
 <p>Robbinsville's newer homes often come with full unfinished basements that double the usable square footage of the house - if you finish them right. MHG Contracting has finished basements throughout Robbinsville, turning concrete shells into family rooms, home theaters, gyms, playrooms, home offices, guest suites, and full in-law setups.</p>
@@ -1645,7 +1645,7 @@ export const AREA_PAGES: AreaPage[] = [
     cityName: "East Windsor",
     state: "NJ",
     title: "Basement Finishing in East Windsor, NJ | MHG Contracting",
-    metaDescription: "Basement finishing in East Windsor, NJ. MHG Contracting transforms unfinished basements into family rooms, home theaters, and guest suites for Twin Rivers and East Windsor homes.",
+    metaDescription: "Basement finishing in East Windsor, NJ. MHG Contracting transforms unfinished basements into family rooms, home theaters, and guest suites for Twin Rivers and.",
     h1: "Basement Finishing in East Windsor, NJ",
     content: `<h2>East Windsor Basement Finishing Contractor</h2>
 <p>East Windsor homes range from Twin Rivers townhomes with limited lower levels to single-family homes with full unfinished basements waiting to be transformed. MHG Contracting has finished basements across East Windsor, and we tailor our approach to what each space can become.</p>

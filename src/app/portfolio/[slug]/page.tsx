@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { portfolioProjects, getProjectBySlug } from "@/lib/data";
 import ProjectDetail from "./ProjectDetail";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 import SeoPrerender from "@/components/seo/SeoPrerender";
 import { generatePortfolioSeoContent } from "@/lib/seo-content-generator";
 
@@ -19,19 +19,16 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const project = getProjectBySlug(slug);
     if (!project) return { title: "Project Not Found" };
 
-    return {
-      title: {
-        absolute: `${project.title} | MHG Contracting Portfolio`,
-      },
-      description: project.description,
-      alternates: { canonical: `https://mhgcon.com/portfolio/${slug}` },
-      openGraph: {
-        title: `${project.title} - MHG Contracting`,
-        description: project.description,
-        url: `https://mhgcon.com/portfolio/${slug}`,
-        images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: project.title }],
-      },
-    };
+    const desc = (project.description || project.shortDescription || "").slice(0, 160);
+    return buildSeoMetadata({
+      path: `/portfolio/${slug}`,
+      title: `${project.title} | MHG Contracting Portfolio`,
+      description: desc,
+      ogTitle: `${project.title} - MHG Contracting`,
+      ogDescription: desc,
+      ogImage: project.imagePath ?? undefined,
+      ogImageAlt: project.title,
+    });
   });
 }
 

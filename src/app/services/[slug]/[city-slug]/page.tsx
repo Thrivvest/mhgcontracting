@@ -9,7 +9,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { getAreaPage, getAllAreaParams } from "@/lib/area-pages-data";
 import AreaPageContent from "./AreaPageContent";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 import SeoPrerender from "@/components/seo/SeoPrerender";
 import { generateAreaSeoContent } from "@/lib/seo-content-generator";
 
@@ -28,33 +28,12 @@ export function generateMetadata({
     const page = getAreaPage(slug, citySlug);
     if (!page) return { title: "Page Not Found" };
 
-    return {
-      title: { absolute: page.title },
+    return buildSeoMetadata({
+      path: `/services/${slug}/${citySlug}`,
+      title: page.title,
       description: page.metaDescription,
-      alternates: {
-        canonical: `https://mhgcon.com/services/${slug}/${citySlug}`,
-      },
-      openGraph: {
-        title: page.title,
-        description: page.metaDescription,
-        url: `https://mhgcon.com/services/${slug}/${citySlug}`,
-        siteName: "MHG Contracting",
-        type: "website",
-        images: [
-          {
-            url: "/images/og-image.jpg",
-            width: 1200,
-            height: 630,
-            alt: page.title,
-          },
-        ],
-      },
-      twitter: {
-        card: "summary_large_image",
-        title: page.title,
-        description: page.metaDescription,
-      },
-    };
+      ogImageAlt: page.title,
+    });
   });
 }
 

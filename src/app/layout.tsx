@@ -300,7 +300,6 @@ export default function RootLayout({
             __html: `(function(){var h=location.hostname;if(h==='localhost'||h==='127.0.0.1'||h.endsWith('.vercel.app'))return;var s=document.createElement('script');s.async=true;s.setAttribute('data-key','RcLQVKa1mgcc1w+KoLW7aw');s.src='https://analytics.ahrefs.com/analytics.js';document.head.appendChild(s);})();`,
           }}
         />
-        <link rel="alternate" hrefLang="en-us" href="https://mhgcon.com" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

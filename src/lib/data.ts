@@ -231,9 +231,9 @@ export const services: Service[] = [
       "Your kitchen is the heart of your home, and we treat it that way. From custom cabinetry and stone countertops to full layout redesigns, our kitchen renovations blend beauty, function, and quality craftsmanship. Whether you want a modern open concept or a timeless classic look, we bring your vision to life.",
     shortDescription:
       "Custom cabinetry, countertops, and full layout redesigns.",
-    seoTitle: "Kitchen Remodeling in Central NJ | Free Estimate | MHG Contracting",
+    seoTitle: "Kitchen Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned kitchen remodeling contractor serving Hamilton, Princeton, Lawrenceville, and Central NJ. Custom cabinetry, quartz counters, full layouts. Free estimate: (609) 712-2474.",
+      "Family-owned kitchen remodeling contractor in Hamilton, Princeton, and Central NJ. Custom cabinetry, quartz counters, full layouts. Free estimate: (609) 712-2474.",
     icon: "kitchen",
     scopeItems: [
       "Custom cabinetry design and installation",
@@ -248,6 +248,11 @@ export const services: Service[] = [
       "Open concept wall removal (with structural engineering)",
     ],
     faqs: [
+      {
+        question: "How much does a kitchen remodel cost in NJ?",
+        answer:
+          "Cosmetic refresh kitchens (new cabinets, counters, flooring, same footprint) run $25,000 to $45,000 in Central NJ. Mid-range renovations with semi-custom cabinets, an island, and quartz counters are our most common project at $55,000 to $95,000. Full gut and reconfigure projects with custom cabinetry and structural changes run $110,000 to $225,000+. We break down where every dollar goes in our /blog/kitchen-remodel-cost guide.",
+      },
       {
         question: "How long does a kitchen renovation take?",
         answer:
@@ -273,9 +278,9 @@ export const services: Service[] = [
       "Transform your bathroom into a personal retreat. From powder room refreshes to full master bathroom overhauls, we handle every detail - tile work, fixtures, vanities, lighting, and more. Our attention to waterproofing and proper ventilation ensures your renovation lasts for years to come.",
     shortDescription:
       "From powder rooms to spa-like master bathrooms.",
-    seoTitle: "Bathroom Remodeling in Central NJ | Free Estimate | MHG Contracting",
+    seoTitle: "Bathroom Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned bathroom remodeling contractor serving Hamilton, Princeton, Lawrenceville, and Central NJ. Walk-in showers, custom tile, vanities. Free estimate: (609) 712-2474.",
+      "Family-owned bathroom remodeling contractor in Hamilton, Princeton, and Central NJ. Walk-in showers, custom tile, vanities. Free estimate: (609) 712-2474.",
     icon: "bathroom",
     scopeItems: [
       "Custom tile showers and tub surrounds",
@@ -315,9 +320,9 @@ export const services: Service[] = [
       "Unlock the potential of your unfinished basement. We transform dark, unused spaces into beautiful living areas - home theaters, guest suites, home offices, gyms, and entertainment lounges. Our basements include proper insulation, moisture management, and quality finishes.",
     shortDescription:
       "Transform your basement into usable living space.",
-    seoTitle: "Basement Finishing in Central NJ | Free Estimate | MHG Contracting",
+    seoTitle: "Basement Finishing Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned basement finishing contractor serving Hamilton, Princeton, Lawrenceville, and Central NJ. Home theaters, in-law suites, gyms. Free estimates: (609) 712-2474.",
+      "Family-owned basement finishing contractor in Hamilton, Princeton, and Central NJ. Home theaters, in-law suites, gyms. Free estimate: (609) 712-2474.",
     icon: "basement",
     scopeItems: [
       "Framing and insulation",
@@ -357,6 +362,9 @@ export const services: Service[] = [
       "When one room isn't enough, we take on whole-home transformations. Our full renovation service covers everything - structural changes, system upgrades (HVAC, electrical, plumbing), interior finishes, and everything in between. We manage the entire project so you have one team and one point of contact.",
     shortDescription:
       "Comprehensive whole-home transformations.",
+    seoTitle: "Full Home Renovations Central NJ | MHG Contracting",
+    seoDescription:
+      "Whole-home renovations in Hamilton, Princeton, and Central NJ. Structural, HVAC, electrical, plumbing, and finishes managed by one team. Free estimate: (609) 712-2474.",
     icon: "home",
     scopeItems: [
       "Structural modifications and engineering",
@@ -396,6 +404,9 @@ export const services: Service[] = [
       "Need more space? We design and build home additions that blend seamlessly with your existing architecture. From family rooms and sunrooms to second-story additions, we handle the entire process - architectural planning, engineering, permitting, and construction.",
     shortDescription:
       "Seamless home additions that match your existing style.",
+    seoTitle: "Home Additions Central NJ | MHG Contracting",
+    seoDescription:
+      "Home additions in Hamilton, Princeton, and Central NJ. Family rooms, sunrooms, second-story builds designed to match your home. Free estimate: (609) 712-2474.",
     icon: "addition",
     scopeItems: [
       "Architectural design and planning",
@@ -435,6 +446,9 @@ export const services: Service[] = [
       "Build the home you have always envisioned. Our new construction service takes you from an empty lot to a finished, move-in ready home. We partner with top architects and handle every phase - site prep, foundation, framing, systems, finishes, and landscaping.",
     shortDescription:
       "Custom homes built from the ground up.",
+    seoTitle: "New Home Construction Central NJ | MHG Contracting",
+    seoDescription:
+      "Custom new home construction in Hamilton, Princeton, and Central NJ. Site prep through finishes managed by one team. Free consultation: (609) 712-2474.",
     icon: "construction",
     scopeItems: [
       "Site preparation and excavation",

@@ -2,35 +2,21 @@ import type { Metadata } from "next";
 import BlogContent from "./BlogContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 
 const breadcrumbJsonLd = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
   { name: "Blog", href: "/blog" },
 ]);
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Home Renovation Tips & Expert Advice | MHG Contracting Blog",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/blog",
+  title: "Home Renovation Tips & Expert Advice | MHG Contracting Blog",
   description:
-    "Read expert tips, renovation advice, and project insights from MHG Contracting. Learn about kitchen renovations, bathroom remodels, and home improvement in Central NJ.",
-  alternates: { canonical: "https://mhgcon.com/blog" },
-  openGraph: {
-    title: "Blog | Home Renovation Tips & Insights",
-    description:
-      "Expert tips, renovation advice, and project insights from the MHG Contracting team.",
-    url: "https://mhgcon.com/blog",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MHG Contracting Blog",
-      },
-    ],
-  },
-};
+    "Tips, cost breakdowns, and project insights on kitchen, bath, basement, and full-home renovation from the MHG Contracting team in Central NJ.",
+  ogTitle: "Blog | Home Renovation Tips & Insights",
+  ogImageAlt: "MHG Contracting Blog",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

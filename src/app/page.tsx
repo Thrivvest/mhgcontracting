@@ -9,29 +9,18 @@ import ReviewsSlider from "@/components/sections/ReviewsSlider";
 import ServiceArea from "@/components/sections/ServiceArea";
 import BlogPreview from "@/components/sections/BlogPreview";
 import SeoPrerender from "@/components/seo/SeoPrerender";
+import { buildSeoMetadata } from "@/lib/seo-utils";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "General Contractor Hamilton NJ | Kitchen, Bath, Basement & Additions | MHG Contracting",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/",
+  title: "General Contractor Hamilton NJ | Kitchen, Bath, Basement | MHG",
   description:
-    "Family-owned general contractor in Hamilton NJ. Kitchen renovations, bathroom remodels, basement finishing, home additions, and new construction across Central NJ. 4.9 stars, 28 Google reviews. Free in-home estimates. Call (609) 712-2474.",
-  alternates: { canonical: "https://mhgcon.com" },
-  openGraph: {
-    title: "MHG Contracting | Kitchen, Bath & Home Renovations in Hamilton, NJ",
-    description:
-      "Family-owned residential contracting in Central NJ. Kitchen renovations, bathroom remodels, basement finishing, additions, and new construction. Free estimates.",
-    url: "https://mhgcon.com",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MHG Contracting, Hamilton, NJ",
-      },
-    ],
-  },
-};
+    "Family-owned general contractor in Hamilton NJ. Kitchen, bath, basement, additions, and new construction across Central NJ. 4.9 stars from 28 Google reviews.",
+  ogTitle: "MHG Contracting | Kitchen, Bath & Home Renovations in Hamilton NJ",
+  ogDescription:
+    "Family-owned residential contracting in Central NJ. Kitchen, bath, basement, additions, and new construction. Free estimates. Call (609) 712-2474.",
+  ogImageAlt: "MHG Contracting, Hamilton, NJ",
+});
 
 const websiteJsonLd = {
   "@context": "https://schema.org",
