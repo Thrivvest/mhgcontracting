@@ -64,6 +64,15 @@ export default function Footer() {
                   </Link>
                 </li>
               ))}
+              <li>
+                <Link
+                  href="/faq"
+                  className="text-white/70 text-sm font-body hover:text-white transition-colors duration-200 inline-block relative group"
+                >
+                  FAQ
+                  <span className="absolute bottom-0 left-0 w-0 h-[1px] bg-white/50 group-hover:w-full transition-all duration-300" />
+                </Link>
+              </li>
             </ul>
           </div>
 

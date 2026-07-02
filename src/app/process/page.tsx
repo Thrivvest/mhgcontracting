@@ -2,35 +2,21 @@ import type { Metadata } from "next";
 import ProcessContent from "./ProcessContent";
 import { processSteps } from "@/lib/data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 
 const breadcrumbJsonLd = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
   { name: "Process", href: "/process" },
 ]);
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Our Renovation Process | MHG Contracting NJ",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/process",
+  title: "Our Renovation Process | How MHG Contracting Works",
   description:
-    "From free consultation to project completion, learn how MHG Contracting guides you through every step of your renovation. Clear communication, quality craftsmanship, no surprises.",
-  alternates: { canonical: "https://mhgcon.com/process" },
-  openGraph: {
-    title: "Our Process | How MHG Contracting Works",
-    description:
-      "From consultation to project completion: clear communication, quality craftsmanship, no surprises.",
-    url: "https://mhgcon.com/process",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MHG Contracting Process",
-      },
-    ],
-  },
-};
+    "How MHG Contracting runs a renovation, from free in-home consultation through design, permits, build, and final walk-through. Clear communication at every step.",
+  ogTitle: "Our Process | How MHG Contracting Works",
+  ogImageAlt: "MHG Contracting Process",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

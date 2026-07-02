@@ -143,6 +143,7 @@ export const navLinks: NavLink[] = [
       { label: "Reviews", href: "/reviews" },
       { label: "Blog", href: "/blog" },
       { label: "Service Areas", href: "/service-areas" },
+      { label: "FAQ", href: "/faq" },
     ],
   },
   { label: "Services", href: "/services" },

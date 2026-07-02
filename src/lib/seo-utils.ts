@@ -1,4 +1,83 @@
+import type { Metadata } from "next";
+
 export const BASE_URL = "https://mhgcon.com";
+export const DEFAULT_OG_IMAGE = "/images/og-image.jpg";
+
+export interface SeoMetadataInput {
+  /** Path starting with "/" (e.g. "/services/kitchen-renovations"). */
+  path: string;
+  /** Full page title. Written verbatim into the <title>. Keep 50-60 chars. */
+  title: string;
+  /** Meta description. Keep 130-160 chars. */
+  description: string;
+  /** Optional OG title override (defaults to `title`). */
+  ogTitle?: string;
+  /** Optional OG description override (defaults to `description`). */
+  ogDescription?: string;
+  /** OG image path (absolute or /-relative). Defaults to brand OG image. */
+  ogImage?: string;
+  /** OG image alt text. */
+  ogImageAlt?: string;
+  /** OG type. Defaults to "website". Use "article" for blog posts. */
+  ogType?: "website" | "article";
+}
+
+/**
+ * Single source of truth for per-page Metadata.
+ * Emits canonical, self-referencing hreflang (en-us + x-default),
+ * full Open Graph, and Twitter Card tags.
+ */
+export function buildSeoMetadata(input: SeoMetadataInput): Metadata {
+  const {
+    path,
+    title,
+    description,
+    ogTitle,
+    ogDescription,
+    ogImage = DEFAULT_OG_IMAGE,
+    ogImageAlt,
+    ogType = "website",
+  } = input;
+
+  const url = `${BASE_URL}${path === "/" ? "" : path}`;
+  const finalOgTitle = ogTitle ?? title;
+  const finalOgDescription = ogDescription ?? description;
+  const alt = ogImageAlt ?? title;
+
+  return {
+    title: { absolute: title },
+    description,
+    alternates: {
+      canonical: url,
+      languages: {
+        "en-us": url,
+        "x-default": url,
+      },
+    },
+    openGraph: {
+      type: ogType,
+      locale: "en_US",
+      url,
+      siteName: "MHG Contracting",
+      title: finalOgTitle,
+      description: finalOgDescription,
+      images: [
+        {
+          url: ogImage,
+          width: 1200,
+          height: 630,
+          alt,
+        },
+      ],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: finalOgTitle,
+      description: finalOgDescription,
+      images: [ogImage],
+    },
+  };
+}
 
 export interface BreadcrumbItem {
   name: string;

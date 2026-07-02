@@ -1,31 +1,17 @@
 import type { Metadata } from "next";
 import ReviewsContent from "./ReviewsContent";
 import SeoPrerender from "@/components/seo/SeoPrerender";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 import gbpReviews from "@/data/gbp-reviews.json";
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "MHG Contracting Reviews | 4.9★ from 28 Verified Google Reviews",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/reviews",
+  title: "MHG Contracting Reviews | 4.9 Stars, 28 Google Reviews",
   description:
-    "Read real Google reviews of MHG Contracting from kitchen, bathroom, basement, and home renovation clients across Hamilton, Princeton, West Windsor, Lawrenceville, and Central NJ. 4.9-star average.",
-  alternates: { canonical: "https://mhgcon.com/reviews" },
-  openGraph: {
-    title: "MHG Contracting Reviews | 4.9★ on Google",
-    description:
-      "Real verified reviews from kitchen, bathroom, basement, and home renovation clients across Central NJ.",
-    url: "https://mhgcon.com/reviews",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MHG Contracting Reviews",
-      },
-    ],
-  },
-};
+    "Read verified Google reviews of MHG Contracting from kitchen, bath, basement, and full-home renovation clients across Hamilton, Princeton, and Central NJ.",
+  ogTitle: "MHG Contracting Reviews | 4.9 Stars on Google",
+  ogImageAlt: "MHG Contracting Reviews",
+});
 
 const reviewListJsonLd = {
   "@context": "https://schema.org",

@@ -2,35 +2,21 @@ import type { Metadata } from "next";
 import PortfolioContent from "./PortfolioContent";
 import { portfolioProjects } from "@/lib/data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 
 const breadcrumbJsonLd = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
   { name: "Portfolio", href: "/portfolio" },
 ]);
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Renovation Portfolio | MHG Contracting NJ",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/portfolio",
+  title: "Renovation Portfolio | MHG Contracting Central NJ",
   description:
-    "Browse our portfolio of kitchen renovations, bathroom remodels, basement finishing, full home renovations, additions, and new construction projects across Central NJ.",
-  alternates: { canonical: "https://mhgcon.com/portfolio" },
-  openGraph: {
-    title: "Portfolio | Our Work - MHG Contracting",
-    description:
-      "Browse our kitchen, bathroom, basement, and full home renovation projects across Central NJ.",
-    url: "https://mhgcon.com/portfolio",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MHG Contracting Portfolio",
-      },
-    ],
-  },
-};
+    "Recent kitchen, bath, basement, addition, full-home renovation, and new construction projects by MHG Contracting across Hamilton, Princeton, and Central NJ.",
+  ogTitle: "Portfolio | Our Work - MHG Contracting",
+  ogImageAlt: "MHG Contracting Portfolio",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

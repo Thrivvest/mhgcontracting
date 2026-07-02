@@ -2,35 +2,21 @@ import type { Metadata } from "next";
 import ServicesContent from "./ServicesContent";
 import { services } from "@/lib/data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 
 const breadcrumbJsonLd = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
   { name: "Services", href: "/services" },
 ]);
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Home Renovation Services | MHG Contracting NJ",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/services",
+  title: "Home Renovation Services | MHG Contracting Central NJ",
   description:
-    "Explore our residential contracting services: kitchen renovations, bathroom remodels, basement finishing, full home renovations, additions, and new construction in Central NJ.",
-  alternates: { canonical: "https://mhgcon.com/services" },
-  openGraph: {
-    title: "Services | Kitchen, Bathroom, Basement & More",
-    description:
-      "Kitchen renovations, bathroom remodels, basement finishing, additions, and new construction in Central NJ.",
-    url: "https://mhgcon.com/services",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "MHG Contracting Services",
-      },
-    ],
-  },
-};
+    "Kitchen renovations, bathroom remodels, basement finishing, full-home renovations, additions, and new construction in Central NJ from MHG Contracting.",
+  ogTitle: "Services | Kitchen, Bathroom, Basement & More",
+  ogImageAlt: "MHG Contracting Services",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

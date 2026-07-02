@@ -1,36 +1,21 @@
 import type { Metadata } from "next";
 import ContactContent from "./ContactContent";
 import SeoPrerender from "@/components/seo/SeoPrerender";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 
 const breadcrumbJsonLd = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
   { name: "Contact", href: "/contact" },
 ]);
 
-export const metadata: Metadata = {
-  title: {
-    absolute:
-      "Get a Free Estimate | MHG Contracting - (609) 712-2474",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/contact",
+  title: "Get a Free Estimate | MHG Contracting | (609) 712-2474",
   description:
-    "Request your free estimate from MHG Contracting. Call (609) 712-2474 or fill out our form. We serve Hamilton, Princeton, West Windsor, and Central NJ.",
-  alternates: { canonical: "https://mhgcon.com/contact" },
-  openGraph: {
-    title: "Contact MHG Contracting | Get a Free Estimate",
-    description:
-      "Request your free estimate. Call (609) 712-2474 or fill out our form. Serving Hamilton, Princeton, West Windsor, and Central NJ.",
-    url: "https://mhgcon.com/contact",
-    images: [
-      {
-        url: "/images/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Contact MHG Contracting",
-      },
-    ],
-  },
-};
+    "Request a free estimate from MHG Contracting. Call (609) 712-2474 or fill out the form. Serving Hamilton, Princeton, West Windsor, and Central NJ.",
+  ogTitle: "Contact MHG Contracting | Get a Free Estimate",
+  ogImageAlt: "Contact MHG Contracting",
+});
 
 const jsonLd = {
   "@context": "https://schema.org",

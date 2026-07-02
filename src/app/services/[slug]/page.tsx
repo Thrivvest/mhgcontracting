@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { services, getServiceBySlug } from "@/lib/data";
 import ServiceDetail from "./ServiceDetail";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 import SeoPrerender from "@/components/seo/SeoPrerender";
 import { generateServiceSeoContent } from "@/lib/seo-content-generator";
 
@@ -20,17 +20,14 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const title = service.seoTitle ?? `${service.name} in Central NJ | MHG Contracting`;
     const description = service.seoDescription ?? service.description;
 
-    return {
-      title: { absolute: title },
+    return buildSeoMetadata({
+      path: `/services/${slug}`,
+      title,
       description,
-      alternates: { canonical: `https://mhgcon.com/services/${slug}` },
-      openGraph: {
-        title,
-        description: service.shortDescription,
-        url: `https://mhgcon.com/services/${slug}`,
-        images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: `${service.name} - MHG Contracting` }],
-      },
-    };
+      ogTitle: title,
+      ogDescription: service.shortDescription,
+      ogImageAlt: `${service.name} - MHG Contracting`,
+    });
   });
 }
 

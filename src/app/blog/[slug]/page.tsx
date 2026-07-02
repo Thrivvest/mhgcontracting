@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import BlogPostContent from "./BlogPostContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 import SeoPrerender from "@/components/seo/SeoPrerender";
 import { generateBlogSeoContent } from "@/lib/seo-content-generator";
 
@@ -17,20 +17,16 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const post = BLOG_POSTS.find((p) => p.slug === slug);
     if (!post) return { title: "Post Not Found" };
 
-    return {
-      title: {
-        absolute: `${post.title} | MHG Contracting`,
-      },
-      description: post.excerpt,
-      alternates: { canonical: `https://mhgcon.com/blog/${slug}` },
-      openGraph: {
-        title: post.title,
-        description: post.excerpt,
-        url: `https://mhgcon.com/blog/${slug}`,
-        type: "article",
-        images: [{ url: "/images/og-image.jpg", width: 1200, height: 630, alt: post.title }],
-      },
-    };
+    const description = (post.metaDescription || post.excerpt).slice(0, 160);
+    return buildSeoMetadata({
+      path: `/blog/${slug}`,
+      title: `${post.title} | MHG Contracting`,
+      description,
+      ogTitle: post.title,
+      ogDescription: description,
+      ogType: "article",
+      ogImageAlt: post.title,
+    });
   });
 }
 

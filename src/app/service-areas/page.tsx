@@ -9,31 +9,23 @@ import type { Metadata } from "next";
 import ServiceAreasContent from "./ServiceAreasContent";
 import { CITIES, SERVICE_SLUGS, AREA_PAGES } from "@/lib/area-pages-data";
 import SeoPrerender from "@/components/seo/SeoPrerender";
-import { buildBreadcrumbSchema } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 
 const breadcrumbJsonLd = buildBreadcrumbSchema([
   { name: "Home", href: "/" },
   { name: "Service Areas", href: "/service-areas" },
 ]);
 
-export const metadata: Metadata = {
-  title: {
-    absolute: "Service Areas | MHG Contracting Central NJ",
-  },
+export const metadata: Metadata = buildSeoMetadata({
+  path: "/service-areas",
+  title: "Service Areas | MHG Contracting Central NJ & Bucks County PA",
   description:
-    "MHG Contracting serves Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley PA with expert kitchen and bathroom renovations, basement finishing, home additions, full-home renovations, and new construction.",
-  alternates: {
-    canonical: "https://mhgcon.com/service-areas",
-  },
-  openGraph: {
-    title: "Service Areas | MHG Contracting",
-    description:
-      "Serving Central New Jersey and Bucks County PA - Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley.",
-    url: "https://mhgcon.com/service-areas",
-    siteName: "MHG Contracting",
-    type: "website",
-  },
-};
+    "MHG Contracting serves Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley PA with kitchen, bath, basement, addition, and new construction work.",
+  ogTitle: "Service Areas | MHG Contracting",
+  ogDescription:
+    "Serving Central NJ and Bucks County PA: Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley.",
+  ogImageAlt: "MHG Contracting service areas",
+});
 
 export default function ServiceAreasPage() {
   // Build JSON-LD for the service areas page
