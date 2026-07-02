@@ -22,6 +22,7 @@ export interface PortfolioProject {
   type: ServiceType;
   description: string;
   shortDescription: string;
+  metaDescription: string;
   location: string;
   year: string;
   imagePath: string;
@@ -76,6 +77,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A complete kitchen transformation featuring custom white shaker cabinetry, quartz countertops, a farmhouse sink, and a spacious center island. The open layout connects seamlessly to the dining area, creating the perfect space for family gatherings.",
     shortDescription: "Custom cabinetry, quartz counters, and a stunning center island.",
+    metaDescription: "Modern farmhouse kitchen remodel in Princeton, NJ by MHG Contracting. Custom white shaker cabinets, quartz counters, farmhouse sink, and a family-sized island.",
     location: "Princeton, NJ",
     year: "2024",
     imagePath: "/images/projects/kitchen-01.jpg",
@@ -91,6 +93,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "This chef-inspired kitchen features professional-grade appliances, a custom range hood, and a waterfall edge quartz island. Warm wood beams and a spacious dining area make this the heart of the home.",
     shortDescription: "Professional-grade appliances with warm wood beams and a waterfall island.",
+    metaDescription: "Chef-inspired kitchen renovation in West Windsor, NJ by MHG Contracting. Pro-grade appliances, custom range hood, waterfall quartz island, and warm wood beams.",
     location: "West Windsor, NJ",
     year: "2024",
     imagePath: "/images/projects/kitchen-02.jpg",
@@ -106,6 +109,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A luxurious master bathroom renovation featuring a freestanding soaking tub, frameless glass walk-in shower with custom tile work, heated floors, and a double vanity with undermount sinks. Every detail was chosen to create a serene, spa-like retreat.",
     shortDescription: "Freestanding tub, walk-in shower, and heated floors.",
+    metaDescription: "Spa-inspired master bathroom remodel in Hamilton, NJ by MHG Contracting. Freestanding soaking tub, frameless walk-in shower, heated floors, double vanity.",
     location: "Hamilton, NJ",
     year: "2024",
     imagePath: "/images/projects/bath-01.jpg",
@@ -121,6 +125,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A compact yet elegant guest bathroom makeover with floor-to-ceiling subway tile, a floating vanity, and a frameless glass shower enclosure. Smart storage solutions maximize every inch of space.",
     shortDescription: "Floating vanity and floor-to-ceiling subway tile.",
+    metaDescription: "Contemporary guest bath remodel in Lawrenceville, NJ by MHG Contracting. Floor-to-ceiling subway tile, floating vanity, and a frameless glass shower enclosure.",
     location: "Lawrenceville, NJ",
     year: "2023",
     imagePath: "/images/projects/bath-02.jpg",
@@ -136,6 +141,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A full basement finishing project that transformed an unfinished space into a multi-zone entertainment area. Features include a home theater, a wet bar with custom cabinetry, a game area, and a guest bedroom with an en-suite bathroom.",
     shortDescription: "Home theater, wet bar, and guest suite in one stunning space.",
+    metaDescription: "Finished basement in Princeton, NJ by MHG Contracting. Multi-zone entertainment suite with home theater, custom wet bar, game area, and en-suite guest bedroom.",
     location: "Princeton, NJ",
     year: "2024",
     imagePath: "/images/projects/basement-01.jpg",
@@ -151,6 +157,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A comprehensive whole-home renovation of a 1970s colonial. The project included opening up the main floor plan, renovating all three bathrooms, updating the kitchen, installing new hardwood floors throughout, and modernizing every system in the home.",
     shortDescription: "Complete colonial renovation from top to bottom.",
+    metaDescription: "Whole-home renovation of a 1970s colonial in Hamilton, NJ by MHG Contracting. Opened floor plan, kitchen, 3 baths, hardwood floors, and full systems modernized.",
     location: "Hamilton, NJ",
     year: "2023",
     imagePath: "/images/projects/fullreno-01.jpg",
@@ -166,6 +173,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A 400-square-foot sunroom and family room addition that expanded the living space with floor-to-ceiling windows, vaulted ceilings, and seamless indoor-outdoor flow. The addition includes radiant floor heating and built-in shelving.",
     shortDescription: "Bright sunroom addition with vaulted ceilings and radiant heat.",
+    metaDescription: "400 sq ft sunroom and family room addition in West Windsor, NJ by MHG Contracting. Floor-to-ceiling windows, vaulted ceilings, radiant heat, built-in shelving.",
     location: "West Windsor, NJ",
     year: "2023",
     imagePath: "/images/projects/addition-01.jpg",
@@ -181,6 +189,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A ground-up custom colonial home build featuring 4 bedrooms, 3.5 bathrooms, a gourmet kitchen, and a finished basement. The home blends traditional architecture with modern amenities including a smart home system and energy-efficient construction.",
     shortDescription: "4BR custom colonial with smart home technology.",
+    metaDescription: "Custom colonial new construction in Plainsboro, NJ by MHG Contracting. 4 bedrooms, 3.5 baths, gourmet kitchen, finished basement, and smart home systems.",
     location: "Plainsboro, NJ",
     year: "2024",
     imagePath: "/images/projects/newbuild-01.jpg",
@@ -196,6 +205,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A dramatic open-concept renovation that removed load-bearing walls (with proper engineering) to unite the kitchen, dining, and living areas. Features a dramatic 16-foot island, custom lighting, and wide-plank engineered hardwood.",
     shortDescription: "Load-bearing wall removal for dramatic open living.",
+    metaDescription: "Open-concept kitchen and living renovation in Yardley, PA by MHG Contracting. Load-bearing wall removal, 16 ft island, custom lighting, wide-plank hardwood.",
     location: "Yardley, PA",
     year: "2024",
     imagePath: "/images/projects/fullreno-02.jpg",
@@ -211,6 +221,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "An expansive primary bathroom renovation featuring a custom-built walk-in shower with multiple shower heads, a soaking tub positioned beneath a picture window, and a spacious double vanity with premium fixtures throughout.",
     shortDescription: "Multi-head shower, soaking tub, and premium fixtures.",
+    metaDescription: "Luxury primary bath remodel in Hamilton, NJ by MHG Contracting. Custom multi-head walk-in shower, soaking tub under a picture window, spacious double vanity.",
     location: "Hamilton, NJ",
     year: "2024",
     imagePath: "/images/projects/bath-03.jpg",

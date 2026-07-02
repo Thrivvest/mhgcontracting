@@ -19,7 +19,7 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const project = getProjectBySlug(slug);
     if (!project) return { title: "Project Not Found" };
 
-    const desc = (project.description || project.shortDescription || "").slice(0, 160);
+    const desc = project.metaDescription || (project.description || project.shortDescription || "").slice(0, 160);
     return buildSeoMetadata({
       path: `/portfolio/${slug}`,
       title: `${project.title} | MHG Contracting Portfolio`,
