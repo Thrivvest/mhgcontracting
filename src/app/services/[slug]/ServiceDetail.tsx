@@ -100,6 +100,15 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               <FadeIn>
                 <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary mb-6">Overview</h2>
                 <p className="font-body text-text-secondary text-lg leading-relaxed">{service.description}</p>
+                {service.costGuideSlug && (
+                  <Link
+                    href={`/blog/${service.costGuideSlug}`}
+                    className="inline-flex items-center gap-2 mt-6 font-body text-primary font-semibold text-base hover:gap-3 transition-all"
+                  >
+                    {service.costGuideLabel ?? "See cost details"}
+                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" /></svg>
+                  </Link>
+                )}
               </FadeIn>
             </div>
             <FadeIn delay={0.2}>

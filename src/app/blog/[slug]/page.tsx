@@ -79,6 +79,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     isAccessibleForFree: true,
   };
 
+  const faqSchema =
+    post.faqs && post.faqs.length > 0
+      ? {
+          "@context": "https://schema.org",
+          "@type": "FAQPage",
+          "@id": `https://mhgcon.com/blog/${slug}#faq`,
+          mainEntity: post.faqs.map((f) => ({
+            "@type": "Question",
+            name: f.question,
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: f.answer.replace(/<[^>]+>/g, ""),
+            },
+          })),
+        }
+      : null;
+
   const seoHtml = generateBlogSeoContent(post);
 
   return (
@@ -91,6 +108,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
+      {faqSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        />
+      )}
       <SeoPrerender>
         <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
       </SeoPrerender>
