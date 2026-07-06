@@ -42,6 +42,8 @@ export interface Service {
   faqs: FAQ[];
   seoTitle?: string;
   seoDescription?: string;
+  costGuideSlug?: string;
+  costGuideLabel?: string;
 }
 
 export interface FAQ {
@@ -246,6 +248,8 @@ export const services: Service[] = [
     seoDescription:
       "Family-owned kitchen remodeling contractor in Hamilton, Princeton, and Central NJ. Custom cabinetry, quartz counters, full layouts. Free estimate: (609) 712-2474.",
     icon: "kitchen",
+    costGuideSlug: "kitchen-remodel-cost",
+    costGuideLabel: "See real kitchen remodel costs in NJ",
     scopeItems: [
       "Custom cabinetry design and installation",
       "Countertop fabrication (quartz, granite, marble)",
@@ -293,6 +297,8 @@ export const services: Service[] = [
     seoDescription:
       "Family-owned bathroom remodeling contractor in Hamilton, Princeton, and Central NJ. Walk-in showers, custom tile, vanities. Free estimate: (609) 712-2474.",
     icon: "bathroom",
+    costGuideSlug: "bathroom-remodel-cost",
+    costGuideLabel: "See real bathroom remodel costs in NJ",
     scopeItems: [
       "Custom tile showers and tub surrounds",
       "Vanity design and installation",
@@ -335,6 +341,8 @@ export const services: Service[] = [
     seoDescription:
       "Family-owned basement finishing contractor in Hamilton, Princeton, and Central NJ. Home theaters, in-law suites, gyms. Free estimate: (609) 712-2474.",
     icon: "basement",
+    costGuideSlug: "basement-finishing-cost",
+    costGuideLabel: "See real basement finishing costs in NJ",
     scopeItems: [
       "Framing and insulation",
       "Drywall installation and finishing",

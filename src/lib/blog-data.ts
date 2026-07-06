@@ -12,6 +12,7 @@ export interface BlogPost {
   readTime: string;
   content: string;
   metaDescription: string;
+  faqs?: { question: string; answer: string }[];
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -27,6 +28,17 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Most articles on <strong>kitchen remodel cost in NJ</strong> give you a range so wide it's useless. "Between $25,000 and $150,000." Great, thanks.</p>
 
 <p>Here's what we actually see when we quote kitchens in Hamilton, Princeton, West Windsor, and the surrounding Central NJ towns. The numbers are from real projects we've built or bid in the last eighteen months.</p>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Kitchen remodel tier</th><th>Typical cost (Central NJ)</th><th>Scope</th></tr></thead>
+<tbody>
+<tr><td>Cosmetic refresh</td><td>$25,000 to $45,000</td><td>Same footprint. New cabinets or refacing, counters, backsplash, flooring, paint.</td></tr>
+<tr><td>Mid-range renovation</td><td>$55,000 to $95,000</td><td>Semi-custom cabinets, quartz counters, island, updated lighting, minor wall removal.</td></tr>
+<tr><td>Full gut and reconfigure</td><td>$110,000 to $225,000+</td><td>New layout, walls moved, plumbing and electrical re-run, custom cabinetry, luxury appliances.</td></tr>
+</tbody>
+</table>
+</div>
 
 <h2>The three tiers homeowners actually fall into</h2>
 
@@ -74,6 +86,28 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>If you want a real number for your kitchen, we'll come out, measure, talk through the scope, and give you a line-item estimate. Call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate here</a>.</p>
 `,
+    faqs: [
+      {
+        question: "How much does a kitchen remodel cost in NJ?",
+        answer:
+          'In Central NJ, a cosmetic refresh runs $25,000 to $45,000, a mid-range renovation runs $55,000 to $95,000, and a full gut and reconfigure runs $110,000 to $225,000 or more. The tier is driven by scope, not finishes. See what each includes on our <a href="/services/kitchen-renovations">kitchen remodeling</a> page.',
+      },
+      {
+        question: "What is the biggest cost in a kitchen remodel?",
+        answer:
+          "Cabinetry, at 35 to 45 percent of the total. Semi-custom boxes run $18,000 to $32,000 installed for an average kitchen, and fully custom roughly doubles that.",
+      },
+      {
+        question: "Why do Princeton kitchens cost more than Hamilton kitchens?",
+        answer:
+          'Same scope, but finishes. Princeton and West Windsor projects lean toward custom trim and higher-end appliances, which adds 15 to 25 percent. We remodel kitchens in <a href="/services/kitchen-renovations/princeton-nj">Princeton</a>, Hamilton, and the surrounding towns.',
+      },
+      {
+        question: "How long does a kitchen remodel take in NJ?",
+        answer:
+          "Six to ten weeks for most projects. Semi-custom cabinets carry a six to ten week lead time, so the cabinet order should be placed before demo begins, not after.",
+      },
+    ],
   },
   {
     slug: "bathroom-remodel-cost",
@@ -87,6 +121,17 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>When someone asks what a bathroom remodel costs in NJ, the honest answer starts with a question back: which bathroom.</p>
 
 <p>A powder room and a primary suite are different projects. They use different trades, different fixtures, different tile volumes. The cost gap can be 4x or more. Here's the real breakdown for each, based on bathrooms we've finished across Hamilton, Princeton, West Windsor, and the rest of Central NJ.</p>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Bathroom type</th><th>Typical cost (Central NJ)</th><th>Scope</th></tr></thead>
+<tbody>
+<tr><td>Powder room</td><td>$8,000 to $16,000</td><td>Toilet, vanity, mirror, lighting, flooring, feature wall. No tub or shower.</td></tr>
+<tr><td>Hall or guest bath</td><td>$18,000 to $32,000</td><td>Tub or shower, toilet, single vanity, full tile surround.</td></tr>
+<tr><td>Primary or master bath</td><td>$35,000 to $85,000+</td><td>Freestanding tub, large walk-in shower, double vanity, full tile package, heated floors.</td></tr>
+</tbody>
+</table>
+</div>
 
 <h2>Powder room: $8,000 to $16,000</h2>
 
@@ -140,6 +185,28 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Ready for a real number on your project? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate</a>.</p>
 `,
+    faqs: [
+      {
+        question: "How much does a bathroom remodel cost in NJ?",
+        answer:
+          'It depends on the room. A powder room runs $8,000 to $16,000, a standard hall or guest bath runs $18,000 to $32,000, and a primary or master bath runs $35,000 to $85,000 or more in Central NJ. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for scope details.',
+      },
+      {
+        question: "What drives the price difference in a bathroom remodel?",
+        answer:
+          "Tile and the shower system. Full floor-to-ceiling tile, a curbless shower, a niche and bench, and a frameless glass door are what separate a $20,000 hall bath from a $30,000 one.",
+      },
+      {
+        question: "Does moving fixtures increase the cost?",
+        answer:
+          "Some, but less than most homeowners expect. Moving a toilet is usually a few hundred to a thousand dollars of added plumbing labor plus minor floor patching. Keeping the existing footprint saves the most.",
+      },
+      {
+        question: "What should I never cut corners on in a bathroom?",
+        answer:
+          "Waterproofing and the shower valve. Proper membrane, pan build, and slope prevent a five-figure repair down the road, and a quality valve avoids drip issues. If a quote does not explain how the shower is waterproofed, that is a red flag.",
+      },
+    ],
   },
   {
     slug: "basement-finishing-cost",
@@ -153,6 +220,18 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Most of the <strong>basement finishing cost NJ</strong> quotes floating around online come from contractors in the Midwest or the South where basements are different animals. NJ basements have their own rules. Moisture, egress requirements, and older homes with shorter ceiling heights change the math.</p>
 
 <p>Here's what a finished basement actually costs in Central NJ in 2026.</p>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Basement scope</th><th>Typical cost (Central NJ)</th><th>Notes</th></tr></thead>
+<tbody>
+<tr><td>Standard finish (per sq ft)</td><td>$45 to $90 / sq ft</td><td>Framing, insulation, drywall, LVP flooring, recessed lighting, egress check.</td></tr>
+<tr><td>1,000 sq ft basement</td><td>$45,000 to $90,000</td><td>Typical range for most Central NJ homes.</td></tr>
+<tr><td>Add a bathroom or wet bar</td><td>+$8,000 to $25,000 each</td><td>Wet work adds cost by complexity.</td></tr>
+<tr><td>Egress window (for a bedroom)</td><td>$5,500 to $9,000</td><td>Required by code for any sleeping area.</td></tr>
+</tbody>
+</table>
+</div>
 
 <h2>The per-square-foot number you can plan around</h2>
 
@@ -208,6 +287,28 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Want a real estimate for your basement? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">tell us about your project</a>.</p>
 `,
+    faqs: [
+      {
+        question: "How much does it cost to finish a basement in NJ?",
+        answer:
+          'Most standard basement finishes in Central NJ run $45 to $90 per square foot, so a 1,000 square foot basement lands between $45,000 and $90,000. Wet areas and egress add to that. See our <a href="/services/basement-finishing">basement finishing</a> page for what is included.',
+      },
+      {
+        question: "What adds the most to basement finishing cost?",
+        answer:
+          "Wet work and egress. A bathroom, wet bar, or kitchenette adds $8,000 to $25,000 each, and cutting in a code-compliant egress window runs $5,500 to $9,000 in most Mercer County homes.",
+      },
+      {
+        question: "Is moisture management really necessary in a NJ basement?",
+        answer:
+          "Yes. NJ basements sit below grade in heavy clay soil with four seasons. A proper vapor barrier, foam against the foundation, and a plumbed dehumidifier run $2,500 to $5,500 and prevent mold and warping later. Skipping it is the most common cause of failed basements we are called to redo.",
+      },
+      {
+        question: "Do I need a permit to finish my basement in NJ?",
+        answer:
+          "Yes. Framing, electrical, plumbing, and egress all require permits, and requirements vary by municipality. We handle permits and know the local codes in Hamilton, Princeton, and the surrounding towns.",
+      },
+    ],
   },
   {
     slug: "choosing-a-contractor",

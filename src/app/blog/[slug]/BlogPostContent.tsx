@@ -80,6 +80,30 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
         </div>
       </section>
 
+      {/* FAQs */}
+      {post.faqs && post.faqs.length > 0 && (
+        <section className="pb-8 md:pb-16 px-6 lg:px-10">
+          <div className="max-w-[700px] mx-auto">
+            <LineReveal className="mb-10">
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">Frequently Asked Questions</h2>
+            </LineReveal>
+            <div className="space-y-6">
+              {post.faqs.map((faq, i) => (
+                <FadeIn key={i} delay={i * 0.08}>
+                  <div className="border-b border-border pb-6">
+                    <h3 className="font-heading text-lg font-semibold text-text-primary mb-3">{faq.question}</h3>
+                    <p
+                      className="blog-content font-body text-text-secondary text-base leading-relaxed"
+                      dangerouslySetInnerHTML={{ __html: faq.answer }}
+                    />
+                  </div>
+                </FadeIn>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* Related Posts */}
       <section className="py-24 md:py-32 px-6 lg:px-10 bg-background-alt">
         <div className="max-w-[1400px] mx-auto">

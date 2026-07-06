@@ -274,6 +274,45 @@ html.lenis body {
   margin-bottom: 0.5rem;
 }
 
+.blog-content .cost-table-wrap {
+  margin: 2rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--color-border, #e5e7eb);
+  border-radius: 0.5rem;
+}
+
+.blog-content table.cost-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+  min-width: 520px;
+}
+
+.blog-content table.cost-table th,
+.blog-content table.cost-table td {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  border-bottom: 1px solid var(--color-border, #e5e7eb);
+  vertical-align: top;
+}
+
+.blog-content table.cost-table thead th {
+  background: var(--color-background-alt, #f7f7fb);
+  font-family: var(--font-urbanist), sans-serif;
+  font-weight: 700;
+  color: var(--color-text-primary, #1a1a2e);
+}
+
+.blog-content table.cost-table tbody td:nth-child(2) {
+  font-weight: 600;
+  color: var(--color-text-primary, #1a1a2e);
+  white-space: nowrap;
+}
+
+.blog-content table.cost-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
 .lenis.lenis-stopped {
   overflow: hidden;
 }
