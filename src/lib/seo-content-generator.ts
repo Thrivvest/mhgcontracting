@@ -50,7 +50,7 @@ export function generateServiceSeoContent(service: Service): string {
 
   return `
     <article>
-      <h1>${service.name} by ${COMPANY} | Central New Jersey</h1>
+      <h2>${service.name} by ${COMPANY} | Central New Jersey</h2>
       <p>${COMPANY} provides expert ${service.name.toLowerCase()} services for homeowners throughout Central New Jersey. Based in ${LOCATION}, our family-owned team specializes in ${service.shortDescription.toLowerCase()} We serve ${CITIES.join(", ")}, and the surrounding communities.</p>
 
       <h2>About Our ${service.name} Services</h2>
@@ -79,7 +79,7 @@ export function generateServiceSeoContent(service: Service): string {
 export function generateBlogSeoContent(post: BlogPost): string {
   return `
     <article>
-      <h1>${post.title}</h1>
+      <h2>${post.title}</h2>
       <p>Published on ${post.date} by ${COMPANY} | ${post.readTime} | Category: ${post.category}</p>
       <p>${post.excerpt}</p>
 
@@ -102,7 +102,7 @@ export function generatePortfolioSeoContent(project: PortfolioProject): string {
 
   return `
     <article>
-      <h1>${project.title} - ${typeLabel} in ${project.location} | ${COMPANY} Portfolio</h1>
+      <h2>${project.title} - ${typeLabel} in ${project.location} | ${COMPANY} Portfolio</h2>
       <p>${project.description}</p>
 
       <h2>Project Details</h2>
@@ -139,7 +139,7 @@ export function generateAreaSeoContent(page: AreaPage): string {
 
   return `
     <article>
-      <h1>${page.h1}</h1>
+      <h2>${page.h1}</h2>
       <p>${page.metaDescription}</p>
 
       <h2>${page.serviceName} Services in ${page.cityName}, ${page.state}</h2>

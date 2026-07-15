@@ -13,6 +13,8 @@ export interface BlogPost {
   content: string;
   metaDescription: string;
   faqs?: { question: string; answer: string }[];
+  /** Set when this post covers the same keyword target as an earlier tracked post. Points the canonical tag at that post's slug instead of self, so the two don't cannibalize the same keyword in search. */
+  canonicalSlug?: string;
 }
 
 export const BLOG_POSTS: BlogPost[] = [
@@ -860,6 +862,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "bathroom-remodel-ideas-nj",
     title: "15 Bathroom Remodel Ideas for NJ Homes in 2026",
     date: "May 11, 2026",
+    canonicalSlug: "bathroom-ideas",
     excerpt: "After 200+ bathroom renovations across Central NJ, these are the ideas that actually work in real homes. Not the Pinterest fantasies.",
     metaDescription: "15 bathroom remodel ideas tested in real NJ homes by MHG Contracting. Walk-in showers, custom tile, vanities, and the upgrades that actually deliver.",
     category: "Bathroom",
@@ -952,6 +955,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "basement-finishing-ideas",
     title: "Basement Finishing Ideas: 12 Ways to Use Your Lower Level",
     date: "May 11, 2026",
+    canonicalSlug: "basement-ideas",
     excerpt: "Your unfinished basement is the cheapest square footage you will ever add to your home. Here are 12 ways homeowners across Central NJ are actually using theirs.",
     metaDescription: "12 basement finishing ideas tested in real Central NJ homes by MHG Contracting. Home theaters, gyms, in-law suites, and the layouts that actually get used.",
     category: "Basement",
@@ -1046,6 +1050,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "kitchen-renovation-timeline-nj",
     title: "How Long Does a Kitchen Renovation Take in NJ? Real Timelines from Real Projects",
     date: "May 11, 2026",
+    canonicalSlug: "kitchen-timeline",
     excerpt: "The honest answer to how long your kitchen renovation will take, broken down week by week. Based on 50+ projects across Hamilton, Princeton, and Central NJ.",
     metaDescription: "Real kitchen renovation timeline in NJ, week by week. From planning through completion based on actual projects by MHG Contracting in Hamilton, Princeton.",
     category: "Kitchen",

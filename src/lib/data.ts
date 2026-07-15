@@ -246,7 +246,7 @@ export const services: Service[] = [
       "Custom cabinetry, countertops, and full layout redesigns.",
     seoTitle: "Kitchen Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned kitchen remodeling contractor in Hamilton, Princeton, and Central NJ. Custom cabinetry, quartz counters, full layouts. Free estimate: (609) 712-2474.",
+      "Family-owned kitchen remodeling contractor in Hamilton, Princeton, Central NJ. Custom cabinetry, quartz counters, full layouts. Free estimate: (609) 712-2474.",
     icon: "kitchen",
     costGuideSlug: "kitchen-remodel-cost",
     costGuideLabel: "See real kitchen remodel costs in NJ",
@@ -383,7 +383,7 @@ export const services: Service[] = [
       "Comprehensive whole-home transformations.",
     seoTitle: "Full Home Renovations Central NJ | MHG Contracting",
     seoDescription:
-      "Whole-home renovations in Hamilton, Princeton, and Central NJ. Structural, HVAC, electrical, plumbing, and finishes managed by one team. Free estimate: (609) 712-2474.",
+      "Whole-home renovations in Hamilton, Princeton, Central NJ. Structural, HVAC, electrical, plumbing, and finishes from one team. Free estimate: (609) 712-2474.",
     icon: "home",
     scopeItems: [
       "Structural modifications and engineering",
