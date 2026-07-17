@@ -482,14 +482,14 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "princeton-nj",
     cityName: "Princeton",
     state: "NJ",
-    title: "Basement Finishing in Princeton, NJ | MHG Contracting",
-    metaDescription: "Expert basement finishing in Princeton, NJ. MHG Contracting transforms unfinished basements into home theaters, guest suites, and entertainment spaces.",
-    h1: "Basement Finishing in Princeton, NJ",
-    content: `<h2>Princeton Basement Finishing Experts</h2>
+    title: "Basement Finishing & Remodeling in Princeton, NJ | MHG",
+    metaDescription: "Basement finishing and remodeling in Princeton, NJ. MHG Contracting builds home theaters, guest suites, and entertainment spaces. Free estimates.",
+    h1: "Basement Finishing & Remodeling in Princeton, NJ",
+    content: `<h2>Princeton Basement Finishing and Remodeling Experts</h2>
 <p>Princeton homes often sit on generous lots with spacious basements that represent enormous untapped potential. Whether your home is in the Princeton Ridge neighborhood, along the tree-lined streets of the Western Section, or in a newer development near Cherry Valley Road, MHG Contracting can transform your unfinished basement into a beautiful, functional living space that adds real value to your home.</p>
 
 <h2>How Princeton Homeowners Use Finished Basements</h2>
-<p>Princeton families finish their basements for many reasons. Home theaters and entertainment lounges are consistently popular - creating a dedicated space for movie nights without disturbing the rest of the house. Home offices have become essential, especially for the many Princeton residents who work remotely at least part of the week. Guest suites with private bathrooms provide comfortable accommodations for visiting family and university guests. Play areas, exercise rooms, and hobby workshops round out the most requested basement designs.</p>
+<p>Whether you are finishing a raw, unfinished space or remodeling a dated basement that was finished decades ago, the goals are usually the same. Princeton families finish their basements for many reasons. Home theaters and entertainment lounges are consistently popular - creating a dedicated space for movie nights without disturbing the rest of the house. Home offices have become essential, especially for the many Princeton residents who work remotely at least part of the week. Guest suites with private bathrooms provide comfortable accommodations for visiting family and university guests. Play areas, exercise rooms, and hobby workshops round out the most requested basement designs.</p>
 <p>Many Princeton homes have walkout basements or basements with good natural light from window wells, which opens up even more design possibilities. We maximize natural light and supplement it with layered artificial lighting to create spaces that feel bright and inviting rather than underground.</p>
 
 <h2>Basement Challenges in Central NJ</h2>
@@ -629,15 +629,15 @@ export const AREA_PAGES: AreaPage[] = [
     citySlug: "yardley-pa",
     cityName: "Yardley",
     state: "PA",
-    title: "Basement Finishing in Yardley, PA | MHG Contracting",
-    metaDescription: "Basement finishing contractor serving Yardley, PA. Home theaters, recreation rooms, and guest suites by MHG Contracting. Free estimates.",
-    h1: "Basement Finishing in Yardley, PA",
-    content: `<h2>Yardley Basement Finishing Services</h2>
+    title: "Basement Finishing & Remodeling in Yardley, PA | MHG",
+    metaDescription: "Basement finishing and remodeling contractor serving Yardley, PA. Home theaters, recreation rooms, and guest suites by MHG Contracting. Free estimates.",
+    h1: "Basement Finishing & Remodeling in Yardley, PA",
+    content: `<h2>Yardley Basement Finishing and Remodeling Services</h2>
 <p>Yardley and Lower Makefield homes often feature generous basements with excellent ceiling height - particularly in the newer developments throughout Bucks County. These unfinished spaces represent a significant opportunity to expand your living area without the cost and complexity of an addition. MHG Contracting serves the Yardley area with the same quality basement finishing we deliver throughout Central New Jersey.</p>
 
 <h2>Yardley Basement Design Ideas</h2>
 <p>Yardley families use finished basements in diverse ways. Popular designs include entertainment spaces with wet bars for hosting game-day gatherings, home theaters for movie buffs, dedicated exercise rooms, and comfortable guest suites for Pennsylvania relatives and out-of-town visitors. Many Yardley homeowners also request home offices - the quiet, separated space of a finished basement is ideal for focused work.</p>
-<p>Yardley's historic homes present unique basement opportunities as well. Stone foundation basements in older properties can be finished with the right approach - proper waterproofing, interior framing set away from stone walls for air circulation, and insulation that manages both moisture and temperature.</p>
+<p>Yardley's historic homes present unique basement opportunities as well. Stone foundation basements in older properties can be finished with the right approach - proper waterproofing, interior framing set away from stone walls for air circulation, and insulation that manages both moisture and temperature. We also remodel basements that were finished years ago and now feel dated, reworking layouts, lighting, and finishes to match the rest of the home.</p>
 
 <h2>Pennsylvania Building Requirements</h2>
 <p>Basement finishing in Lower Makefield Township requires building, electrical, and plumbing permits. Pennsylvania code requirements are similar but not identical to New Jersey's. We are experienced with both states' requirements and handle the entire permitting process through the Lower Makefield Building Department.</p>

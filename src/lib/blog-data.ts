@@ -20,10 +20,10 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "kitchen-remodel-cost",
-    title: "Kitchen Remodel Cost in NJ (2026 Guide)",
+    title: "How Much Does a Kitchen Remodel Cost in NJ? (2026 Prices)",
     date: "April 10, 2026",
     excerpt: "We quote kitchens every week in Central NJ. Here are the real numbers, where the money actually goes, and the places homeowners get surprised.",
-    metaDescription: "Real kitchen remodel cost in NJ: $25-45k cosmetic refresh, $55-95k mid-range, $110-225k full gut. From MHG Contracting in Hamilton, serving Princeton.",
+    metaDescription: "NJ kitchen remodel costs from a contractor who builds them: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut. Real 2026 prices, no wide ranges.",
     category: "Kitchen",
     readTime: "6 min read",
     content: `
@@ -314,10 +314,10 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "choosing-a-contractor",
-    title: "How to Choose a Contractor in NJ",
+    title: "How to Choose a Contractor in NJ: 3 Checks Before You Sign",
     date: "March 20, 2026",
     excerpt: "Three things will tell you almost everything you need to know about a contractor in NJ. Here's what to look for and the questions that separate the pros from.",
-    metaDescription: "How to choose a contractor in NJ. Licensing, red flags, and the questions to ask before you sign anything. From MHG Contracting in Hamilton, NJ.",
+    metaDescription: "Verify the HIC license, see the insurance, read the contract. A Hamilton NJ contractor explains the 3 checks that prevent almost every horror story.",
     category: "Tips",
     readTime: "6 min read",
     content: `
