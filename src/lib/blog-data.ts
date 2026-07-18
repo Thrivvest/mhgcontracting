@@ -112,6 +112,174 @@ export const BLOG_POSTS: BlogPost[] = [
     ],
   },
   {
+    slug: "master-bathroom-remodel-nj",
+    title: "Master Bathroom Remodel in NJ: Cost, Scope, and What's Worth It",
+    date: "July 18, 2026",
+    excerpt: "The primary bath is the most personal room in the remodel conversation. Here's what the $35k to $85k+ range actually buys in Central NJ, and where the money is worth spending.",
+    metaDescription: "Master bathroom remodel costs in NJ: $35k-$85k+ for the primary suite tier. A Central NJ contractor on walk-in showers, heated floors, and what's worth it.",
+    category: "Bathroom",
+    readTime: "6 min read",
+    content: `
+<p>Of every room we remodel, the primary bathroom is the one where homeowners have thought hardest about what they want and least about what it costs. The Pinterest board is full. The budget is a question mark.</p>
+
+<p>So here's the straight version. A <strong>master bathroom remodel in NJ</strong> runs $35,000 to $85,000 and up in the Central NJ towns we serve. That's the primary suite tier: large walk-in shower, freestanding tub, double vanity, full tile package, and usually heated floors. Where you land in that range comes down to three decisions.</p>
+
+<h2>Decision one: does the layout change?</h2>
+
+<p>Keeping fixtures where they are keeps plumbing costs down and puts you at the lower half of the range. Moving the shower to steal space from a closet, or splitting the toilet into its own water closet, means re-running supply and waste lines through the floor. In a slab-on-grade home that means cutting concrete. Worth it when the existing layout is genuinely bad. Not worth it to move a toilet eighteen inches.</p>
+
+<h2>Decision two: the shower</h2>
+
+<p>The walk-in shower is the centerpiece of every primary bath we build, and it's the line item with the widest swing. A quality tiled shower with a frameless glass panel and a single valve is one number. A curbless entry, a bench, body sprays, a rain head plus handheld, and floor-to-ceiling large-format tile is a different number, sometimes $15,000 different. Our take: spend on the pan, the waterproofing, and the glass. Skip the body sprays. Nobody uses them after the first month, and every penetration in a tiled wall is a future maintenance point.</p>
+
+<p>We wrote a full breakdown in our <a href="/blog/walk-in-shower-installation-nj">walk-in shower installation guide</a> if the shower is the main event of your project.</p>
+
+<h2>Decision three: heated floors and the comfort layer</h2>
+
+<p>Electric radiant floor heat adds roughly $1,500 to $3,500 depending on the room and it is the upgrade clients thank us for a year later. January in Mercer County makes the case better than we can. The same goes for a properly sized exhaust fan on a humidity sensor: cheap, invisible, and it protects the tile work you just paid for.</p>
+
+<h2>What's actually worth it</h2>
+
+<p>After building these across Hamilton, Princeton, and West Windsor, our honest ranking: waterproofing and tile execution first, because everything else sits on top of it. The shower second. Heated floors third. The freestanding tub last. Half our clients tell us a year later they use the tub a handful of times. If the tub is what pushes your budget past comfort, that's the item to cut, and you can always keep the plumbing rough-in so a future owner can add one.</p>
+
+<p>For where the primary bath fits in the bigger picture, see our <a href="/blog/bathroom-remodel-cost">full bathroom cost guide</a>, or look at the <a href="/portfolio/luxury-primary-bath-retreat">luxury primary bath retreat</a> we completed to see the upper end of this tier in a real home.</p>
+
+<p>Thinking about yours? <a href="/contact">Request an estimate</a> and we'll walk the space. Our fall schedule is filling, so plan ahead if you want it done before the holidays.</p>`,
+    faqs: [
+      { question: "How much does a master bathroom remodel cost in NJ?", answer: "In Central NJ, a primary bathroom remodel typically runs $35,000 to $85,000 and up. The range covers a walk-in shower, double vanity, full tile package, and often a freestanding tub and heated floors. Layout changes and shower complexity drive most of the variation." },
+      { question: "How long does a master bathroom remodel take?", answer: "Typically 4 to 6 weeks of construction for a primary bath, longer if walls move or plumbing is reconfigured. Add lead time before construction for design, material orders, and permits, especially custom glass and tile which can take several weeks to arrive." },
+      { question: "Is a freestanding tub worth it in a master bath?", answer: "It depends on whether you'll use it. Tubs matter for resale in higher-end markets like Princeton, but many homeowners rarely use them. If budget is tight, we often recommend investing in the shower and keeping a tub rough-in for the future." },
+    ],
+  },
+  {
+    slug: "walk-in-shower-installation-nj",
+    title: "Walk-In Shower Installation in NJ: Cost and What to Know",
+    date: "July 18, 2026",
+    excerpt: "Tub-to-shower conversions and custom walk-ins are the most requested bathroom upgrade we build. Real costs, the waterproofing that matters, and the mistakes to avoid.",
+    metaDescription: "Walk-in shower installation in NJ: $12k-$25k tub conversions, $18k-$35k+ custom builds. A Central NJ contractor on waterproofing, glass, and what to skip.",
+    category: "Bathroom",
+    readTime: "5 min read",
+    content: `
+<p>The single most requested bathroom change we get across Hamilton, Princeton, and West Windsor: take out the tub, put in a walk-in shower. Sometimes it's about accessibility. Usually it's simpler than that. Nobody in the house has taken a bath since 2019 and the tub is a sixty-gallon shelf for shampoo bottles.</p>
+
+<p>Here's what <strong>walk-in shower installation in NJ</strong> actually costs and where the money goes.</p>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Project</th><th>Typical cost (Central NJ)</th><th>Timeline</th></tr></thead>
+<tbody>
+<tr><td>Tub-to-shower conversion</td><td>$12,000 to $25,000</td><td>2 to 3 weeks</td></tr>
+<tr><td>Custom walk-in shower (new build or expansion)</td><td>$18,000 to $35,000+</td><td>3 to 5 weeks</td></tr>
+<tr><td>Curbless / zero-entry shower</td><td>Add $2,500 to $6,000</td><td>Adds structural floor work</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>The part you can't see is the part that matters</h2>
+
+<p>A walk-in shower is a waterproofing project with tile on top. The pan, the membrane, the slope, and the drain detail decide whether this shower is still perfect in fifteen years or leaking into your floor joists in five. This is our strongest opinion in the whole bathroom category: hire for the waterproofing, not the tile pattern. Tile setters who rush the membrane are the reason shower repair is an industry.</p>
+
+<p>We use full waterproof membrane systems on every shower we build, and we flood-test pans before a single tile goes on. Ask any contractor you're interviewing what their waterproofing system is. If the answer is a brand name and a method, good. If the answer is "we've never had a problem," keep interviewing.</p>
+
+<h2>Glass, niches, and the details that separate showers</h2>
+
+<p>Frameless glass costs more than framed and it's worth every dollar, both in how the room reads and how it cleans. A tiled niche (or two) beats every add-on shelf ever made. A bench matters if the shower is big enough that it doesn't crowd the space. Linear drains let the floor tile run in large format, which is most of why high-end showers look high-end.</p>
+
+<h2>Curbless entries</h2>
+
+<p>Zero-entry showers are the fastest-growing request we see, both for aging-in-place planning and because they simply look better. The catch: the floor has to be recessed or built up to create the slope, which is structural work, not tile work. In a first-floor bath over a basement it's very doable. In a slab home it means grinding or building a platform. Budget the $2,500 to $6,000 premium and decide early, because it can't be retrofitted after the pan is set.</p>
+
+<p>The walk-in shower usually anchors a bigger project. See our <a href="/blog/master-bathroom-remodel-nj">master bathroom remodel guide</a> for the full-room picture, or the <a href="/blog/bathroom-remodel-cost">bathroom cost breakdown</a> for every tier. Real examples: our <a href="/portfolio/spa-inspired-master-bath">spa-inspired master bath</a> centers on exactly this kind of shower.</p>
+
+<p><a href="/contact">Request an estimate</a> and tell us what you're picturing. Conversions are one of the quickest projects on our schedule.</p>`,
+    faqs: [
+      { question: "How much does a walk-in shower cost in NJ?", answer: "A tub-to-shower conversion in Central NJ typically runs $12,000 to $25,000. A custom walk-in shower as part of a larger remodel runs $18,000 to $35,000 and up. Curbless entry adds roughly $2,500 to $6,000 due to structural floor work." },
+      { question: "Does removing a bathtub hurt resale value?", answer: "Keep at least one tub somewhere in the house for resale, since families with young kids look for one. Beyond that, converting a primary or hall bath tub to a quality walk-in shower is generally neutral to positive in today's market." },
+      { question: "How long does a walk-in shower installation take?", answer: "A straightforward tub-to-shower conversion takes 2 to 3 weeks. Custom showers with glass take longer because frameless glass is measured after tile is complete and typically takes 1 to 2 weeks to fabricate." },
+    ],
+  },
+  {
+    slug: "full-home-renovation-timeline-nj",
+    title: "How Long Does a Full Home Renovation Take in NJ?",
+    date: "July 18, 2026",
+    excerpt: "Four months to a year, and the difference is decided before demo day. An honest phase-by-phase timeline for whole-home renovations in Central NJ.",
+    metaDescription: "Full home renovation timelines in NJ: 4-12 months phase by phase. A Central NJ contractor on permits, lead times, and what actually causes delays.",
+    category: "Remodeling",
+    readTime: "6 min read",
+    content: `
+<p>When a homeowner asks how long a whole-home renovation takes, they've usually already heard a horror story. The neighbor's project that was quoted at four months and took eleven. The family that lived with a plywood kitchen through two holidays.</p>
+
+<p>The honest answer for a <strong>full home renovation in NJ</strong>: four to twelve months of construction, and which end of that range you get is mostly decided before demolition starts, not after.</p>
+
+<h2>The real timeline, phase by phase</h2>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Phase</th><th>Typical duration</th><th>What's happening</th></tr></thead>
+<tbody>
+<tr><td>Design and scope</td><td>4 to 8 weeks</td><td>Layout decisions, selections, engineering if walls move</td></tr>
+<tr><td>Permits</td><td>2 to 6 weeks</td><td>Township review; varies widely by town and season</td></tr>
+<tr><td>Material lead times</td><td>Overlaps design</td><td>Cabinetry 6-10 weeks, windows 4-12 weeks, custom items longer</td></tr>
+<tr><td>Construction</td><td>4 to 12 months</td><td>Demo, structure, mechanicals, insulation, drywall, finishes</td></tr>
+<tr><td>Punch list and final inspections</td><td>2 to 4 weeks</td><td>Details, touch-ups, township sign-offs</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>What actually causes the horror stories</h2>
+
+<p>It's almost never the construction. It's decisions made late. A renovation runs on a sequence: you can't close walls until rough inspections pass, can't template counters until cabinets are set, can't set cabinets until flooring decisions are final. Every selection that isn't made before demo day is a future stoppage. When we take on a whole-home project, we push hard to have every major selection locked before the dumpster arrives. Clients sometimes find that tedious. It's also why our projects finish when we said they would.</p>
+
+<p>The second cause is scope creep mid-project. Opening walls in a 1960s Hamilton or Lawrenceville home sometimes reveals things that must be fixed: undersized panels, corroded galvanized supply lines. We price honestly for that risk up front. But "while the walls are open, let's also redo the upstairs bath" is a choice, and it's a choice that adds a month. Sometimes it's the right call. Just make it knowing the cost in time.</p>
+
+<h2>Can you live in the house?</h2>
+
+<p>For a phased renovation, often yes, and we plan phases so a working kitchen or bath exists at all times. For a true gut renovation, no, and pretending otherwise makes the project slower and your life worse. Budgeting a rental for the construction window is frequently cheaper than the extended timeline of working around a family in the house.</p>
+
+<p>A whole-home renovation at this scale runs $150,000 to $500,000 and up in our market. For the money side, start with our <a href="/blog/home-remodeling-cost-hamilton-nj">Hamilton remodeling cost guide</a> and <a href="/blog/remodel-roi">renovation ROI breakdown</a>. To see the outcome of a project like this, look at our <a href="/portfolio/whole-home-transformation">whole-home transformation</a>.</p>
+
+<p>If you're targeting a spring start, the design phase should begin in the fall. <a href="/contact">Request a consultation</a> and we'll map your project's actual timeline, not the optimistic version.</p>`,
+    faqs: [
+      { question: "How long does a full home renovation take in NJ?", answer: "Construction typically runs 4 to 12 months depending on scope, plus 2 to 4 months before that for design, selections, permits, and material lead times. A well-planned project with selections locked before demolition finishes dramatically faster than one deciding as it goes." },
+      { question: "Can I live in my house during a full renovation?", answer: "For phased renovations, usually yes, and phases can be planned to keep a working kitchen and bathroom available. For full gut renovations, moving out is faster, safer, and often cheaper overall than working around an occupied house." },
+      { question: "What causes home renovation delays in NJ?", answer: "The biggest causes are late selections that stall the construction sequence, material lead times (especially cabinetry and windows), township permit and inspection scheduling, and mid-project scope additions. Surprises behind walls in older homes play a smaller role than most people expect." },
+    ],
+  },
+  {
+    slug: "new-home-construction-cost-nj",
+    title: "What It Costs to Build a Custom Home in NJ (2026)",
+    date: "July 18, 2026",
+    excerpt: "Custom home construction in Central NJ runs $250 to $400+ per square foot before land. Here's what drives the number and how the process actually works.",
+    metaDescription: "New home construction costs in NJ: $250-$400+ per square foot for custom builds, before land. A Central NJ builder on what drives the number.",
+    category: "New Construction",
+    readTime: "6 min read",
+    content: `
+<p>Building a custom home is the biggest check most families will ever write, and the pricing information online is somehow worse than for any other project. National averages lump North Dakota in with Princeton. Production-builder prices get quoted next to custom numbers as if they're the same product.</p>
+
+<p>Here's the real frame for <strong>new home construction cost in NJ</strong>: custom builds in Central NJ generally run $250 to $400+ per square foot for construction, before land. A 3,000-square-foot custom home lands somewhere between $750,000 and $1.2 million to build, and the range is wide because "custom" covers a lot of ground.</p>
+
+<h2>What moves the per-square-foot number</h2>
+
+<p>Three things, in order. First, complexity of the structure: a simple rectangular footprint with a straightforward roofline is dramatically cheaper per foot than the same square footage with bump-outs, dormers, and multiple roof planes. Second, the finish level: site-built trim, custom cabinetry throughout, and stone selections can add $75 per foot versus builder-grade equivalents. Third, the site itself: well and septic versus municipal utilities, lot grading, and tree clearing can swing the budget by six figures before the foundation is poured.</p>
+
+<p>Our advice, and we give it even when it costs us scope: spend on the envelope and the structure, economize on finishes you can upgrade later. Windows, insulation, and mechanical systems are forever decisions. A powder room vanity is not.</p>
+
+<h2>The timeline nobody quotes honestly</h2>
+
+<p>From first design meeting to move-in, a custom home in Mercer County realistically takes 14 to 20 months: three to five months of design and engineering, two to four months of township approvals and permitting, and nine to twelve months of construction. Anyone quoting a shorter total is either building from stock plans or being optimistic on your behalf.</p>
+
+<h2>Custom builder vs. production builder</h2>
+
+<p>Production builders deliver a known product at a lower per-foot cost, and for some families that's the right buy. You choose from their plans, their selection sheets, their lots. Custom construction means the house is designed around your land and your life: the mudroom sized for your actual family, the office where the morning light is. That's the product we build. If you've walked through production homes and felt like you were choosing the least-wrong option, custom is the conversation you want to have.</p>
+
+<p>See our <a href="/portfolio/custom-colonial-new-build">custom colonial new build</a> in Plainsboro for what this looks like finished, and our <a href="/blog/permits-nj">NJ permits guide</a> for how approvals work. If you already own the lot, or you're evaluating one, <a href="/contact">talk to us before you finalize anything</a>. A builder's eye on a lot before purchase has saved our clients real money more than once.</p>`,
+    faqs: [
+      { question: "How much does it cost to build a house in NJ?", answer: "Custom home construction in Central NJ typically runs $250 to $400+ per square foot before land costs. A 3,000-square-foot custom home generally lands between $750,000 and $1.2 million to build, driven by structural complexity, finish level, and site conditions." },
+      { question: "How long does it take to build a custom home in NJ?", answer: "Realistically 14 to 20 months from first design meeting to move-in: 3 to 5 months of design, 2 to 4 months of approvals and permits, and 9 to 12 months of construction. Site conditions and township review times cause most variation." },
+      { question: "Is it cheaper to build or buy in NJ?", answer: "Buying an existing home is usually cheaper up front. Building custom costs more but delivers exactly the house you want with new systems, a full warranty period, and no renovation compromises. For families planning to stay 15+ years, the math often favors building." },
+    ],
+  },
+  {
     slug: "kitchen-remodel-cost",
     title: "How Much Does a Kitchen Remodel Cost in NJ? (2026 Prices)",
     date: "April 10, 2026",
