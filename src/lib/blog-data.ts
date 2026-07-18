@@ -19,6 +19,99 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "home-remodeling-cost-hamilton-nj",
+    title: "Home Remodeling Cost in Hamilton, NJ: What Projects Actually Run",
+    date: "July 18, 2026",
+    excerpt: "We're based in Hamilton and quote remodels here every week. Real numbers by project type, and why Hamilton prices differ from the Princeton figures you see online.",
+    metaDescription: "Home remodeling costs in Hamilton, NJ from a local contractor: kitchens $55-95k, bathrooms $25-60k, basements $40-90k. Real 2026 numbers by project type.",
+    category: "Remodeling",
+    readTime: "6 min read",
+    content: `
+<p>Search for remodeling costs and you'll get national averages that mean nothing for Hamilton. Labor rates in Mercer County are not labor rates in Ohio, and a quote for a kitchen in Princeton runs different than the same kitchen two miles away in Hamilton Square.</p>
+
+<p>We're based in Hamilton. Our office is on Nottingham Way. These are the numbers we actually see quoting <strong>home remodeling in Hamilton, NJ</strong> right now.</p>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Project type</th><th>Typical Hamilton cost</th><th>Typical timeline</th></tr></thead>
+<tbody>
+<tr><td>Kitchen renovation</td><td>$55,000 to $95,000</td><td>6 to 10 weeks</td></tr>
+<tr><td>Bathroom renovation</td><td>$25,000 to $60,000</td><td>3 to 6 weeks</td></tr>
+<tr><td>Basement finishing</td><td>$40,000 to $90,000</td><td>6 to 10 weeks</td></tr>
+<tr><td>Home addition</td><td>$120,000 to $300,000+</td><td>4 to 8 months</td></tr>
+<tr><td>Full home renovation</td><td>$150,000 to $500,000+</td><td>4 to 12 months</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Why Hamilton prices sit where they do</h2>
+
+<p>Hamilton is a value market compared to Princeton and West Windsor, and that shows up in your quote in one specific way: the house itself. A lot of Hamilton housing stock is 1950s to 1980s construction. That era means galley kitchens, smaller bathrooms, and mechanicals that have been touched three times by three different hands. When we open a wall in a Hamilton ranch, we plan for surprises in a way we don't in a 2005 West Windsor colonial.</p>
+
+<p>That's not a reason to be scared of remodeling an older Hamilton home. It's a reason to hire someone who prices honestly up front instead of lowballing the bid and change-ordering you later. The contractor who quotes your 1962 Cape at a suspiciously round number has not thought about your electrical panel. We have.</p>
+
+<h2>Where the money actually goes</h2>
+
+<p>On a typical Hamilton kitchen at $70,000, roughly a third is cabinetry and counters, a third is labor, and the rest splits across appliances, flooring, lighting, plumbing fixtures, and permits. The single biggest cost swing is whether walls move. Keep the footprint and you control the budget. Open up the kitchen to the living room and you've added structural work, electrical re-runs, and patching that ripples through the whole first floor.</p>
+
+<p>Permits in Hamilton Township run through the Division of Inspections and are not a place to cut corners. We pull them on every job. If a contractor suggests skipping permits to save you money, that savings comes back to bite you at resale, when the buyer's inspector asks for the paperwork that doesn't exist.</p>
+
+<h2>The one question that changes your quote the most</h2>
+
+<p>How long do you plan to stay in the house? A family staying fifteen years should build what they want. A family selling in three should remodel to the neighborhood ceiling and not a dollar past it. Hamilton resale values reward clean, well-executed mid-range work. They do not reward a $150,000 kitchen in a $450,000 house. We'll tell you that to your face in the estimate, because it's your money.</p>
+
+<p>For deeper numbers on specific projects, see our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a>, <a href="/blog/bathroom-remodel-cost">bathroom cost guide</a>, and <a href="/blog/basement-finishing-cost">basement finishing cost guide</a>. To see the work behind these numbers, browse <a href="/portfolio">our portfolio</a>.</p>
+
+<p>Ready for a real number for your house instead of a range on the internet? <a href="/contact">Request an estimate</a>. We're local, so we can usually walk your project within the week.</p>`,
+    faqs: [
+      { question: "How much does home remodeling cost in Hamilton, NJ?", answer: "In Hamilton, kitchen renovations typically run $55,000 to $95,000, bathrooms $25,000 to $60,000, basement finishing $40,000 to $90,000, and additions $120,000 and up. Older Hamilton homes can add cost when outdated electrical or plumbing needs updating during the project." },
+      { question: "Are remodeling costs lower in Hamilton than Princeton?", answer: "Often, yes. The same scope of work usually quotes lower in Hamilton than in Princeton or West Windsor, partly due to home values and finish expectations. But Hamilton's older housing stock can offset that with more corrective work behind the walls." },
+      { question: "Do I need a permit to remodel in Hamilton Township?", answer: "Yes. Kitchen, bathroom, basement, and addition projects require permits through Hamilton Township's Division of Inspections for building, electrical, and plumbing work. MHG Contracting handles the full permitting process on every job." },
+    ],
+  },
+  {
+    slug: "luxury-kitchen-remodeling-nj",
+    title: "Luxury Kitchen Remodeling in NJ: What $100k+ Actually Buys",
+    date: "July 18, 2026",
+    excerpt: "Past the $100,000 line, a kitchen remodel becomes a different kind of project. Here's what changes, what it buys, and what separates a luxury build from an expensive one.",
+    metaDescription: "What luxury kitchen remodeling in NJ really costs and buys: custom cabinetry, moved walls, full-slab stone. A Central NJ contractor breaks down the $100k+ tier.",
+    category: "Kitchen",
+    readTime: "6 min read",
+    content: `
+<p>There's a line in kitchen remodeling, and it sits right around $100,000. Below it, you're upgrading a kitchen. Above it, you're rebuilding the way the whole first floor of the house works.</p>
+
+<p>We build both across Hamilton, Princeton, West Windsor, and the surrounding Central NJ towns. But <strong>luxury kitchen remodeling in NJ</strong> is a different kind of project, and if you're considering one, you should know what actually changes past that line, because it is not just nicer cabinet doors.</p>
+
+<h2>The layout stops being a constraint</h2>
+
+<p>Under $100k, the smart play is usually keeping the footprint: same walls, same plumbing wall, same window openings. Past it, walls move. The load-bearing wall between the kitchen and dining room comes out and a flush structural beam goes in. The window over the sink becomes a nine-foot slider to the patio. The kitchen stops being the room it was in 1995 and becomes the room your family actually lives in.</p>
+
+<p>That's where most of the money goes, and it's the part you can't add later. Cabinets can be upgraded in ten years. A moved wall is forever.</p>
+
+<h2>Custom cabinetry, and why it's not a vanity spend</h2>
+
+<p>Semi-custom cabinets come in three-inch increments and a set catalog of options. Custom cabinetry is built to your wall, to the quarter inch, around how you cook. The panel-ready column refrigerator disappears into it. The coffee station hides behind a pocket door. The difference isn't visible in a photo. It's visible every single morning you use the kitchen.</p>
+
+<p>Full-slab stone follows the same logic. A waterfall island in a single bookmatched slab, with the veining running continuously across the backsplash, is the thing everyone notices without knowing what they're noticing.</p>
+
+<h2>What separates luxury from just expensive</h2>
+
+<p>Here's our honest opinion after building these: the difference is not the appliance brand. Plenty of $150,000 kitchens feel generic because the money went into a checklist of luxury signifiers instead of decisions about the specific house and the specific family. The luxury kitchens that hold up are the ones where the layout, the lighting plan, and the storage were designed around how the owners actually live: where the backpacks land, who cooks, how many people end up standing around the island at a party.</p>
+
+<p>That design work happens before demolition, in the planning phase. It's why we spend more time on layout and lighting design on these projects than on material selection. Materials are easy. Getting the room right is the job.</p>
+
+<h2>What to expect on budget and timeline</h2>
+
+<p>In Central NJ, the full-gut, reconfigured, custom-cabinetry tier runs $110,000 to $225,000 and up, over roughly three to five months including design and permitting. See our <a href="/blog/kitchen-remodel-cost">full kitchen cost breakdown</a> for how the tiers compare, and browse projects like our <a href="/portfolio/traditional-chefs-kitchen">traditional chef's kitchen</a> and <a href="/portfolio/open-concept-kitchen-living">open-concept kitchen and living space</a> to see the tier we're describing.</p>
+
+<p>If you're planning at this level, the conversation starts with your house, not a price sheet. <a href="/contact">Request a consultation</a> and we'll walk the space with you. Our schedule books out months ahead, so if you're targeting a fall or winter start, now is the time to get on it.</p>`,
+    faqs: [
+      { question: "How much does a luxury kitchen remodel cost in NJ?", answer: "In Central NJ, luxury kitchen remodels typically run $110,000 to $225,000 and up. That tier includes layout reconfiguration, structural work, custom cabinetry, full-slab stone, and premium appliances, over roughly three to five months including design and permits." },
+      { question: "What's the difference between custom and semi-custom cabinetry?", answer: "Semi-custom cabinets come in fixed size increments from a set catalog. Custom cabinetry is built to your exact walls and workflow, allowing integrated panel-ready appliances, specialty storage, and details a catalog can't produce. It's usually the single biggest upgrade in the luxury tier." },
+      { question: "Is a luxury kitchen remodel worth it for resale?", answer: "It depends on your neighborhood ceiling and how long you'll stay. In Princeton and West Windsor, high-end kitchens are often expected at resale. In more modest neighborhoods, remodeling past the neighborhood ceiling rarely returns the difference. We give homeowners a straight answer on this during the estimate." },
+    ],
+  },
+  {
     slug: "kitchen-remodel-cost",
     title: "How Much Does a Kitchen Remodel Cost in NJ? (2026 Prices)",
     date: "April 10, 2026",
