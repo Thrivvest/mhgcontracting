@@ -54,7 +54,7 @@ export default function ReviewsPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>MHG Contracting Reviews - 4.9 Stars from {gbpReviews.total_reviews} Verified Google Reviews</h1>
+        <h2>MHG Contracting Reviews - 4.9 Stars from {gbpReviews.total_reviews} Verified Google Reviews</h2>
         <p>
           Real verified Google reviews of MHG Contracting from homeowners across Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Robbinsville, Pennington, Hopewell, Ewing, East Windsor, and Yardley PA. Projects include kitchen renovations, bathroom remodels, basement finishing, home additions, full home renovations, and new construction.
         </p>

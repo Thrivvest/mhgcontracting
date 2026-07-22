@@ -20,7 +20,7 @@ export interface BlogPost {
 export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "home-remodeling-cost-hamilton-nj",
-    title: "Home Remodeling Cost in Hamilton, NJ: What Projects Actually Run",
+    title: "Home Remodeling Cost in Hamilton, NJ",
     date: "July 18, 2026",
     excerpt: "We're based in Hamilton and quote remodels here every week. Real numbers by project type, and why Hamilton prices differ from the Princeton figures you see online.",
     metaDescription: "Home remodeling costs in Hamilton, NJ from a local contractor: kitchens $55-95k, bathrooms $25-60k, basements $40-90k. Real 2026 numbers by project type.",
@@ -113,7 +113,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "master-bathroom-remodel-nj",
-    title: "Master Bathroom Remodel in NJ: Cost, Scope, and What's Worth It",
+    title: "Master Bathroom Remodel Cost in NJ",
     date: "July 18, 2026",
     excerpt: "The primary bath is the most personal room in the remodel conversation. Here's what the $35k to $85k+ range actually buys in Central NJ, and where the money is worth spending.",
     metaDescription: "Master bathroom remodel costs in NJ: $35k-$85k+ for the primary suite tier. A Central NJ contractor on walk-in showers, heated floors, and what's worth it.",
@@ -1309,7 +1309,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "kitchen-renovation-timeline-nj",
-    title: "How Long Does a Kitchen Renovation Take in NJ? Real Timelines from Real Projects",
+    title: "Kitchen Renovation Timeline in NJ",
     date: "May 11, 2026",
     canonicalSlug: "kitchen-timeline",
     excerpt: "The honest answer to how long your kitchen renovation will take, broken down week by week. Based on 50+ projects across Hamilton, Princeton, and Central NJ.",
@@ -1522,7 +1522,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "general-contractor-vs-handyman-hamilton-nj",
-    title: "General Contractor vs Handyman in Hamilton NJ: When to Hire Which",
+    title: "Contractor vs Handyman in Hamilton NJ",
     date: "May 21, 2026",
     excerpt: "Hiring the wrong one wastes money and time. Here is how to know which you actually need for your project in Hamilton, Princeton, or anywhere in Central NJ.",
     metaDescription: "When to hire a general contractor vs a handyman in Hamilton NJ. Licensing, scope, cost, and the projects where each makes sense. From MHG Contracting.",

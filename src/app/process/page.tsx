@@ -56,7 +56,7 @@ export default function ProcessPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>Our Renovation Process: From Free Estimate to Completed Project | MHG Contracting</h1>
+        <h2>Our Renovation Process: From Free Estimate to Completed Project | MHG Contracting</h2>
 
         <h2>Step 1: Free In-Home Consultation &amp; Estimate</h2>
         <p>Every MHG Contracting project begins with a free consultation. We start with a quick phone call to learn about your project, then schedule an in-person visit to your home in Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley, or anywhere in Central NJ. During this visit, we assess the existing space, discuss your vision and budget, take measurements, and provide an honest evaluation of what is possible. Within a few days, you receive a detailed written estimate with transparent pricing - no hidden fees or vague allowances.</p>

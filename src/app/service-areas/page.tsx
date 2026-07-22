@@ -60,7 +60,7 @@ export default function ServiceAreasPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>Service Areas - Kitchen, Bath &amp; Home Renovations in Central NJ &amp; Bucks County, PA</h1>
+        <h2>Service Areas - Kitchen, Bath &amp; Home Renovations in Central NJ &amp; Bucks County, PA</h2>
 
         <h2>Hamilton, NJ - Home Renovations &amp; Contracting</h2>
         <p>MHG Contracting is proudly based in Hamilton, New Jersey. As our home community, Hamilton homeowners receive the full range of our residential contracting services including kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction. We know Hamilton&apos;s neighborhoods, building codes, and architectural styles, ensuring a smooth renovation experience from permit to final walkthrough.</p>

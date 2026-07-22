@@ -59,7 +59,7 @@ export default function AboutPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <SeoPrerender>
-        <h1>About MHG Contracting - Family-Owned Residential Contractor in Hamilton, NJ</h1>
+        <h2>About MHG Contracting - Family-Owned Residential Contractor in Hamilton, NJ</h2>
 
         <h2>Meet Shahzeb Malik, Founder &amp; Owner</h2>
         <p>MHG Contracting was founded by Shahzeb Malik with a simple commitment: deliver exceptional craftsmanship with honest, transparent communication on every project. As a hands-on owner, Shahzeb personally oversees every renovation from the initial free estimate through design, construction, and final walkthrough. When you work with MHG Contracting, you deal directly with the person responsible for building your renovation - not a salesperson, not a franchise manager, and not a subcontractor you have never met.</p>

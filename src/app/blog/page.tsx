@@ -56,7 +56,7 @@ export default function BlogPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>Home Renovation Tips &amp; Expert Advice - MHG Contracting Blog</h1>
+        <h2>Home Renovation Tips &amp; Expert Advice - MHG Contracting Blog</h2>
 
         <h2>Kitchen Renovation Tips &amp; Design Ideas</h2>
         <p>Our blog features expert kitchen renovation advice from the MHG Contracting team. Learn about the latest kitchen design trends including open-concept layouts, custom cabinetry options, quartz vs. granite countertops, tile backsplash ideas, and professional-grade appliance selection. Whether you are planning a complete kitchen gut renovation or a cosmetic refresh in Hamilton, Princeton, or West Windsor, our kitchen remodeling articles help you make informed decisions about materials, timelines, and budgets for your Central NJ kitchen project.</p>
