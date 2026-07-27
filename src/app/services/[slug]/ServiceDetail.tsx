@@ -9,6 +9,7 @@ import { getAreaPagesByService } from "@/lib/area-pages-data";
 import { company } from "@/lib/constants";
 
 const SERVICE_TYPE_MAP: Record<string, ServiceType> = {
+  "general-contracting": "full-renovation",
   "kitchen-renovations": "kitchen",
   "bathroom-renovations": "bathroom",
   "basement-finishing": "basement",

@@ -237,16 +237,68 @@ export const portfolioProjects: PortfolioProject[] = [
 
 export const services: Service[] = [
   {
+    id: "service-general-contracting",
+    name: "General Contracting",
+    slug: "general-contracting",
+    description:
+      "A general contractor is the one person who owns the whole job: the permits, the plumber, the electrician, the framer, the schedule, and the phone call when something goes sideways. Hire the wrong one and you get a half-gutted house, a crew that vanishes for three weeks, and a final bill that doubled. MHG Contracting is a licensed, insured general contractor based in Hamilton, NJ. We run remodels and builds across Mercer County and into Middlesex County and Bucks County, PA: kitchens, bathrooms, basements, additions, whole-home renovations, and ground-up construction. One contract. One crew lead you can actually reach. A written price and a schedule we hold to. When you search general contractor near me and want someone who manages the project instead of subbing it out and disappearing, that is us.",
+    shortDescription:
+      "Licensed, insured general contractor for remodels and builds across Central NJ.",
+    seoTitle: "General Contractor & Remodeling Contractor NJ | MHG Contracting",
+    seoDescription:
+      "Licensed general contractor near Hamilton, Princeton, and Central NJ. Kitchens, baths, additions, whole-home remodels. One crew, written pricing. (609) 712-2474.",
+    icon: "home",
+    scopeItems: [
+      "Licensed, insured general contracting (NJ HIC registered)",
+      "Permit pulling and township inspections across Mercer County",
+      "Kitchen and bathroom remodeling",
+      "Basement finishing and below-grade build-outs",
+      "Home additions and second-story builds",
+      "Whole-home and full-house renovations",
+      "New home construction",
+      "Subcontractor management (plumbing, electrical, HVAC)",
+      "Structural changes and load-bearing wall removal",
+      "Written fixed-price estimates and project scheduling",
+    ],
+    faqs: [
+      {
+        question: "Are you a licensed general contractor in NJ?",
+        answer:
+          "Yes. MHG Contracting is registered with the NJ Division of Consumer Affairs as a Home Improvement Contractor and carries full liability and workers comp insurance. Ask any contractor for their HIC number and proof of insurance before you sign anything. If they hesitate, walk away.",
+      },
+      {
+        question: "What does a general contractor do that I can't do myself?",
+        answer:
+          "We coordinate every trade, pull the permits, schedule the inspections, and stand behind the whole job. On a Hamilton or Princeton remodel that means one contract instead of chasing a separate plumber, electrician, and tile setter, and one person accountable when the township inspector shows up.",
+      },
+      {
+        question: "Do you serve my town?",
+        answer:
+          "We work across Mercer County (Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, East Windsor), Plainsboro in Middlesex County, and Yardley across the river in Bucks County, PA. Call (609) 712-2474 and we will tell you honestly if your project is in our range.",
+      },
+      {
+        question: "How do you keep a project from dragging on for months?",
+        answer:
+          "Before demo we hand you a written schedule with real milestones. The same crew lead runs your job from start to finish and updates you as it moves. We don't start five jobs at once and stretch one crew across all of them, which is why so many remodels stall.",
+      },
+      {
+        question: "How do you price a remodel or build?",
+        answer:
+          "Free in-home estimate, then a written fixed price broken down by trade. You approve it before we start. Any change gets quoted and signed off before we do the work, so the final number matches what you agreed to. No surprise line items at the end.",
+      },
+    ],
+  },
+  {
     id: "service-kitchen",
     name: "Kitchen Renovations",
     slug: "kitchen-renovations",
     description:
-      "Your kitchen is the heart of your home, and we treat it that way. From custom cabinetry and stone countertops to full layout redesigns, our kitchen renovations blend beauty, function, and quality craftsmanship. Whether you want a modern open concept or a timeless classic look, we bring your vision to life.",
+      "Search kitchen remodeling near me around Hamilton and you get a wall of contractors who go quiet the day after they cash your deposit. We are the family-run crew that shows up. MHG has remodeled kitchens across Hamilton, Princeton, West Windsor, Lawrenceville, and Plainsboro, from a $30,000 cabinet-and-counter refresh to a full gut that moves the sink, opens a wall into the dining room, and lands a 10-foot quartz island. You get a written fixed price before demo starts, a start date we hold, and the same crew lead on site every day. No surprise change orders. No crew you have never met walking through your front door.",
     shortDescription:
       "Custom cabinetry, countertops, and full layout redesigns.",
     seoTitle: "Kitchen Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned kitchen remodeling contractor in Hamilton, Princeton, Central NJ. Custom cabinetry, quartz counters, full layouts. Free estimate: (609) 712-2474.",
+      "Kitchen remodel contractors in Hamilton, Princeton, and Central NJ. Custom cabinets, quartz counters, full layouts, fixed written pricing. Free estimate: (609) 712-2474.",
     icon: "kitchen",
     costGuideSlug: "kitchen-remodel-cost",
     costGuideLabel: "See real kitchen remodel costs in NJ",
@@ -283,6 +335,16 @@ export const services: Service[] = [
         answer:
           "Yes, we handle all necessary permits for plumbing, electrical, and structural work. Permit requirements vary by municipality, and we know the local codes in Hamilton, Princeton, and the surrounding areas.",
       },
+      {
+        question: "Do you do kitchen remodeling near me in Central NJ?",
+        answer:
+          "If you are in Mercer County, yes. We remodel kitchens in Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, and East Windsor, plus Plainsboro in Middlesex County and Yardley across the river in Bucks County, PA. Call (609) 712-2474 and we will tell you straight if your town is in our range.",
+      },
+      {
+        question: "Who actually shows up to run my kitchen job?",
+        answer:
+          "The same crew lead, every day, start to finish. You are not handed off to a rotating cast of subs you have never met. One person owns your schedule, answers your questions, and is accountable when the inspector comes through.",
+      },
     ],
   },
   {
@@ -290,12 +352,12 @@ export const services: Service[] = [
     name: "Bathroom Renovations",
     slug: "bathroom-renovations",
     description:
-      "Transform your bathroom into a personal retreat. From powder room refreshes to full master bathroom overhauls, we handle every detail - tile work, fixtures, vanities, lighting, and more. Our attention to waterproofing and proper ventilation ensures your renovation lasts for years to come.",
+      "Most bathroom remodels fail in the parts you never see. Waterproofing skipped behind the tile. A fan that vents into the attic instead of outside. A shower pan sloped the wrong way. Two years later the grout turns black and the subfloor goes soft. MHG builds bathrooms in Hamilton, Princeton, Lawrenceville, and across Mercer County that hold up, because we waterproof the full shower assembly, vent every fan through the roof, and slope pans to drain. Whether it is a 2-week powder room or a master bath with a curbless walk-in shower, heated tile floors, and a double vanity, you get one crew, a firm written price, and a finish date we commit to before we swing a hammer.",
     shortDescription:
       "From powder rooms to spa-like master bathrooms.",
     seoTitle: "Bathroom Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned bathroom remodeling contractor in Hamilton, Princeton, and Central NJ. Walk-in showers, custom tile, vanities. Free estimate: (609) 712-2474.",
+      "Bathroom remodeling contractor in Hamilton, Princeton, and Central NJ. Walk-in showers, custom tile, real waterproofing, fixed pricing. Free estimate: (609) 712-2474.",
     icon: "bathroom",
     costGuideSlug: "bathroom-remodel-cost",
     costGuideLabel: "See real bathroom remodel costs in NJ",
@@ -326,6 +388,16 @@ export const services: Service[] = [
         question: "What about heated floors?",
         answer:
           "Heated floors are one of our most popular upgrades. We install electric radiant heating under tile, which is energy efficient and adds significant comfort, especially during New Jersey winters.",
+      },
+      {
+        question: "Do you do bathroom remodeling near me in Central NJ?",
+        answer:
+          "If you are in Mercer County, yes. We remodel bathrooms in Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, and East Windsor, plus Plainsboro in Middlesex County and Yardley, PA. Call (609) 712-2474 for a free in-home estimate.",
+      },
+      {
+        question: "How much does a bathroom remodel cost in NJ?",
+        answer:
+          "A powder room or hall bath refresh in Central NJ typically runs $12,000 to $25,000. A full hall bath with new tile, tub, vanity, and fixtures lands around $25,000 to $40,000. Master baths with a curbless walk-in shower, heated floors, and a double vanity generally run $40,000 to $75,000 depending on tile and fixtures. You get a written breakdown before any work begins.",
       },
     ],
   },

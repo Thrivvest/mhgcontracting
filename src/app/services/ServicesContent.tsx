@@ -8,12 +8,13 @@ import ScrollSlider from "@/components/animations/ScrollSlider";
 import { company } from "@/lib/constants";
 
 const SERVICE_SLIDES = [
-  { slug: "kitchen-renovations",   image: "/images/projects/kitchen-02-2.jpg",                    label: "01", title: "Kitchen Renovations",   sub: "Custom cabinetry, countertops, and full layout redesigns." },
-  { slug: "bathroom-renovations",  image: "/images/projects/bath-02-1.jpg",                       label: "02", title: "Bathroom Renovations",  sub: "From powder rooms to spa-like master bathrooms." },
-  { slug: "basement-finishing",    image: "/images/projects/gallery/bath-03/1.jpg",               label: "03", title: "Basement Finishing",    sub: "Transform your basement into usable living space." },
-  { slug: "full-home-renovations", image: "/images/projects/gallery/fullreno-01/4.jpg",           label: "04", title: "Full Home Renovations", sub: "Comprehensive whole-home transformations." },
-  { slug: "additions",             image: "/images/projects/addition-01-2.jpg",                   label: "05", title: "Additions",             sub: "Seamless home additions that match your existing style." },
-  { slug: "new-construction",      image: "/images/projects/newbuild-01-1.jpg",                   label: "06", title: "New Construction",      sub: "Custom homes built from the ground up." },
+  { slug: "general-contracting",   image: "/images/projects/fullreno-01.jpg",                     label: "01", title: "General Contracting",   sub: "Licensed, insured general contractor for remodels and builds across Central NJ." },
+  { slug: "kitchen-renovations",   image: "/images/projects/kitchen-02-2.jpg",                    label: "02", title: "Kitchen Renovations",   sub: "Custom cabinetry, countertops, and full layout redesigns." },
+  { slug: "bathroom-renovations",  image: "/images/projects/bath-02-1.jpg",                       label: "03", title: "Bathroom Renovations",  sub: "From powder rooms to spa-like master bathrooms." },
+  { slug: "basement-finishing",    image: "/images/projects/gallery/bath-03/1.jpg",               label: "04", title: "Basement Finishing",    sub: "Transform your basement into usable living space." },
+  { slug: "full-home-renovations", image: "/images/projects/gallery/fullreno-01/4.jpg",           label: "05", title: "Full Home Renovations", sub: "Comprehensive whole-home transformations." },
+  { slug: "additions",             image: "/images/projects/addition-01-2.jpg",                   label: "06", title: "Additions",             sub: "Seamless home additions that match your existing style." },
+  { slug: "new-construction",      image: "/images/projects/newbuild-01-1.jpg",                   label: "07", title: "New Construction",      sub: "Custom homes built from the ground up." },
 ];
 
 export default function ServicesContent() {
@@ -32,7 +33,7 @@ export default function ServicesContent() {
           </LineReveal>
           <FadeIn delay={0.6}>
             <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">
-              Kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction - serving Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, and Yardley, PA.
+              One licensed general contractor for kitchen renovations, bathroom remodels, basement finishing, home additions, whole-home renovations, and new construction. Serving Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, and Yardley, PA.
             </p>
           </FadeIn>
         </div>
