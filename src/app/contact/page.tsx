@@ -73,7 +73,7 @@ export default function ContactPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>Contact MHG Contracting - Get a Free Renovation Estimate</h1>
+        <h2>Contact MHG Contracting - Get a Free Renovation Estimate</h2>
 
         <h2>Request Your Free Estimate Today</h2>
         <p>Contact MHG Contracting to schedule your free in-home consultation and estimate for any residential renovation project in Central New Jersey. Whether you are planning a kitchen renovation, bathroom remodel, basement finishing, home addition, full-home renovation, or new construction, owner Shahzeb Malik will personally visit your home to discuss your project, assess the space, and provide a detailed, transparent estimate with no hidden fees or obligations.</p>

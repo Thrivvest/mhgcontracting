@@ -43,7 +43,7 @@ export default function FAQPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>Frequently Asked Questions - MHG Contracting Home Renovation in Central NJ</h1>
+        <h2>Frequently Asked Questions - MHG Contracting Home Renovation in Central NJ</h2>
         <p>Answers to the questions we get most often from homeowners considering a kitchen renovation, bathroom remodel, basement finishing project, home addition, or new construction build in Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley PA, and throughout Central New Jersey.</p>
       </SeoPrerender>
       <FAQContent />

@@ -57,7 +57,7 @@ export default function ServicesPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>Home Renovation Services in Central NJ - MHG Contracting</h1>
+        <h2>Home Renovation Services in Central NJ - MHG Contracting</h2>
 
         <h2>Kitchen Renovations</h2>
         <p>MHG Contracting delivers premium kitchen renovations throughout Central New Jersey. Our kitchen remodeling services include custom cabinetry design and installation, natural stone and quartz countertop fabrication, open-concept layout conversions, professional-grade appliance integration, custom backsplash tile work, under-cabinet and recessed lighting design, kitchen island design with seating and storage, and complete plumbing and electrical upgrades. We work with homeowners in Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, and Yardley to create kitchens that are both beautiful and built to last.</p>

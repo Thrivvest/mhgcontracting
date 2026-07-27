@@ -13,7 +13,7 @@ import { buildSeoMetadata } from "@/lib/seo-utils";
 
 export const metadata: Metadata = buildSeoMetadata({
   path: "/",
-  title: "General Contractor Hamilton NJ | Kitchen, Bath, Basement | MHG",
+  title: "General Contractor Hamilton NJ | Kitchen, Bath, Basement",
   description:
     "Family-owned general contractor in Hamilton NJ. Kitchen, bath, basement, additions, and new construction across Central NJ. 4.9 stars from 28 Google reviews.",
   ogTitle: "MHG Contracting | Kitchen, Bath & Home Renovations in Hamilton NJ",
@@ -79,7 +79,7 @@ export default function HomePage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }}
       />
       <SeoPrerender>
-        <h1>MHG Contracting - Kitchen, Bath &amp; Home Renovations in Hamilton, NJ</h1>
+        <h2>MHG Contracting - Kitchen, Bath &amp; Home Renovations in Hamilton, NJ</h2>
 
         <h2>Family-Owned Residential Contracting in Central New Jersey</h2>
         <p>MHG Contracting is a family-owned and operated residential contracting company based in Hamilton, New Jersey. MHG Contracting has built a reputation for exceptional craftsmanship, transparent communication, and a personal approach to every home renovation project. We specialize in kitchen renovations, bathroom remodels, basement finishing, home additions, full-home renovations, and new construction throughout Central New Jersey and Bucks County, Pennsylvania.</p>

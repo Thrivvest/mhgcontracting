@@ -27,7 +27,7 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   title: {
-    default: "MHG Contracting | Kitchen, Bath & Home Renovations in Hamilton, NJ",
+    default: "MHG Contracting | Renovations in Hamilton, NJ",
     template: "%s | MHG Contracting",
   },
   description:

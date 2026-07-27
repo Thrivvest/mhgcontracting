@@ -61,7 +61,7 @@ export default function PortfolioPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
       />
       <SeoPrerender>
-        <h1>Renovation Portfolio - Kitchen, Bath &amp; Basement Projects | MHG Contracting</h1>
+        <h2>Renovation Portfolio - Kitchen, Bath &amp; Basement Projects | MHG Contracting</h2>
 
         <h2>Kitchen Renovation Projects in Central NJ</h2>
         <p>Browse completed kitchen renovation projects by MHG Contracting throughout Central New Jersey. Our kitchen remodeling portfolio showcases custom cabinetry installations, quartz and granite countertop fabrication, open-concept layout conversions, professional-grade appliance integration, custom tile backsplashes, and complete kitchen gut renovations. From modern farmhouse kitchens in Princeton to sleek contemporary designs in West Windsor, every project reflects our commitment to quality craftsmanship and attention to detail. Each kitchen renovation is personally overseen by owner Shahzeb Malik from design consultation through final walkthrough.</p>
