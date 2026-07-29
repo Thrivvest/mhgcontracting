@@ -244,9 +244,9 @@ export const services: Service[] = [
       "A general contractor is the one person who owns the whole job: the permits, the plumber, the electrician, the framer, the schedule, and the phone call when something goes sideways. Hire the wrong one and you get a half-gutted house, a crew that vanishes for three weeks, and a final bill that doubled. MHG Contracting is a licensed, insured general contractor based in Hamilton, NJ. We run remodels and builds across Mercer County and into Middlesex County and Bucks County, PA: kitchens, bathrooms, basements, additions, whole-home renovations, and ground-up construction. One contract. One crew lead you can actually reach. A written price and a schedule we hold to. When you search general contractor near me and want someone who manages the project instead of subbing it out and disappearing, that is us.",
     shortDescription:
       "Licensed, insured general contractor for remodels and builds across Central NJ.",
-    seoTitle: "General Contractor & Remodeling Contractor NJ | MHG Contracting",
+    seoTitle: "General Contractor in Central NJ | MHG Contracting",
     seoDescription:
-      "Licensed general contractor near Hamilton, Princeton, and Central NJ. Kitchens, baths, additions, whole-home remodels. One crew, written pricing. (609) 712-2474.",
+      "Licensed general contractor near Hamilton, Princeton, Central NJ. Kitchens, baths, additions, whole-home remodels. One crew, written pricing. (609) 712-2474.",
     icon: "home",
     scopeItems: [
       "Licensed, insured general contracting (NJ HIC registered)",
@@ -298,7 +298,7 @@ export const services: Service[] = [
       "Custom cabinetry, countertops, and full layout redesigns.",
     seoTitle: "Kitchen Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Kitchen remodel contractors in Hamilton, Princeton, and Central NJ. Custom cabinets, quartz counters, full layouts, fixed written pricing. Free estimate: (609) 712-2474.",
+      "Kitchen remodel contractors in Hamilton, Princeton, Central NJ. Custom cabinets, quartz counters, fixed written pricing. Free estimate: (609) 712-2474.",
     icon: "kitchen",
     costGuideSlug: "kitchen-remodel-cost",
     costGuideLabel: "See real kitchen remodel costs in NJ",
@@ -357,7 +357,7 @@ export const services: Service[] = [
       "From powder rooms to spa-like master bathrooms.",
     seoTitle: "Bathroom Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Bathroom remodeling contractor in Hamilton, Princeton, and Central NJ. Walk-in showers, custom tile, real waterproofing, fixed pricing. Free estimate: (609) 712-2474.",
+      "Bathroom remodeling contractor in Hamilton, Princeton, Central NJ. Walk-in showers, custom tile, real waterproofing. Free estimate: (609) 712-2474.",
     icon: "bathroom",
     costGuideSlug: "bathroom-remodel-cost",
     costGuideLabel: "See real bathroom remodel costs in NJ",

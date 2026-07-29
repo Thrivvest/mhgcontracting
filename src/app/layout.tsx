@@ -117,6 +117,7 @@ const SERVICE_AREA_CITIES = [
 ];
 
 const SERVICE_OFFERINGS = [
+  { name: "General Contracting", slug: "general-contracting" },
   { name: "Kitchen Renovations", slug: "kitchen-renovations" },
   { name: "Bathroom Renovations", slug: "bathroom-renovations" },
   { name: "Basement Finishing", slug: "basement-finishing" },
