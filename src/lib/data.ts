@@ -406,42 +406,52 @@ export const services: Service[] = [
     name: "Basement Finishing",
     slug: "basement-finishing",
     description:
-      "Unlock the potential of your unfinished basement. We transform dark, unused spaces into beautiful living areas - home theaters, guest suites, home offices, gyms, and entertainment lounges. Our basements include proper insulation, moisture management, and quality finishes.",
+      "Central Jersey sits on a high water table, and most of the finished basements we get called to fix started with someone skipping the vapor barrier or under-sizing the sump pump. Six months in, the carpet smells and the drywall starts to bow at the base. MHG finishes basements in Hamilton, Princeton, and across Mercer County the way they should be built the first time: interior perimeter drain where the lot calls for it, a sump system sized to the actual water load, a real vapor barrier under the subfloor, and a code-compliant egress window if you want the extra bedroom to count on your appraisal. Home theaters, in-law suites, home gyms, wet bars, we build all of it, but the waterproofing and code work happen before a single stud goes up.",
     shortDescription:
-      "Transform your basement into usable living space.",
+      "Waterproofed, code-compliant basements, not finishes over a moisture problem.",
     seoTitle: "Basement Finishing Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned basement finishing contractor in Hamilton, Princeton, and Central NJ. Home theaters, in-law suites, gyms. Free estimate: (609) 712-2474.",
+      "Basement finishing contractor in Hamilton, Princeton, Central NJ. Real waterproofing, egress windows, in-law suites, home theaters. (609) 712-2474.",
     icon: "basement",
     costGuideSlug: "basement-finishing-cost",
     costGuideLabel: "See real basement finishing costs in NJ",
     scopeItems: [
+      "Interior perimeter drain and sump system design",
+      "Vapor barrier and moisture management",
       "Framing and insulation",
       "Drywall installation and finishing",
       "Flooring (LVP, carpet, tile)",
       "Bathroom rough-in and build-out",
       "Wet bar and kitchenette construction",
       "Home theater pre-wiring and installation",
-      "Egress window installation",
-      "Moisture management and waterproofing",
-      "Custom built-ins and storage",
-      "Lighting and electrical design",
+      "Code-compliant egress window installation",
+      "Custom built-ins, storage, and electrical design",
     ],
     faqs: [
       {
         question: "Is waterproofing included?",
         answer:
-          "We assess moisture conditions before starting every basement project. If your basement needs waterproofing or a sump pump, we include it in the scope. A dry basement is the foundation of a quality finish.",
+          "We assess moisture conditions before starting every basement project. If your basement needs an interior drain, a sump system, or a vapor barrier, it's in the scope from day one. A dry basement is the foundation of a quality finish, not an upsell we add after something fails.",
       },
       {
         question: "Do I need an egress window?",
         answer:
-          "If your basement will have a bedroom, building code requires an egress window or door for emergency exit. We handle the permitting and installation as part of the project.",
+          "If your basement will have a bedroom, building code requires an egress window or door for emergency exit. We handle the permitting and installation as part of the project, and it's what lets that room count as a legal bedroom on your appraisal.",
       },
       {
         question: "Can I add a bathroom in my basement?",
         answer:
-          "Yes! We can add a full or half bathroom. If your home doesn't have a below-grade rough-in, we can break the concrete and run new plumbing lines.",
+          "Yes. We can add a full or half bathroom. If your home doesn't have a below-grade rough-in, we can break the concrete and run new plumbing lines.",
+      },
+      {
+        question: "Do you finish basements near me in Central NJ?",
+        answer:
+          "Yes. We finish basements in Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, and East Windsor, plus Plainsboro in Middlesex County and Yardley across the river in Bucks County, PA. Call (609) 712-2474 and we'll tell you honestly if your basement is a fit.",
+      },
+      {
+        question: "What happens if my basement already has a moisture problem?",
+        answer:
+          "We fix it before we build anything. That means grading and drainage outside, an interior perimeter drain and sump system if the water table calls for it, and a real vapor barrier under the subfloor. Finishing over an active leak just hides it until the drywall bows and the mold shows up.",
       },
     ],
   },
