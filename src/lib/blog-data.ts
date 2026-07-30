@@ -286,7 +286,7 @@ export const BLOG_POSTS: BlogPost[] = [
     excerpt: "We quote kitchens every week in Central NJ. Here are the real numbers, where the money actually goes, and the places homeowners get surprised.",
     metaDescription: "NJ kitchen remodel costs from a contractor who builds them: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut. Real 2026 prices, no wide ranges.",
     category: "Kitchen",
-    readTime: "6 min read",
+    readTime: "8 min read",
     content: `
 <p>Most articles on <strong>kitchen remodel cost in NJ</strong> give you a range so wide it's useless. "Between $25,000 and $150,000." Great, thanks.</p>
 
@@ -343,9 +343,19 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Same square footage, same scope, and the Princeton number is often 15 to 25 percent higher. The driver is finishes. In Princeton and West Windsor, the expectation is custom trim, higher-end hardware, and appliance packages that push $20,000. In Hamilton, a $60,000 kitchen looks and performs great with semi-custom and solid mid-tier appliances. Neither is wrong. It's a finish decision, not a quality one.</p>
 
+<h2>What a kitchen remodel actually costs in Hamilton NJ</h2>
+
+<p>Pull the two most common jobs we build in <a href="/services/kitchen-renovations/hamilton-nj">Hamilton</a> this year and it looks like this. A $38,000 refresh in a Hamilton Square ranch: new shaker cabinets, quartz counters, vinyl plank floor, same layout, same appliances. And a $68,000 mid-range job off Nottingham Way: semi-custom cabinets, an island added where there wasn't one, updated lighting, and a half-wall opened to the dining room. Hamilton kitchens built in the 60s and 70s tend to run smaller than Princeton or West Windsor kitchens, so the cost per square foot is similar but the total project number lands lower because there's less kitchen to remodel. Under 150 square feet, expect the low end of our refresh tier. Push past 200 square feet with an island added and you're solidly mid-range.</p>
+
+<h2>Financing a kitchen remodel</h2>
+
+<p>Most of our clients pay one of three ways. Cash covers roughly a third of our jobs, mostly refresh-tier projects. A HELOC is the most common route for mid-range and full-gut kitchens, since the rate usually beats a personal loan and the interest can be tax-deductible when the money goes back into the home, though confirm that with your accountant. A smaller group uses a renovation-specific loan through their mortgage lender, which counts the projected post-renovation value toward the loan amount. That's useful if your equity is thin today but the kitchen will meaningfully raise the home's value once it's done. Whichever route you take, get the estimate locked in writing before you finalize the loan amount. A vague number from a contractor turns into a change-order fight once the bank has already cut the check.</p>
+
 <h2>How to keep the number in check</h2>
 
 <p>Don't move the sink unless you really need to. Don't add a pot filler unless you actually cook enough to justify it. Don't choose a slab counter and then budget for the cheapest installer you can find. Spend the money where you'll touch it every day, which is cabinets and counters, and save where it doesn't show.</p>
+
+<p>Curious what you'll actually get back at resale? See our breakdown of <a href="/blog/remodel-roi">kitchen remodel ROI in NJ</a>.</p>
 
 <p>If you want a real number for your kitchen, we'll come out, measure, talk through the scope, and give you a line-item estimate. Call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate here</a>.</p>
 `,

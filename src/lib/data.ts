@@ -244,9 +244,9 @@ export const services: Service[] = [
       "A general contractor is the one person who owns the whole job: the permits, the plumber, the electrician, the framer, the schedule, and the phone call when something goes sideways. Hire the wrong one and you get a half-gutted house, a crew that vanishes for three weeks, and a final bill that doubled. MHG Contracting is a licensed, insured general contractor based in Hamilton, NJ. We run remodels and builds across Mercer County and into Middlesex County and Bucks County, PA: kitchens, bathrooms, basements, additions, whole-home renovations, and ground-up construction. One contract. One crew lead you can actually reach. A written price and a schedule we hold to. When you search general contractor near me and want someone who manages the project instead of subbing it out and disappearing, that is us.",
     shortDescription:
       "Licensed, insured general contractor for remodels and builds across Central NJ.",
-    seoTitle: "General Contractor & Remodeling Contractor NJ | MHG Contracting",
+    seoTitle: "General Contractor in Central NJ | MHG Contracting",
     seoDescription:
-      "Licensed general contractor near Hamilton, Princeton, and Central NJ. Kitchens, baths, additions, whole-home remodels. One crew, written pricing. (609) 712-2474.",
+      "Licensed general contractor near Hamilton, Princeton, Central NJ. Kitchens, baths, additions, whole-home remodels. One crew, written pricing. (609) 712-2474.",
     icon: "home",
     scopeItems: [
       "Licensed, insured general contracting (NJ HIC registered)",
@@ -298,7 +298,7 @@ export const services: Service[] = [
       "Custom cabinetry, countertops, and full layout redesigns.",
     seoTitle: "Kitchen Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Kitchen remodel contractors in Hamilton, Princeton, and Central NJ. Custom cabinets, quartz counters, full layouts, fixed written pricing. Free estimate: (609) 712-2474.",
+      "Kitchen remodel contractors in Hamilton, Princeton, Central NJ. Custom cabinets, quartz counters, fixed written pricing. Free estimate: (609) 712-2474.",
     icon: "kitchen",
     costGuideSlug: "kitchen-remodel-cost",
     costGuideLabel: "See real kitchen remodel costs in NJ",
@@ -357,7 +357,7 @@ export const services: Service[] = [
       "From powder rooms to spa-like master bathrooms.",
     seoTitle: "Bathroom Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Bathroom remodeling contractor in Hamilton, Princeton, and Central NJ. Walk-in showers, custom tile, real waterproofing, fixed pricing. Free estimate: (609) 712-2474.",
+      "Bathroom remodeling contractor in Hamilton, Princeton, Central NJ. Walk-in showers, custom tile, real waterproofing. Free estimate: (609) 712-2474.",
     icon: "bathroom",
     costGuideSlug: "bathroom-remodel-cost",
     costGuideLabel: "See real bathroom remodel costs in NJ",
@@ -406,42 +406,52 @@ export const services: Service[] = [
     name: "Basement Finishing",
     slug: "basement-finishing",
     description:
-      "Unlock the potential of your unfinished basement. We transform dark, unused spaces into beautiful living areas - home theaters, guest suites, home offices, gyms, and entertainment lounges. Our basements include proper insulation, moisture management, and quality finishes.",
+      "Central Jersey sits on a high water table, and most of the finished basements we get called to fix started with someone skipping the vapor barrier or under-sizing the sump pump. Six months in, the carpet smells and the drywall starts to bow at the base. MHG finishes basements in Hamilton, Princeton, and across Mercer County the way they should be built the first time: interior perimeter drain where the lot calls for it, a sump system sized to the actual water load, a real vapor barrier under the subfloor, and a code-compliant egress window if you want the extra bedroom to count on your appraisal. Home theaters, in-law suites, home gyms, wet bars, we build all of it, but the waterproofing and code work happen before a single stud goes up.",
     shortDescription:
-      "Transform your basement into usable living space.",
+      "Waterproofed, code-compliant basements, not finishes over a moisture problem.",
     seoTitle: "Basement Finishing Central NJ | MHG Contracting",
     seoDescription:
-      "Family-owned basement finishing contractor in Hamilton, Princeton, and Central NJ. Home theaters, in-law suites, gyms. Free estimate: (609) 712-2474.",
+      "Basement finishing contractor in Hamilton, Princeton, Central NJ. Real waterproofing, egress windows, in-law suites, home theaters. (609) 712-2474.",
     icon: "basement",
     costGuideSlug: "basement-finishing-cost",
     costGuideLabel: "See real basement finishing costs in NJ",
     scopeItems: [
+      "Interior perimeter drain and sump system design",
+      "Vapor barrier and moisture management",
       "Framing and insulation",
       "Drywall installation and finishing",
       "Flooring (LVP, carpet, tile)",
       "Bathroom rough-in and build-out",
       "Wet bar and kitchenette construction",
       "Home theater pre-wiring and installation",
-      "Egress window installation",
-      "Moisture management and waterproofing",
-      "Custom built-ins and storage",
-      "Lighting and electrical design",
+      "Code-compliant egress window installation",
+      "Custom built-ins, storage, and electrical design",
     ],
     faqs: [
       {
         question: "Is waterproofing included?",
         answer:
-          "We assess moisture conditions before starting every basement project. If your basement needs waterproofing or a sump pump, we include it in the scope. A dry basement is the foundation of a quality finish.",
+          "We assess moisture conditions before starting every basement project. If your basement needs an interior drain, a sump system, or a vapor barrier, it's in the scope from day one. A dry basement is the foundation of a quality finish, not an upsell we add after something fails.",
       },
       {
         question: "Do I need an egress window?",
         answer:
-          "If your basement will have a bedroom, building code requires an egress window or door for emergency exit. We handle the permitting and installation as part of the project.",
+          "If your basement will have a bedroom, building code requires an egress window or door for emergency exit. We handle the permitting and installation as part of the project, and it's what lets that room count as a legal bedroom on your appraisal.",
       },
       {
         question: "Can I add a bathroom in my basement?",
         answer:
-          "Yes! We can add a full or half bathroom. If your home doesn't have a below-grade rough-in, we can break the concrete and run new plumbing lines.",
+          "Yes. We can add a full or half bathroom. If your home doesn't have a below-grade rough-in, we can break the concrete and run new plumbing lines.",
+      },
+      {
+        question: "Do you finish basements near me in Central NJ?",
+        answer:
+          "Yes. We finish basements in Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, and East Windsor, plus Plainsboro in Middlesex County and Yardley across the river in Bucks County, PA. Call (609) 712-2474 and we'll tell you honestly if your basement is a fit.",
+      },
+      {
+        question: "What happens if my basement already has a moisture problem?",
+        answer:
+          "We fix it before we build anything. That means grading and drainage outside, an interior perimeter drain and sump system if the water table calls for it, and a real vapor barrier under the subfloor. Finishing over an active leak just hides it until the drywall bows and the mold shows up.",
       },
     ],
   },
