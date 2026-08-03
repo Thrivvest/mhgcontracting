@@ -15,10 +15,10 @@ import FadeIn from "@/components/animations/FadeIn";
 const BLOG_POSTS = [
   {
     slug: "kitchen-remodel-cost",
-    title: "5 Things to Consider Before Your Kitchen Renovation",
-    date: "March 15, 2026",
+    title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
+    date: "April 10, 2026",
     excerpt:
-      "Planning a kitchen renovation? Before you start picking countertops, here are the five most important decisions that will shape your entire project.",
+      "The average NJ kitchen remodel runs $55,000 to $95,000. Here's the real 2026 breakdown by tier, from a cosmetic refresh to a six-figure full gut.",
     image: "/images/projects/kitchen-01.jpg",
   },
   {

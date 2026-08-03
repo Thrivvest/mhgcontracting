@@ -35,7 +35,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <table class="cost-table">
 <thead><tr><th>Project type</th><th>Typical Hamilton cost</th><th>Typical timeline</th></tr></thead>
 <tbody>
-<tr><td>Kitchen renovation</td><td>$55,000 to $95,000</td><td>6 to 10 weeks</td></tr>
+<tr><td>Kitchen renovation</td><td>$55,000 to $150,000+</td><td>6 to 10 weeks</td></tr>
 <tr><td>Bathroom renovation</td><td>$25,000 to $100,000+</td><td>3 to 6 weeks</td></tr>
 <tr><td>Basement finishing</td><td>$40,000 to $90,000</td><td>6 to 10 weeks</td></tr>
 <tr><td>Home addition</td><td>$120,000 to $300,000+</td><td>4 to 8 months</td></tr>
@@ -64,7 +64,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Ready for a real number for your house instead of a range on the internet? <a href="/contact">Request an estimate</a>. We're local, so we can usually walk your project within the week.</p>`,
     faqs: [
-      { question: "How much does home remodeling cost in Hamilton, NJ?", answer: "In Hamilton, kitchen renovations typically run $55,000 to $95,000, bathrooms $25,000 to $100,000, basement finishing $40,000 to $90,000, and additions $120,000 and up. Older Hamilton homes can add cost when outdated electrical or plumbing needs updating during the project." },
+      { question: "How much does home remodeling cost in Hamilton, NJ?", answer: "In Hamilton, kitchen renovations typically run $55,000 to $150,000+, bathrooms $25,000 to $100,000+, basement finishing $40,000 to $90,000, and additions $120,000 and up. Older Hamilton homes can add cost when outdated electrical or plumbing needs updating during the project." },
       { question: "Are remodeling costs lower in Hamilton than Princeton?", answer: "Often, yes. The same scope of work usually quotes lower in Hamilton than in Princeton or West Windsor, partly due to home values and finish expectations. But Hamilton's older housing stock can offset that with more corrective work behind the walls." },
       { question: "Do I need a permit to remodel in Hamilton Township?", answer: "Yes. Kitchen, bathroom, basement, and addition projects require permits through Hamilton Township's Division of Inspections for building, electrical, and plumbing work. MHG Contracting handles the full permitting process on every job." },
     ],
@@ -281,16 +281,20 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "kitchen-remodel-cost",
-    title: "How Much Does a Kitchen Remodel Cost in NJ? (2026 Prices)",
+    title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
     date: "April 10, 2026",
-    excerpt: "We quote kitchens every week in Central NJ. Here are the real numbers, where the money actually goes, and the places homeowners get surprised.",
-    metaDescription: "NJ kitchen remodel costs from a contractor who builds them: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut. Real 2026 prices, no wide ranges.",
+    excerpt: "The average kitchen remodel in NJ runs $55,000 to $95,000, but the tier you land in matters more than any single number. Here are the real 2026 prices and where the money actually goes.",
+    metaDescription: "The average kitchen remodel cost in NJ runs $55,000 to $95,000. Real 2026 prices by tier from a Central NJ contractor: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut.",
     category: "Kitchen",
     readTime: "8 min read",
     content: `
 <p>Most articles on <strong>kitchen remodel cost in NJ</strong> give you a range so wide it's useless. "Between $25,000 and $150,000." Great, thanks.</p>
 
 <p>Here's what we actually see when we quote kitchens in Hamilton, Princeton, West Windsor, and the surrounding Central NJ towns. The numbers are from real projects we've built or bid in the last eighteen months.</p>
+
+<h2>What is the average kitchen remodel cost in NJ?</h2>
+
+<p>Most kitchens we build in New Jersey land in the mid-range tier, so the average project runs <strong>$55,000 to $95,000</strong>, with the typical job around <strong>$65,000</strong>. A cosmetic refresh starts near $25,000. A full gut with a new layout and custom cabinetry runs well into six figures. Which tier you fall into depends on scope, not finishes, and that is what the breakdown below sorts out.</p>
 
 <div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
 <table class="cost-table">
@@ -360,6 +364,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>If you want a real number for your kitchen, we'll come out, measure, talk through the scope, and give you a line-item estimate. Call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate here</a>.</p>
 `,
     faqs: [
+      {
+        question: "What is the average kitchen remodel cost in NJ?",
+        answer:
+          'The average kitchen remodel in NJ runs $55,000 to $95,000, with the typical mid-range job around $65,000. Cosmetic refreshes start near $25,000 and full gut renovations run $110,000 to $225,000 or more. Scope drives the tier, not finishes. See what each includes on our <a href="/services/kitchen-renovations">kitchen remodeling</a> page.',
+      },
       {
         question: "How much does a kitchen remodel cost in NJ?",
         answer:

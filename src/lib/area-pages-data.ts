@@ -1419,7 +1419,7 @@ export const AREA_PAGES: AreaPage[] = [
     faqs: [
       {
         question: "How much does a bathroom remodel cost in Robbinsville, NJ?",
-        answer: "Bathroom remodels in Robbinsville typically range from $18,000 to $55,000. Powder rooms start around $8,000-$12,000, guest baths fall in the $20,000-$35,000 range, and primary bath transformations with premium finishes run $35,000 to $55,000 or more.",
+        answer: "Bathroom remodels in Robbinsville typically range from $12,000 to $100,000+. Small and powder baths start around $12,000-$20,000, full guest baths fall in the $25,000-$40,000 range, and primary bath transformations with premium finishes run $45,000 to $100,000 or more.",
       },
       {
         question: "How long does a Robbinsville bathroom renovation take?",
@@ -1459,7 +1459,7 @@ export const AREA_PAGES: AreaPage[] = [
     faqs: [
       {
         question: "How much does a bathroom remodel cost in East Windsor, NJ?",
-        answer: "East Windsor bathroom remodels typically range from $15,000 to $45,000. Twin Rivers and other compact baths often fall in the $15,000-$25,000 range. Full primary bath rebuilds with custom tile, stone tops, and frameless glass typically run $30,000 to $45,000.",
+        answer: "East Windsor bathroom remodels typically range from $15,000 to $100,000+. Twin Rivers and other compact baths often fall in the $18,000-$25,000 range, and full baths run $25,000 to $40,000. Full primary bath rebuilds with custom tile, stone tops, and frameless glass typically run $45,000 to $100,000 or more.",
       },
       {
         question: "Can you renovate Twin Rivers townhome bathrooms?",
@@ -1582,7 +1582,7 @@ export const AREA_PAGES: AreaPage[] = [
     faqs: [
       {
         question: "How much does a bathroom remodel cost in Ewing, NJ?",
-        answer: "Bathroom remodels in Ewing typically range from $14,000 to $40,000. Hall and guest baths fall in the $14,000-$25,000 range. Full primary bath rebuilds with custom tile, stone tops, and frameless glass typically run $30,000 to $40,000.",
+        answer: "Bathroom remodels in Ewing typically range from $14,000 to $100,000+. Small and hall baths fall in the $14,000-$25,000 range, and full baths run $25,000 to $40,000. Full primary bath rebuilds with custom tile, stone tops, and frameless glass typically run $45,000 to $100,000 or more.",
       },
       {
         question: "Can you renovate older Ewing Cape Cod and ranch bathrooms?",
