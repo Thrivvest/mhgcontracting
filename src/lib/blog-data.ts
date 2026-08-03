@@ -36,7 +36,7 @@ export const BLOG_POSTS: BlogPost[] = [
 <thead><tr><th>Project type</th><th>Typical Hamilton cost</th><th>Typical timeline</th></tr></thead>
 <tbody>
 <tr><td>Kitchen renovation</td><td>$55,000 to $95,000</td><td>6 to 10 weeks</td></tr>
-<tr><td>Bathroom renovation</td><td>$25,000 to $60,000</td><td>3 to 6 weeks</td></tr>
+<tr><td>Bathroom renovation</td><td>$25,000 to $100,000+</td><td>3 to 6 weeks</td></tr>
 <tr><td>Basement finishing</td><td>$40,000 to $90,000</td><td>6 to 10 weeks</td></tr>
 <tr><td>Home addition</td><td>$120,000 to $300,000+</td><td>4 to 8 months</td></tr>
 <tr><td>Full home renovation</td><td>$150,000 to $500,000+</td><td>4 to 12 months</td></tr>
@@ -64,7 +64,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Ready for a real number for your house instead of a range on the internet? <a href="/contact">Request an estimate</a>. We're local, so we can usually walk your project within the week.</p>`,
     faqs: [
-      { question: "How much does home remodeling cost in Hamilton, NJ?", answer: "In Hamilton, kitchen renovations typically run $55,000 to $95,000, bathrooms $25,000 to $60,000, basement finishing $40,000 to $90,000, and additions $120,000 and up. Older Hamilton homes can add cost when outdated electrical or plumbing needs updating during the project." },
+      { question: "How much does home remodeling cost in Hamilton, NJ?", answer: "In Hamilton, kitchen renovations typically run $55,000 to $95,000, bathrooms $25,000 to $100,000, basement finishing $40,000 to $90,000, and additions $120,000 and up. Older Hamilton homes can add cost when outdated electrical or plumbing needs updating during the project." },
       { question: "Are remodeling costs lower in Hamilton than Princeton?", answer: "Often, yes. The same scope of work usually quotes lower in Hamilton than in Princeton or West Windsor, partly due to home values and finish expectations. But Hamilton's older housing stock can offset that with more corrective work behind the walls." },
       { question: "Do I need a permit to remodel in Hamilton Township?", answer: "Yes. Kitchen, bathroom, basement, and addition projects require permits through Hamilton Township's Division of Inspections for building, electrical, and plumbing work. MHG Contracting handles the full permitting process on every job." },
     ],
@@ -115,14 +115,14 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "master-bathroom-remodel-nj",
     title: "Master Bathroom Remodel Cost in NJ",
     date: "July 18, 2026",
-    excerpt: "The primary bath is the most personal room in the remodel conversation. Here's what the $35k to $85k+ range actually buys in Central NJ, and where the money is worth spending.",
-    metaDescription: "Master bathroom remodel costs in NJ: $35k-$85k+ for the primary suite tier. A Central NJ contractor on walk-in showers, heated floors, and what's worth it.",
+    excerpt: "The primary bath is the most personal room in the remodel conversation. Here's what the $45k to $100k+ range actually buys in Central NJ, and where the money is worth spending.",
+    metaDescription: "Master bathroom remodel costs in NJ: $45k-$100k+ for the primary suite tier. A Central NJ contractor on walk-in showers, heated floors, and what's worth it.",
     category: "Bathroom",
     readTime: "6 min read",
     content: `
 <p>Of every room we remodel, the primary bathroom is the one where homeowners have thought hardest about what they want and least about what it costs. The Pinterest board is full. The budget is a question mark.</p>
 
-<p>So here's the straight version. A <strong>master bathroom remodel in NJ</strong> runs $35,000 to $85,000 and up in the Central NJ towns we serve. That's the primary suite tier: large walk-in shower, freestanding tub, double vanity, full tile package, and usually heated floors. Where you land in that range comes down to three decisions.</p>
+<p>So here's the straight version. A <strong>master bathroom remodel in NJ</strong> runs $45,000 to $100,000 and up in the Central NJ towns we serve. That's the primary suite tier: large walk-in shower, freestanding tub, double vanity, full tile package, and usually heated floors. Where you land in that range comes down to three decisions.</p>
 
 <h2>Decision one: does the layout change?</h2>
 
@@ -146,7 +146,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Thinking about yours? <a href="/contact">Request an estimate</a> and we'll walk the space. Our fall schedule is filling, so plan ahead if you want it done before the holidays.</p>`,
     faqs: [
-      { question: "How much does a master bathroom remodel cost in NJ?", answer: "In Central NJ, a primary bathroom remodel typically runs $35,000 to $85,000 and up. The range covers a walk-in shower, double vanity, full tile package, and often a freestanding tub and heated floors. Layout changes and shower complexity drive most of the variation." },
+      { question: "How much does a master bathroom remodel cost in NJ?", answer: "In Central NJ, a primary bathroom remodel typically runs $45,000 to $100,000 and up. The range covers a walk-in shower, double vanity, full tile package, and often a freestanding tub and heated floors. Layout changes and shower complexity drive most of the variation." },
       { question: "How long does a master bathroom remodel take?", answer: "Typically 4 to 6 weeks of construction for a primary bath, longer if walls move or plumbing is reconfigured. Add lead time before construction for design, material orders, and permits, especially custom glass and tile which can take several weeks to arrive." },
       { question: "Is a freestanding tub worth it in a master bath?", answer: "It depends on whether you'll use it. Tubs matter for resale in higher-end markets like Princeton, but many homeowners rarely use them. If budget is tight, we often recommend investing in the shower and keeping a tub rough-in for the future." },
     ],
@@ -384,45 +384,51 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-cost",
-    title: "Bathroom Remodel Cost in NJ",
+    title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "April 3, 2026",
-    excerpt: "Powder room, hall bath, master suite. The gap between them is bigger than most homeowners realize. Here's what each actually costs in Central NJ.",
-    metaDescription: "Bathroom remodel cost in NJ broken down by room type and scope. Real numbers from MHG Contracting in Hamilton, serving Princeton, West Windsor, and Central NJ.",
+    excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
+    metaDescription: "The average bathroom remodel cost in Hamilton, NJ runs $25,000 to $40,000. See 2026 price ranges by room type from MHG Contracting, serving Hamilton, Princeton, and Central NJ.",
     category: "Bathroom",
     readTime: "5 min read",
     content: `
-<p>When someone asks what a bathroom remodel costs in NJ, the honest answer starts with a question back: which bathroom.</p>
+<p>When someone in Hamilton asks what a bathroom remodel costs, the honest answer starts with a question back: which bathroom.</p>
 
 <p>A powder room and a primary suite are different projects. They use different trades, different fixtures, different tile volumes. The cost gap can be 4x or more. Here's the real breakdown for each, based on bathrooms we've finished across Hamilton, Princeton, West Windsor, and the rest of Central NJ.</p>
+
+<h2>What is the average bathroom remodel cost in Hamilton, NJ?</h2>
+
+<p>Across every bathroom we build in Hamilton, the average project lands around <strong>$30,000</strong>, and most standard bathrooms fall in the <strong>$25,000 to $40,000</strong> range. Powder rooms pull that average down. Full primary suites pull it well up, into six figures on the high end. Where your project lands comes down to the size of the room and the tile and fixtures you pick.</p>
+
+<p>That number is a starting point, not a quote. The three tiers below are what actually predict your cost in 2026.</p>
 
 <div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
 <table class="cost-table">
 <thead><tr><th>Bathroom type</th><th>Typical cost (Central NJ)</th><th>Scope</th></tr></thead>
 <tbody>
-<tr><td>Powder room</td><td>$8,000 to $16,000</td><td>Toilet, vanity, mirror, lighting, flooring, feature wall. No tub or shower.</td></tr>
-<tr><td>Hall or guest bath</td><td>$18,000 to $32,000</td><td>Tub or shower, toilet, single vanity, full tile surround.</td></tr>
-<tr><td>Primary or master bath</td><td>$35,000 to $85,000+</td><td>Freestanding tub, large walk-in shower, double vanity, full tile package, heated floors.</td></tr>
+<tr><td>Small / powder room</td><td>$12,000 to $20,000</td><td>Toilet, vanity, mirror, lighting, flooring, feature wall. No tub or shower.</td></tr>
+<tr><td>Full hall or guest bath</td><td>$25,000 to $40,000</td><td>Tub or shower, toilet, single vanity, full tile surround.</td></tr>
+<tr><td>Primary or master bath</td><td>$45,000 to $100,000+</td><td>Freestanding tub, large walk-in shower, double vanity, full tile package, heated floors.</td></tr>
 </tbody>
 </table>
 </div>
 
-<h2>Powder room: $8,000 to $16,000</h2>
+<h2>Small bathroom remodel cost: $12,000 to $20,000</h2>
 
-<p>Small space, no tub, no shower. Toilet, vanity, mirror, lighting, often new flooring and a feature wall. We can do these in two to three weeks with minimal disruption.</p>
+<p>Small space, no tub, no shower. This covers powder rooms and compact half baths: toilet, vanity, mirror, lighting, often new flooring and a feature wall. We can do these in two to three weeks with minimal disruption.</p>
 
 <p>The range is driven almost entirely by vanity and tile choices. A stock vanity and a simple porcelain floor lands at the low end. A floating vanity with a stone top, a designer wallpaper or hand-made tile feature wall, and upgraded fixtures pushes you toward the upper end.</p>
 
-<p>Powder rooms are where we see the best design-to-dollar ratio in the whole home. A well-done powder room is the fastest way to make your house feel different without taking on a project that lives in your calendar for two months.</p>
+<p>Small bathrooms are where we see the best design-to-dollar ratio in the whole home. A well-done powder room is the fastest way to make your house feel different without taking on a project that lives in your calendar for two months.</p>
 
-<h2>Standard hall or guest bath: $18,000 to $32,000</h2>
+<h2>Full bathroom remodel cost: $25,000 to $40,000</h2>
 
-<p>Tub and shower combo or standalone shower, toilet, single vanity, ventilation, usually a full tile surround. This is the most common bathroom we remodel.</p>
+<p>A full bathroom remodel in Hamilton means every fixture and surface: a tub and shower combo or standalone shower, toilet, single vanity, ventilation, and usually a full tile surround. This is the most common bathroom we remodel.</p>
 
-<p>The difference between a $20k hall bath and a $30k hall bath is almost always tile and the shower system. An acrylic tub surround and basic 12x12 floor tile is at the low end. Full floor-to-ceiling porcelain or ceramic tile, a curbless shower, a niche, a bench, a rainhead plus handheld system, and a frameless glass door all stack.</p>
+<p>The difference between a $28k full bath and a $40k one is almost always tile and the shower system. An acrylic tub surround and basic 12x12 floor tile is at the low end. Full floor-to-ceiling porcelain or ceramic tile, a curbless shower, a niche, a bench, a rainhead plus handheld system, and a frameless glass door all stack.</p>
 
 <p>Plumbing location matters too. If you're keeping the same footprint, you save real money. Move the toilet to a new wall and you're adding a day of plumbing labor and potentially floor rework.</p>
 
-<h2>Primary or master bath: $35,000 to $85,000+</h2>
+<h2>Primary or master bath: $45,000 to $100,000+</h2>
 
 <p>This is where the numbers stretch. A primary bath typically has a freestanding tub, a large walk-in shower with multiple fixtures, a double vanity, a dedicated toilet area, a full tile package, and often heated floors or a linen tower.</p>
 
@@ -430,7 +436,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>Where bathroom remodel dollars actually go</h2>
 
-<p>Bathrooms are labor-heavy. For a $25,000 hall bath, here's the rough split:</p>
+<p>Bathrooms are labor-heavy. For a $30,000 full bath, here's the rough split:</p>
 
 <p><strong>Tile and stone: 20 to 25 percent.</strong> Tile is expensive in square foot terms, especially large format porcelain or natural stone. The material and the labor to set it well eat up more of the budget than most homeowners expect.</p>
 
@@ -460,9 +466,14 @@ export const BLOG_POSTS: BlogPost[] = [
 `,
     faqs: [
       {
+        question: "What is the average bathroom remodel cost in Hamilton, NJ?",
+        answer:
+          'The average bathroom remodel in Hamilton, NJ lands around $30,000, with most standard bathrooms falling between $25,000 and $40,000. Small bathrooms and powder rooms run $12,000 to $20,000, and primary or master baths run $45,000 to $100,000 or more. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for scope details.',
+      },
+      {
         question: "How much does a bathroom remodel cost in NJ?",
         answer:
-          'It depends on the room. A powder room runs $8,000 to $16,000, a standard hall or guest bath runs $18,000 to $32,000, and a primary or master bath runs $35,000 to $85,000 or more in Central NJ. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for scope details.',
+          'It depends on the room. A small bathroom or powder room runs $12,000 to $20,000, a full hall or guest bath runs $25,000 to $40,000, and a primary or master bath runs $45,000 to $100,000 or more in Central NJ. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for scope details.',
       },
       {
         question: "What drives the price difference in a bathroom remodel?",

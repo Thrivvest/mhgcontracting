@@ -23,10 +23,10 @@ const BLOG_POSTS = [
   },
   {
     slug: "bathroom-remodel-cost",
-    title: "How Long Does a Bathroom Remodel Take?",
-    date: "March 8, 2026",
+    title: "Average Bathroom Remodel Cost in Hamilton, NJ",
+    date: "April 3, 2026",
     excerpt:
-      "One of the most common questions we get. The answer depends on scope, materials, and complexity. Here's a realistic timeline breakdown.",
+      "The average bathroom remodel in Hamilton lands around $30,000. Here's the real 2026 breakdown by room type, from small baths to six-figure master suites.",
     image: "/images/projects/bath-01.jpg",
   },
   {

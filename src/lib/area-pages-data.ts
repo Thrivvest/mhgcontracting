@@ -343,6 +343,7 @@ export const AREA_PAGES: AreaPage[] = [
 <h2>Common Bathroom Issues in Hamilton Homes</h2>
 <p>Most Hamilton homes built in the 1960s-1980s share common bathroom challenges: small footprints, tub-shower combos with aging surrounds, single-bowl vanities with limited storage, and exhausted ventilation. Some homes still have original cast iron drain piping that needs replacement. Our Hamilton bathroom renovations address these issues head-on - converting tub-shower combos to spacious walk-in showers, installing double vanities where space allows, adding proper exhaust fans, and upgrading plumbing infrastructure.</p>
 <p>For Hamilton families, a bathroom renovation often means reclaiming space. We have converted unused closets into linen storage, borrowed space from adjacent rooms for a shower expansion, and reconfigured cramped layouts to feel open and comfortable. Every inch matters, and our designs maximize what you have.</p>
+<p>Wondering what to budget? Our <a href="/blog/bathroom-remodel-cost">average bathroom remodel cost guide for Hamilton, NJ</a> breaks down real 2026 price ranges by room type, from small baths to full master suites.</p>
 
 <h2>Quality You Can Trust</h2>
 <p>We treat every Hamilton bathroom like it is in our own home. That means proper waterproofing beneath every tile installation, correct slope on shower floors for drainage, secure grab bar blocking in walls for future accessibility, and quality fixtures that perform reliably. We pull all permits through the Hamilton Building Department and ensure inspections are passed before we close walls.</p>
@@ -350,7 +351,7 @@ export const AREA_PAGES: AreaPage[] = [
 <h2>See Our Work</h2>
 <p>Browse our <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> completed right here in Hamilton, then <a href="/contact">contact us</a> for your free bathroom renovation estimate.</p>`,
     faqs: [
-      { question: "How much does a bathroom renovation cost in Hamilton, NJ?", answer: "Hamilton bathroom renovations typically range from $15,000 for a basic update to $45,000-$65,000 for a full master bath renovation. Cost depends on size, fixture quality, and tile complexity. We provide free, transparent estimates." },
+      { question: "How much does a bathroom renovation cost in Hamilton, NJ?", answer: "Hamilton bathroom renovations typically range from $12,000 for a small bathroom to $45,000-$100,000+ for a full master bath renovation. A standard full bath runs $25,000 to $40,000. Cost depends on size, fixture quality, and tile complexity. We provide free, transparent estimates." },
       { question: "Can you convert my tub to a walk-in shower?", answer: "Yes, tub-to-shower conversions are one of our most popular Hamilton bathroom renovations. We can install a custom-tiled walk-in shower with frameless glass, a rain head, and a built-in bench or niche." },
       { question: "Do Hamilton bathroom renovations need permits?", answer: "Yes, bathroom renovations involving plumbing or electrical work require permits from Hamilton Township. As a local company, we handle all permitting and inspections." },
     ],

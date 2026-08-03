@@ -397,7 +397,7 @@ export const services: Service[] = [
       {
         question: "How much does a bathroom remodel cost in NJ?",
         answer:
-          "A powder room or hall bath refresh in Central NJ typically runs $12,000 to $25,000. A full hall bath with new tile, tub, vanity, and fixtures lands around $25,000 to $40,000. Master baths with a curbless walk-in shower, heated floors, and a double vanity generally run $40,000 to $75,000 depending on tile and fixtures. You get a written breakdown before any work begins.",
+          "A small bathroom or powder room in Central NJ typically runs $12,000 to $20,000. A full hall or guest bath with new tile, tub, vanity, and fixtures lands around $25,000 to $40,000. Master baths with a curbless walk-in shower, heated floors, and a double vanity generally run $45,000 to $100,000 and up depending on tile and fixtures. You get a written breakdown before any work begins.",
       },
     ],
   },
