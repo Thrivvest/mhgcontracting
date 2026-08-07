@@ -20,7 +20,7 @@ export const metadata: Metadata = buildSeoMetadata({
   path: "/service-areas",
   title: "Service Areas | MHG Contracting Central NJ & Bucks County PA",
   description:
-    "MHG Contracting serves Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley PA with kitchen, bath, basement, addition, and new construction work.",
+    "MHG Contracting serves Princeton, Hamilton, West Windsor, Lawrenceville, and Yardley PA with kitchen, bath, basement, addition, and new construction work.",
   ogTitle: "Service Areas | MHG Contracting",
   ogDescription:
     "Serving Central NJ and Bucks County PA: Princeton, Hamilton, West Windsor, Lawrenceville, Plainsboro, and Yardley.",

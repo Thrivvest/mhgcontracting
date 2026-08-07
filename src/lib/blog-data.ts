@@ -6,6 +6,8 @@
 export interface BlogPost {
   slug: string;
   title: string;
+  /** Optional SEO <title> override (<=60 chars incl brand). Falls back to `${title} | MHG Contracting`. */
+  seoTitle?: string;
   date: string;
   excerpt: string;
   category: string;
@@ -71,6 +73,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "luxury-kitchen-remodeling-nj",
+    seoTitle: "Luxury Kitchen Remodeling in NJ: The $100k+ Tier | MHG",
     title: "Luxury Kitchen Remodeling in NJ: What $100k+ Actually Buys",
     date: "July 18, 2026",
     excerpt: "Past the $100,000 line, a kitchen remodel becomes a different kind of project. Here's what changes, what it buys, and what separates a luxury build from an expensive one.",
@@ -153,6 +156,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "walk-in-shower-installation-nj",
+    seoTitle: "Walk-In Shower Installation in NJ: Costs | MHG",
     title: "Walk-In Shower Installation in NJ: Cost and What to Know",
     date: "July 18, 2026",
     excerpt: "Tub-to-shower conversions and custom walk-ins are the most requested bathroom upgrade we build. Real costs, the waterproofing that matters, and the mistakes to avoid.",
@@ -200,6 +204,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "full-home-renovation-timeline-nj",
+    seoTitle: "How Long a Full Home Renovation Takes in NJ | MHG",
     title: "How Long Does a Full Home Renovation Take in NJ?",
     date: "July 18, 2026",
     excerpt: "Four months to a year, and the difference is decided before demo day. An honest phase-by-phase timeline for whole-home renovations in Central NJ.",
@@ -247,6 +252,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "new-home-construction-cost-nj",
+    seoTitle: "Cost to Build a Custom Home in NJ (2026) | MHG",
     title: "What It Costs to Build a Custom Home in NJ (2026)",
     date: "July 18, 2026",
     excerpt: "Custom home construction in Central NJ runs $250 to $400+ per square foot before land. Here's what drives the number and how the process actually works.",
@@ -281,6 +287,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "kitchen-remodel-cost",
+    seoTitle: "Kitchen Remodel Cost in NJ (2026 Prices) | MHG",
     title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
     date: "April 10, 2026",
     excerpt: "The average kitchen remodel in NJ runs $55,000 to $95,000, but the tier you land in matters more than any single number. Here are the real 2026 prices and where the money actually goes.",
@@ -393,6 +400,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-cost",
+    seoTitle: "Bathroom Remodel Cost in Hamilton, NJ (2026) | MHG",
     title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "April 3, 2026",
     excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
@@ -605,6 +613,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "choosing-a-contractor",
+    seoTitle: "How to Choose a Contractor in NJ: 3 Checks | MHG",
     title: "How to Choose a Contractor in NJ: 3 Checks Before You Sign",
     date: "March 20, 2026",
     excerpt: "Three things will tell you almost everything you need to know about a contractor in NJ. Here's what to look for and the questions that separate the pros from.",
@@ -1151,6 +1160,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-ideas-nj",
+    seoTitle: "15 Bathroom Remodel Ideas for NJ Homes (2026) | MHG",
     title: "15 Bathroom Remodel Ideas for NJ Homes in 2026",
     date: "May 11, 2026",
     canonicalSlug: "bathroom-ideas",
@@ -1244,6 +1254,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "basement-finishing-ideas",
+    seoTitle: "Basement Finishing Ideas: 12 Ways to Use It | MHG",
     title: "Basement Finishing Ideas: 12 Ways to Use Your Lower Level",
     date: "May 11, 2026",
     canonicalSlug: "basement-ideas",
@@ -1458,6 +1469,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "home-additions-cost-mercer-county-nj",
+    seoTitle: "Home Addition Cost in Mercer County NJ (2026) | MHG",
     title: "Home Addition Cost in Mercer County NJ (2026)",
     date: "May 21, 2026",
     excerpt: "What home additions actually cost in Hamilton, Princeton, Lawrenceville, and the rest of Mercer County, broken down by addition type and what drives the price.",

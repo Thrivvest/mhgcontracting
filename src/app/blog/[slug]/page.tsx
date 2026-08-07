@@ -20,7 +20,7 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const description = (post.metaDescription || post.excerpt).slice(0, 160);
     return buildSeoMetadata({
       path: `/blog/${post.canonicalSlug ?? slug}`,
-      title: `${post.title} | MHG Contracting`,
+      title: post.seoTitle ?? `${post.title} | MHG Contracting`,
       description,
       ogTitle: post.title,
       ogDescription: description,
