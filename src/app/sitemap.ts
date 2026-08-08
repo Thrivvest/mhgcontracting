@@ -98,8 +98,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.6,
   }));
 
-  // Blog post pages
-  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.map((post) => ({
+  // Blog post pages. Skip keyword-variant posts that canonicalize to another
+  // post (canonicalSlug set) so the sitemap only lists self-canonical URLs;
+  // their canonical target is already emitted as its own entry.
+  const blogPages: MetadataRoute.Sitemap = BLOG_POSTS.filter(
+    (post) => !post.canonicalSlug,
+  ).map((post) => ({
     url: `${BASE_URL}/blog/${post.slug}`,
     lastModified: now,
     changeFrequency: "monthly" as const,
