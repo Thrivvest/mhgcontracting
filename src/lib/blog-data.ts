@@ -289,7 +289,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "kitchen-remodel-cost",
     seoTitle: "Kitchen Remodel Cost in NJ (2026 Prices) | MHG",
     title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
-    date: "April 10, 2026",
+    date: "August 10, 2026",
     excerpt: "The average kitchen remodel in NJ runs $55,000 to $95,000, but the tier you land in matters more than any single number. Here are the real 2026 prices and where the money actually goes.",
     metaDescription: "The average kitchen remodel cost in NJ runs $55,000 to $95,000. Real 2026 prices by tier from a Central NJ contractor: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut.",
     category: "Kitchen",
@@ -298,6 +298,8 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Most articles on <strong>kitchen remodel cost in NJ</strong> give you a range so wide it's useless. "Between $25,000 and $150,000." Great, thanks.</p>
 
 <p>Here's what we actually see when we quote kitchens in Hamilton, Princeton, West Windsor, and the surrounding Central NJ towns. The numbers are from real projects we've built or bid in the last eighteen months.</p>
+
+<p><em>Updated August 2026 with current Central NJ labor and material pricing.</em></p>
 
 <h2>What is the average kitchen remodel cost in NJ?</h2>
 
@@ -366,7 +368,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Don't move the sink unless you really need to. Don't add a pot filler unless you actually cook enough to justify it. Don't choose a slab counter and then budget for the cheapest installer you can find. Spend the money where you'll touch it every day, which is cabinets and counters, and save where it doesn't show.</p>
 
-<p>Curious what you'll actually get back at resale? See our breakdown of <a href="/blog/remodel-roi">kitchen remodel ROI in NJ</a>.</p>
+<p>Curious what you'll actually get back at resale? See our breakdown of <a href="/blog/remodel-roi">kitchen remodel ROI in NJ</a>. Remodeling more than the kitchen? Our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a> covers current Hamilton and Central NJ pricing the same way.</p>
 
 <p>If you want a real number for your kitchen, we'll come out, measure, talk through the scope, and give you a line-item estimate. Call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate here</a>.</p>
 `,
@@ -402,7 +404,7 @@ export const BLOG_POSTS: BlogPost[] = [
     slug: "bathroom-remodel-cost",
     seoTitle: "Bathroom Remodel Cost in Hamilton, NJ (2026) | MHG",
     title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
-    date: "April 3, 2026",
+    date: "August 10, 2026",
     excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
     metaDescription: "The average bathroom remodel cost in Hamilton, NJ runs $25,000 to $40,000. See 2026 price ranges by room type from MHG Contracting, serving Hamilton, Princeton, and Central NJ.",
     category: "Bathroom",
@@ -410,7 +412,9 @@ export const BLOG_POSTS: BlogPost[] = [
     content: `
 <p>When someone in Hamilton asks what a bathroom remodel costs, the honest answer starts with a question back: which bathroom.</p>
 
-<p>A powder room and a primary suite are different projects. They use different trades, different fixtures, different tile volumes. The cost gap can be 4x or more. Here's the real breakdown for each, based on bathrooms we've finished across Hamilton, Princeton, West Windsor, and the rest of Central NJ.</p>
+<p>A powder room and a primary suite are different projects. They use different trades, different fixtures, different tile volumes. The cost gap can be 4x or more. Here's the real breakdown for each, based on <a href="/services/bathroom-renovations/hamilton-nj">bathrooms we've remodeled in Hamilton</a>, Princeton, West Windsor, and the rest of Central NJ.</p>
+
+<p><em>Updated August 2026 with current Central NJ labor and material pricing.</em></p>
 
 <h2>What is the average bathroom remodel cost in Hamilton, NJ?</h2>
 
@@ -447,7 +451,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>Primary or master bath: $45,000 to $100,000+</h2>
 
-<p>This is where the numbers stretch. A primary bath typically has a freestanding tub, a large walk-in shower with multiple fixtures, a double vanity, a dedicated toilet area, a full tile package, and often heated floors or a linen tower.</p>
+<p>This is where the numbers stretch. A primary bath typically has a freestanding tub, a <a href="/blog/walk-in-shower-installation-nj">large walk-in shower</a> with multiple fixtures, a double vanity, a dedicated toilet area, a full tile package, and often heated floors or a linen tower. We break the high end down further in our <a href="/blog/master-bathroom-remodel-nj">master bathroom remodel guide</a>.</p>
 
 <p>In our Princeton, Pennington, and Hopewell primary baths, we routinely see $55,000 to $75,000 projects with scopes that include all of the above plus smart mirrors, custom vanities, and specialty tile. In the larger Yardley PA homes and the occasional West Windsor estate rebuild, we've done primary suites north of $100,000 with custom millwork, steam showers, and designer tile packages.</p>
 
@@ -478,6 +482,8 @@ export const BLOG_POSTS: BlogPost[] = [
 <h2>What we recommend spending more on</h2>
 
 <p>Shower valves and the toilet. Cheap shower valves develop drip issues. Cheap toilets clog and run. These are daily-touch items and the step up from builder-grade to a quality mid-tier brand is a few hundred dollars that you'll appreciate every day for fifteen years.</p>
+
+<p>Planning a whole-home budget? Our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> breaks down current NJ pricing the same way.</p>
 
 <p>Ready for a real number on your project? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate</a>.</p>
 `,
