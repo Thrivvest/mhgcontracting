@@ -12,6 +12,7 @@ const BLOG_IMAGES: Record<string, string> = {
   Kitchen: "/images/projects/kitchen-01.jpg",
   Bathroom: "/images/projects/bath-01.jpg",
   Basement: "/images/projects/basement-01.jpg",
+  Remodeling: "/images/projects/fullreno-01.jpg",
   Tips: "/images/projects/fullreno-01.jpg",
   About: "/images/projects/fullreno-02.jpg",
 };

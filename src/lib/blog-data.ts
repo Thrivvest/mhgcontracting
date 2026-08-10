@@ -21,6 +21,110 @@ export interface BlogPost {
 
 export const BLOG_POSTS: BlogPost[] = [
   {
+    slug: "full-home-renovation-cost-nj",
+    seoTitle: "Full Home Renovation Cost in NJ (2026) | MHG",
+    title: "Full Home Renovation Cost in NJ (2026 Price Ranges)",
+    date: "August 10, 2026",
+    excerpt: "A whole-home renovation in Central NJ runs $150,000 to $500,000 or more, and the number is set by how far down to the studs you go. Here's the honest 2026 breakdown by tier.",
+    metaDescription: "A full home renovation in NJ runs $150,000 to $500,000+ depending on scope. See 2026 whole-house cost ranges by tier from MHG Contracting in Central NJ.",
+    category: "Remodeling",
+    readTime: "10 min read",
+    content: `
+<p>A full home renovation is not a big kitchen remodel. It is a different kind of project, with a different number attached, and the homeowners who get burned are usually the ones who walked in expecting the second and got quoted the first.</p>
+
+<p>When someone in Hamilton, Princeton, or West Windsor asks what a whole-home renovation costs, the real answer depends on one thing above all others: how far down to the studs you go. A cosmetic refresh of a 2,500 square foot house and a full gut of the same house are separated by a factor of four. Here's the honest breakdown for 2026, based on whole-home projects we've built across Central NJ.</p>
+
+<p><em>Updated August 2026 with current Central NJ labor and material pricing.</em></p>
+
+<h2>What is the average full home renovation cost in NJ?</h2>
+
+<p>Most whole-home renovations we take on in Central NJ land between <strong>$150,000 and $350,000</strong>, with full-gut projects running <strong>$300,000 to $600,000 and up</strong>. On a per-square-foot basis, a light cosmetic refresh runs $30 to $60, a mid-level full renovation runs $75 to $125, and a down-to-the-studs gut runs $150 to $250 or more. Multiply that by your square footage and you have a starting point, not a quote.</p>
+
+<p>The tier you land in is decided by scope, not by finishes. Moving walls, replacing mechanical systems, and reconfiguring the layout are what separate a $150,000 project from a $400,000 one. The tile you pick matters far less than whether the plumbing gets re-run.</p>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Renovation tier</th><th>Typical cost (Central NJ)</th><th>Scope</th></tr></thead>
+<tbody>
+<tr><td>Cosmetic whole-home refresh</td><td>$75,000 to $150,000</td><td>Paint, flooring, kitchen and bath updates, lighting and fixtures. Same layout, same systems.</td></tr>
+<tr><td>Mid-level full renovation</td><td>$150,000 to $300,000</td><td>New kitchen, two to three baths, some walls removed, updated electrical, new flooring throughout.</td></tr>
+<tr><td>Full gut and reconfigure</td><td>$300,000 to $600,000+</td><td>Down to the studs. New layout, all new HVAC, electrical, and plumbing, custom cabinetry, high-end finishes.</td></tr>
+<tr><td>Luxury or estate-level</td><td>$600,000 and up</td><td>Architectural changes, additions, top-tier finishes, smart-home integration, specialty millwork.</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>The tiers homeowners actually fall into</h2>
+
+<p><strong>Cosmetic whole-home refresh: $75,000 to $150,000.</strong> Nothing structural moves. You are updating everything you see and touch: new floors throughout, fresh paint, a refreshed kitchen, updated bathrooms, new lighting and hardware. This is the right project for a solid house with a dated interior, and it is the fastest of the four, usually two to three months.</p>
+
+<p><strong>Mid-level full renovation: $150,000 to $300,000.</strong> This is our most common whole-home job. A new kitchen, two or three renovated bathrooms, a few walls opened up to modernize the flow, updated electrical, and new flooring across the house. Some mechanical work, but not a total systems replacement. Most of our Lawrenceville, Hamilton, and Robbinsville whole-home projects sit here.</p>
+
+<p><strong>Full gut and reconfigure: $300,000 to $600,000 and up.</strong> The house comes down to the studs. Walls move, the layout changes, and the HVAC, electrical, and plumbing are re-run from scratch. Custom cabinetry, full tile packages, and higher-end finishes are standard at this level. We see these in Princeton, West Windsor, Pennington, and the larger Yardley PA homes, where the goal is a house that lives like new construction inside an existing footprint.</p>
+
+<p><strong>Luxury or estate-level: $600,000 and up.</strong> Architectural reconfiguration, an addition folded into the renovation, specialty millwork, designer tile and stone, and smart-home systems throughout. At this level the number is driven by the ambition of the design more than the square footage.</p>
+
+<h2>Where your money actually goes</h2>
+
+<p>Here's the rough split on a $250,000 mid-level whole-home renovation in Central NJ:</p>
+
+<p><strong>Kitchen: 18 to 25 percent.</strong> The kitchen is the single most expensive room in the house per square foot. Cabinetry, counters, and appliances stack fast. Our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> breaks this down on its own.</p>
+
+<p><strong>Bathrooms: 15 to 20 percent.</strong> Two or three baths, each labor-heavy and trade-heavy. The <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a> covers the per-room math.</p>
+
+<p><strong>Mechanical systems: 12 to 18 percent.</strong> HVAC, electrical, and plumbing. On a full gut this jumps, because you are replacing rather than patching. Older homes in Ewing and Trenton often need a panel upgrade, which adds $2,500 to $4,500 on its own.</p>
+
+<p><strong>Structural and framing: 10 to 15 percent.</strong> Removing load-bearing walls, adding beams, reframing for a new layout. This is where a reconfiguration earns its cost.</p>
+
+<p><strong>Flooring: 8 to 10 percent.</strong> Running consistent flooring across a whole house is a large material and labor line, especially with hardwood or large-format tile.</p>
+
+<p><strong>Interior finishes: 10 to 12 percent.</strong> Trim, interior doors, paint, built-ins, and the detail work that makes a renovated house feel finished rather than flipped.</p>
+
+<p><strong>Permits, design, and contingency: 8 to 12 percent.</strong> A whole-home renovation touches multiple permit categories, needs real design time, and deserves a genuine contingency for what hides behind the walls of a 40-year-old house.</p>
+
+<h2>Why our Princeton renovations cost more than our Hamilton ones</h2>
+
+<p>Same square footage, same scope, and the Princeton number often runs 20 to 30 percent higher. The driver is finish level and expectation. In Princeton and West Windsor, a whole-home renovation is expected to deliver custom cabinetry, full-slab stone, designer tile, and appliance packages that clear $30,000. In Hamilton, a beautifully renovated home performs and shows well with semi-custom cabinetry and strong mid-tier selections. Neither is wrong. It is a finish decision, and we walk every client through where that money does and does not pay off.</p>
+
+<h2>Cost and timeline are the same conversation</h2>
+
+<p>A whole-home renovation runs four months to a year, and the timeline and the budget move together. A phased, lived-in renovation costs more and takes longer than an empty-house gut, because we work around you. An empty house lets the trades move fast and overlap, which tightens both the schedule and the cost. We cover the full schedule in our <a href="/blog/full-home-renovation-timeline-nj">whole-home renovation timeline guide</a>, and you can see a finished project on our <a href="/portfolio/whole-home-transformation">whole-home transformation</a> in the portfolio.</p>
+
+<h2>How to keep the number in check</h2>
+
+<p>Decide early what actually needs to change. The most expensive whole-home renovations are the ones where the scope grew month by month because no one drew a hard line at the start. Keep the systems and structural work non-negotiable, since that is what you are really buying, and treat finishes as the lever you pull if the budget tightens. Do not gut a wall to move a doorway three feet unless the flow genuinely demands it. And get the full scope in a line-item estimate before you finalize financing, because a vague number becomes a change-order fight once the bank has already cut the check.</p>
+
+<p>If you are planning a whole-home renovation, the conversation starts with your house, not a price sheet. We handle the full scope in-house, from <a href="/services/full-home-renovations">full home renovations</a> to <a href="/services/additions">additions</a> and <a href="/services/new-construction">new construction</a>. Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate</a>. Our schedule books months out, so if you are targeting a start this year, now is the time to get on it.</p>
+`,
+    faqs: [
+      {
+        question: "What is the average full home renovation cost in NJ?",
+        answer:
+          'Most whole-home renovations in Central NJ run $150,000 to $350,000, with full-gut projects running $300,000 to $600,000 or more. On a per-square-foot basis, expect $30 to $60 for a cosmetic refresh, $75 to $125 for a mid-level renovation, and $150 to $250 or more for a down-to-the-studs gut. See scope details on our <a href="/services/full-home-renovations">full home renovations</a> page.',
+      },
+      {
+        question: "How much does it cost to gut and renovate a whole house in NJ?",
+        answer:
+          "A full gut and reconfigure in Central NJ runs $300,000 to $600,000 and up. That tier takes the house down to the studs, re-runs the HVAC, electrical, and plumbing, changes the layout, and uses custom cabinetry and high-end finishes throughout.",
+      },
+      {
+        question: "What is the biggest cost in a full home renovation?",
+        answer:
+          "The kitchen and bathrooms together, usually 35 to 45 percent of the total. After that, mechanical systems and any structural or layout changes are the next largest drivers. Finishes matter less to the total than most homeowners expect.",
+      },
+      {
+        question: "How long does a full home renovation take in NJ?",
+        answer:
+          "Four months to a year, depending on scope and whether the house is occupied. An empty-house gut moves faster because the trades can overlap. A phased, lived-in renovation takes longer because we work around you.",
+      },
+      {
+        question: "Is it cheaper to renovate or build new in NJ?",
+        answer:
+          "For most Central NJ homeowners, a full renovation costs less than a comparable new build, since you keep the foundation, framing, and shell. New construction runs $250 to $400 or more per square foot before land. A whole-home renovation makes sense when the existing structure and location are worth keeping.",
+      },
+    ],
+  },
+  {
     slug: "home-remodeling-cost-hamilton-nj",
     title: "Home Remodeling Cost in Hamilton, NJ",
     date: "July 18, 2026",
@@ -241,7 +345,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>For a phased renovation, often yes, and we plan phases so a working kitchen or bath exists at all times. For a true gut renovation, no, and pretending otherwise makes the project slower and your life worse. Budgeting a rental for the construction window is frequently cheaper than the extended timeline of working around a family in the house.</p>
 
-<p>A whole-home renovation at this scale runs $150,000 to $500,000 and up in our market. For the money side, start with our <a href="/blog/home-remodeling-cost-hamilton-nj">Hamilton remodeling cost guide</a> and <a href="/blog/remodel-roi">renovation ROI breakdown</a>. To see the outcome of a project like this, look at our <a href="/portfolio/whole-home-transformation">whole-home transformation</a>.</p>
+<p>A whole-home renovation at this scale runs $150,000 to $500,000 and up in our market. For the money side, start with our <a href="/blog/full-home-renovation-cost-nj">full home renovation cost guide</a>, then dig into the <a href="/blog/home-remodeling-cost-hamilton-nj">Hamilton remodeling cost guide</a> and <a href="/blog/remodel-roi">renovation ROI breakdown</a>. To see the outcome of a project like this, look at our <a href="/portfolio/whole-home-transformation">whole-home transformation</a>.</p>
 
 <p>If you're targeting a spring start, the design phase should begin in the fall. <a href="/contact">Request a consultation</a> and we'll map your project's actual timeline, not the optimistic version.</p>`,
     faqs: [
