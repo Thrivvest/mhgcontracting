@@ -391,7 +391,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "kitchen-remodel-cost",
-    seoTitle: "Kitchen Remodel Cost in NJ (2026 Prices) | MHG",
+    seoTitle: "Kitchen Remodel Cost in NJ (2026): $55K-$95K",
     title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
     date: "August 10, 2026",
     excerpt: "The average kitchen remodel in NJ runs $55,000 to $95,000, but the tier you land in matters more than any single number. Here are the real 2026 prices and where the money actually goes.",
@@ -506,11 +506,11 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-cost",
-    seoTitle: "Bathroom Remodel Cost in Hamilton, NJ (2026) | MHG",
+    seoTitle: "Bathroom Remodel Cost Hamilton, NJ (2026): $25K-$40K",
     title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "August 10, 2026",
     excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
-    metaDescription: "The average bathroom remodel cost in Hamilton, NJ runs $25,000 to $40,000. See 2026 price ranges by room type from MHG Contracting, serving Hamilton, Princeton, and Central NJ.",
+    metaDescription: "A full bathroom remodel in Hamilton, NJ runs $25,000 to $40,000, with the average project landing around $30,000. See 2026 prices by bathroom type from MHG Contracting.",
     category: "Bathroom",
     readTime: "5 min read",
     content: `
@@ -592,6 +592,11 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Ready for a real number on your project? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate</a>.</p>
 `,
     faqs: [
+      {
+        question: "How much does a full bathroom remodel cost in Hamilton, NJ?",
+        answer:
+          'A full bathroom remodel in Hamilton, NJ runs $25,000 to $40,000. That covers every fixture and surface: a tub and shower combo or standalone shower, toilet, single vanity, ventilation, and a full tile surround. The gap between $28,000 and $40,000 comes down to tile choice and the shower system. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for scope details.',
+      },
       {
         question: "What is the average bathroom remodel cost in Hamilton, NJ?",
         answer:
