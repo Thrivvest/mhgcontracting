@@ -395,7 +395,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
     date: "August 10, 2026",
     excerpt: "The average kitchen remodel in NJ runs $55,000 to $95,000, but the tier you land in matters more than any single number. Here are the real 2026 prices and where the money actually goes.",
-    metaDescription: "The average kitchen remodel cost in NJ runs $55,000 to $95,000. Real 2026 prices by tier from a Central NJ contractor: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut.",
+    metaDescription: "The average kitchen remodel cost in NJ runs $55,000 to $95,000. Real 2026 prices by tier: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut.",
     category: "Kitchen",
     readTime: "8 min read",
     content: `
@@ -510,7 +510,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "August 10, 2026",
     excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
-    metaDescription: "A full bathroom remodel in Hamilton, NJ runs $25,000 to $40,000, with the average project landing around $30,000. See 2026 prices by bathroom type from MHG Contracting.",
+    metaDescription: "A full bathroom remodel in Hamilton, NJ runs $25,000 to $40,000, average around $30,000. See 2026 prices by bathroom type from MHG Contracting.",
     category: "Bathroom",
     readTime: "5 min read",
     content: `
