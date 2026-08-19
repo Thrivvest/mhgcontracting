@@ -7,9 +7,10 @@
  */
 
 import type { Service } from "@/lib/data";
-import type { BlogPost } from "@/lib/blog-data";
+import { BLOG_POSTS, type BlogPost } from "@/lib/blog-data";
 import type { PortfolioProject } from "@/lib/data";
 import type { AreaPage } from "@/lib/area-pages-data";
+import { SERVICE_BLOG_MAP } from "@/lib/seo-utils";
 
 const COMPANY = "MHG Contracting";
 const LOCATION = "Hamilton, NJ";
@@ -26,6 +27,16 @@ const SERVICE_TYPE_LABELS: Record<string, string> = {
   "full-renovation": "Full Home Renovation",
   addition: "Home Addition",
   "new-construction": "New Construction",
+};
+
+/**
+ * Anchor text for related cost-guide links, matched to the striking-distance
+ * GSC query each post is closest to ranking for. Falls back to the post
+ * title when a service's related post has no override.
+ */
+const RELATED_BLOG_ANCHOR_TEXT: Record<string, string> = {
+  "kitchen-remodel-cost": "kitchen remodel cost in NJ",
+  "bathroom-remodel-cost": "average bathroom remodel cost in Hamilton, NJ",
 };
 
 /**
@@ -48,6 +59,21 @@ export function generateServiceSeoContent(service: Service): string {
     (city) => `${service.name} in ${city}`
   ).join(", ");
 
+  const relatedPosts = (SERVICE_BLOG_MAP[service.slug] ?? [])
+    .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+    .filter((p): p is BlogPost => Boolean(p));
+
+  const costGuideSection = relatedPosts.length
+    ? `
+      <h2>${service.name} Cost Guides</h2>
+      <p>${relatedPosts
+        .map(
+          (p) =>
+            `<a href="/blog/${p.slug}">${RELATED_BLOG_ANCHOR_TEXT[p.slug] ?? p.title}</a>`
+        )
+        .join(" &middot; ")}</p>`
+    : "";
+
   return `
     <article>
       <h2>${service.name} by ${COMPANY} | Central New Jersey</h2>
@@ -61,6 +87,7 @@ export function generateServiceSeoContent(service: Service): string {
 
       <h2>Frequently Asked Questions: ${service.name}</h2>
       ${faqSection}
+      ${costGuideSection}
 
       <h2>Service Areas for ${service.name}</h2>
       <p>${COMPANY} provides ${service.name.toLowerCase()} throughout Central New Jersey, including ${cityMentions}. Contact us at ${PHONE} for a free estimate.</p>
