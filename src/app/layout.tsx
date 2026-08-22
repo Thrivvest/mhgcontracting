@@ -5,6 +5,7 @@ import PageTransition from "@/components/animations/PageTransition";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import EventTracker from "@/components/analytics/EventTracker";
+import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 import "./globals.css";
 
 // ─── Font Configuration ─────────────────────────────────
@@ -317,6 +318,7 @@ export default function RootLayout({
           </PageTransition>
           <Footer />
         </SmoothScroll>
+        <StickyMobileCTA />
       </body>
     </html>
   );

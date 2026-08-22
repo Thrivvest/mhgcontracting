@@ -5,6 +5,7 @@ import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { type BlogPost, BLOG_POSTS } from "@/lib/blog-data";
+import LeadForm from "@/components/sections/LeadForm";
 
 interface BlogPostContentProps {
   post: BlogPost;
@@ -103,6 +104,19 @@ export default function BlogPostContent({ post }: BlogPostContentProps) {
           </div>
         </section>
       )}
+
+      {/* Lead form */}
+      <section className="py-20 md:py-28 px-6 lg:px-10 bg-[#F7F6F4]">
+        <div className="max-w-[720px] mx-auto">
+          <FadeIn>
+            <LeadForm
+              source={`mhgcon.com /blog/${post.slug} embed`}
+              heading="Get a Real Number for Your Project"
+              subheading="Reading about costs is a start. A free in-home estimate is a real answer, within 24 hours."
+            />
+          </FadeIn>
+        </div>
+      </section>
 
       {/* Related Posts */}
       <section className="py-24 md:py-32 px-6 lg:px-10 bg-background-alt">

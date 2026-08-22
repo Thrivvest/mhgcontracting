@@ -7,6 +7,17 @@ import FadeIn from "@/components/animations/FadeIn";
 import { type Service, getProjectsByType, type ServiceType, services } from "@/lib/data";
 import { getAreaPagesByService } from "@/lib/area-pages-data";
 import { company } from "@/lib/constants";
+import LeadForm from "@/components/sections/LeadForm";
+
+const PROJECT_TYPE_MAP: Record<string, string> = {
+  "kitchen-renovations": "Kitchen Renovation",
+  "bathroom-renovations": "Bathroom Renovation",
+  "basement-finishing": "Basement Finishing",
+  "full-home-renovations": "Full Home Renovation",
+  additions: "Addition",
+  "new-construction": "New Construction",
+  "general-contracting": "Other",
+};
 
 const SERVICE_TYPE_MAP: Record<string, ServiceType> = {
   "general-contracting": "full-renovation",
@@ -242,6 +253,20 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
               </FadeIn>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Lead form */}
+      <section className="py-20 md:py-28 px-6 lg:px-10 bg-[#F7F6F4]">
+        <div className="max-w-[720px] mx-auto">
+          <FadeIn>
+            <LeadForm
+              source={`mhgcon.com /services/${service.slug} embed`}
+              defaultProjectType={PROJECT_TYPE_MAP[service.slug] ?? ""}
+              heading={`Get a Free ${service.name.replace(/s$/, "")} Estimate`}
+              subheading="Tell us about your project. We respond within 24 hours, and the estimate is free."
+            />
+          </FadeIn>
         </div>
       </section>
 

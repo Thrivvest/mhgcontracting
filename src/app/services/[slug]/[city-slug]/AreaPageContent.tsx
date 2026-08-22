@@ -12,6 +12,16 @@ import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { type AreaPage, getAreaPagesByCity, getAreaPagesByService } from "@/lib/area-pages-data";
 import { company } from "@/lib/constants";
+import LeadForm from "@/components/sections/LeadForm";
+
+const AREA_PROJECT_TYPE_MAP: Record<string, string> = {
+  "kitchen-renovations": "Kitchen Renovation",
+  "bathroom-renovations": "Bathroom Renovation",
+  "basement-finishing": "Basement Finishing",
+  "full-home-renovations": "Full Home Renovation",
+  additions: "Addition",
+  "new-construction": "New Construction",
+};
 
 const SERVICE_HERO_MAP: Record<string, string> = {
   "kitchen-renovations": "kitchen",
@@ -189,6 +199,20 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
           </div>
         </section>
       )}
+
+      {/* Lead form */}
+      <section className="py-20 md:py-28 px-6 lg:px-10 bg-[#F7F6F4]">
+        <div className="max-w-[720px] mx-auto">
+          <FadeIn>
+            <LeadForm
+              source={`mhgcon.com /services/${page.serviceSlug}/${page.citySlug} embed`}
+              defaultProjectType={AREA_PROJECT_TYPE_MAP[page.serviceSlug] ?? ""}
+              heading={`Get a Free Estimate in ${page.cityName}`}
+              subheading={`Planning ${page.serviceName.toLowerCase()} in ${page.cityName}? We respond within 24 hours, and the estimate is free.`}
+            />
+          </FadeIn>
+        </div>
+      </section>
 
       {/* CTA */}
       <section
