@@ -7,7 +7,7 @@ export const metadata: Metadata = buildSeoMetadata({
   path: "/about",
   title: "About MHG Contracting | Family-Owned Hamilton NJ Builder",
   description:
-    "Family-owned residential contracting in Hamilton, NJ led by Shahzeb Malik. Kitchen, bath, basement, and full-home renovations built with care across Central NJ.",
+    "Family-owned contracting in Hamilton, NJ led by Shahzeb Malik. Rated 4.9 stars across 28 Google reviews. Kitchens, baths, basements, and full-home renovations.",
   ogTitle: "About MHG Contracting | Family-Owned Renovations",
   ogImageAlt: "About MHG Contracting",
 });

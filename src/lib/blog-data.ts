@@ -127,9 +127,10 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "home-remodeling-cost-hamilton-nj",
     title: "Home Remodeling Cost in Hamilton, NJ",
+    seoTitle: "Hamilton, NJ Home Remodeling Costs and Prices (2026 Guide)",
     date: "July 18, 2026",
     excerpt: "We're based in Hamilton and quote remodels here every week. Real numbers by project type, and why Hamilton prices differ from the Princeton figures you see online.",
-    metaDescription: "Home remodeling costs in Hamilton, NJ from a local contractor: kitchens $55-95k, bathrooms $25-60k, basements $40-90k. Real 2026 numbers by project type.",
+    metaDescription: "What remodeling actually costs in Hamilton in 2026: kitchens $55K-$95K, baths $25K-$60K, basements $40K-$90K. From a contractor based in Hamilton, NJ.",
     category: "Remodeling",
     readTime: "6 min read",
     content: `
@@ -506,11 +507,11 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-cost",
-    seoTitle: "Bathroom Remodel Cost Hamilton, NJ (2026): $25K-$40K",
+    seoTitle: "Average Bathroom Remodel Cost in Hamilton, NJ (2026): $30K",
     title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "August 10, 2026",
     excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
-    metaDescription: "A full bathroom remodel in Hamilton, NJ runs $25,000 to $40,000, with the average project landing around $30,000. See 2026 prices by bathroom type from MHG Contracting.",
+    metaDescription: "The average bathroom remodel in Hamilton, NJ costs about $30,000. Full baths run $25K to $40K, primary suites $45K+. Real 2026 pricing from MHG Contracting.",
     category: "Bathroom",
     readTime: "5 min read",
     content: `
@@ -1080,9 +1081,10 @@ export const BLOG_POSTS: BlogPost[] = [
   {
     slug: "permits-nj",
     title: "Do You Need a Permit in NJ?",
+    seoTitle: "Do You Need a Permit to Remodel in NJ? (2026 Rules) | MHG",
     date: "February 13, 2026",
     excerpt: "The short answer is probably yes. The longer answer matters because unpermitted work will haunt you at resale. Here's what NJ actually requires.",
-    metaDescription: "NJ home renovation permits explained. When you need one, who pulls them, what happens if you skip them. From MHG Contracting in Hamilton, NJ.",
+    metaDescription: "Kitchen remodels, bathrooms, additions: what needs a permit in NJ, who pulls it, and what unpermitted work costs you at resale. From MHG Contracting, Hamilton NJ.",
     category: "Tips",
     readTime: "5 min read",
     content: `
