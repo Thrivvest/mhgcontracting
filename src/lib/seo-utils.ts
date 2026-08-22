@@ -107,7 +107,7 @@ export function robotsDirective(index = true, follow = true) {
 
 export const SERVICE_BLOG_MAP: Record<string, string[]> = {
   "kitchen-renovations": ["kitchen-remodel-cost", "kitchen-trends", "kitchen-timeline"],
-  "bathroom-renovations": ["bathroom-remodel-cost", "bathroom-ideas"],
+  "bathroom-renovations": ["bathroom-remodel-cost", "bathroom-remodel-cost-nj", "bathroom-ideas"],
   "basement-finishing": ["basement-finishing-cost", "basement-ideas"],
   "full-home-renovations": ["choosing-a-contractor", "remodel-roi", "general-contractor-vs-handyman-hamilton-nj"],
   additions: ["home-additions-cost-mercer-county-nj", "permits-nj", "remodel-roi"],
@@ -117,6 +117,7 @@ export const SERVICE_BLOG_MAP: Record<string, string[]> = {
 export const BLOG_SERVICE_MAP: Record<string, string> = {
   "kitchen-remodel-cost": "/services/kitchen-renovations",
   "bathroom-remodel-cost": "/services/bathroom-renovations",
+  "bathroom-remodel-cost-nj": "/services/bathroom-renovations",
   "basement-finishing-cost": "/services/basement-finishing",
   "choosing-a-contractor": "/services",
   "kitchen-trends": "/services/kitchen-renovations",

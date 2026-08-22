@@ -588,7 +588,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Shower valves and the toilet. Cheap shower valves develop drip issues. Cheap toilets clog and run. These are daily-touch items and the step up from builder-grade to a quality mid-tier brand is a few hundred dollars that you'll appreciate every day for fifteen years.</p>
 
-<p>Planning a whole-home budget? Our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> breaks down current NJ pricing the same way.</p>
+<p>Planning a whole-home budget? Our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> breaks down current NJ pricing the same way. Outside the Hamilton area? Our <a href="/blog/bathroom-remodel-cost-nj">statewide NJ bathroom cost guide</a> covers how prices shift across North, Central, and South Jersey.</p>
 
 <p>Ready for a real number on your project? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate</a>.</p>
 `,
@@ -622,6 +622,82 @@ export const BLOG_POSTS: BlogPost[] = [
         question: "What should I never cut corners on in a bathroom?",
         answer:
           "Waterproofing and the shower valve. Proper membrane, pan build, and slope prevent a five-figure repair down the road, and a quality valve avoids drip issues. If a quote does not explain how the shower is waterproofed, that is a red flag.",
+      },
+    ],
+  },
+  {
+    slug: "bathroom-remodel-cost-nj",
+    seoTitle: "Bathroom Remodel Cost in NJ (2026): $12K to $100K+ by Type",
+    title: "Average Bathroom Remodel Cost in NJ (2026 Price Breakdown)",
+    date: "August 22, 2026",
+    excerpt: "A full bathroom remodel in New Jersey runs $25,000 to $40,000 in 2026, but where you live in the state and which bathroom you're touching swing that number hard. Here's the real statewide breakdown.",
+    metaDescription: "The average bathroom remodel in NJ runs $25,000 to $40,000 for a full bath. Small baths from $12K, primary suites $45K to $100K+. Real 2026 numbers by room type.",
+    category: "Bathroom",
+    readTime: "6 min read",
+    content: `
+<p>Search for bathroom remodel cost in New Jersey and you'll find national averages that were calculated in Ohio. NJ labor rates, NJ permit requirements, and NJ housing stock make those numbers useless here. These are the prices we actually quote and build at in 2026.</p>
+
+<h2>What does a bathroom remodel cost in NJ?</h2>
+
+<p>Across New Jersey, a full bathroom remodel runs <strong>$25,000 to $40,000</strong> in 2026, with the statewide average landing near <strong>$30,000</strong>. Small bathrooms and powder rooms run $12,000 to $20,000. Primary and master suites run $45,000 to $100,000 and beyond. The single biggest predictor is not square footage. It is which bathroom you are remodeling and what tile and shower system you choose.</p>
+
+<div class="cost-table-wrap" style="overflow-x:auto;margin:2rem 0;">
+<table class="cost-table">
+<thead><tr><th>Bathroom type</th><th>2026 NJ cost range</th><th>What's included</th></tr></thead>
+<tbody>
+<tr><td>Powder room / half bath</td><td>$12,000 to $20,000</td><td>Toilet, vanity, mirror, lighting, flooring, feature wall</td></tr>
+<tr><td>Full hall or guest bath</td><td>$25,000 to $40,000</td><td>Tub or shower, toilet, vanity, full tile surround, ventilation</td></tr>
+<tr><td>Primary / master suite</td><td>$45,000 to $100,000+</td><td>Walk-in shower, freestanding tub, double vanity, heated floors, full tile package</td></tr>
+</tbody>
+</table>
+</div>
+
+<h2>Prices shift by region inside NJ</h2>
+
+<p>New Jersey is not one market. In Bergen, Essex, and the North Jersey commuter towns, expect quotes 10 to 20 percent above the ranges here, driven by labor rates and parking-and-access logistics. South Jersey tends to come in near the bottom of each range. Central NJ, where we work, sits in the middle: Princeton and Hopewell trend higher on finish selections, while Hamilton, Ewing, and East Windsor projects usually land close to the state average. If you're in our area, our <a href="/blog/bathroom-remodel-cost">Hamilton bathroom cost guide</a> has the town-level detail.</p>
+
+<h2>The three choices that move your number most</h2>
+
+<p><strong>Tile scope.</strong> Floor-only tile with an acrylic surround sits at the bottom of every range. Floor-to-ceiling porcelain with a niche and bench adds $4,000 to $8,000 in material and labor.</p>
+
+<p><strong>The shower system.</strong> A single valve with a tub spout is baseline. A thermostatic system with a rainhead, handheld, and body sprays adds $2,000 to $5,000 before tile. If you're going frameless glass, budget another $1,500 to $3,000. We covered the full walk-in build in our <a href="/blog/walk-in-shower-installation-nj">walk-in shower installation guide</a>.</p>
+
+<p><strong>Moving plumbing.</strong> Keeping the layout saves real money. Relocating a toilet or shower drain adds plumbing labor, floor rework, and sometimes framing. It's rarely a dealbreaker, but it's the difference between the low and middle of a range.</p>
+
+<h2>What NJ requires that national guides skip</h2>
+
+<p>New Jersey requires permits for plumbing, electrical, and structural work in a bathroom remodel, and inspectors check waterproofing details that cut-rate crews skip. Budget 5 to 8 percent for permits and contingency. Unpermitted bathroom work surfaces at resale, every time. Our <a href="/blog/permits-nj">NJ permit guide</a> covers exactly what needs one.</p>
+
+<h2>Where the money goes in a $30,000 NJ bath</h2>
+
+<p>Labor takes 30 to 35 percent, because bathrooms stack more trades per square foot than any room in the house. Tile and stone take 20 to 25 percent. Fixtures run 15 to 20 percent. Plumbing and electrical rough-in take 10 to 15 percent, and the vanity, counters, permits, and contingency fill out the rest.</p>
+
+<h2>Planning a bigger project?</h2>
+
+<p>If the bathroom is part of a whole-house plan, read our <a href="/blog/full-home-renovation-cost-nj">full home renovation cost guide</a> for how bathrooms fit a six-figure budget, or our <a href="/blog/master-bathroom-remodel-nj">master bathroom guide</a> for the top tier. To see our finished work, browse the <a href="/portfolio">portfolio</a>.</p>
+
+<p>Ready for a real number instead of a range? MHG Contracting remodels bathrooms across Central NJ from our home base in Hamilton. Call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate</a>.</p>
+`,
+    faqs: [
+      {
+        question: "What is the average cost of a bathroom remodel in NJ?",
+        answer:
+          'The average full bathroom remodel in New Jersey costs $25,000 to $40,000 in 2026, with most projects landing near $30,000. Powder rooms run $12,000 to $20,000 and primary suites run $45,000 to $100,000 or more. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for what each scope includes.',
+      },
+      {
+        question: "Why do NJ bathroom remodels cost more than national averages?",
+        answer:
+          "Labor rates, mandatory permits and inspections, and older housing stock. NJ requires permitted plumbing and electrical work with inspected waterproofing, and many NJ homes need subfloor or vent stack corrections that national averages do not price in.",
+      },
+      {
+        question: "Is a bathroom remodel cheaper in South Jersey than North Jersey?",
+        answer:
+          "Generally yes. North Jersey quotes trend 10 to 20 percent above the state average on labor alone. South Jersey lands near the bottom of each range, and Central NJ sits in the middle.",
+      },
+      {
+        question: "How long does a bathroom remodel take in NJ?",
+        answer:
+          "A full bathroom remodel takes 3 to 5 weeks including inspections. Powder rooms run 2 to 3 weeks. Primary suite remodels with layout changes can run 6 to 8 weeks.",
       },
     ],
   },
@@ -1586,8 +1662,8 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "home-additions-cost-mercer-county-nj",
-    seoTitle: "Home Addition Cost in Mercer County NJ (2026) | MHG",
-    title: "Home Addition Cost in Mercer County NJ (2026)",
+    seoTitle: "Home Addition Cost in NJ (2026): Mercer County Numbers",
+    title: "Home Addition Cost in NJ (2026): Real Mercer County Numbers",
     date: "May 21, 2026",
     excerpt: "What home additions actually cost in Hamilton, Princeton, Lawrenceville, and the rest of Mercer County, broken down by addition type and what drives the price.",
     metaDescription: "Real home addition cost in Mercer County NJ for 2026. Single-story, two-story, bump-outs, sunrooms, and garage conversions. From MHG Contracting in Hamilton.",

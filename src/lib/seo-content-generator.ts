@@ -10,6 +10,7 @@ import type { Service } from "@/lib/data";
 import type { BlogPost } from "@/lib/blog-data";
 import type { PortfolioProject } from "@/lib/data";
 import type { AreaPage } from "@/lib/area-pages-data";
+import { AREA_PAGES, CITIES as AREA_CITIES } from "@/lib/area-pages-data";
 
 const COMPANY = "MHG Contracting";
 const LOCATION = "Hamilton, NJ";
@@ -44,9 +45,18 @@ export function generateServiceSeoContent(service: Service): string {
     )
     .join("\n");
 
-  const cityMentions = CITIES.map(
-    (city) => `${service.name} in ${city}`
-  ).join(", ");
+  const cityLinks = AREA_PAGES.filter((p) => p.serviceSlug === service.slug).map((p) => {
+    const city = AREA_CITIES.find((c) => c.slug === p.citySlug);
+    const label = city ? `${city.name}, ${city.stateAbbr}` : p.citySlug;
+    return `<a href="/services/${service.slug}/${p.citySlug}">${service.name} in ${label}</a>`;
+  });
+  const cityMentions = cityLinks.length
+    ? cityLinks.join(", ")
+    : CITIES.map((city) => `${service.name} in ${city}`).join(", ");
+
+  const costGuideBlock = service.costGuideSlug
+    ? `<p>Budgeting first? Our <a href="/blog/${service.costGuideSlug}">${service.costGuideLabel ?? "cost guide"}</a> breaks down real Central NJ pricing line by line.</p>`
+    : "";
 
   return `
     <article>
@@ -58,6 +68,7 @@ export function generateServiceSeoContent(service: Service): string {
 
       <h2>What's Included in Our ${service.name}</h2>
       <ul>${scopeList}</ul>
+      ${costGuideBlock}
 
       <h2>Frequently Asked Questions: ${service.name}</h2>
       ${faqSection}
@@ -68,7 +79,7 @@ export function generateServiceSeoContent(service: Service): string {
       <h2>Why Choose ${COMPANY} for Your ${service.name}?</h2>
       <p>${COMPANY} is a family-owned residential contracting company based in ${LOCATION}. We bring a hands-on approach to every project. From the initial consultation through project completion, you work directly with the people building your space. Our commitment to quality craftsmanship, transparent communication, and fair pricing has earned us the trust of homeowners across Central New Jersey.</p>
 
-      <p>Ready to start your ${service.name.toLowerCase()} project? Call ${COMPANY} at ${PHONE} or visit our website to schedule your free in-home consultation.</p>
+      <p>Ready to start your ${service.name.toLowerCase()} project? Call ${COMPANY} at ${PHONE}, read our <a href="/reviews">4.9-star Google reviews</a>, browse <a href="/portfolio">completed projects</a>, or <a href="/contact">request a free in-home estimate</a>.</p>
     </article>
   `;
 }

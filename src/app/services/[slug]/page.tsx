@@ -42,6 +42,19 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
     { name: service.name, href: `/services/${slug}` },
   ]);
 
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: service.faqs.map((faq) => ({
+      "@type": "Question",
+      name: faq.question,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: faq.answer.replace(/<[^>]+>/g, ""),
+      },
+    })),
+  };
+
   const seoHtml = generateServiceSeoContent(service);
 
   return (
@@ -49,6 +62,10 @@ export default async function ServicePage({ params }: { params: Promise<{ slug: 
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
       />
       <SeoPrerender>
         <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
