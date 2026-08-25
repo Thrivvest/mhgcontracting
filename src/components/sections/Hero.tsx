@@ -90,10 +90,9 @@ export default function Hero() {
           </LineReveal>
 
           <FadeIn y={20} delay={0.6}>
-            <p className="font-body text-lg text-white/70 max-w-xl mx-auto lg:mx-0 mb-6 leading-relaxed">
-              Family-owned residential contracting serving Central New Jersey.
-              Kitchen renovations, bathroom remodels, basement finishing, and
-              more.
+            <p className="font-body text-lg text-white/70 max-w-md mx-auto lg:mx-0 mb-6 leading-relaxed">
+              Family-owned kitchen, bathroom, and basement remodeling across
+              Central New Jersey.
             </p>
 
             <div className="flex flex-wrap justify-center lg:justify-start items-center gap-x-4 gap-y-2 mb-6 font-body text-sm text-white/80">
@@ -111,7 +110,7 @@ export default function Hero() {
 
             <a
               href={company.phoneHref}
-              className="inline-flex items-center gap-2 font-body text-sm font-medium text-white hover:text-white/80 transition-colors"
+              className="hidden lg:inline-flex items-center gap-2 font-body text-sm font-medium text-white hover:text-white/80 transition-colors"
             >
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                 <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" />
@@ -121,8 +120,9 @@ export default function Hero() {
           </FadeIn>
         </div>
 
-        {/* Right: estimate form (same /api/contact -> GHL + n8n path as every embed) */}
-        <div className="min-w-0 w-full">
+        {/* Right: estimate form on desktop only. On mobile the form opens as a
+            bottom sheet from the sticky "Free Estimate" bar (MobileEstimateSheet). */}
+        <div className="hidden lg:block min-w-0 w-full">
           <FadeIn y={20} delay={0.5}>
             <LeadForm
               source="mhgcon.com homepage hero"
