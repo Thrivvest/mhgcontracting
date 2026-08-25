@@ -78,9 +78,9 @@ export default function Hero() {
 
       {/* Content - two-column split: message left, estimate form right.
           pt-24 clears the fixed header; stacks to a single column on mobile. */}
-      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-28 pb-16 lg:py-24 grid lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="relative z-10 w-full max-w-7xl mx-auto px-6 pt-28 pb-16 lg:py-24 grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
         {/* Left: message + trust */}
-        <div className="text-center lg:text-left">
+        <div className="min-w-0 text-center lg:text-left">
           <LineReveal trigger="load" delay={0.3} className="mb-5">
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-6xl xl:text-[4.25rem] font-bold text-white leading-[1.05] tracking-tight">
               Building With Pride,
@@ -122,14 +122,16 @@ export default function Hero() {
         </div>
 
         {/* Right: estimate form (same /api/contact -> GHL + n8n path as every embed) */}
-        <FadeIn y={20} delay={0.5}>
-          <LeadForm
-            source="mhgcon.com homepage hero"
-            heading={company.ctaPrimary}
-            subheading="Tell us about your project. We respond within 24 hours."
-            theme="light"
-          />
-        </FadeIn>
+        <div className="min-w-0 w-full">
+          <FadeIn y={20} delay={0.5}>
+            <LeadForm
+              source="mhgcon.com homepage hero"
+              heading={company.ctaPrimary}
+              subheading="Tell us about your project. We respond within 24 hours."
+              theme="light"
+            />
+          </FadeIn>
+        </div>
       </div>
     </section>
   );
