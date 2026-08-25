@@ -396,7 +396,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
     date: "August 10, 2026",
     excerpt: "The average kitchen remodel in NJ runs $55,000 to $95,000, but the tier you land in matters more than any single number. Here are the real 2026 prices and where the money actually goes.",
-    metaDescription: "The average kitchen remodel cost in NJ runs $55,000 to $95,000. Real 2026 prices by tier from a Central NJ contractor: $25-45k refresh, $55-95k mid-range, $110-225k+ full gut.",
+    metaDescription: "Kitchen remodel cost in NJ runs $55,000 to $95,000 on average. Real 2026 prices by tier, refresh, mid-range, or full gut, from a Central NJ contractor.",
     category: "Kitchen",
     readTime: "8 min read",
     content: `
@@ -503,15 +503,20 @@ export const BLOG_POSTS: BlogPost[] = [
         answer:
           "Six to ten weeks for most projects. Semi-custom cabinets carry a six to ten week lead time, so the cabinet order should be placed before demo begins, not after.",
       },
+      {
+        question: "What are the best ways to keep a kitchen remodel budget in check in NJ?",
+        answer:
+          "Keep the existing footprint. Moving the sink or the range means new plumbing and gas runs, and that cost adds up fast. Skip a pot filler unless you actually cook enough to justify it. Spend on cabinets and counters, the things you touch every day, and save on anything that doesn't show. Get your cabinet order in before demo starts so the six to ten week lead time doesn't stall the job.",
+      },
     ],
   },
   {
     slug: "bathroom-remodel-cost",
-    seoTitle: "Average Bathroom Remodel Cost in Hamilton, NJ (2026): $30K",
+    seoTitle: "Average Bathroom Remodel Cost Hamilton, NJ (2026)",
     title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "August 10, 2026",
     excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
-    metaDescription: "The average bathroom remodel in Hamilton, NJ costs about $30,000. Full baths run $25K to $40K, primary suites $45K+. Real 2026 pricing from MHG Contracting.",
+    metaDescription: "Bathroom remodel cost in Hamilton, NJ: $12K-$20K small, $25K-$40K full, $45K-$100K+ primary. Average lands around $30K. 2026 prices from MHG Contracting.",
     category: "Bathroom",
     readTime: "5 min read",
     content: `
@@ -622,6 +627,11 @@ export const BLOG_POSTS: BlogPost[] = [
         question: "What should I never cut corners on in a bathroom?",
         answer:
           "Waterproofing and the shower valve. Proper membrane, pan build, and slope prevent a five-figure repair down the road, and a quality valve avoids drip issues. If a quote does not explain how the shower is waterproofed, that is a red flag.",
+      },
+      {
+        question: "How much does a small bathroom remodel cost in Hamilton, NJ?",
+        answer:
+          'A small bathroom or powder room in Hamilton runs $12,000 to $20,000. That covers a toilet, vanity, mirror, lighting, new flooring, and often a feature wall, with no tub or shower to build around. Most small bathrooms take two to three weeks. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for scope details.',
       },
     ],
   },

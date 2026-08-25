@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { portfolioProjects, getProjectBySlug } from "@/lib/data";
 import ProjectDetail from "./ProjectDetail";
-import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata, truncateAtWord } from "@/lib/seo-utils";
 import SeoPrerender from "@/components/seo/SeoPrerender";
 import { generatePortfolioSeoContent } from "@/lib/seo-content-generator";
 
@@ -19,7 +19,7 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const project = getProjectBySlug(slug);
     if (!project) return { title: "Project Not Found" };
 
-    const desc = project.metaDescription || (project.description || project.shortDescription || "").slice(0, 160);
+    const desc = project.metaDescription || truncateAtWord(project.description || project.shortDescription || "", 160);
     return buildSeoMetadata({
       path: `/portfolio/${slug}`,
       title: `${project.title} | MHG Contracting Portfolio`,

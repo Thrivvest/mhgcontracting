@@ -2,7 +2,7 @@ import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import BlogPostContent from "./BlogPostContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
-import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
+import { buildBreadcrumbSchema, buildSeoMetadata, truncateAtWord } from "@/lib/seo-utils";
 import SeoPrerender from "@/components/seo/SeoPrerender";
 import { generateBlogSeoContent } from "@/lib/seo-content-generator";
 
@@ -17,7 +17,7 @@ export function generateMetadata({ params }: { params: Promise<{ slug: string }>
     const post = BLOG_POSTS.find((p) => p.slug === slug);
     if (!post) return { title: "Post Not Found" };
 
-    const description = (post.metaDescription || post.excerpt).slice(0, 160);
+    const description = truncateAtWord(post.metaDescription || post.excerpt, 160);
     return buildSeoMetadata({
       path: `/blog/${post.canonicalSlug ?? slug}`,
       title: post.seoTitle ?? `${post.title} | MHG Contracting`,

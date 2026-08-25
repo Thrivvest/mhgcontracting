@@ -97,6 +97,21 @@ export function buildBreadcrumbSchema(items: BreadcrumbItem[]) {
   };
 }
 
+/**
+ * Truncate to a max length without cutting a word in half. Falls back to a
+ * hard clip only if there's no whitespace to break on. Used anywhere a meta
+ * description is derived from a longer field (excerpt, body copy) so a
+ * long source string never renders as a broken mid-word snippet in search
+ * results.
+ */
+export function truncateAtWord(text: string, maxLength: number): string {
+  if (text.length <= maxLength) return text;
+  const clipped = text.slice(0, maxLength - 3);
+  const lastSpace = clipped.lastIndexOf(" ");
+  const base = lastSpace > 0 ? clipped.slice(0, lastSpace) : clipped;
+  return `${base.replace(/[,;:.\-]+$/, "")}...`;
+}
+
 export function robotsDirective(index = true, follow = true) {
   return {
     index,
