@@ -6,6 +6,7 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import EventTracker from "@/components/analytics/EventTracker";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
+import MobileEstimateSheet from "@/components/layout/MobileEstimateSheet";
 import "./globals.css";
 
 // ─── Font Configuration ─────────────────────────────────
@@ -319,6 +320,7 @@ export default function RootLayout({
           <Footer />
         </SmoothScroll>
         <StickyMobileCTA />
+        <MobileEstimateSheet />
       </body>
     </html>
   );

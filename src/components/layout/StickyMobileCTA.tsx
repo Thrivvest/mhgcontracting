@@ -6,9 +6,9 @@
  * tel: clicks are picked up by EventTracker as phone_call_click.
  */
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { company } from "@/lib/constants";
+import { OPEN_ESTIMATE_SHEET } from "@/components/layout/MobileEstimateSheet";
 
 export default function StickyMobileCTA() {
   const pathname = usePathname();
@@ -28,12 +28,13 @@ export default function StickyMobileCTA() {
         </svg>
         Call Now
       </a>
-      <Link
-        href="/contact"
+      <button
+        type="button"
+        onClick={() => window.dispatchEvent(new Event(OPEN_ESTIMATE_SHEET))}
         className="flex items-center justify-center gap-2 py-4 font-body font-semibold text-sm text-white bg-primary active:bg-primary-dark transition-colors"
       >
         Free Estimate
-      </Link>
+      </button>
     </div>
   );
 }

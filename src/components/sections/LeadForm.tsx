@@ -41,6 +41,8 @@ interface LeadFormProps {
   subheading?: string;
   /** "light" for white/neutral page sections, "dark" for navy sections */
   theme?: "light" | "dark";
+  /** Render without the outer white card wrapper (for embedding in a sheet/modal that supplies its own surface) */
+  bare?: boolean;
 }
 
 type VerifyState = "idle" | "verifying" | "verified";
@@ -51,6 +53,7 @@ export default function LeadForm({
   heading = "Get Your Free Estimate",
   subheading = "Tell us about your project. We respond within 24 hours.",
   theme = "light",
+  bare = false,
 }: LeadFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -154,7 +157,7 @@ export default function LeadForm({
 
   if (isSubmitted) {
     return (
-      <div className={`text-center py-12 px-6 ${dark ? "" : "bg-white border border-[#E5E5E5] rounded-lg"}`}>
+      <div className={`text-center py-12 px-6 ${dark || bare ? "" : "bg-white border border-[#E5E5E5] rounded-lg"}`}>
         <h3 className={`font-heading text-2xl font-bold mb-3 ${headingColor}`}>Request Received</h3>
         <p className={`font-body text-base max-w-sm mx-auto leading-relaxed ${subColor}`}>
           We&apos;ll be in touch within 24 hours to talk through your project.
@@ -164,7 +167,7 @@ export default function LeadForm({
   }
 
   return (
-    <div className={dark ? "" : "bg-white border border-[#E5E5E5] rounded-lg p-6 md:p-10"}>
+    <div className={dark || bare ? "" : "bg-white border border-[#E5E5E5] rounded-lg p-6 md:p-10"}>
       <div className="mb-8">
         <h3 className={`font-heading text-2xl md:text-3xl font-bold leading-tight ${headingColor}`}>{heading}</h3>
         <p className={`font-body text-sm mt-3 ${subColor}`}>{subheading}</p>
