@@ -23,10 +23,10 @@ const BLOG_POSTS = [
   },
   {
     slug: "bathroom-remodel-cost",
-    title: "Average Bathroom Remodel Cost in Hamilton, NJ",
+    title: "Full & Average Bathroom Remodel Cost in Hamilton, NJ",
     date: "April 3, 2026",
     excerpt:
-      "The average bathroom remodel in Hamilton lands around $30,000. Here's the real 2026 breakdown by room type, from small baths to six-figure master suites.",
+      "A full bathroom remodel in Hamilton runs $25,000 to $40,000, and the average lands around $30,000. Here's the real 2026 breakdown by room type, from small baths to six-figure master suites.",
     image: "/images/projects/bath-01.jpg",
   },
   {

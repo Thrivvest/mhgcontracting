@@ -360,7 +360,7 @@ export const services: Service[] = [
       "Bathroom remodeling contractor in Hamilton, Princeton, Central NJ. Walk-in showers, custom tile, real waterproofing. Free estimate: (609) 712-2474.",
     icon: "bathroom",
     costGuideSlug: "bathroom-remodel-cost",
-    costGuideLabel: "See real bathroom remodel costs in NJ",
+    costGuideLabel: "See real bathroom remodel costs in Hamilton, NJ",
     scopeItems: [
       "Custom tile showers and tub surrounds",
       "Vanity design and installation",

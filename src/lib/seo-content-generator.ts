@@ -37,7 +37,7 @@ const SERVICE_TYPE_LABELS: Record<string, string> = {
  */
 const RELATED_BLOG_ANCHOR_TEXT: Record<string, string> = {
   "kitchen-remodel-cost": "kitchen remodel cost in NJ",
-  "bathroom-remodel-cost": "average bathroom remodel cost in Hamilton, NJ",
+  "bathroom-remodel-cost": "full and average bathroom remodel cost in Hamilton, NJ",
 };
 
 /**

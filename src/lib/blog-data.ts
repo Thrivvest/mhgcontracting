@@ -512,15 +512,15 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-cost",
-    seoTitle: "Average Bathroom Remodel Cost Hamilton, NJ (2026)",
-    title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
+    seoTitle: "Full & Average Bathroom Remodel Cost, Hamilton NJ (2026)",
+    title: "Full & Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "August 10, 2026",
-    excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
-    metaDescription: "Bathroom remodel cost in Hamilton, NJ: $12K-$20K small, $25K-$40K full, $45K-$100K+ primary. Average lands around $30K. 2026 prices from MHG Contracting.",
+    excerpt: "A full bathroom remodel in Hamilton runs $25,000 to $40,000, and the average lands around $30,000. Here's what a small powder room and a full primary suite actually cost in 2026.",
+    metaDescription: "Full bathroom remodel cost in Hamilton, NJ: $25K-$40K. Average lands around $30K, powder rooms from $12K, primary suites $45K-$100K+. 2026 prices from MHG.",
     category: "Bathroom",
     readTime: "5 min read",
     content: `
-<p>When someone in Hamilton asks what a bathroom remodel costs, the honest answer starts with a question back: which bathroom.</p>
+<p>When someone in Hamilton asks what a bathroom remodel costs, the honest answer starts with a question back: which bathroom. A full bathroom remodel cost in Hamilton runs $25,000 to $40,000. The average bathroom remodel cost across every size we build, powder rooms through primary suites, lands closer to $30,000.</p>
 
 <p>A powder room and a primary suite are different projects. They use different trades, different fixtures, different tile volumes. The cost gap can be 4x or more. Here's the real breakdown for each, based on <a href="/services/bathroom-renovations/hamilton-nj">bathrooms we've remodeled in Hamilton</a>, Princeton, West Windsor, and the rest of Central NJ.</p>
 
