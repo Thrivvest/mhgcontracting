@@ -175,6 +175,21 @@ export function generateAreaSeoContent(page: AreaPage): string {
     )
     .join("\n");
 
+  const relatedPosts = (page.relatedBlogSlugs ?? [])
+    .map((slug) => BLOG_POSTS.find((p) => p.slug === slug))
+    .filter((p): p is BlogPost => Boolean(p));
+
+  const relatedBlogSection = relatedPosts.length
+    ? `
+      <h2>${page.serviceName} Cost Guides for ${page.cityName}, ${page.state}</h2>
+      <p>${relatedPosts
+        .map(
+          (p) =>
+            `<a href="/blog/${p.slug}">${RELATED_BLOG_ANCHOR_TEXT[p.slug] ?? p.title}</a>`
+        )
+        .join(" &middot; ")}</p>`
+    : "";
+
   return `
     <article>
       <h2>${page.h1}</h2>
@@ -185,6 +200,7 @@ export function generateAreaSeoContent(page: AreaPage): string {
 
       <h2>Frequently Asked Questions: ${page.serviceName} in ${page.cityName}</h2>
       ${faqSection}
+      ${relatedBlogSection}
 
       <h2>About ${COMPANY}</h2>
       <p>${COMPANY} is a family-owned residential contracting company specializing in kitchen renovations, bathroom remodels, basement finishing, full home renovations, additions, and new construction. From our base in ${LOCATION}, we serve homeowners in ${CITIES.join(", ")}, and surrounding communities in Central New Jersey and Bucks County, PA.</p>
