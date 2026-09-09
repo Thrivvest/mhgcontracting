@@ -662,6 +662,12 @@ export const BLOG_POSTS: BlogPost[] = [
 </table>
 </div>
 
+<h2>Full bathroom remodel cost in NJ: $25,000 to $40,000</h2>
+
+<p>This is the bathroom remodel most New Jersey homeowners are actually pricing out: a tub and shower combo or standalone shower, toilet, single vanity, ventilation, and a full tile surround. It is the most common job we build statewide, and the $25,000 to $40,000 range holds whether the house is in Bergen County or Cape May.</p>
+
+<p>What separates a $27,000 full bathroom remodel from a $38,000 one is almost always the tile and the shower system, not the town. An acrylic tub surround with basic floor tile sits at the low end. Floor-to-ceiling porcelain, a curbless shower, a niche and bench, and a frameless glass door push it toward the top. Plumbing location matters too. Keep the toilet and shower where they are and you control the number. Move them and you add a day or more of labor plus floor rework, on top of whatever the new tile and fixtures cost.</p>
+
 <h2>Prices shift by region inside NJ</h2>
 
 <p>New Jersey is not one market. In Bergen, Essex, and the North Jersey commuter towns, expect quotes 10 to 20 percent above the ranges here, driven by labor rates and parking-and-access logistics. South Jersey tends to come in near the bottom of each range. Central NJ, where we work, sits in the middle: Princeton and Hopewell trend higher on finish selections, while Hamilton, Ewing, and East Windsor projects usually land close to the state average. If you're in our area, our <a href="/blog/bathroom-remodel-cost">Hamilton bathroom cost guide</a> has the town-level detail.</p>
@@ -708,6 +714,16 @@ export const BLOG_POSTS: BlogPost[] = [
         question: "How long does a bathroom remodel take in NJ?",
         answer:
           "A full bathroom remodel takes 3 to 5 weeks including inspections. Powder rooms run 2 to 3 weeks. Primary suite remodels with layout changes can run 6 to 8 weeks.",
+      },
+      {
+        question: "How much does a full bathroom remodel cost in NJ?",
+        answer:
+          'A full bathroom remodel in New Jersey costs $25,000 to $40,000 in 2026. That covers a tub and shower combo or standalone shower, toilet, single vanity, ventilation, and a full tile surround, the most common bathroom project we build statewide. Tile choice and the shower system separate the low end from the high end far more than which NJ county you are in. See our <a href="/services/bathroom-renovations">bathroom remodeling</a> page for scope details.',
+      },
+      {
+        question: "What is the average bathroom renovation cost in New Jersey?",
+        answer:
+          "The average bathroom renovation in New Jersey lands near $30,000, with full baths running $25,000 to $40,000, powder rooms $12,000 to $20,000, and primary suites $45,000 to $100,000 or more. North Jersey quotes trend 10 to 20 percent above these ranges, South Jersey trends below, and Central NJ sits in the middle.",
       },
     ],
   },
@@ -1239,6 +1255,8 @@ export const BLOG_POSTS: BlogPost[] = [
 <p>Some towns have simplified permit processes for minor work. In Hamilton, for example, a straight fixture swap in a bathroom with no layout changes can sometimes be done under a minor work permit with a simpler application. Ask your contractor what's possible for your specific scope. The answer should be specific, not "oh we don't need a permit for that."</p>
 
 <p>If a contractor tells you no permit is needed, ask them to write that statement in the contract. If they're right, there's no issue. If they're wrong, you're documented as the one who asked. Most won't write it down, which tells you something.</p>
+
+<p>Pricing out the project itself? Our <a href="/blog/bathroom-remodel-cost-nj">full bathroom remodel cost guide for NJ</a> breaks down what permits and everything else actually add up to across the state.</p>
 
 <p>Planning a project and want to understand exactly what permits you'll need? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">schedule a free consultation</a>.</p>
 `,
