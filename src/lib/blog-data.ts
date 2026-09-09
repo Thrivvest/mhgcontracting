@@ -473,7 +473,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Don't move the sink unless you really need to. Don't add a pot filler unless you actually cook enough to justify it. Don't choose a slab counter and then budget for the cheapest installer you can find. Spend the money where you'll touch it every day, which is cabinets and counters, and save where it doesn't show.</p>
 
-<p>Curious what you'll actually get back at resale? See our breakdown of <a href="/blog/remodel-roi">kitchen remodel ROI in NJ</a>. Remodeling more than the kitchen? Our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a> covers current Hamilton and Central NJ pricing the same way.</p>
+<p>Curious what you'll actually get back at resale? See our breakdown of <a href="/blog/remodel-roi">kitchen remodel ROI in NJ</a>. Wondering how long the work will actually take? Our <a href="/blog/kitchen-timeline">kitchen remodel timeline guide</a> breaks down the week-by-week schedule. Remodeling more than the kitchen? Our <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a> covers current Hamilton and Central NJ pricing the same way.</p>
 
 <p>If you want a real number for your kitchen, we'll come out, measure, talk through the scope, and give you a line-item estimate. Call <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">request a free estimate here</a>.</p>
 `,
@@ -788,7 +788,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>A well-finished basement in Central NJ adds real square footage that your family uses every day, and in this market it adds 50 to 70 percent of its cost back in home value. The ROI isn't 100 percent but the use-value is high and the cost per usable square foot is far lower than an addition.</p>
 
-<p>Want a real estimate for your basement? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">tell us about your project</a>.</p>
+<p>Not sure yet what to actually put down there? Our <a href="/blog/basement-ideas">finished basement ideas guide</a> covers what our Central NJ clients are building in 2026. Want a real estimate for your basement? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">tell us about your project</a>.</p>
 `,
     faqs: [
       {
@@ -889,7 +889,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>Trust your gut. If something feels off on the first visit, it'll feel worse six weeks in when they're in your house every day. The relationship matters almost as much as the skill.</p>
 
-<p>If you want to see how we work up close, call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">schedule a free in-home consultation</a>.</p>
+<p>If you want to see how we work up close, browse our <a href="/services">full range of renovation services</a>, call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a>, or <a href="/contact">schedule a free in-home consultation</a>.</p>
 `,
   },
   {
@@ -1796,7 +1796,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>What a general contractor is right for</h2>
 
-<p>A licensed general contractor is the right call when the project involves any of these:</p>
+<p>A licensed <a href="/services/general-contracting">general contractor</a> is the right call when the project involves any of these:</p>
 
 <p><strong>Structural work.</strong> Removing walls, adding load-bearing supports, raising ceilings, cutting new openings in exterior walls. A handyman cannot legally do this and homeowner insurance won't cover the damage if something fails.</p>
 
