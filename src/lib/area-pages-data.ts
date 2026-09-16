@@ -88,7 +88,8 @@ export const AREA_PAGES: AreaPage[] = [
 
 <h2>What Sets Us Apart in Princeton</h2>
 <p>We are a family-owned company based in nearby Hamilton, NJ - just minutes from Princeton. Shahzeb Malik, our founder, personally oversees every project. We are not a franchise or a sales-driven operation. When you call MHG, you talk to the people who will actually build your kitchen. That direct relationship means faster decisions, clearer communication, and a finished product that reflects your vision, not a cookie-cutter template.</p>
-<p>Our portfolio includes projects in Princeton, West Windsor, Lawrenceville, and across Central New Jersey. We invite you to view our <a href="/portfolio/modern-farmhouse-kitchen">Modern Farmhouse Kitchen</a> project completed in Princeton - a full transformation featuring custom white shaker cabinetry, quartz countertops, and a center island designed for everyday family life.</p>`,
+<p>Our portfolio includes projects in Princeton, West Windsor, Lawrenceville, and across Central New Jersey. We invite you to view our <a href="/portfolio/modern-farmhouse-kitchen">Modern Farmhouse Kitchen</a> project completed in Princeton - a full transformation featuring custom white shaker cabinetry, quartz countertops, and a center island designed for everyday family life.</p>
+<p>Working out numbers before you call? Our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide for NJ</a> breaks down real pricing by scope.</p>`,
     faqs: [
       {
         question: "How much does a kitchen renovation cost in Princeton, NJ?",
@@ -131,7 +132,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>Our commitment to quality is reflected in every detail - from the straightness of cabinet installations to the precision of tile grout lines. We treat every Hamilton kitchen like it is our own family's kitchen. Check out our <a href="/portfolio/open-concept-kitchen-living">Open Concept Kitchen & Living</a> project to see the kind of transformation we deliver.</p>
 
 <h2>Hamilton Kitchen Renovation Services</h2>
-<p>Whether you want a targeted refresh or a complete gut renovation, we customize our approach to your budget and vision. Our Hamilton kitchen renovations include custom cabinetry, countertop fabrication and installation, backsplash design, plumbing and fixture upgrades, electrical updates, flooring, lighting design, and appliance integration. We also handle structural modifications like wall removal - always with proper engineering - to create the open floor plans that today's families love.</p>`,
+<p>Whether you want a targeted refresh or a complete gut renovation, we customize our approach to your budget and vision. Our Hamilton kitchen renovations include custom cabinetry, countertop fabrication and installation, backsplash design, plumbing and fixture upgrades, electrical updates, flooring, lighting design, and appliance integration. We also handle structural modifications like wall removal - always with proper engineering - to create the open floor plans that today's families love.</p>
+<p>Want current numbers before your consultation? Our <a href="/blog/kitchen-remodel-cost">Hamilton kitchen remodel cost guide</a> breaks down 2026 pricing by scope.</p>`,
     faqs: [
       {
         question: "How much does a kitchen renovation cost in Hamilton, NJ?",
@@ -170,7 +172,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>West Windsor is just a short drive from our Hamilton headquarters, which means we are on-site when you need us. Shahzeb personally manages every West Windsor project, ensuring quality control and clear communication from start to finish. We also understand West Windsor Township's permitting requirements and coordinate with their building department directly.</p>
 
 <h2>Investment in Your West Windsor Home</h2>
-<p>A well-executed kitchen renovation is one of the highest-ROI improvements you can make to a West Windsor home. With the area's strong real estate market and buyer expectations, a modern, high-quality kitchen can significantly increase your home's value and desirability. Whether you are renovating to sell or renovating to stay, we design kitchens that deliver long-term satisfaction.</p>`,
+<p>A well-executed kitchen renovation is one of the highest-ROI improvements you can make to a West Windsor home. With the area's strong real estate market and buyer expectations, a modern, high-quality kitchen can significantly increase your home's value and desirability. Whether you are renovating to sell or renovating to stay, we design kitchens that deliver long-term satisfaction.</p>
+<p>For real numbers by scope, see our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> covering current NJ kitchen remodeling costs.</p>`,
     faqs: [
       {
         question: "What is the average cost of a kitchen renovation in West Windsor?",
@@ -206,7 +209,8 @@ export const AREA_PAGES: AreaPage[] = [
 
 <h2>Local Expertise, Personal Service</h2>
 <p>Lawrenceville is in Lawrence Township, which has its own building department and permitting requirements. We handle all permits, schedule inspections, and ensure your renovation meets Lawrence Township's building codes. Our Hamilton headquarters is just 10 minutes from most Lawrenceville neighborhoods, meaning we are always nearby and responsive.</p>
-<p>We believe the best renovations happen when the homeowner and contractor communicate openly and frequently. Shahzeb Malik is your direct point of contact from the first consultation through the final walkthrough. No project managers, no runaround - just honest, straightforward collaboration. Browse our <a href="/portfolio">portfolio</a> to see the caliber of work we deliver throughout the region.</p>`,
+<p>We believe the best renovations happen when the homeowner and contractor communicate openly and frequently. Shahzeb Malik is your direct point of contact from the first consultation through the final walkthrough. No project managers, no runaround - just honest, straightforward collaboration. Browse our <a href="/portfolio">portfolio</a> to see the caliber of work we deliver throughout the region.</p>
+<p>Curious what your project might run? Our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> breaks down current NJ pricing by scope.</p>`,
     faqs: [
       {
         question: "How much does a kitchen renovation cost in Lawrenceville, NJ?",
@@ -242,7 +246,8 @@ export const AREA_PAGES: AreaPage[] = [
 
 <h2>Why Plainsboro Homeowners Choose MHG</h2>
 <p>Plainsboro is home to a diverse community that values quality and attention to detail. Our approach aligns with those values. We take the time to understand how you use your kitchen, what frustrates you about the current layout, and what you envision for the finished space. Then we deliver - on time, on budget, and with the craftsmanship that has earned us our reputation across Central New Jersey.</p>
-<p>Check out our <a href="/portfolio/custom-colonial-new-build">Custom Colonial New Build</a> completed in Plainsboro to see our commitment to quality, and <a href="/contact">reach out</a> to schedule your free kitchen renovation consultation.</p>`,
+<p>Check out our <a href="/portfolio/custom-colonial-new-build">Custom Colonial New Build</a> completed in Plainsboro to see our commitment to quality, and <a href="/contact">reach out</a> to schedule your free kitchen renovation consultation.</p>
+<p>Planning your budget first? Our <a href="/blog/kitchen-remodel-cost">NJ kitchen remodeling cost guide</a> covers pricing by scope and finish level.</p>`,
     faqs: [
       {
         question: "How much does a kitchen renovation cost in Plainsboro?",
@@ -278,7 +283,8 @@ export const AREA_PAGES: AreaPage[] = [
 
 <h2>Crossing the River for Quality</h2>
 <p>While many of our projects are in Central New Jersey, we have completed several projects in the Yardley and Lower Makefield area, including our <a href="/portfolio/open-concept-kitchen-living">Open Concept Kitchen & Living</a> renovation - a dramatic transformation that united the kitchen, dining, and living areas in a Yardley home. The project showcases what is possible when you remove barriers and reimagine a home's potential.</p>
-<p>Yardley is only 20 minutes from our Hamilton headquarters, well within our service radius. We handle Pennsylvania permitting requirements through Lower Makefield Township's building department and are registered to work in Bucks County.</p>`,
+<p>Yardley is only 20 minutes from our Hamilton headquarters, well within our service radius. We handle Pennsylvania permitting requirements through Lower Makefield Township's building department and are registered to work in Bucks County.</p>
+<p>For real pricing by scope, see our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> covering the wider Central NJ and Bucks County market.</p>`,
     faqs: [
       {
         question: "Do you serve Yardley and Bucks County, PA?",
@@ -319,7 +325,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>Central New Jersey's climate means humidity and moisture management are critical in every bathroom. We use proven waterproofing systems including Kerdi membrane and RedGard in all wet areas, ensuring your tile installation remains watertight for decades. This attention to what you cannot see is what separates a quality renovation from a pretty one that fails in five years.</p>
 
 <h2>Your Princeton Bathroom Renovation Partner</h2>
-<p>Shahzeb Malik personally oversees every Princeton project. From our base in Hamilton, we are just minutes away and always accessible. View our <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> and <a href="/portfolio/luxury-primary-bath-retreat">Luxury Primary Bath Retreat</a> projects in our portfolio, then <a href="/contact">schedule your free consultation</a> to discuss your Princeton bathroom renovation.</p>`,
+<p>Shahzeb Malik personally oversees every Princeton project. From our base in Hamilton, we are just minutes away and always accessible. View our <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> and <a href="/portfolio/luxury-primary-bath-retreat">Luxury Primary Bath Retreat</a> projects in our portfolio, then <a href="/contact">schedule your free consultation</a> to discuss your Princeton bathroom renovation.</p>
+<p>Working out a budget first? Our <a href="/blog/bathroom-remodel-cost">average bathroom remodel cost breakdown</a> covers pricing for small, full, and primary bathrooms across Central NJ.</p>`,
     faqs: [
       { question: "How much does a bathroom renovation cost in Princeton?", answer: "Bathroom renovations in Princeton typically range from $20,000 for a powder room update to $60,000-$90,000 for a full master bathroom transformation with custom tile, premium fixtures, and heated floors. We provide detailed estimates based on your specific scope." },
       { question: "How long does a bathroom renovation take in Princeton?", answer: "Most bathroom renovations take 3-6 weeks. A powder room refresh can be completed in 2-3 weeks, while a full master bathroom with custom tile work typically requires 5-7 weeks. We provide a clear schedule before starting." },
@@ -378,7 +385,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>The difference between a good bathroom renovation and a great one is in the details: precise tile cuts at corners, consistent grout lines, perfectly level vanity installations, and seamless caulk joints. We take pride in these details because they are what you will notice every day for years to come. Our <a href="/portfolio/contemporary-guest-bath">Contemporary Guest Bath</a> project showcases this level of precision.</p>
 
 <h2>Start Your West Windsor Bathroom Project</h2>
-<p>We are just a short drive from West Windsor and serve the area regularly. <a href="/contact">Contact us</a> to schedule a free in-home consultation for your bathroom renovation.</p>`,
+<p>We are just a short drive from West Windsor and serve the area regularly. <a href="/contact">Contact us</a> to schedule a free in-home consultation for your bathroom renovation.</p>
+<p>Not sure what to budget? Our <a href="/blog/bathroom-remodel-cost">full bathroom remodel cost breakdown</a> lays out real 2026 pricing by bathroom type across Central NJ.</p>`,
     faqs: [
       { question: "What does a bathroom renovation cost in West Windsor?", answer: "West Windsor bathroom renovations typically range from $25,000 to $80,000. Master bath renovations with premium fixtures and custom tile average $50,000-$80,000. Guest and hall bath renovations typically fall between $25,000-$40,000." },
       { question: "How long does a West Windsor bathroom renovation take?", answer: "Most bathroom renovations in West Windsor take 4-7 weeks. The timeline depends on complexity, custom fixture lead times, and the extent of tile work. We provide a detailed schedule during the planning phase." },
@@ -407,7 +415,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>We know Lawrence Township's building codes and permitting process. All bathroom renovations involving plumbing or electrical work require permits, and we handle the entire process - from application through final inspection. Our experience with local requirements means no delays and no compliance issues.</p>
 
 <h2>Get Started</h2>
-<p>View our <a href="/portfolio/contemporary-guest-bath">Contemporary Guest Bath</a> in nearby Lawrenceville, then <a href="/contact">schedule your free estimate</a>. We are just 10 minutes from Lawrenceville and serve the area regularly.</p>`,
+<p>View our <a href="/portfolio/contemporary-guest-bath">Contemporary Guest Bath</a> in nearby Lawrenceville, then <a href="/contact">schedule your free estimate</a>. We are just 10 minutes from Lawrenceville and serve the area regularly.</p>
+<p>For a small bathroom remodel, our <a href="/blog/bathroom-remodel-cost">small bathroom remodel cost breakdown</a> covers powder room and compact bath pricing across Central NJ.</p>`,
     faqs: [
       { question: "How much does a bathroom renovation cost in Lawrenceville?", answer: "Lawrenceville bathroom renovations typically range from $18,000 to $55,000. Powder room updates start around $10,000-$15,000, while full master bath renovations with custom tile and premium fixtures range from $35,000-$55,000." },
       { question: "Can you renovate a small Lawrenceville bathroom?", answer: "Absolutely. Many older Lawrenceville homes have compact bathrooms. We specialize in smart space-saving solutions like wall-mounted vanities, pocket doors, and large-format tile that makes small rooms feel more open." },
@@ -436,7 +445,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>Every Plainsboro bathroom renovation includes proper waterproofing, code-compliant plumbing, and quality tile installation. We handle permits through the Plainsboro Construction Office and ensure all work meets current building codes. Our <a href="/portfolio/luxury-primary-bath-retreat">Luxury Primary Bath Retreat</a> demonstrates the level of quality and finish we bring to every project.</p>
 
 <h2>Schedule Your Consultation</h2>
-<p><a href="/contact">Contact us</a> today for a free in-home bathroom renovation estimate in Plainsboro.</p>`,
+<p><a href="/contact">Contact us</a> today for a free in-home bathroom renovation estimate in Plainsboro.</p>
+<p>Comparing options first? Our <a href="/blog/bathroom-remodel-cost">average bathroom remodel cost guide</a> breaks down pricing by bathroom size across Central NJ.</p>`,
     faqs: [
       { question: "How much does a bathroom renovation cost in Plainsboro?", answer: "Plainsboro bathroom renovations typically range from $18,000 to $60,000. Townhome bath renovations tend to be $15,000-$30,000, while single-family master bath renovations range from $35,000-$60,000 depending on materials and complexity." },
       { question: "Can you renovate a Plainsboro condo bathroom?", answer: "Yes, we work on condos and townhomes in Princeton Meadows, Aspen, and other Plainsboro communities. We coordinate with HOAs when needed and comply with any community renovation guidelines." },
@@ -465,7 +475,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>Yardley is within our regular service area, just 20 minutes from Hamilton. We are licensed to work in Pennsylvania and handle all permitting through Lower Makefield Township. Whether your project is a quick powder room refresh or a complete master bathroom overhaul, we deliver the same quality and personal attention that has earned our reputation in Central New Jersey.</p>
 
 <h2>Start Your Project</h2>
-<p>See our <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> for inspiration, then <a href="/contact">contact us</a> for a free bathroom renovation consultation in Yardley.</p>`,
+<p>See our <a href="/portfolio/spa-inspired-master-bath">Spa-Inspired Master Bath</a> for inspiration, then <a href="/contact">contact us</a> for a free bathroom renovation consultation in Yardley.</p>
+<p>Budgeting across the river too? Our <a href="/blog/bathroom-remodel-cost">full bathroom remodel cost breakdown</a> covers pricing by bathroom type for the whole region.</p>`,
     faqs: [
       { question: "Do you do bathroom renovations in Yardley, PA?", answer: "Yes, Yardley and the Lower Makefield area are within our regular service area. We handle all Pennsylvania permitting requirements and have completed multiple projects in Bucks County." },
       { question: "How much does a bathroom renovation cost in Yardley?", answer: "Yardley bathroom renovations typically range from $20,000 to $65,000. Historic home bathrooms may cost more due to unique plumbing and structural considerations. We provide detailed free estimates." },
@@ -1293,7 +1304,8 @@ export const AREA_PAGES: AreaPage[] = [
 <p>Our <a href="/portfolio/modern-farmhouse-kitchen">Modern Farmhouse Kitchen</a> project is a good example of blending contemporary function with traditional character - exactly the kind of work that fits Hopewell's housing stock.</p>
 
 <h2>Permits and Local Knowledge</h2>
-<p>Hopewell Borough and Hopewell Township have separate building departments. We handle permitting for both, and we understand the special considerations for any homes in the historic district. Read our <a href="/blog/permits-nj">guide to NJ remodeling permits</a> for more on what the process looks like.</p>`,
+<p>Hopewell Borough and Hopewell Township have separate building departments. We handle permitting for both, and we understand the special considerations for any homes in the historic district. Read our <a href="/blog/permits-nj">guide to NJ remodeling permits</a> for more on what the process looks like.</p>
+<p>Budgeting for a historic home renovation? Our <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a> covers current NJ pricing by scope.</p>`,
     faqs: [
       {
         question: "How much does a kitchen remodel cost in Hopewell, NJ?",

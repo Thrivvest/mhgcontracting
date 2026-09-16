@@ -512,7 +512,7 @@ export const BLOG_POSTS: BlogPost[] = [
   },
   {
     slug: "bathroom-remodel-cost",
-    seoTitle: "Average Bathroom Remodel Cost Hamilton, NJ (2026)",
+    seoTitle: "Bathroom Remodel Cost in Hamilton, NJ: $12K-$100K (2026)",
     title: "Average Bathroom Remodel Cost in Hamilton, NJ (2026 Price Ranges)",
     date: "August 10, 2026",
     excerpt: "The average bathroom remodel in Hamilton lands around $30,000, but the gap between a powder room and a primary suite is bigger than most homeowners realize. Here's what each actually costs in 2026.",
@@ -524,7 +524,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <p>A powder room and a primary suite are different projects. They use different trades, different fixtures, different tile volumes. The cost gap can be 4x or more. Here's the real breakdown for each, based on <a href="/services/bathroom-renovations/hamilton-nj">bathrooms we've remodeled in Hamilton</a>, Princeton, West Windsor, and the rest of Central NJ.</p>
 
-<p><em>Updated August 2026 with current Central NJ labor and material pricing.</em></p>
+<p><em>Updated September 2026 with current Central NJ labor and material pricing.</em></p>
 
 <h2>What is the average bathroom remodel cost in Hamilton, NJ?</h2>
 
