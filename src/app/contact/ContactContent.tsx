@@ -36,6 +36,36 @@ const TIMELINES = [
   "Just exploring",
 ];
 
+/**
+ * Step 2 of the form: the lead marks when they are free and Shahzeb calls them.
+ * Deliberately time blocks, not exact slots. Nothing is booked.
+ * Call hours are Mon-Fri 9-5 (confirmed by Shahzeb 2026-09-15).
+ */
+const CALL_BLOCKS = [
+  { id: "morning", label: "Morning", detail: "9am - 12pm" },
+  { id: "afternoon", label: "Afternoon", detail: "12pm - 3pm" },
+  { id: "late", label: "Late Day", detail: "3pm - 5pm" },
+];
+
+const MAX_WINDOWS = 3;
+
+/** The next 5 weekdays, starting tomorrow. Weekends are skipped. */
+function nextWeekdays(count: number): Array<{ key: string; weekday: string; date: string }> {
+  const out: Array<{ key: string; weekday: string; date: string }> = [];
+  const cursor = new Date();
+  while (out.length < count) {
+    cursor.setDate(cursor.getDate() + 1);
+    const day = cursor.getDay();
+    if (day === 0 || day === 6) continue;
+    out.push({
+      key: cursor.toISOString().slice(0, 10),
+      weekday: cursor.toLocaleDateString("en-US", { weekday: "short" }),
+      date: cursor.toLocaleDateString("en-US", { month: "short", day: "numeric" }),
+    });
+  }
+  return out;
+}
+
 const labelClass =
   "font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] block mb-2.5";
 
@@ -47,8 +77,14 @@ const errorInputClass =
 
 type VerifyState = "idle" | "verifying" | "verified";
 
+type Step = "form" | "availability" | "done";
+
 export default function ContactContent() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [step, setStep] = useState<Step>("form");
+  const [contactId, setContactId] = useState<string | null>(null);
+  const [selectedWindows, setSelectedWindows] = useState<string[]>([]);
+  const [isSavingWindows, setIsSavingWindows] = useState(false);
+  const [days] = useState(() => nextWeekdays(5));
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [verifyState, setVerifyState] = useState<VerifyState>("idle");
   const [verifyError, setVerifyError] = useState<string | null>(null);
@@ -89,9 +125,38 @@ export default function ContactContent() {
     }, 900);
   };
 
+  const toggleWindow = (label: string) => {
+    setSelectedWindows((prev) => {
+      if (prev.includes(label)) return prev.filter((w) => w !== label);
+      if (prev.length >= MAX_WINDOWS) return prev;
+      return [...prev, label];
+    });
+  };
+
+  const saveWindows = async () => {
+    if (selectedWindows.length === 0 || !contactId) {
+      setStep("done");
+      return;
+    }
+    setIsSavingWindows(true);
+    try {
+      await fetch("/api/contact/availability", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ contactId, windows: selectedWindows }),
+      });
+    } catch (error) {
+      // The lead is already captured, so a failure here is never fatal.
+      console.error("Availability save error:", error);
+    } finally {
+      setIsSavingWindows(false);
+      setStep("done");
+    }
+  };
+
   const onSubmit = async (data: ContactFormData) => {
     if (data.website && data.website.trim() !== "") {
-      setIsSubmitted(true);
+      setStep("done");
       return;
     }
     if (verifyState !== "verified") {
@@ -120,12 +185,20 @@ export default function ContactContent() {
         }),
       });
 
+      const result = await res.json().catch(() => ({}));
+
       if (!res.ok) {
-        const { error } = await res.json().catch(() => ({}));
-        throw new Error(error ?? "Submission failed");
+        throw new Error(result?.error ?? "Submission failed");
       }
 
-      setIsSubmitted(true);
+      // Lead is captured at this point. Step 2 is a bonus, so a missing
+      // contactId sends them straight to the confirmation instead of a dead end.
+      if (result?.contactId) {
+        setContactId(result.contactId);
+        setStep("availability");
+      } else {
+        setStep("done");
+      }
     } catch (error) {
       console.error("Form submission error:", error);
       alert("There was an error submitting the form. Please try again or call us directly.");
@@ -204,7 +277,7 @@ export default function ContactContent() {
                   </div>
                 </div>
 
-                {isSubmitted ? (
+                {step === "done" ? (
                   <div className="py-16 text-center">
                     <div className="w-16 h-16 border border-primary/30 flex items-center justify-center mx-auto mb-8">
                       <svg
@@ -224,8 +297,88 @@ export default function ContactContent() {
                       Message Received
                     </h3>
                     <p className="font-body text-text-secondary text-base max-w-xs mx-auto leading-relaxed">
-                      We&apos;ll be in touch within 24 hours to discuss your project.
+                      {selectedWindows.length > 0
+                        ? "We'll call you at one of the times you picked. If anything changes, reach us at (609) 712-2474."
+                        : "We'll be in touch within 24 hours to discuss your project."}
                     </p>
+                  </div>
+                ) : step === "availability" ? (
+                  <div className="py-4">
+                    <div className="flex items-center gap-2 mb-6">
+                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2D3380" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <path d="M20 6L9 17l-5-5" />
+                      </svg>
+                      <p className="font-body text-sm text-text-primary">
+                        Got it, your request is in.
+                      </p>
+                    </div>
+
+                    <h3 className="font-heading text-2xl font-bold text-text-primary mb-3">
+                      When&apos;s a good time to call you?
+                    </h3>
+                    <p className="font-body text-text-secondary text-sm leading-relaxed mb-8">
+                      Pick up to {MAX_WINDOWS} windows that work and we&apos;ll call you at one of them. Optional, but it saves us playing phone tag.
+                    </p>
+
+                    <div className="space-y-6">
+                      {days.map((day) => (
+                        <div key={day.key}>
+                          <p className="font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] mb-2.5">
+                            {day.weekday} <span className="text-[#BBBBBB]">{day.date}</span>
+                          </p>
+                          <div className="grid grid-cols-3 gap-2">
+                            {CALL_BLOCKS.map((block) => {
+                              const label = `${day.weekday} ${day.date}, ${block.label} (${block.detail})`;
+                              const active = selectedWindows.includes(label);
+                              const full = selectedWindows.length >= MAX_WINDOWS && !active;
+                              return (
+                                <button
+                                  key={block.id}
+                                  type="button"
+                                  onClick={() => toggleWindow(label)}
+                                  disabled={full}
+                                  aria-pressed={active}
+                                  className={`px-3 py-3 border font-body text-xs transition-colors duration-200 ${
+                                    active
+                                      ? "border-primary bg-primary text-white"
+                                      : full
+                                        ? "border-[#E5E5E5] bg-white text-[#CCCCCC] cursor-not-allowed"
+                                        : "border-[#D8D8D8] bg-white text-text-primary hover:border-primary hover:text-primary"
+                                  }`}
+                                >
+                                  <span className="block font-medium">{block.label}</span>
+                                  <span className={`block text-[10px] mt-0.5 ${active ? "text-white/70" : "text-text-secondary"}`}>
+                                    {block.detail}
+                                  </span>
+                                </button>
+                              );
+                            })}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                    <div className="pt-8 flex flex-col sm:flex-row items-center gap-4">
+                      <button
+                        type="button"
+                        onClick={saveWindows}
+                        disabled={isSavingWindows || selectedWindows.length === 0}
+                        className="w-full sm:w-auto bg-primary text-white font-body font-medium text-sm px-8 py-4 hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                      >
+                        {isSavingWindows
+                          ? "Saving..."
+                          : selectedWindows.length > 0
+                            ? `Send ${selectedWindows.length} time${selectedWindows.length > 1 ? "s" : ""}`
+                            : "Select a time"}
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setStep("done")}
+                        className="font-body text-sm text-text-secondary underline underline-offset-4 hover:text-primary transition-colors duration-200"
+                      >
+                        Skip, just call me
+                      </button>
+                    </div>
                   </div>
                 ) : (
                   <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
@@ -427,7 +580,7 @@ export default function ContactContent() {
                         disabled={isSubmitting}
                         className="group w-full bg-primary text-white font-body font-medium text-sm px-8 py-4 flex items-center justify-center gap-3 hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmitting ? "Sending..." : "Request Your Free Estimate"}
+                        {isSubmitting ? "Sending..." : "Next: Request Your Free Estimate"}
                         {!isSubmitting && (
                           <svg
                             width="15"
