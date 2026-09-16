@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { company, serviceAreas } from "@/lib/constants";
+import CallbackWindows, { type LeadMeta } from "@/components/forms/CallbackWindows";
 
 interface ContactFormData {
   firstName: string;
@@ -36,44 +37,14 @@ const TIMELINES = [
   "Just exploring",
 ];
 
-/**
- * Step 2 of the form: the lead marks when they are free and Shahzeb calls them.
- * Deliberately time blocks, not exact slots. Nothing is booked.
- * Call hours are Mon-Fri 9-5 (confirmed by Shahzeb 2026-09-15).
- */
-const CALL_BLOCKS = [
-  { id: "morning", label: "Morning", detail: "9am - 12pm" },
-  { id: "afternoon", label: "Afternoon", detail: "12pm - 3pm" },
-  { id: "late", label: "Late Day", detail: "3pm - 5pm" },
-];
-
-const MAX_WINDOWS = 3;
-
-/** The next 5 weekdays, starting tomorrow. Weekends are skipped. */
-function nextWeekdays(count: number): Array<{ key: string; weekday: string; date: string }> {
-  const out: Array<{ key: string; weekday: string; date: string }> = [];
-  const cursor = new Date();
-  while (out.length < count) {
-    cursor.setDate(cursor.getDate() + 1);
-    const day = cursor.getDay();
-    if (day === 0 || day === 6) continue;
-    out.push({
-      key: cursor.toISOString().slice(0, 10),
-      weekday: cursor.toLocaleDateString("en-US", { weekday: "short" }),
-      date: cursor.toLocaleDateString("en-US", { month: "short", day: "numeric" }),
-    });
-  }
-  return out;
-}
-
 const labelClass =
-  "font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] block mb-2.5";
+  "font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] block mb-1.5";
 
 const baseInputClass =
-  "w-full bg-transparent border-0 border-b border-[#C8C8C8] rounded-none px-0 py-3 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
+  "w-full bg-transparent border-0 border-b border-[#C8C8C8] rounded-none px-0 py-2 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
 
 const errorInputClass =
-  "w-full bg-transparent border-0 border-b border-red-400 rounded-none px-0 py-3 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-red-400 transition-colors duration-200";
+  "w-full bg-transparent border-0 border-b border-red-400 rounded-none px-0 py-2 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-red-400 transition-colors duration-200";
 
 type VerifyState = "idle" | "verifying" | "verified";
 
@@ -82,9 +53,8 @@ type Step = "form" | "availability" | "done";
 export default function ContactContent() {
   const [step, setStep] = useState<Step>("form");
   const [contactId, setContactId] = useState<string | null>(null);
-  const [selectedWindows, setSelectedWindows] = useState<string[]>([]);
-  const [isSavingWindows, setIsSavingWindows] = useState(false);
-  const [days] = useState(() => nextWeekdays(5));
+  const [leadMeta, setLeadMeta] = useState<LeadMeta | null>(null);
+  const [pickedWindows, setPickedWindows] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [verifyState, setVerifyState] = useState<VerifyState>("idle");
   const [verifyError, setVerifyError] = useState<string | null>(null);
@@ -123,35 +93,6 @@ export default function ContactContent() {
       setVerifyState("verified");
       verifiedAtRef.current = Date.now();
     }, 900);
-  };
-
-  const toggleWindow = (label: string) => {
-    setSelectedWindows((prev) => {
-      if (prev.includes(label)) return prev.filter((w) => w !== label);
-      if (prev.length >= MAX_WINDOWS) return prev;
-      return [...prev, label];
-    });
-  };
-
-  const saveWindows = async () => {
-    if (selectedWindows.length === 0 || !contactId) {
-      setStep("done");
-      return;
-    }
-    setIsSavingWindows(true);
-    try {
-      await fetch("/api/contact/availability", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ contactId, windows: selectedWindows }),
-      });
-    } catch (error) {
-      // The lead is already captured, so a failure here is never fatal.
-      console.error("Availability save error:", error);
-    } finally {
-      setIsSavingWindows(false);
-      setStep("done");
-    }
   };
 
   const onSubmit = async (data: ContactFormData) => {
@@ -195,6 +136,12 @@ export default function ContactContent() {
       // contactId sends them straight to the confirmation instead of a dead end.
       if (result?.contactId) {
         setContactId(result.contactId);
+        setLeadMeta({
+          first_name: data.firstName,
+          last_name: data.lastName,
+          phone: data.phone,
+          project_type: data.projectType,
+        });
         setStep("availability");
       } else {
         setStep("done");
@@ -243,26 +190,26 @@ export default function ContactContent() {
       </section>
 
       {/* Form + Info */}
-      <section className="py-20 md:py-32 px-6 lg:px-10 bg-[#F7F6F4]">
+      <section className="py-12 md:py-16 px-6 lg:px-10 bg-[#F7F6F4]">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
             {/* ── Left: Form ── */}
             <FadeIn>
               <div>
                 {/* Section intro */}
-                <div className="mb-8">
-                  <span className="font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.15em] block mb-4">
+                <div className="mb-5">
+                  <span className="font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.15em] block mb-2.5">
                     Free Consultation
                   </span>
-                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary leading-tight">
-                    Tell Us About<br />Your Vision
+                  <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary leading-tight">
+                    Tell Us About Your Vision
                   </h2>
-                  <div className="w-10 h-[2px] bg-primary mt-5" />
+                  <div className="w-10 h-[2px] bg-primary mt-4" />
                 </div>
 
                 {/* Trust bar */}
-                <div className="mb-12 grid grid-cols-3 gap-3 border-y border-[#E5E5E5] py-4">
+                <div className="mb-7 grid grid-cols-3 gap-3 border-y border-[#E5E5E5] py-3">
                   <div className="text-center">
                     <p className="font-heading text-lg font-bold text-primary leading-none">24hr</p>
                     <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">Response time</p>
@@ -297,91 +244,22 @@ export default function ContactContent() {
                       Message Received
                     </h3>
                     <p className="font-body text-text-secondary text-base max-w-xs mx-auto leading-relaxed">
-                      {selectedWindows.length > 0
+                      {pickedWindows > 0
                         ? "We'll call you at one of the times you picked. If anything changes, reach us at (609) 712-2474."
                         : "We'll be in touch within 24 hours to discuss your project."}
                     </p>
                   </div>
-                ) : step === "availability" ? (
-                  <div className="py-4">
-                    <div className="flex items-center gap-2 mb-6">
-                      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#2D3380" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                        <path d="M20 6L9 17l-5-5" />
-                      </svg>
-                      <p className="font-body text-sm text-text-primary">
-                        Got it, your request is in.
-                      </p>
-                    </div>
-
-                    <h3 className="font-heading text-2xl font-bold text-text-primary mb-3">
-                      When&apos;s a good time to call you?
-                    </h3>
-                    <p className="font-body text-text-secondary text-sm leading-relaxed mb-8">
-                      Pick up to {MAX_WINDOWS} windows that work and we&apos;ll call you at one of them. Optional, but it saves us playing phone tag.
-                    </p>
-
-                    <div className="space-y-6">
-                      {days.map((day) => (
-                        <div key={day.key}>
-                          <p className="font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] mb-2.5">
-                            {day.weekday} <span className="text-[#BBBBBB]">{day.date}</span>
-                          </p>
-                          <div className="grid grid-cols-3 gap-2">
-                            {CALL_BLOCKS.map((block) => {
-                              const label = `${day.weekday} ${day.date}, ${block.label} (${block.detail})`;
-                              const active = selectedWindows.includes(label);
-                              const full = selectedWindows.length >= MAX_WINDOWS && !active;
-                              return (
-                                <button
-                                  key={block.id}
-                                  type="button"
-                                  onClick={() => toggleWindow(label)}
-                                  disabled={full}
-                                  aria-pressed={active}
-                                  className={`px-3 py-3 border font-body text-xs transition-colors duration-200 ${
-                                    active
-                                      ? "border-primary bg-primary text-white"
-                                      : full
-                                        ? "border-[#E5E5E5] bg-white text-[#CCCCCC] cursor-not-allowed"
-                                        : "border-[#D8D8D8] bg-white text-text-primary hover:border-primary hover:text-primary"
-                                  }`}
-                                >
-                                  <span className="block font-medium">{block.label}</span>
-                                  <span className={`block text-[10px] mt-0.5 ${active ? "text-white/70" : "text-text-secondary"}`}>
-                                    {block.detail}
-                                  </span>
-                                </button>
-                              );
-                            })}
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-
-                    <div className="pt-8 flex flex-col sm:flex-row items-center gap-4">
-                      <button
-                        type="button"
-                        onClick={saveWindows}
-                        disabled={isSavingWindows || selectedWindows.length === 0}
-                        className="w-full sm:w-auto bg-primary text-white font-body font-medium text-sm px-8 py-4 hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
-                      >
-                        {isSavingWindows
-                          ? "Saving..."
-                          : selectedWindows.length > 0
-                            ? `Send ${selectedWindows.length} time${selectedWindows.length > 1 ? "s" : ""}`
-                            : "Select a time"}
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setStep("done")}
-                        className="font-body text-sm text-text-secondary underline underline-offset-4 hover:text-primary transition-colors duration-200"
-                      >
-                        Skip, just call me
-                      </button>
-                    </div>
-                  </div>
+                ) : step === "availability" && contactId && leadMeta ? (
+                  <CallbackWindows
+                    contactId={contactId}
+                    lead={leadMeta}
+                    onDone={(picked) => {
+                      setPickedWindows(picked);
+                      setStep("done");
+                    }}
+                  />
                 ) : (
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
 
                     {/* Honeypot: hidden from humans, bots fill it in */}
                     <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
@@ -397,7 +275,7 @@ export default function ContactContent() {
 
 
                     {/* Name */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="firstName" className={labelClass}>First Name *</label>
                         <input
@@ -528,7 +406,7 @@ export default function ContactContent() {
                       <label htmlFor="message" className={labelClass}>Message</label>
                       <textarea
                         id="message"
-                        rows={4}
+                        rows={3}
                         {...register("message")}
                         className={`${baseInputClass} resize-none`}
                         placeholder="Tell us about your project..."
@@ -536,8 +414,8 @@ export default function ContactContent() {
                     </div>
 
                     {/* Human verification */}
-                    <div className="pt-2">
-                      <div className="flex items-center gap-3 border border-[#D8D8D8] bg-white px-4 py-3.5 max-w-sm">
+                    <div className="pt-1">
+                      <div className="flex items-center gap-3 border border-[#D8D8D8] bg-white px-4 py-2.5 max-w-sm">
                         <button
                           type="button"
                           onClick={handleVerifyClick}
@@ -574,13 +452,13 @@ export default function ContactContent() {
                     </div>
 
                     {/* Submit */}
-                    <div className="pt-2">
+                    <div className="pt-1">
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="group w-full bg-primary text-white font-body font-medium text-sm px-8 py-4 flex items-center justify-center gap-3 hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="group w-full bg-primary text-white font-body font-medium text-sm px-8 py-3.5 flex items-center justify-center gap-3 hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmitting ? "Sending..." : "Next: Request Your Free Estimate"}
+                        {isSubmitting ? "Sending..." : "Next"}
                         {!isSubmitting && (
                           <svg
                             width="15"
@@ -602,10 +480,10 @@ export default function ContactContent() {
 
             {/* ── Right: Image + Contact Info ── */}
             <FadeIn delay={0.2}>
-              <div className="space-y-12">
+              <div className="space-y-8">
 
                 {/* Project image */}
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[16/10] overflow-hidden">
                   <img
                     src="/images/projects/gallery/kitchen-02/1.jpg"
                     alt="MHG Contracting - recent project"

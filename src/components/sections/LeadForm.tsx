@@ -12,6 +12,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
+import CallbackWindows, { type LeadMeta } from "@/components/forms/CallbackWindows";
 
 interface LeadFormData {
   firstName: string;
@@ -57,6 +58,10 @@ export default function LeadForm({
 }: LeadFormProps) {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
+  // Step 2: once the lead is saved, offer callback windows. Same flow as the contact page.
+  const [contactId, setContactId] = useState<string | null>(null);
+  const [leadMeta, setLeadMeta] = useState<LeadMeta | null>(null);
+  const [pickedWindows, setPickedWindows] = useState(0);
   const [verifyState, setVerifyState] = useState<VerifyState>("idle");
   const [verifyError, setVerifyError] = useState<string | null>(null);
   const formStartRef = useRef<number>(Date.now());
@@ -124,9 +129,10 @@ export default function LeadForm({
         }),
       });
 
+      const result = await res.json().catch(() => ({}));
+
       if (!res.ok) {
-        const { error } = await res.json().catch(() => ({}));
-        throw new Error(error ?? "Submission failed");
+        throw new Error(result?.error ?? "Submission failed");
       }
 
       if (typeof window !== "undefined" && typeof window.gtag === "function") {
@@ -136,7 +142,19 @@ export default function LeadForm({
         });
       }
 
-      setIsSubmitted(true);
+      // Lead is captured. Step 2 is a bonus, so a missing id just shows the
+      // confirmation rather than a dead end.
+      if (result?.contactId) {
+        setContactId(result.contactId);
+        setLeadMeta({
+          first_name: data.firstName,
+          last_name: data.lastName,
+          phone: data.phone,
+          project_type: data.projectType,
+        });
+      } else {
+        setIsSubmitted(true);
+      }
     } catch (error) {
       console.error("Lead form submission error:", error);
       alert("There was an error submitting the form. Please try again or call (609) 712-2474.");
@@ -155,12 +173,30 @@ export default function LeadForm({
     : "w-full bg-white border border-[#D8D8D8] rounded-md px-4 py-3 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
   const errorClass = "text-red-400 text-[11px] mt-1.5 font-body";
 
+  if (contactId && leadMeta && !isSubmitted) {
+    return (
+      <div className={dark || bare ? "" : "bg-white border border-[#E5E5E5] rounded-lg p-6 md:p-8"}>
+        <CallbackWindows
+          contactId={contactId}
+          lead={leadMeta}
+          theme={dark ? "dark" : "light"}
+          onDone={(picked) => {
+            setPickedWindows(picked);
+            setIsSubmitted(true);
+          }}
+        />
+      </div>
+    );
+  }
+
   if (isSubmitted) {
     return (
       <div className={`text-center py-12 px-6 ${dark || bare ? "" : "bg-white border border-[#E5E5E5] rounded-lg"}`}>
         <h3 className={`font-heading text-2xl font-bold mb-3 ${headingColor}`}>Request Received</h3>
         <p className={`font-body text-base max-w-sm mx-auto leading-relaxed ${subColor}`}>
-          We&apos;ll be in touch within 24 hours to talk through your project.
+          {pickedWindows > 0
+            ? "We'll call you at one of the times you picked. Need us sooner? Call (609) 712-2474."
+            : "We'll be in touch within 24 hours to talk through your project."}
         </p>
       </div>
     );
@@ -285,7 +321,7 @@ export default function LeadForm({
             dark ? "bg-white text-primary hover:bg-white/90" : "bg-primary text-white hover:bg-primary-dark"
           }`}
         >
-          {isSubmitting ? "Sending..." : "Request Free Estimate"}
+          {isSubmitting ? "Sending..." : "Next"}
         </button>
       </form>
     </div>
