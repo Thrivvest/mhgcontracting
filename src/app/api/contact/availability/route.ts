@@ -138,41 +138,46 @@ export async function POST(req: NextRequest) {
     }
   };
 
-  // ── Custom field: the structured home for the windows ───────────────────────
+  // ── Everything below is independent, so it runs concurrently. Sequentially
+  // these four calls took ~5s, which the lead spends watching a spinner. ──────
   const fieldId = process.env.GHL_FIELD_PREFERRED_CALL_TIMES;
-  if (fieldId) {
-    await ghlCall("custom field", `${GHL_API_BASE}/contacts/${contactId}`, "PUT", {
-      customFields: [{ id: fieldId, field_value: summary }],
-    });
-  } else {
-    console.warn(`[${ROUTE_VERSION}] GHL_FIELD_PREFERRED_CALL_TIMES not set, note only`);
-  }
+  if (!fieldId) console.warn(`[${ROUTE_VERSION}] GHL_FIELD_PREFERRED_CALL_TIMES not set, note only`);
 
-  // ── Note: visible in the contact timeline ──────────────────────────────────
-  await ghlCall("note", `${GHL_API_BASE}/contacts/${contactId}/notes`, "POST", {
-    body: `Available for a call: ${summary}`,
-  });
-
-  // ── Tag: filterable in GHL and available as an automation trigger ──────────
-  await ghlCall("tag", `${GHL_API_BASE}/contacts/${contactId}/tags`, "POST", {
-    tags: ["callback-requested"],
-  });
-
-  // ── Task: due at the start of the first window, so it surfaces on its own ──
   const [firstDay, firstBlock] = (windowKeys[0] ?? "").split("|");
   const dueDate = firstBlock ? easternIso(firstDay, BLOCK_START_HOUR[firstBlock] ?? 9) : null;
-  if (dueDate) {
-    // Unassigned tasks only show on the contact record. Assigning it puts the
-    // task in that user's own task list, which is where it actually gets seen.
-    const assignee = process.env.GHL_TASK_ASSIGNEE_ID;
-    await ghlCall("task", `${GHL_API_BASE}/contacts/${contactId}/tasks`, "POST", {
-      title: `Call ${leadName || "website lead"}${body.phone ? ` at ${body.phone}` : ""}`,
-      body: `Lead asked for a callback. Windows they gave: ${summary}`,
-      dueDate,
-      completed: false,
-      ...(assignee ? { assignedTo: assignee } : {}),
-    });
-  }
+  // Unassigned tasks only show on the contact record. Assigning it puts the
+  // task in that user's own task list, which is where it actually gets seen.
+  const assignee = process.env.GHL_TASK_ASSIGNEE_ID;
+
+  await Promise.all([
+    // The structured home for the windows.
+    fieldId
+      ? ghlCall("custom field", `${GHL_API_BASE}/contacts/${contactId}`, "PUT", {
+          customFields: [{ id: fieldId, field_value: summary }],
+        })
+      : Promise.resolve(false),
+
+    // Visible in the contact timeline.
+    ghlCall("note", `${GHL_API_BASE}/contacts/${contactId}/notes`, "POST", {
+      body: `Available for a call: ${summary}`,
+    }),
+
+    // Filterable in GHL and available as an automation trigger.
+    ghlCall("tag", `${GHL_API_BASE}/contacts/${contactId}/tags`, "POST", {
+      tags: ["callback-requested"],
+    }),
+
+    // Due at the start of the first window, so it surfaces on its own.
+    dueDate
+      ? ghlCall("task", `${GHL_API_BASE}/contacts/${contactId}/tasks`, "POST", {
+          title: `Call ${leadName || "website lead"}${body.phone ? ` at ${body.phone}` : ""}`,
+          body: `Lead asked for a callback. Windows they gave: ${summary}`,
+          dueDate,
+          completed: false,
+          ...(assignee ? { assignedTo: assignee } : {}),
+        })
+      : Promise.resolve(false),
+  ]);
 
   // ── Follow-up email to Shahzeb + Shahmi, threaded under the lead email ─────
   const webhook = process.env.N8N_WEBHOOK_AVAILABILITY;
