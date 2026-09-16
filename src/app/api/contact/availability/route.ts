@@ -16,6 +16,7 @@
  *   GHL_LOCATION_ID                - GHL location ID
  *   GHL_FIELD_PREFERRED_CALL_TIMES - Custom field ID for "Preferred Call Times"
  *   N8N_WEBHOOK_AVAILABILITY       - Webhook for the follow-up email to the team
+ *   GHL_TASK_ASSIGNEE_ID           - GHL user the callback task is assigned to (optional)
  */
 
 import { NextRequest, NextResponse } from "next/server";
@@ -161,11 +162,15 @@ export async function POST(req: NextRequest) {
   const [firstDay, firstBlock] = (windowKeys[0] ?? "").split("|");
   const dueDate = firstBlock ? easternIso(firstDay, BLOCK_START_HOUR[firstBlock] ?? 9) : null;
   if (dueDate) {
+    // Unassigned tasks only show on the contact record. Assigning it puts the
+    // task in that user's own task list, which is where it actually gets seen.
+    const assignee = process.env.GHL_TASK_ASSIGNEE_ID;
     await ghlCall("task", `${GHL_API_BASE}/contacts/${contactId}/tasks`, "POST", {
       title: `Call ${leadName || "website lead"}${body.phone ? ` at ${body.phone}` : ""}`,
       body: `Lead asked for a callback. Windows they gave: ${summary}`,
       dueDate,
       completed: false,
+      ...(assignee ? { assignedTo: assignee } : {}),
     });
   }
 
