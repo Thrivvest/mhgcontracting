@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { company, serviceAreas } from "@/lib/constants";
+import CallbackWindows, { type LeadMeta } from "@/components/forms/CallbackWindows";
 
 interface ContactFormData {
   firstName: string;
@@ -37,18 +38,23 @@ const TIMELINES = [
 ];
 
 const labelClass =
-  "font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] block mb-2.5";
+  "font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] block mb-1.5";
 
 const baseInputClass =
-  "w-full bg-transparent border-0 border-b border-[#C8C8C8] rounded-none px-0 py-3 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
+  "w-full bg-transparent border-0 border-b border-[#C8C8C8] rounded-none px-0 py-2 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
 
 const errorInputClass =
-  "w-full bg-transparent border-0 border-b border-red-400 rounded-none px-0 py-3 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-red-400 transition-colors duration-200";
+  "w-full bg-transparent border-0 border-b border-red-400 rounded-none px-0 py-2 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-red-400 transition-colors duration-200";
 
 type VerifyState = "idle" | "verifying" | "verified";
 
+type Step = "form" | "availability" | "done";
+
 export default function ContactContent() {
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [step, setStep] = useState<Step>("form");
+  const [contactId, setContactId] = useState<string | null>(null);
+  const [leadMeta, setLeadMeta] = useState<LeadMeta | null>(null);
+  const [pickedWindows, setPickedWindows] = useState(0);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [verifyState, setVerifyState] = useState<VerifyState>("idle");
   const [verifyError, setVerifyError] = useState<string | null>(null);
@@ -91,7 +97,7 @@ export default function ContactContent() {
 
   const onSubmit = async (data: ContactFormData) => {
     if (data.website && data.website.trim() !== "") {
-      setIsSubmitted(true);
+      setStep("done");
       return;
     }
     if (verifyState !== "verified") {
@@ -120,12 +126,26 @@ export default function ContactContent() {
         }),
       });
 
+      const result = await res.json().catch(() => ({}));
+
       if (!res.ok) {
-        const { error } = await res.json().catch(() => ({}));
-        throw new Error(error ?? "Submission failed");
+        throw new Error(result?.error ?? "Submission failed");
       }
 
-      setIsSubmitted(true);
+      // Lead is captured at this point. Step 2 is a bonus, so a missing
+      // contactId sends them straight to the confirmation instead of a dead end.
+      if (result?.contactId) {
+        setContactId(result.contactId);
+        setLeadMeta({
+          first_name: data.firstName,
+          last_name: data.lastName,
+          phone: data.phone,
+          project_type: data.projectType,
+        });
+        setStep("availability");
+      } else {
+        setStep("done");
+      }
     } catch (error) {
       console.error("Form submission error:", error);
       alert("There was an error submitting the form. Please try again or call us directly.");
@@ -170,26 +190,26 @@ export default function ContactContent() {
       </section>
 
       {/* Form + Info */}
-      <section className="py-20 md:py-32 px-6 lg:px-10 bg-[#F7F6F4]">
+      <section className="py-12 md:py-16 px-6 lg:px-10 bg-[#F7F6F4]">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-28">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-start">
 
             {/* ── Left: Form ── */}
             <FadeIn>
               <div>
                 {/* Section intro */}
-                <div className="mb-8">
-                  <span className="font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.15em] block mb-4">
+                <div className="mb-5">
+                  <span className="font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.15em] block mb-2.5">
                     Free Consultation
                   </span>
-                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary leading-tight">
-                    Tell Us About<br />Your Vision
+                  <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary leading-tight">
+                    Tell Us About Your Vision
                   </h2>
-                  <div className="w-10 h-[2px] bg-primary mt-5" />
+                  <div className="w-10 h-[2px] bg-primary mt-4" />
                 </div>
 
                 {/* Trust bar */}
-                <div className="mb-12 grid grid-cols-3 gap-3 border-y border-[#E5E5E5] py-4">
+                <div className="mb-7 grid grid-cols-3 gap-3 border-y border-[#E5E5E5] py-3">
                   <div className="text-center">
                     <p className="font-heading text-lg font-bold text-primary leading-none">24hr</p>
                     <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">Response time</p>
@@ -204,7 +224,7 @@ export default function ContactContent() {
                   </div>
                 </div>
 
-                {isSubmitted ? (
+                {step === "done" ? (
                   <div className="py-16 text-center">
                     <div className="w-16 h-16 border border-primary/30 flex items-center justify-center mx-auto mb-8">
                       <svg
@@ -224,11 +244,22 @@ export default function ContactContent() {
                       Message Received
                     </h3>
                     <p className="font-body text-text-secondary text-base max-w-xs mx-auto leading-relaxed">
-                      We&apos;ll be in touch within 24 hours to discuss your project.
+                      {pickedWindows > 0
+                        ? "We'll call you at one of the times you picked. If anything changes, reach us at (609) 712-2474."
+                        : "We'll be in touch within 24 hours to discuss your project."}
                     </p>
                   </div>
+                ) : step === "availability" && contactId && leadMeta ? (
+                  <CallbackWindows
+                    contactId={contactId}
+                    lead={leadMeta}
+                    onDone={(picked) => {
+                      setPickedWindows(picked);
+                      setStep("done");
+                    }}
+                  />
                 ) : (
-                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-8" noValidate>
+                  <form onSubmit={handleSubmit(onSubmit)} className="space-y-4" noValidate>
 
                     {/* Honeypot: hidden from humans, bots fill it in */}
                     <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
@@ -244,7 +275,7 @@ export default function ContactContent() {
 
 
                     {/* Name */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="firstName" className={labelClass}>First Name *</label>
                         <input
@@ -375,7 +406,7 @@ export default function ContactContent() {
                       <label htmlFor="message" className={labelClass}>Message</label>
                       <textarea
                         id="message"
-                        rows={4}
+                        rows={3}
                         {...register("message")}
                         className={`${baseInputClass} resize-none`}
                         placeholder="Tell us about your project..."
@@ -383,8 +414,8 @@ export default function ContactContent() {
                     </div>
 
                     {/* Human verification */}
-                    <div className="pt-2">
-                      <div className="flex items-center gap-3 border border-[#D8D8D8] bg-white px-4 py-3.5 max-w-sm">
+                    <div className="pt-1">
+                      <div className="flex items-center gap-3 border border-[#D8D8D8] bg-white px-4 py-2.5 max-w-sm">
                         <button
                           type="button"
                           onClick={handleVerifyClick}
@@ -421,13 +452,13 @@ export default function ContactContent() {
                     </div>
 
                     {/* Submit */}
-                    <div className="pt-2">
+                    <div className="pt-1">
                       <button
                         type="submit"
                         disabled={isSubmitting}
-                        className="group w-full bg-primary text-white font-body font-medium text-sm px-8 py-4 flex items-center justify-center gap-3 hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                        className="group w-full bg-primary text-white font-body font-medium text-sm px-8 py-3.5 flex items-center justify-center gap-3 hover:bg-primary-dark transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                       >
-                        {isSubmitting ? "Sending..." : "Request Your Free Estimate"}
+                        {isSubmitting ? "Sending..." : "Next"}
                         {!isSubmitting && (
                           <svg
                             width="15"
@@ -449,10 +480,10 @@ export default function ContactContent() {
 
             {/* ── Right: Image + Contact Info ── */}
             <FadeIn delay={0.2}>
-              <div className="space-y-12">
+              <div className="space-y-8">
 
                 {/* Project image */}
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="aspect-[16/10] overflow-hidden">
                   <img
                     src="/images/projects/gallery/kitchen-02/1.jpg"
                     alt="MHG Contracting - recent project"
