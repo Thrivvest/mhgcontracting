@@ -641,7 +641,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "Average Bathroom Remodel Cost in NJ (2026 Price Breakdown)",
     date: "August 22, 2026",
     excerpt: "A full bathroom remodel in New Jersey runs $25,000 to $40,000 in 2026, but where you live in the state and which bathroom you're touching swing that number hard. Here's the real statewide breakdown.",
-    metaDescription: "The average bathroom remodel in NJ runs $25,000 to $40,000 for a full bath. Small baths from $12K, primary suites $45K to $100K+. Real 2026 numbers by room type.",
+    metaDescription: "Average bathroom remodel cost in NJ: $25K-$40K full bath. Small baths from $12K, primary suites $45K-$100K+. Real 2026 numbers by room type.",
     category: "Bathroom",
     readTime: "6 min read",
     content: `
@@ -819,7 +819,7 @@ export const BLOG_POSTS: BlogPost[] = [
     title: "How to Choose a Contractor in NJ: 3 Checks Before You Sign",
     date: "March 20, 2026",
     excerpt: "Three things will tell you almost everything you need to know about a contractor in NJ. Here's what to look for and the questions that separate the pros from.",
-    metaDescription: "Verify the HIC license, see the insurance, read the contract. A Hamilton NJ contractor explains the 3 checks that prevent almost every horror story.",
+    metaDescription: "How to choose a contractor in NJ: verify the HIC license, check insurance, read the contract. The 3 checks that prevent almost every horror story.",
     category: "Tips",
     readTime: "6 min read",
     content: `
@@ -1170,7 +1170,7 @@ export const BLOG_POSTS: BlogPost[] = [
     seoTitle: "Do You Need a Permit to Remodel in NJ? (2026 Rules) | MHG",
     date: "February 13, 2026",
     excerpt: "The short answer is probably yes. The longer answer matters because unpermitted work will haunt you at resale. Here's what NJ actually requires.",
-    metaDescription: "Kitchen remodels, bathrooms, additions: what needs a permit in NJ, who pulls it, and what unpermitted work costs you at resale. From MHG Contracting, Hamilton NJ.",
+    metaDescription: "Kitchen remodels, bathrooms, additions: what needs a permit in NJ, who pulls it, and what unpermitted work costs at resale. MHG Contracting, Hamilton NJ.",
     category: "Tips",
     readTime: "5 min read",
     content: `
