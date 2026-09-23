@@ -520,6 +520,8 @@ export const BLOG_POSTS: BlogPost[] = [
     category: "Bathroom",
     readTime: "5 min read",
     content: `
+<p><strong>Quick answer:</strong> a small bathroom or powder room remodel in Hamilton, NJ runs $12,000 to $20,000. A full bathroom remodel runs $25,000 to $40,000. A primary or master bath runs $45,000 to $100,000 or more. Averaged across every bathroom size, the typical Hamilton project lands around $30,000.</p>
+
 <p>When someone in Hamilton asks what a bathroom remodel costs, the honest answer starts with a question back: which bathroom.</p>
 
 <p>A powder room and a primary suite are different projects. They use different trades, different fixtures, different tile volumes. The cost gap can be 4x or more. Here's the real breakdown for each, based on <a href="/services/bathroom-renovations/hamilton-nj">bathrooms we've remodeled in Hamilton</a>, Princeton, West Windsor, and the rest of Central NJ.</p>
