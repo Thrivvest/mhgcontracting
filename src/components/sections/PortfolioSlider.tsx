@@ -75,12 +75,6 @@ export default function PortfolioSlider() {
         </Link>
       </div>
 
-      {/* Project location pill */}
-      <div className="absolute top-6 right-6 md:top-14 md:right-14 z-10">
-        <span className="font-body text-xs text-white/50 tracking-wide">
-          {project.location}
-        </span>
-      </div>
     </div>
   ));
 

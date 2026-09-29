@@ -1,10 +1,10 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { businessRef } from "@/data/business";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { portfolioProjects, getProjectBySlug } from "@/lib/data";
 import ProjectDetail from "./ProjectDetail";
 import { buildBreadcrumbSchema, buildSeoMetadata, truncateAtWord } from "@/lib/seo-utils";
-import SeoPrerender from "@/components/seo/SeoPrerender";
-import { generatePortfolioSeoContent } from "@/lib/seo-content-generator";
 
 // Generate static routes for all projects
 export function generateStaticParams() {
@@ -43,16 +43,7 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     name: project.title,
     description: project.description,
     image: `https://mhgcon.com${project.imagePath}`,
-    creator: {
-      "@type": "Organization",
-      "@id": "https://mhgcon.com/#organization",
-      name: "MHG Contracting",
-    },
-    locationCreated: {
-      "@type": "Place",
-      name: project.location,
-    },
-    dateCreated: project.year,
+    creator: businessRef,
   };
 
   const breadcrumbSchema = buildBreadcrumbSchema([
@@ -61,7 +52,6 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
     { name: project.title, href: `/portfolio/${slug}` },
   ]);
 
-  const seoHtml = generatePortfolioSeoContent(project);
 
   return (
     <>
@@ -69,14 +59,8 @@ export default async function ProjectPage({ params }: { params: Promise<{ slug: 
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <SeoPrerender>
-        <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
-      </SeoPrerender>
       <ProjectDetail project={project} />
+      <Breadcrumbs schema={breadcrumbSchema} />
     </>
   );
 }

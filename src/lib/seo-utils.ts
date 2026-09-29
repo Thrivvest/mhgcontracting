@@ -121,27 +121,29 @@ export function robotsDirective(index = true, follow = true) {
 }
 
 export const SERVICE_BLOG_MAP: Record<string, string[]> = {
-  "kitchen-renovations": ["kitchen-remodel-cost", "kitchen-trends", "kitchen-timeline"],
-  "bathroom-renovations": ["bathroom-remodel-cost", "bathroom-remodel-cost-nj", "bathroom-ideas"],
-  "basement-finishing": ["basement-finishing-cost", "basement-ideas"],
-  "full-home-renovations": ["choosing-a-contractor", "remodel-roi", "general-contractor-vs-handyman-hamilton-nj"],
-  additions: ["home-additions-cost-mercer-county-nj", "permits-nj", "remodel-roi"],
+  "kitchen-renovations": ["kitchen-remodel-cost", "kitchen-trends", "kitchen-renovation-timeline-nj"],
+  "bathroom-renovations": ["bathroom-remodel-cost", "bathroom-ideas"],
+  "basement-finishing": ["basement-finishing-cost", "basement-finishing-ideas"],
+  "full-home-renovations": ["choosing-a-contractor", "home-remodeling-cost-hamilton-nj", "general-contractor-vs-handyman-hamilton-nj"],
+  additions: ["home-additions-cost-mercer-county-nj", "permits-nj", "home-remodeling-cost-hamilton-nj"],
   "new-construction": ["choosing-a-contractor", "permits-nj", "general-contractor-vs-handyman-hamilton-nj"],
 };
 
 export const BLOG_SERVICE_MAP: Record<string, string> = {
   "kitchen-remodel-cost": "/services/kitchen-renovations",
-  "bathroom-remodel-cost": "/services/bathroom-renovations",
-  "bathroom-remodel-cost-nj": "/services/bathroom-renovations",
-  "basement-finishing-cost": "/services/basement-finishing",
-  "choosing-a-contractor": "/services",
   "kitchen-trends": "/services/kitchen-renovations",
+  "kitchen-renovation-timeline-nj": "/services/kitchen-renovations",
+  "bathroom-remodel-cost": "/services/bathroom-renovations",
   "bathroom-ideas": "/services/bathroom-renovations",
-  "basement-ideas": "/services/basement-finishing",
-  "kitchen-timeline": "/services/kitchen-renovations",
-  "permits-nj": "/services/additions",
-  "remodel-roi": "/services/full-home-renovations",
-  "why-we-love-what-we-do": "/services",
+  "walk-in-shower-installation-nj": "/services/bathroom-renovations",
+  "basement-finishing-cost": "/services/basement-finishing",
+  "basement-finishing-ideas": "/services/basement-finishing",
+  "full-home-renovation-cost-nj": "/services/full-home-renovations",
+  "full-home-renovation-timeline-nj": "/services/full-home-renovations",
+  "home-remodeling-cost-hamilton-nj": "/services/full-home-renovations",
   "home-additions-cost-mercer-county-nj": "/services/additions",
+  "permits-nj": "/services/additions",
+  "new-home-construction-cost-nj": "/services/new-construction",
+  "choosing-a-contractor": "/services",
   "general-contractor-vs-handyman-hamilton-nj": "/services",
 };

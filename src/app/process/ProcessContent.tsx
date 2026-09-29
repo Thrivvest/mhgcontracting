@@ -12,22 +12,22 @@ const PROCESS_SLIDES = [
   {
     image: "/images/projects/gallery/kitchen-01/3.jpg",
     subsections: [
-      { title: "What Happens", desc: "We start with a quick phone call to hear about your project, then schedule an in-person visit to see the space, take measurements, and provide an honest estimate." },
-      { title: "What You Get", desc: "A clear understanding of what's possible, a realistic budget range, and confidence that MHG is the right fit for your project." },
+      { title: "What Happens", desc: "A quick phone call to hear about your project, then a visit to your house to see the space, followed by a written preconstruction estimate." },
+      { title: "What You Get", desc: "A written estimate you can go through with us line by line, free of charge." },
     ],
   },
   {
     image: "/images/projects/gallery/fullreno-01/3.jpg",
     subsections: [
-      { title: "Design First", desc: "We spend 2-3 weeks on detailed drawings, renderings, and material selections so you can visualize the finished result before any work begins." },
-      { title: "Week-by-Week Schedule", desc: "For larger projects, you receive a written week-by-week timeline so you always know what to expect - no guesswork, no surprises." },
+      { title: "Settle the Plan", desc: "We go through the estimate together and settle the scope and finishes. After the deposit, the plan and budget are finalized." },
+      { title: "The Schedule", desc: "Your schedule is set before work starts. New Jersey also requires the start and finish dates in your contract." },
     ],
   },
   {
     image: "/images/projects/gallery/bath-02/4.jpg",
     subsections: [
-      { title: "Daily Progress", desc: "Our skilled team executes the plan with precision. Our leads are on-site regularly to ensure quality at every stage." },
-      { title: "Clean & Respectful", desc: "We protect your home, clean up daily, and minimize disruption to your family's routine." },
+      { title: "Week-by-Week Progress", desc: "MHG's crew and its licensed subcontractors do the work, with progress updates every week." },
+      { title: "Final Walkthrough", desc: "Before the last payment, we walk the finished job with you." },
     ],
   },
 ];
@@ -49,7 +49,7 @@ export default function ProcessContent() {
             <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">Our Renovation Process: From First Call to Completed Project</h1>
           </LineReveal>
           <FadeIn delay={0.6}>
-            <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">Free consultation, detailed design and planning, and expert build: three clear steps, no surprises, for your kitchen, bathroom, or home renovation in Central NJ.</p>
+            <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">From the first phone call to the final walkthrough: how an MHG kitchen, bathroom or home renovation runs.</p>
           </FadeIn>
         </div>
       </section>
@@ -138,7 +138,6 @@ export default function ProcessContent() {
                 <h3 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.1]">
                   {project.title}
                 </h3>
-                <p className="font-body text-white/50 text-sm tracking-wide">{project.location}</p>
               </div>
             </div>
           ))}

@@ -8,7 +8,7 @@ import ScrollSlider from "@/components/animations/ScrollSlider";
 import { company } from "@/lib/constants";
 
 const SERVICE_SLIDES = [
-  { slug: "general-contracting",   image: "/images/projects/fullreno-01.jpg",                     label: "01", title: "General Contracting",   sub: "Licensed, insured general contractor for remodels and builds across Central NJ." },
+  { slug: "general-contracting",   image: "/images/projects/fullreno-01.jpg",                     label: "01", title: "General Contracting",   sub: "One contract for the whole job, from a family-owned contractor in Hamilton." },
   { slug: "kitchen-renovations",   image: "/images/projects/kitchen-02-2.jpg",                    label: "02", title: "Kitchen Renovations",   sub: "Custom cabinetry, countertops, and full layout redesigns." },
   { slug: "bathroom-renovations",  image: "/images/projects/bath-02-1.jpg",                       label: "03", title: "Bathroom Renovations",  sub: "From powder rooms to spa-like master bathrooms." },
   { slug: "basement-finishing",    image: "/images/projects/gallery/bath-03/1.jpg",               label: "04", title: "Basement Finishing",    sub: "Transform your basement into usable living space." },

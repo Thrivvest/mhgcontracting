@@ -11,6 +11,8 @@
 
 import Link from "next/link";
 import { company, navLinks, serviceAreas } from "@/lib/constants";
+import { business } from "@/data/business";
+import { CVV_COPYRIGHT } from "@/data/costs";
 import { services } from "@/lib/data";
 
 export default function Footer() {
@@ -119,8 +121,12 @@ export default function Footer() {
                 </a>
               </li>
               <li className="text-white/50 text-sm font-body">
-                {company.location}
+                <a href={business.mapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
+                  {business.address.street}, {business.address.city}, {business.address.state} {business.address.zip}
+                </a>
               </li>
+              <li className="text-white/50 text-sm font-body">{business.hoursText}</li>
+              <li className="text-white/50 text-sm font-body">NJ HIC #{business.hic}</li>
               <li className="text-white/40 text-xs font-body pt-2">
                 Serving {serviceAreas.primary.join(", ")} &amp; surrounding areas
               </li>
@@ -186,7 +192,8 @@ export default function Footer() {
       <div className="mx-auto max-w-[1400px] px-6 lg:px-10 py-6 border-t border-white/10">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-2 text-center sm:text-left">
           <p className="text-white/30 text-xs font-body">
-            © {currentYear} {company.name}. All rights reserved.
+            © {currentYear} {business.legalName}. NJ HIC #{business.hic}. All rights reserved.
+            <span className="block mt-1">{CVV_COPYRIGHT}</span>
           </p>
           <p className="text-white/30 text-xs font-body">
             Marketing by{" "}

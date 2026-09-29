@@ -84,7 +84,6 @@ export default function PortfolioContent() {
                           {project.type.replace("-", " ")}
                         </span>
                         <span className="block font-heading text-white text-lg font-semibold mb-2">{project.title}</span>
-                        <span className="block font-body text-white/60 text-sm mb-3">{project.location}</span>
                         <span className="inline-flex items-center gap-1.5 text-white font-body text-sm font-medium">
                           View Project
                           <svg width="14" height="14" viewBox="0 0 16 16" fill="none">

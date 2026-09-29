@@ -84,9 +84,10 @@ export default function MobileEstimateSheet() {
           <LeadForm
             source="mhgcon.com mobile estimate sheet"
             heading="Get Your Free Estimate"
-            subheading="Tell us about your project. We respond within 24 hours."
+            subheading="Tell us about your project. The estimate is free."
             theme="light"
             bare
+            multistep
           />
         </div>
       </div>

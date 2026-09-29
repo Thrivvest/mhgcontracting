@@ -1,3 +1,6 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { serviceNode } from "@/lib/schema";
+import { townFaqs, townMeta } from "@/lib/town-page";
 /**
  * /services/[slug]/[city-slug] - Geo-targeted service area page
  *
@@ -10,8 +13,6 @@ import type { Metadata } from "next";
 import { getAreaPage, getAllAreaParams } from "@/lib/area-pages-data";
 import AreaPageContent from "./AreaPageContent";
 import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
-import SeoPrerender from "@/components/seo/SeoPrerender";
-import { generateAreaSeoContent } from "@/lib/seo-content-generator";
 
 type Params = { slug: string; "city-slug": string };
 
@@ -31,7 +32,7 @@ export function generateMetadata({
     return buildSeoMetadata({
       path: `/services/${slug}/${citySlug}`,
       title: page.title,
-      description: page.metaDescription,
+      description: townMeta(page),
       ogImageAlt: page.title,
     });
   });
@@ -48,42 +49,19 @@ export default async function AreaPage({
 
   // JSON-LD: Service + FAQPage schema
   const jsonLd = [
-    {
-      "@context": "https://schema.org",
-      "@type": "Service",
+    serviceNode({
       name: `${page.serviceName} in ${page.cityName}, ${page.state}`,
-      description: page.metaDescription,
-      provider: {
-        "@type": "LocalBusiness",
-        name: "MHG Contracting",
-        telephone: "(609) 712-2474",
-        address: {
-          "@type": "PostalAddress",
-          addressLocality: "Hamilton",
-          addressRegion: "NJ",
-          addressCountry: "US",
-        },
-      },
-      areaServed: {
-        "@type": "City",
-        name: page.cityName,
-        containedInPlace: {
-          "@type": "State",
-          name: page.state === "NJ" ? "New Jersey" : "Pennsylvania",
-        },
-      },
-      url: `https://mhgcon.com/services/${slug}/${citySlug}`,
-    },
+      path: `/services/${slug}/${citySlug}`,
+      description: townMeta(page),
+      town: { name: page.cityName, state: page.state },
+    }),
     {
       "@context": "https://schema.org",
       "@type": "FAQPage",
-      mainEntity: page.faqs.map((faq) => ({
+      mainEntity: townFaqs(page).faqs.map((faq) => ({
         "@type": "Question",
         name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
+        acceptedAnswer: { "@type": "Answer", text: faq.answer },
       })),
     },
   ];
@@ -95,7 +73,6 @@ export default async function AreaPage({
     { name: `${page.cityName}, ${page.state}`, href: `/services/${slug}/${citySlug}` },
   ]);
 
-  const seoHtml = generateAreaSeoContent(page);
 
   return (
     <>
@@ -103,14 +80,8 @@ export default async function AreaPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
-      <SeoPrerender>
-        <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
-      </SeoPrerender>
       <AreaPageContent page={page} />
+      <Breadcrumbs schema={breadcrumbSchema} />
     </>
   );
 }

@@ -1,10 +1,10 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
+import { businessRef } from "@/data/business";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import BlogPostContent from "./BlogPostContent";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { buildBreadcrumbSchema, buildSeoMetadata, truncateAtWord } from "@/lib/seo-utils";
-import SeoPrerender from "@/components/seo/SeoPrerender";
-import { generateBlogSeoContent } from "@/lib/seo-content-generator";
 
 export function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -68,13 +68,8 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
       width: 1200,
       height: 630,
     },
-    author: {
-      "@type": "Person",
-      "@id": "https://mhgcon.com/#founder",
-      name: "Shahzeb Malik",
-      url: "https://mhgcon.com/about",
-    },
-    publisher: { "@id": "https://mhgcon.com/#organization" },
+    author: businessRef,
+    publisher: businessRef,
     inLanguage: "en-US",
     isAccessibleForFree: true,
   };
@@ -96,7 +91,6 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         }
       : null;
 
-  const seoHtml = generateBlogSeoContent(post);
 
   return (
     <>
@@ -104,20 +98,14 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-      />
       {faqSchema && (
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       )}
-      <SeoPrerender>
-        <div dangerouslySetInnerHTML={{ __html: seoHtml }} />
-      </SeoPrerender>
       <BlogPostContent post={post} />
+      <Breadcrumbs schema={breadcrumbSchema} />
     </>
   );
 }

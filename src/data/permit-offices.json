@@ -1,0 +1,130 @@
+{
+ "source": "New Jersey Department of Community Affairs, Listing of NJ Municipal Construction Code Enforcement Officials",
+ "url": "https://www.nj.gov/dca/codes/publications/pdf_ora/muniroster.pdf",
+ "asOf": "2026-09-02",
+ "retrieved": "2026-09-28",
+ "note": "The construction office for the municipality each town page covers. Lawrenceville is inside Lawrence Township. The 08525 Hopewell address covers both Hopewell Borough (its code enforcement is run by the DCA) and Hopewell Township, so that page lists both. Yardley is in Pennsylvania and comes from Yardley Borough's own permit page.",
+ "offices": {
+  "hamilton-nj": [
+   {
+    "municipality": "Hamilton Township",
+    "county": "Mercer County",
+    "street": "2090 Greenwood Avenue",
+    "city": "Hamilton",
+    "zip": "08650",
+    "phone": "(609) 890-3666"
+   }
+  ],
+  "princeton-nj": [
+   {
+    "municipality": "Princeton",
+    "county": "Mercer County",
+    "street": "400 Witherspoon Street",
+    "city": "Princeton",
+    "zip": "08540",
+    "phone": "(609) 921-7078"
+   }
+  ],
+  "west-windsor-nj": [
+   {
+    "municipality": "West Windsor Township",
+    "county": "Mercer County",
+    "street": "271 Clarksville Road",
+    "city": "West Windsor",
+    "zip": "08550",
+    "phone": "(609) 799-8490"
+   }
+  ],
+  "lawrenceville-nj": [
+   {
+    "municipality": "Lawrence Township",
+    "county": "Mercer County",
+    "street": "2207 Lawrence Road",
+    "city": "Lawrenceville",
+    "zip": "08648",
+    "phone": "(609) 844-7060"
+   }
+  ],
+  "plainsboro-nj": [
+   {
+    "municipality": "Plainsboro Township",
+    "county": "Middlesex County",
+    "street": "641 Plainsboro Road",
+    "city": "Plainsboro",
+    "zip": "08536",
+    "phone": "(609) 799-0909"
+   }
+  ],
+  "robbinsville-nj": [
+   {
+    "municipality": "Robbinsville Township",
+    "county": "Mercer County",
+    "street": "2298 Route 33",
+    "city": "Robbinsville",
+    "zip": "08691",
+    "phone": "(609) 259-3600"
+   }
+  ],
+  "hopewell-nj": [
+   {
+    "municipality": "Hopewell Township",
+    "county": "Mercer County",
+    "street": "201 Washington Crossing Pennington Road",
+    "city": "Titusville",
+    "zip": "08560",
+    "phone": "(609) 737-0612"
+   },
+   {
+    "municipality": "Hopewell Borough",
+    "county": "Mercer County",
+    "street": "88 E Broad Street",
+    "city": "Hopewell",
+    "zip": "08525",
+    "phone": "(908) 713-0722",
+    "note": "code enforcement run by the NJ DCA"
+   }
+  ],
+  "pennington-nj": [
+   {
+    "municipality": "Pennington Borough",
+    "county": "Mercer County",
+    "street": "30 North Main Street",
+    "city": "Pennington",
+    "zip": "08534",
+    "phone": "(609) 737-0276"
+   }
+  ],
+  "east-windsor-nj": [
+   {
+    "municipality": "East Windsor Township",
+    "county": "Mercer County",
+    "street": "16 Lanning Boulevard",
+    "city": "East Windsor",
+    "zip": "08520",
+    "phone": "(609) 443-4000"
+   }
+  ],
+  "ewing-nj": [
+   {
+    "municipality": "Ewing Township",
+    "county": "Mercer County",
+    "street": "2 Jake Garzio Drive",
+    "city": "Ewing",
+    "zip": "08628",
+    "phone": "(609) 883-2900"
+   }
+  ],
+  "yardley-pa": [
+   {
+    "municipality": "Yardley Borough",
+    "county": "Bucks County, PA",
+    "street": "56 S. Main Street",
+    "city": "Yardley",
+    "zip": "19067",
+    "phone": "(215) 493-6832",
+    "sourceUrl": "https://www.yardleyboro.org/submit-a-permit",
+    "note": "applications at Borough Hall; building permits go to the Borough's Building Code Official"
+   }
+  ]
+ }
+}

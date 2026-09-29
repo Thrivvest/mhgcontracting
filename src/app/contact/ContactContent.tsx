@@ -6,10 +6,11 @@ import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { company, serviceAreas } from "@/lib/constants";
 import CallbackWindows, { type LeadMeta } from "@/components/forms/CallbackWindows";
+import { business, googleRating } from "@/data/business";
+import { splitName } from "@/lib/split-name";
 
 interface ContactFormData {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   phone: string;
   projectType: string;
@@ -41,10 +42,10 @@ const labelClass =
   "font-body text-[11px] font-medium text-text-secondary uppercase tracking-[0.13em] block mb-1.5";
 
 const baseInputClass =
-  "w-full bg-transparent border-0 border-b border-[#C8C8C8] rounded-none px-0 py-2 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
+  "w-full bg-transparent border-0 border-b border-[#C8C8C8] rounded-none px-0 py-2 font-body text-base text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
 
 const errorInputClass =
-  "w-full bg-transparent border-0 border-b border-red-400 rounded-none px-0 py-2 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-red-400 transition-colors duration-200";
+  "w-full bg-transparent border-0 border-b border-red-400 rounded-none px-0 py-2 font-body text-base text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-red-400 transition-colors duration-200";
 
 type VerifyState = "idle" | "verifying" | "verified";
 
@@ -105,13 +106,14 @@ export default function ContactContent() {
       return;
     }
     setIsSubmitting(true);
+    const { firstName, lastName } = splitName(data.name);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          first_name: data.firstName,
-          last_name: data.lastName,
+          first_name: firstName,
+          last_name: lastName,
           email: data.email,
           phone: data.phone,
           project_type: data.projectType,
@@ -137,8 +139,8 @@ export default function ContactContent() {
       if (result?.contactId) {
         setContactId(result.contactId);
         setLeadMeta({
-          first_name: data.firstName,
-          last_name: data.lastName,
+          first_name: firstName,
+          last_name: lastName,
           phone: data.phone,
           project_type: data.projectType,
         });
@@ -159,7 +161,7 @@ export default function ContactContent() {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
+      <section className="relative flex items-end pt-28 pb-10 md:min-h-[60vh] md:pb-16 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src="/images/projects/fullreno-01-1.jpg"
@@ -168,23 +170,30 @@ export default function ContactContent() {
             loading="eager"
             fetchPriority="high"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-black/65" />
         </div>
-        <div className="relative z-10 max-w-[1400px] mx-auto">
+        <div className="relative z-10 w-full max-w-[1400px] mx-auto">
           <FadeIn>
-            <span className="font-body text-xs font-medium text-white/40 uppercase tracking-[0.15em] mb-4 block">
+            <span className="font-body text-xs font-medium text-white/60 uppercase tracking-[0.15em] mb-4 block">
               Contact
             </span>
           </FadeIn>
           <LineReveal trigger="load" delay={0.3}>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05] max-w-4xl">
               Get a Free Renovation Estimate
             </h1>
           </LineReveal>
           <FadeIn delay={0.6}>
-            <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">
-              Contact MHG Contracting for a free estimate on your kitchen renovation, bathroom remodel, basement finishing, home addition, or new construction project in Central New Jersey. Call (609) 712-2474 or fill out the form below.
+            <p className="font-body text-white/85 text-lg md:text-xl mt-4 md:mt-6 max-w-xl leading-relaxed">
+              Tell us about your kitchen, bath, basement, addition or new build and we&apos;ll set up a free in-home estimate. Or call the office.
             </p>
+            <a
+              href={business.phoneHref}
+              className="mt-6 inline-flex w-full sm:w-auto items-center justify-center gap-2 bg-primary px-7 py-4 font-body text-base font-semibold text-white rounded-md hover:bg-primary-light transition-colors"
+            >
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.8 19.8 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z" /></svg>
+              Call {business.phone}
+            </a>
           </FadeIn>
         </div>
       </section>
@@ -211,16 +220,16 @@ export default function ContactContent() {
                 {/* Trust bar */}
                 <div className="mb-7 grid grid-cols-3 gap-3 border-y border-[#E5E5E5] py-3">
                   <div className="text-center">
-                    <p className="font-heading text-lg font-bold text-primary leading-none">24hr</p>
-                    <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">Response time</p>
+                    <p className="font-heading text-lg font-bold text-primary leading-none">{googleRating.rating.toFixed(1)}&#9733;</p>
+                    <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">{googleRating.count} Google reviews</p>
                   </div>
                   <div className="text-center border-x border-[#E5E5E5]">
                     <p className="font-heading text-lg font-bold text-primary leading-none">Free</p>
                     <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">In-home estimate</p>
                   </div>
                   <div className="text-center">
-                    <p className="font-heading text-lg font-bold text-primary leading-none">5&#9733;</p>
-                    <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">Google rated</p>
+                    <p className="font-heading text-lg font-bold text-primary leading-none">NJ HIC</p>
+                    <p className="font-body text-[10px] text-text-secondary uppercase tracking-[0.08em] mt-1">#{business.hic}</p>
                   </div>
                 </div>
 
@@ -246,7 +255,7 @@ export default function ContactContent() {
                     <p className="font-body text-text-secondary text-base max-w-xs mx-auto leading-relaxed">
                       {pickedWindows > 0
                         ? "We'll call you at one of the times you picked. If anything changes, reach us at (609) 712-2474."
-                        : "We'll be in touch within 24 hours to discuss your project."}
+                        : `We'll call you to set up your free estimate. You can also reach us at ${business.phone}.`}
                     </p>
                   </div>
                 ) : step === "availability" && contactId && leadMeta ? (
@@ -275,33 +284,19 @@ export default function ContactContent() {
 
 
                     {/* Name */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                      <div>
-                        <label htmlFor="firstName" className={labelClass}>First Name *</label>
-                        <input
-                          id="firstName"
-                          type="text"
-                          {...register("firstName", { required: "Required" })}
-                          className={errors.firstName ? errorInputClass : baseInputClass}
-                          placeholder="John"
-                        />
-                        {errors.firstName && (
-                          <p className="text-red-500 text-[11px] mt-1.5 font-body">{errors.firstName.message}</p>
-                        )}
-                      </div>
-                      <div>
-                        <label htmlFor="lastName" className={labelClass}>Last Name *</label>
-                        <input
-                          id="lastName"
-                          type="text"
-                          {...register("lastName", { required: "Required" })}
-                          className={errors.lastName ? errorInputClass : baseInputClass}
-                          placeholder="Smith"
-                        />
-                        {errors.lastName && (
-                          <p className="text-red-500 text-[11px] mt-1.5 font-body">{errors.lastName.message}</p>
-                        )}
-                      </div>
+                    <div>
+                      <label htmlFor="name" className={labelClass}>Name *</label>
+                      <input
+                        id="name"
+                        type="text"
+                        autoComplete="name"
+                        {...register("name", { required: "Required" })}
+                        className={errors.name ? errorInputClass : baseInputClass}
+                        placeholder="John Smith"
+                      />
+                      {errors.name && (
+                        <p className="text-red-500 text-[11px] mt-1.5 font-body">{errors.name.message}</p>
+                      )}
                     </div>
 
                     {/* Email & Phone */}

@@ -13,10 +13,10 @@
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import CallbackWindows, { type LeadMeta } from "@/components/forms/CallbackWindows";
+import { splitName } from "@/lib/split-name";
 
 interface LeadFormData {
-  firstName: string;
-  lastName: string;
+  name: string;
   email: string;
   phone: string;
   projectType: string;
@@ -44,6 +44,12 @@ interface LeadFormProps {
   theme?: "light" | "dark";
   /** Render without the outer white card wrapper (for embedding in a sheet/modal that supplies its own surface) */
   bare?: boolean;
+  /**
+   * One question per screen (used by the mobile estimate sheet): project type,
+   * then name, then phone and email. Same fields, same verification and the
+   * same /api/contact payload as the single-page form.
+   */
+  multistep?: boolean;
 }
 
 type VerifyState = "idle" | "verifying" | "verified";
@@ -52,10 +58,12 @@ export default function LeadForm({
   source,
   defaultProjectType = "",
   heading = "Get Your Free Estimate",
-  subheading = "Tell us about your project. We respond within 24 hours.",
+  subheading = "Tell us about your project. The estimate is free.",
   theme = "light",
   bare = false,
+  multistep = false,
 }: LeadFormProps) {
+  const [step, setStep] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   // Step 2: once the lead is saved, offer callback windows. Same flow as the contact page.
@@ -71,6 +79,8 @@ export default function LeadForm({
   const {
     register,
     handleSubmit,
+    trigger,
+    setValue,
     formState: { errors },
   } = useForm<LeadFormData>({ defaultValues: { projectType: defaultProjectType } });
 
@@ -111,13 +121,14 @@ export default function LeadForm({
       return;
     }
     setIsSubmitting(true);
+    const { firstName, lastName } = splitName(data.name);
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          first_name: data.firstName,
-          last_name: data.lastName,
+          first_name: firstName,
+          last_name: lastName,
           email: data.email,
           phone: data.phone,
           project_type: data.projectType,
@@ -147,8 +158,8 @@ export default function LeadForm({
       if (result?.contactId) {
         setContactId(result.contactId);
         setLeadMeta({
-          first_name: data.firstName,
-          last_name: data.lastName,
+          first_name: firstName,
+          last_name: lastName,
           phone: data.phone,
           project_type: data.projectType,
         });
@@ -169,8 +180,8 @@ export default function LeadForm({
   const headingColor = dark ? "text-white" : "text-text-primary";
   const subColor = dark ? "text-white/60" : "text-text-secondary";
   const inputClass = dark
-    ? "w-full bg-white/10 border border-white/20 rounded-md px-4 py-3 font-body text-sm text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-colors duration-200"
-    : "w-full bg-white border border-[#D8D8D8] rounded-md px-4 py-3 font-body text-sm text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
+    ? "w-full bg-white/10 border border-white/20 rounded-md px-4 py-3 font-body text-base text-white placeholder:text-white/40 focus:outline-none focus:border-white transition-colors duration-200"
+    : "w-full bg-white border border-[#D8D8D8] rounded-md px-4 py-3 font-body text-base text-text-primary placeholder:text-[#BBBBBB] focus:outline-none focus:border-primary transition-colors duration-200";
   const errorClass = "text-red-400 text-[11px] mt-1.5 font-body";
 
   if (contactId && leadMeta && !isSubmitted) {
@@ -196,8 +207,167 @@ export default function LeadForm({
         <p className={`font-body text-base max-w-sm mx-auto leading-relaxed ${subColor}`}>
           {pickedWindows > 0
             ? "We'll call you at one of the times you picked. Need us sooner? Call (609) 712-2474."
-            : "We'll be in touch within 24 hours to talk through your project."}
+            : "We'll call you to set up your free estimate. Need us sooner? Call (609) 712-2474."}
         </p>
+      </div>
+    );
+  }
+
+  const honeypot = (
+    <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
+      <label htmlFor={`lf-website-${source}`}>Website</label>
+      <input id={`lf-website-${source}`} type="text" tabIndex={-1} autoComplete="off" {...register("website")} />
+    </div>
+  );
+
+  const robotCheck = (
+    <div>
+      <div className={`flex items-center gap-3 px-4 py-3 rounded-md ${dark ? "border border-white/20 bg-white/5" : "border border-[#D8D8D8] bg-[#FAFAFA]"}`}>
+        <button
+          type="button"
+          onClick={handleVerifyClick}
+          disabled={verifyState !== "idle"}
+          aria-checked={verifyState === "verified"}
+          role="checkbox"
+          className={`relative w-6 h-6 border ${
+            verifyState === "verified" ? "border-primary bg-primary" : dark ? "border-white/50 bg-transparent" : "border-[#999] bg-white"
+          } flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${verifyState === "idle" ? "cursor-pointer" : "cursor-default"}`}
+        >
+          {verifyState === "verifying" && <span className="block w-3 h-3 border-2 border-[#999] border-t-primary rounded-full animate-spin" />}
+          {verifyState === "verified" && (
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
+              <path d="M20 6L9 17l-5-5" />
+            </svg>
+          )}
+        </button>
+        <label
+          onClick={handleVerifyClick}
+          className={`font-body text-sm select-none ${dark ? "text-white/80" : "text-text-primary"} ${verifyState === "idle" ? "cursor-pointer" : "cursor-default"}`}
+        >
+          I am not a robot
+        </label>
+      </div>
+      {verifyError && <p className={errorClass}>{verifyError}</p>}
+    </div>
+  );
+
+  if (multistep) {
+    const STEPS = 3;
+    const next = async (fields: (keyof LeadFormData)[]) => {
+      if (await trigger(fields)) setStep((n) => n + 1);
+    };
+    const primaryBtn = `w-full font-body font-semibold text-base px-8 py-4 rounded-md transition-colors duration-300 disabled:opacity-50 disabled:cursor-not-allowed ${
+      dark ? "bg-white text-primary hover:bg-white/90" : "bg-primary text-white hover:bg-primary-dark"
+    }`;
+    return (
+      <div className={dark || bare ? "" : "bg-white border border-[#E5E5E5] rounded-lg p-6 md:p-10"}>
+        <div className="mb-6">
+          <div className="flex items-center gap-3 mb-3 pr-12">
+            {step > 0 && (
+              <button type="button" onClick={() => setStep((n) => n - 1)} className={`font-body text-sm font-medium ${subColor} hover:underline`}>
+                &larr; Back
+              </button>
+            )}
+            <span className={`font-body text-xs font-medium uppercase tracking-[0.12em] ${subColor}`}>
+              Step {step + 1} of {STEPS}
+            </span>
+          </div>
+          <div className="flex gap-1.5" aria-hidden="true">
+            {Array.from({ length: STEPS }, (_, i) => (
+              <span key={i} className={`h-1 flex-1 rounded-full ${i <= step ? "bg-primary" : "bg-[#E5E5E5]"}`} />
+            ))}
+          </div>
+        </div>
+
+        <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
+          {honeypot}
+
+          {step === 0 && (
+            <div>
+              <h3 className={`font-heading text-2xl font-bold leading-tight mb-5 ${headingColor}`}>What are you planning?</h3>
+              <input type="hidden" {...register("projectType")} />
+              <div className="grid grid-cols-2 gap-3">
+                {PROJECT_TYPES.map((type) => (
+                  <button
+                    key={type}
+                    type="button"
+                    onClick={() => {
+                      setValue("projectType", type);
+                      setStep(1);
+                    }}
+                    className="min-h-[56px] rounded-md border border-[#D8D8D8] bg-white px-3 py-3 text-left font-body text-base text-text-primary hover:border-primary active:bg-[#F5F5FA]"
+                  >
+                    {type}
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
+
+          {step === 1 && (
+            <div>
+              <h3 className={`font-heading text-2xl font-bold leading-tight mb-5 ${headingColor}`}>What&apos;s your name?</h3>
+              <input
+                type="text"
+                aria-label="Name"
+                autoComplete="name"
+                autoFocus
+                {...register("name", { required: "Name required" })}
+                className={inputClass}
+                placeholder="Name *"
+                onKeyDown={(e) => {
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    void next(["name"]);
+                  }
+                }}
+              />
+              {errors.name && <p className={errorClass}>{errors.name.message}</p>}
+              <button type="button" onClick={() => next(["name"])} className={`${primaryBtn} mt-5`}>
+                Next
+              </button>
+            </div>
+          )}
+
+          {step === 2 && (
+            <div className="space-y-4">
+              <h3 className={`font-heading text-2xl font-bold leading-tight ${headingColor}`}>Where can we reach you?</h3>
+              <div>
+                <input
+                  type="tel"
+                  inputMode="tel"
+                  aria-label="Phone"
+                  autoComplete="tel"
+                  autoFocus
+                  {...register("phone", { required: "Phone required" })}
+                  className={inputClass}
+                  placeholder="Phone *"
+                />
+                {errors.phone && <p className={errorClass}>{errors.phone.message}</p>}
+              </div>
+              <div>
+                <input
+                  type="email"
+                  inputMode="email"
+                  aria-label="Email"
+                  autoComplete="email"
+                  {...register("email", {
+                    required: "Email required",
+                    pattern: { value: /^\S+@\S+$/i, message: "Invalid email" },
+                  })}
+                  className={inputClass}
+                  placeholder="Email *"
+                />
+                {errors.email && <p className={errorClass}>{errors.email.message}</p>}
+              </div>
+              {robotCheck}
+              <button type="submit" disabled={isSubmitting} className={primaryBtn}>
+                {isSubmitting ? "Sending..." : "Get my free estimate"}
+              </button>
+              <p className={`text-center font-body text-xs ${subColor}`}>{subheading}</p>
+            </div>
+          )}
+        </form>
       </div>
     );
   }
@@ -210,33 +380,18 @@ export default function LeadForm({
       </div>
 
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-5" noValidate>
-        {/* Honeypot: hidden from humans, bots fill it in */}
-        <div aria-hidden="true" style={{ position: "absolute", left: "-9999px", width: "1px", height: "1px", overflow: "hidden" }}>
-          <label htmlFor={`lf-website-${source}`}>Website</label>
-          <input id={`lf-website-${source}`} type="text" tabIndex={-1} autoComplete="off" {...register("website")} />
-        </div>
+        {honeypot}
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-          <div>
-            <input
-              type="text"
-              aria-label="First name"
-              {...register("firstName", { required: "First name required" })}
-              className={inputClass}
-              placeholder="First name *"
-            />
-            {errors.firstName && <p className={errorClass}>{errors.firstName.message}</p>}
-          </div>
-          <div>
-            <input
-              type="text"
-              aria-label="Last name"
-              {...register("lastName", { required: "Last name required" })}
-              className={inputClass}
-              placeholder="Last name *"
-            />
-            {errors.lastName && <p className={errorClass}>{errors.lastName.message}</p>}
-          </div>
+        <div>
+          <input
+            type="text"
+            aria-label="Name"
+            autoComplete="name"
+            {...register("name", { required: "Name required" })}
+            className={inputClass}
+            placeholder="Name *"
+          />
+          {errors.name && <p className={errorClass}>{errors.name.message}</p>}
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -276,43 +431,7 @@ export default function LeadForm({
           </select>
         </div>
 
-        {/* Human verification */}
-        <div>
-          <div className={`flex items-center gap-3 px-4 py-3 rounded-md ${dark ? "border border-white/20 bg-white/5" : "border border-[#D8D8D8] bg-[#FAFAFA]"}`}>
-            <button
-              type="button"
-              onClick={handleVerifyClick}
-              disabled={verifyState !== "idle"}
-              aria-checked={verifyState === "verified"}
-              role="checkbox"
-              className={`relative w-6 h-6 border ${
-                verifyState === "verified"
-                  ? "border-primary bg-primary"
-                  : dark
-                    ? "border-white/50 bg-transparent"
-                    : "border-[#999] bg-white"
-              } flex items-center justify-center flex-shrink-0 transition-colors duration-200 ${
-                verifyState === "idle" ? "cursor-pointer" : "cursor-default"
-              }`}
-            >
-              {verifyState === "verifying" && (
-                <span className="block w-3 h-3 border-2 border-[#999] border-t-primary rounded-full animate-spin" />
-              )}
-              {verifyState === "verified" && (
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M20 6L9 17l-5-5" />
-                </svg>
-              )}
-            </button>
-            <label
-              onClick={handleVerifyClick}
-              className={`font-body text-sm select-none ${dark ? "text-white/80" : "text-text-primary"} ${verifyState === "idle" ? "cursor-pointer" : "cursor-default"}`}
-            >
-              I am not a robot
-            </label>
-          </div>
-          {verifyError && <p className={errorClass}>{verifyError}</p>}
-        </div>
+        {robotCheck}
 
         <button
           type="submit"

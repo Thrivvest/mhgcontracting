@@ -1,0 +1,140 @@
+{
+ "source": "U.S. Census Bureau, American Community Survey 5-year estimates (tables B25034, B25035, B25077, B25003, B25024), via Census Reporter",
+ "release": "ACS 2024 5-year",
+ "years": "2020-2024",
+ "retrieved": "2026-09-28",
+ "towns": {
+  "hamilton-nj": {
+   "geoid": "3402129310",
+   "geography": "Hamilton township, Mercer County",
+   "housingUnits": 37628,
+   "medianYearBuilt": 1964,
+   "pctBuiltBefore1980": 75,
+   "pctBuiltBefore1960": 43,
+   "medianHomeValue": 335500,
+   "pctOwnerOccupied": 72,
+   "pctSingleFamilyDetached": 63,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402129310/"
+  },
+  "princeton-nj": {
+   "geoid": "3402160900",
+   "geography": "Princeton",
+   "housingUnits": 9906,
+   "medianYearBuilt": 1965,
+   "pctBuiltBefore1980": 64,
+   "pctBuiltBefore1960": 44,
+   "medianHomeValue": 1050600,
+   "pctOwnerOccupied": 55,
+   "pctSingleFamilyDetached": 54,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402160900/"
+  },
+  "west-windsor-nj": {
+   "geoid": "3402180240",
+   "geography": "West Windsor township",
+   "housingUnits": 11944,
+   "medianYearBuilt": 1990,
+   "pctBuiltBefore1980": 23,
+   "pctBuiltBefore1960": 8,
+   "medianHomeValue": 776400,
+   "pctOwnerOccupied": 65,
+   "pctSingleFamilyDetached": 55,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402180240/"
+  },
+  "lawrenceville-nj": {
+   "geoid": "3402139510",
+   "geography": "Lawrence township (includes Lawrenceville)",
+   "housingUnits": 12927,
+   "medianYearBuilt": 1979,
+   "pctBuiltBefore1980": 51,
+   "pctBuiltBefore1960": 23,
+   "medianHomeValue": 439700,
+   "pctOwnerOccupied": 67,
+   "pctSingleFamilyDetached": 49,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402139510/"
+  },
+  "plainsboro-nj": {
+   "geoid": "3402359280",
+   "geography": "Plainsboro township",
+   "housingUnits": 10175,
+   "medianYearBuilt": 1986,
+   "pctBuiltBefore1980": 26,
+   "pctBuiltBefore1960": 5,
+   "medianHomeValue": 683100,
+   "pctOwnerOccupied": 48,
+   "pctSingleFamilyDetached": 30,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402359280/"
+  },
+  "robbinsville-nj": {
+   "geoid": "3402163850",
+   "geography": "Robbinsville township",
+   "housingUnits": 6033,
+   "medianYearBuilt": 1992,
+   "pctBuiltBefore1980": 19,
+   "pctBuiltBefore1960": 6,
+   "medianHomeValue": 568300,
+   "pctOwnerOccupied": 80,
+   "pctSingleFamilyDetached": 49,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402163850/"
+  },
+  "hopewell-nj": {
+   "geoid": "3402133180",
+   "geography": "Hopewell township, Mercer County",
+   "housingUnits": 6612,
+   "medianYearBuilt": 1977,
+   "pctBuiltBefore1980": 53,
+   "pctBuiltBefore1960": 29,
+   "medianHomeValue": 561900,
+   "pctOwnerOccupied": 91,
+   "pctSingleFamilyDetached": 86,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402133180/"
+  },
+  "pennington-nj": {
+   "geoid": "3402157600",
+   "geography": "Pennington borough",
+   "housingUnits": 1250,
+   "medianYearBuilt": 1953,
+   "pctBuiltBefore1980": 71,
+   "pctBuiltBefore1960": 57,
+   "medianHomeValue": 672900,
+   "pctOwnerOccupied": 82,
+   "pctSingleFamilyDetached": 70,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402157600/"
+  },
+  "east-windsor-nj": {
+   "geoid": "3402119780",
+   "geography": "East Windsor township",
+   "housingUnits": 12422,
+   "medianYearBuilt": 1976,
+   "pctBuiltBefore1980": 60,
+   "pctBuiltBefore1960": 13,
+   "medianHomeValue": 397400,
+   "pctOwnerOccupied": 61,
+   "pctSingleFamilyDetached": 31,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402119780/"
+  },
+  "ewing-nj": {
+   "geoid": "3402122185",
+   "geography": "Ewing township",
+   "housingUnits": 14908,
+   "medianYearBuilt": 1964,
+   "pctBuiltBefore1980": 72,
+   "pctBuiltBefore1960": 43,
+   "medianHomeValue": 294400,
+   "pctOwnerOccupied": 67,
+   "pctSingleFamilyDetached": 60,
+   "profileUrl": "https://censusreporter.org/profiles/06000US3402122185/"
+  },
+  "yardley-pa": {
+   "geoid": "4201786920",
+   "geography": "Yardley borough, Bucks County",
+   "housingUnits": 1235,
+   "medianYearBuilt": 1962,
+   "pctBuiltBefore1980": 75,
+   "pctBuiltBefore1960": 47,
+   "medianHomeValue": 480300,
+   "pctOwnerOccupied": 73,
+   "pctSingleFamilyDetached": 50,
+   "profileUrl": "https://censusreporter.org/profiles/06000US4201786920/"
+  }
+ }
+}

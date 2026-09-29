@@ -3,6 +3,7 @@ import { portfolioProjects } from "@/lib/data";
 import { services } from "@/lib/data";
 import { BLOG_POSTS } from "@/lib/blog-data";
 import { getAllAreaParams } from "@/lib/area-pages-data";
+import { answers } from "@/data/answers";
 
 const BASE_URL = "https://mhgcon.com";
 
@@ -110,5 +111,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.7,
   }));
 
-  return [...staticPages, ...servicePages, ...areaPages, ...projectPages, ...blogPages];
+  const answerPages: MetadataRoute.Sitemap = [
+    { url: `${BASE_URL}/answers`, lastModified: now, changeFrequency: "monthly", priority: 0.7 },
+    ...answers.map((a) => ({
+      url: `${BASE_URL}/answers/${a.slug}`,
+      lastModified: new Date(`${a.updated}T12:00:00Z`),
+      changeFrequency: "monthly" as const,
+      priority: 0.7,
+    })),
+  ];
+
+  return [...staticPages, ...servicePages, ...areaPages, ...projectPages, ...blogPages, ...answerPages];
 }

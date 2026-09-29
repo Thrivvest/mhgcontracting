@@ -11,33 +11,19 @@
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
+import { BLOG_POSTS as ALL_POSTS } from "@/lib/blog-data";
 
-const BLOG_POSTS = [
-  {
-    slug: "kitchen-remodel-cost",
-    title: "Average Kitchen Remodel Cost in NJ (2026 Prices)",
-    date: "April 10, 2026",
-    excerpt:
-      "The average NJ kitchen remodel runs $55,000 to $95,000. Here's the real 2026 breakdown by tier, from a cosmetic refresh to a six-figure full gut.",
-    image: "/images/projects/kitchen-01.jpg",
-  },
-  {
-    slug: "bathroom-remodel-cost",
-    title: "Average Bathroom Remodel Cost in Hamilton, NJ",
-    date: "April 3, 2026",
-    excerpt:
-      "The average bathroom remodel in Hamilton lands around $30,000. Here's the real 2026 breakdown by room type, from small baths to six-figure master suites.",
-    image: "/images/projects/bath-01.jpg",
-  },
-  {
-    slug: "choosing-a-contractor",
-    title: "Choosing the Right Contractor: What to Look For",
-    date: "February 28, 2026",
-    excerpt:
-      "Not all contractors are created equal. Learn what separates a great contractor from the rest and the red flags to watch out for.",
-    image: "/images/projects/fullreno-01.jpg",
-  },
+// Cards read the live posts (lib/blog-data.ts), so titles, dates and
+// excerpts never drift from the articles they link to.
+const FEATURED: { slug: string; image: string }[] = [
+  { slug: "kitchen-remodel-cost", image: "/images/projects/kitchen-01.jpg" },
+  { slug: "bathroom-remodel-cost", image: "/images/projects/bath-01.jpg" },
+  { slug: "choosing-a-contractor", image: "/images/projects/fullreno-01.jpg" },
 ];
+const BLOG_POSTS = FEATURED.flatMap(({ slug, image }) => {
+  const post = ALL_POSTS.find((p) => p.slug === slug);
+  return post ? [{ slug, image, title: post.title, date: post.date, excerpt: post.excerpt }] : [];
+});
 
 export default function BlogPreview() {
   return (

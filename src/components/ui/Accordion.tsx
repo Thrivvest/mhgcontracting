@@ -1,9 +1,9 @@
+"use client";
 /**
  * Accordion - Expandable FAQ/content component
  * Used on service detail pages for FAQ sections.
  */
 
-"use client";
 
 export default function Accordion() {
   return (

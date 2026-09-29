@@ -95,9 +95,10 @@ export async function POST(req: NextRequest) {
 
   // Validate required fields
   const { first_name, last_name, email, phone } = body;
-  if (!first_name || !last_name || !email || !phone) {
+  // Forms send one "Name" field, so a single-word name arrives with no last_name.
+  if (!first_name || !email || !phone) {
     return NextResponse.json(
-      { error: "Missing required fields: first_name, last_name, email, phone." },
+      { error: "Missing required fields: first_name, email, phone." },
       { status: 400 }
     );
   }
@@ -177,7 +178,7 @@ export async function POST(req: NextRequest) {
 
   const ghlPayload: Record<string, unknown> = {
     firstName: first_name,
-    lastName: last_name,
+    ...(last_name ? { lastName: last_name } : {}),
     email,
     phone: normalizePhone(phone),
     locationId,
@@ -227,7 +228,7 @@ export async function POST(req: NextRequest) {
 
   if (pipelineId && stageId && contactId) {
     try {
-      const oppName = `${first_name} ${last_name}${body.project_type ? ` - ${body.project_type}` : ""}`;
+      const oppName = `${[first_name, last_name].filter(Boolean).join(" ")}${body.project_type ? ` - ${body.project_type}` : ""}`;
       const oppRes = await fetch(`${GHL_API_BASE}/opportunities/`, {
         method: "POST",
         headers,

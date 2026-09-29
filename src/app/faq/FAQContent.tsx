@@ -4,7 +4,9 @@ import Link from "next/link";
 import Image from "next/image";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
-import { FAQ_CATEGORIES } from "@/lib/faq-data";
+import { FAQ_CATEGORIES, getAllFAQItems } from "@/lib/faq-data";
+import SourcesList from "@/components/sections/SourcesList";
+import { citedSources } from "@/lib/citations";
 import { company } from "@/lib/constants";
 
 export default function FAQContent() {
@@ -91,6 +93,7 @@ export default function FAQContent() {
               </FadeIn>
             </div>
           ))}
+          <SourcesList sources={citedSources(...getAllFAQItems().map((i) => i.answer))} />
         </div>
       </section>
 

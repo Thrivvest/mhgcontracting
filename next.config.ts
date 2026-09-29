@@ -11,11 +11,23 @@ const nextConfig: NextConfig = {
 
   async redirects() {
     return [
+      // One host: www 308s to the apex (standard 1.5).
+      { source: "/:path*", has: [{ type: "host", value: "www.mhgcon.com" }], destination: "https://mhgcon.com/:path*", permanent: true },
+      // Retired URLs (standard 1.5). Consolidation 2026-09-28: blog posts that
+      // were a second page on the same topic, merged into the one guide.
       { source: "/blog/5-things-to-consider-before-kitchen-renovation", destination: "/blog/kitchen-remodel-cost", permanent: true },
       { source: "/blog/kitchen-renovation-cost-breakdown", destination: "/blog/kitchen-remodel-cost", permanent: true },
-      { source: "/blog/how-long-does-bathroom-remodel-take", destination: "/blog/kitchen-timeline", permanent: true },
+      { source: "/blog/how-long-does-bathroom-remodel-take", destination: "/blog/kitchen-renovation-timeline-nj", permanent: true },
       { source: "/blog/choosing-the-right-contractor", destination: "/blog/choosing-a-contractor", permanent: true },
       { source: "/blog/basement-finishing-guide-central-nj", destination: "/blog/basement-finishing-cost", permanent: true },
+      { source: "/blog/bathroom-remodel-cost-nj", destination: "/blog/bathroom-remodel-cost", permanent: true },
+      { source: "/blog/bathroom-remodel-ideas-nj", destination: "/blog/bathroom-ideas", permanent: true },
+      { source: "/blog/basement-ideas", destination: "/blog/basement-finishing-ideas", permanent: true },
+      { source: "/blog/kitchen-timeline", destination: "/blog/kitchen-renovation-timeline-nj", permanent: true },
+      { source: "/blog/remodel-roi", destination: "/blog/home-remodeling-cost-hamilton-nj", permanent: true },
+      { source: "/blog/why-we-love-what-we-do", destination: "/about", permanent: true },
+      { source: "/blog/luxury-kitchen-remodeling-nj", destination: "/blog/kitchen-remodel-cost", permanent: true },
+      { source: "/blog/master-bathroom-remodel-nj", destination: "/blog/bathroom-remodel-cost", permanent: true },
     ];
   },
 

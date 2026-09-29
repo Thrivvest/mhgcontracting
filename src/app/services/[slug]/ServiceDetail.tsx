@@ -1,4 +1,5 @@
 "use client";
+import { serviceNode } from "@/lib/schema";
 
 import Link from "next/link";
 import Image from "next/image";
@@ -8,6 +9,9 @@ import { type Service, getProjectsByType, type ServiceType, services } from "@/l
 import { getAreaPagesByService } from "@/lib/area-pages-data";
 import { company } from "@/lib/constants";
 import LeadForm from "@/components/sections/LeadForm";
+import SourcesList from "@/components/sections/SourcesList";
+import { citedSources } from "@/lib/citations";
+import HeroActions from "@/components/sections/HeroActions";
 
 const PROJECT_TYPE_MAP: Record<string, string> = {
   "kitchen-renovations": "Kitchen Renovation",
@@ -50,26 +54,11 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{
           __html: JSON.stringify([
-            {
-              "@context": "https://schema.org",
-              "@type": "Service",
+            serviceNode({
               name: service.name,
+              path: `/services/${service.slug}`,
               description: service.description,
-              provider: {
-                "@type": "LocalBusiness",
-                "@id": "https://mhgcon.com/#localbusiness",
-                name: "MHG Contracting",
-              },
-              areaServed: [
-                { "@type": "City", name: "Hamilton", containedIn: "NJ" },
-                { "@type": "City", name: "Princeton", containedIn: "NJ" },
-                { "@type": "City", name: "West Windsor", containedIn: "NJ" },
-                { "@type": "City", name: "Lawrenceville", containedIn: "NJ" },
-                { "@type": "City", name: "Plainsboro", containedIn: "NJ" },
-                { "@type": "City", name: "Yardley", containedIn: "PA" },
-              ],
-              url: `https://mhgcon.com/services/${service.slug}`,
-            },
+            }),
             {
               "@context": "https://schema.org",
               "@type": "FAQPage",
@@ -83,7 +72,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         }}
       />
       {/* Hero */}
-      <section className="relative min-h-screen flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
+      <section className="relative flex items-end pt-28 pb-12 md:min-h-screen md:items-center md:pt-20 md:pb-0 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
           <Image src={`/images/services/${serviceType || 'kitchen'}-hero.jpg`} alt={service.name} fill priority sizes="100vw" className="object-cover" />
           <div className="absolute inset-0 bg-black/50" />
@@ -96,10 +85,11 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             </Link>
           </FadeIn>
           <LineReveal trigger="load" delay={0.3}>
-            <h1 className="font-heading text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">{service.name}</h1>
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">{service.name}</h1>
           </LineReveal>
           <FadeIn delay={0.6}>
-            <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">{service.shortDescription}</p>
+            <p className="font-body text-white/80 text-lg md:text-xl mt-4 md:mt-6 max-w-xl leading-relaxed">{service.shortDescription}</p>
+            <HeroActions />
           </FadeIn>
         </div>
       </section>
@@ -172,6 +162,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                 </FadeIn>
               ))}
             </div>
+            <SourcesList sources={citedSources(service.description, ...service.faqs.map((f) => f.answer))} />
           </div>
         </section>
       )}
@@ -190,7 +181,6 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                     <div className="aspect-[4/3] rounded-lg overflow-hidden mb-4 relative">
                       <Image src={project.imagePath} alt={project.title} fill sizes="(max-width: 768px) 100vw, 33vw" className="object-cover group-hover:scale-105 transition-transform duration-500" />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
-                      <span className="absolute bottom-5 left-5 font-body text-white/70 text-xs">{project.location}</span>
                     </div>
                     <h3 className="font-heading text-lg font-semibold text-text-primary group-hover:text-primary transition-colors">{project.title}</h3>
                     <p className="font-body text-text-secondary text-sm mt-1">{project.shortDescription}</p>
@@ -257,14 +247,14 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       </section>
 
       {/* Lead form */}
-      <section className="py-20 md:py-28 px-6 lg:px-10 bg-[#F7F6F4]">
+      <section id="estimate" className="scroll-mt-20 py-20 md:py-28 px-6 lg:px-10 bg-[#F7F6F4]">
         <div className="max-w-[720px] mx-auto">
           <FadeIn>
             <LeadForm
               source={`mhgcon.com /services/${service.slug} embed`}
               defaultProjectType={PROJECT_TYPE_MAP[service.slug] ?? ""}
               heading={`Get a Free ${service.name.replace(/s$/, "")} Estimate`}
-              subheading="Tell us about your project. We respond within 24 hours, and the estimate is free."
+              subheading="Tell us about your project. The estimate is free."
             />
           </FadeIn>
         </div>

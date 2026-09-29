@@ -66,14 +66,6 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                 <span className="font-body text-xs text-text-light uppercase tracking-[0.1em] block mb-1">Type</span>
                 <span className="font-body text-sm font-medium text-text-primary">{SERVICE_TYPE_LABELS[project.type]}</span>
               </div>
-              <div>
-                <span className="font-body text-xs text-text-light uppercase tracking-[0.1em] block mb-1">Location</span>
-                <span className="font-body text-sm font-medium text-text-primary">{project.location}</span>
-              </div>
-              <div>
-                <span className="font-body text-xs text-text-light uppercase tracking-[0.1em] block mb-1">Year</span>
-                <span className="font-body text-sm font-medium text-text-primary">{project.year}</span>
-              </div>
             </div>
           </FadeIn>
         </div>
@@ -129,7 +121,6 @@ export default function ProjectDetail({ project }: ProjectDetailProps) {
                       <span className="absolute bottom-5 left-5 font-body text-white/70 text-xs uppercase tracking-[0.1em]">{rp.type.replace("-", " ")}</span>
                     </div>
                     <h3 className="font-heading text-lg font-semibold text-text-primary group-hover:text-primary transition-colors">{rp.title}</h3>
-                    <p className="font-body text-text-secondary text-sm mt-1">{rp.location}</p>
                   </Link>
                 </FadeIn>
               ))}

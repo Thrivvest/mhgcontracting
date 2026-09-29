@@ -10,18 +10,18 @@ import { teamMembers } from "@/lib/data";
 import { company } from "@/lib/constants";
 
 const WORK_SLIDES = [
-  { image: "/images/projects/fullreno-01-3.jpg", label: "Full Renovation", title: "Whole-Home Transformation", location: "Hamilton, NJ" },
-  { image: "/images/projects/gallery/kitchen-02/1.jpg", label: "Kitchen Renovation", title: "Traditional Chef's Kitchen", location: "West Windsor, NJ" },
-  { image: "/images/projects/bath-01.jpg", label: "Bathroom Renovation", title: "Spa-Inspired Master Bath", location: "Hamilton, NJ" },
-  { image: "/images/projects/addition-01.jpg", label: "Addition", title: "Sunroom & Family Room Addition", location: "West Windsor, NJ" },
+  { image: "/images/projects/fullreno-01-3.jpg", label: "Full Renovation", title: "Whole-Home Transformation" },
+  { image: "/images/projects/gallery/kitchen-02/1.jpg", label: "Kitchen Renovation", title: "Traditional Chef's Kitchen" },
+  { image: "/images/projects/bath-01.jpg", label: "Bathroom Renovation", title: "Spa-Inspired Master Bath" },
+  { image: "/images/projects/addition-01.jpg", label: "Addition", title: "Sunroom & Family Room Addition" },
 ];
 
 const VALUES = [
-  { title: "Quality", description: "We never cut corners. Every joint, every finish, every detail is done right the first time." },
-  { title: "Transparency", description: "No surprises. Clear pricing, honest timelines, and open communication from day one." },
-  { title: "Family", description: "We treat your home like our own - with care, respect, and genuine pride in every project." },
-  { title: "Craftsmanship", description: "Years of hands-on experience combined with an eye for detail that elevates every space." },
-  { title: "Communication", description: "You'll always know what's happening. Regular updates, responsive answers, easy to reach." },
+  { title: "Family", description: "Family owned and run by two brothers, Shahzeb and Shahmi Malik." },
+  { title: "Pride", description: "In Shahzeb's words: \"We love what we do and take pride in the projects and work we take on.\"" },
+  { title: "Easy to work with", description: "\"We are easy to work with, personable and just two normal guys who want to build cool things.\"" },
+  { title: "The crew", description: "A team of seven, plus the subcontractors they work with on every job." },
+  { title: "Here to stay", description: "\"We are a hard working team and are here for the long run.\"" },
 ];
 
 // Project images used as placeholders until team photos are available
@@ -91,14 +91,14 @@ export default function AboutContent() {
 
               <FadeIn delay={0.2}>
                 <p className="font-body text-text-secondary text-lg leading-relaxed mb-4">
-                  MHG Contracting was built on a simple belief: every homeowner deserves quality craftsmanship, honest communication, and a team that treats their home with the same care they would. As a family business, we bring a personal touch to every project that larger contractors simply can't match.
+                  MHG Contracting is a family business run by two brothers, Shahzeb and Shahmi Malik, with a crew of seven and the subcontractors they work with. It has been open since 2021 and is registered as a New Jersey home improvement contractor (#13VH13286900).
                 </p>
               </FadeIn>
               <FadeIn delay={0.3}>
                 <p className="font-body text-text-secondary text-lg leading-relaxed">
                   Based in Hamilton, NJ, MHG Contracting serves homeowners throughout Central New Jersey,
                   from Princeton and West Windsor to Lawrenceville, Plainsboro, and Yardley, PA. Every
-                  project is an opportunity to build something we&apos;re proud of.
+                  project starts with a free in-home estimate.
                 </p>
               </FadeIn>
             </div>
@@ -158,7 +158,6 @@ export default function AboutContent() {
                 <h2 className="font-heading text-3xl md:text-5xl lg:text-6xl font-bold text-white mb-3 leading-[1.1]">
                   {slide.title}
                 </h2>
-                <p className="font-body text-white/50 text-sm tracking-wide">{slide.location}</p>
               </div>
             </div>
           ))}

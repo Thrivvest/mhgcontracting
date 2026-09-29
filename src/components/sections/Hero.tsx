@@ -105,7 +105,7 @@ export default function Hero() {
                 4.9 on Google
               </span>
               <span className="text-white/30">|</span>
-              <span>Licensed &amp; insured</span>
+              <span>NJ HIC registered</span>
             </div>
 
             <a
@@ -127,7 +127,7 @@ export default function Hero() {
             <LeadForm
               source="mhgcon.com homepage hero"
               heading={company.ctaPrimary}
-              subheading="Tell us about your project. We respond within 24 hours."
+              subheading="Tell us about your project. The estimate is free."
               theme="light"
             />
           </FadeIn>

@@ -42,9 +42,9 @@ export default function AboutTeaser() {
 
             <FadeIn delay={0.3}>
               <p className="font-body text-text-secondary text-lg leading-relaxed mb-8 max-w-xl">
-                We take pride in every project, treating each home as if it were our own.
-                Our hands-on approach means you work directly with the people building your
-                space, ensuring quality you can see and service you can trust.
+                Brothers Shahzeb and Shahmi Malik run it with a crew of seven. In
+                Shahzeb&apos;s words: &ldquo;We love what we do and take pride in the
+                projects and work we take on.&rdquo;
               </p>
             </FadeIn>
 

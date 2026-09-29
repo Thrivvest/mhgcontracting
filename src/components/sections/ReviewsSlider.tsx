@@ -12,6 +12,7 @@ import { useState, useEffect, useCallback, useRef } from "react";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
 import { GOOGLE_REVIEWS } from "@/lib/reviews-data";
+import { googleRating } from "@/data/business";
 
 /* ── Google "G" logo (inline SVG) ── */
 function GoogleLogo({ className = "" }: { className?: string }) {
@@ -250,7 +251,7 @@ export default function ReviewsSlider() {
             </div>
             <Stars />
             <span className="font-body text-xs md:text-sm text-white/40">
-              {totalReviews}+ reviews on Google
+              {googleRating.rating.toFixed(1)} from {googleRating.count} reviews on Google
             </span>
           </div>
         </FadeIn>

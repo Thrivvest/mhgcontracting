@@ -79,8 +79,8 @@ export default function ServicesGrid() {
           </LineReveal>
           <FadeIn delay={0.2}>
             <p className="font-body text-text-secondary text-lg max-w-xl mx-auto leading-relaxed">
-              From single-room renovations to full home builds, we bring expertise
-              and pride to every project.
+              From a single bathroom to a new house, all within about 25 minutes of
+              Hamilton.
             </p>
           </FadeIn>
         </div>

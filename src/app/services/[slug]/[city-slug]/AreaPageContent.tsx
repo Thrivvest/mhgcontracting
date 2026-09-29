@@ -13,6 +13,11 @@ import FadeIn from "@/components/animations/FadeIn";
 import { type AreaPage, getAreaPagesByCity, getAreaPagesByService } from "@/lib/area-pages-data";
 import { company } from "@/lib/constants";
 import LeadForm from "@/components/sections/LeadForm";
+import HeroActions from "@/components/sections/HeroActions";
+import SourcesList from "@/components/sections/SourcesList";
+import { getServiceBySlug } from "@/lib/data";
+import { serviceNoun, townFaqs, townIntro } from "@/lib/town-page";
+import { townOffices } from "@/data/sources";
 
 const AREA_PROJECT_TYPE_MAP: Record<string, string> = {
   "kitchen-renovations": "Kitchen Renovation",
@@ -38,6 +43,10 @@ interface AreaPageContentProps {
 
 export default function AreaPageContent({ page }: AreaPageContentProps) {
   const heroType = SERVICE_HERO_MAP[page.serviceSlug] || "kitchen";
+  const service = getServiceBySlug(page.serviceSlug);
+  const intro = townIntro(page);
+  const { faqs, sources } = townFaqs(page);
+  const offices = townOffices(page.citySlug);
 
   // Other services in the same city (for cross-linking)
   const otherServicesInCity = getAreaPagesByCity(page.citySlug).filter(
@@ -52,7 +61,7 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
   return (
     <main>
       {/* Hero */}
-      <section className="relative min-h-[60vh] flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
+      <section className="relative flex items-end pt-28 pb-12 md:min-h-[60vh] md:items-center md:pt-20 md:pb-0 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
           <img
             src={`/images/services/${heroType}-hero.jpg`}
@@ -87,54 +96,84 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
             </h1>
           </LineReveal>
           <FadeIn delay={0.6}>
-            <p className="font-body text-white/50 text-lg mt-6 max-w-xl leading-relaxed">
-              Expert {page.serviceName.toLowerCase()} from MHG Contracting,
-              serving {page.cityName}, {page.state} and surrounding areas.
+            <p className="font-body text-white/80 text-lg mt-4 md:mt-6 max-w-xl leading-relaxed">
+              {page.serviceName} for homes in {page.cityName}, {page.state}, from MHG
+              Contracting in Hamilton.
             </p>
+            <HeroActions />
           </FadeIn>
         </div>
       </section>
 
-      {/* Main Content */}
-      <section className="py-20 md:py-28 px-6 lg:px-10">
-        <div className="max-w-[900px] mx-auto">
-          <FadeIn>
-            <div
-              className="prose prose-lg max-w-none
-                prose-headings:font-heading prose-headings:text-text-primary prose-headings:font-bold
-                prose-h2:text-2xl prose-h2:md:text-3xl prose-h2:mt-12 prose-h2:mb-4
-                prose-p:font-body prose-p:text-text-secondary prose-p:leading-relaxed
-                prose-a:text-primary prose-a:no-underline hover:prose-a:underline
-                prose-ul:text-text-secondary prose-li:font-body"
-              dangerouslySetInnerHTML={{ __html: page.content }}
-            />
-          </FadeIn>
+      {/* Main Content: sourced facts only (lib/town-page.ts) */}
+      <section className="py-16 md:py-24 px-6 lg:px-10">
+        <div className="max-w-[900px] mx-auto space-y-6">
+          {intro.map((para) => (
+            <p key={para.slice(0, 32)} className="font-body text-lg text-text-secondary leading-relaxed">{para}</p>
+          ))}
+
+          {service && (
+            <>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary pt-6">
+                What a {serviceNoun(page.serviceSlug)} with MHG covers
+              </h2>
+              <ul className="grid gap-2 sm:grid-cols-2">
+                {service.scopeItems.map((item) => (
+                  <li key={item} className="flex gap-3 font-body text-text-secondary">
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" aria-hidden="true" />
+                    {item}
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          {offices.length > 0 && (
+            <>
+              <h2 className="font-heading text-2xl md:text-3xl font-bold text-text-primary pt-6">
+                Permits in {page.cityName}
+              </h2>
+              <ul className="space-y-3">
+                {offices.map((o) => (
+                  <li key={o.municipality} className="rounded-lg border border-border bg-white p-5 font-body text-text-secondary">
+                    <span className="block font-semibold text-text-primary">{o.municipality} construction office{o.note ? ` (${o.note})` : ""}</span>
+                    {o.street}, {o.city}, {page.state === "PA" ? "PA" : "NJ"} {o.zip}
+                    <span className="block">{o.phone}</span>
+                  </li>
+                ))}
+              </ul>
+            </>
+          )}
+
+          <p className="font-body text-text-secondary leading-relaxed pt-2">
+            Budgeting first? Read the{" "}
+            <Link href={service?.costGuideSlug ? `/blog/${service.costGuideSlug}` : `/services/${page.serviceSlug}`} className="text-primary font-semibold hover:underline">
+              {service?.costGuideSlug ? `${serviceNoun(page.serviceSlug)} cost guide` : `${page.serviceName.toLowerCase()} page`}
+            </Link>
+            , or see <Link href="/portfolio" className="text-primary font-semibold hover:underline">past projects</Link>.
+          </p>
         </div>
       </section>
 
       {/* FAQs */}
-      <section className="py-20 md:py-28 px-6 lg:px-10 bg-background-alt">
+      <section className="py-16 md:py-24 px-6 lg:px-10 bg-background-alt">
         <div className="max-w-[900px] mx-auto">
-          <LineReveal className="mb-12">
+          <LineReveal className="mb-10">
             <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">
-              Frequently Asked Questions
+              {page.serviceName} in {page.cityName}: common questions
             </h2>
           </LineReveal>
 
           <div className="space-y-6">
-            {page.faqs.map((faq, i) => (
-              <FadeIn key={i} delay={i * 0.08}>
-                <div className="bg-white rounded-lg p-6 md:p-8 border border-border">
-                  <h3 className="font-heading text-lg font-semibold text-text-primary mb-3">
-                    {faq.question}
-                  </h3>
-                  <p className="font-body text-text-secondary leading-relaxed">
-                    {faq.answer}
-                  </p>
-                </div>
-              </FadeIn>
+            {faqs.map((faq) => (
+              <div key={faq.question} className="bg-white rounded-lg p-6 md:p-8 border border-border">
+                <h3 className="font-heading text-lg font-semibold text-text-primary mb-3">{faq.question}</h3>
+                <p className="font-body text-text-secondary leading-relaxed">{faq.answer}</p>
+              </div>
             ))}
           </div>
+
+          <SourcesList sources={sources} />
         </div>
       </section>
 
@@ -201,14 +240,14 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
       )}
 
       {/* Lead form */}
-      <section className="py-20 md:py-28 px-6 lg:px-10 bg-[#F7F6F4]">
+      <section id="estimate" className="scroll-mt-20 py-20 md:py-28 px-6 lg:px-10 bg-[#F7F6F4]">
         <div className="max-w-[720px] mx-auto">
           <FadeIn>
             <LeadForm
               source={`mhgcon.com /services/${page.serviceSlug}/${page.citySlug} embed`}
               defaultProjectType={AREA_PROJECT_TYPE_MAP[page.serviceSlug] ?? ""}
               heading={`Get a Free Estimate in ${page.cityName}`}
-              subheading={`Planning ${page.serviceName.toLowerCase()} in ${page.cityName}? We respond within 24 hours, and the estimate is free.`}
+              subheading={`Planning ${page.serviceName.toLowerCase()} in ${page.cityName}? Tell us about it. The estimate is free.`}
             />
           </FadeIn>
         </div>

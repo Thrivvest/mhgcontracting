@@ -1,9 +1,10 @@
 /**
- * MHG Contracting - Placeholder Data
+ * MHG Contracting - site data: portfolio projects, services, team.
  *
- * Typed placeholder content for all site sections.
- * Replace image paths and descriptions with real content when available.
+ * Facts about MHG come from the intake form (2026-03-28), GBP and
+ * data/business.ts. Dollar figures only via data/costs.ts.
  */
+import { HOUZZ, NAHB, money } from "@/data/costs";
 
 // ─── Types ──────────────────────────────────────────────
 
@@ -23,8 +24,6 @@ export interface PortfolioProject {
   description: string;
   shortDescription: string;
   metaDescription: string;
-  location: string;
-  year: string;
   imagePath: string;
   galleryImages: string[];
   featured: boolean;
@@ -79,9 +78,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A complete kitchen transformation featuring custom white shaker cabinetry, quartz countertops, a farmhouse sink, and a spacious center island. The open layout connects seamlessly to the dining area, creating the perfect space for family gatherings.",
     shortDescription: "Custom cabinetry, quartz counters, and a stunning center island.",
-    metaDescription: "Modern farmhouse kitchen remodel in Princeton, NJ by MHG Contracting. Custom white shaker cabinets, quartz counters, farmhouse sink, and a family-sized island.",
-    location: "Princeton, NJ",
-    year: "2024",
+    metaDescription: "Modern farmhouse kitchen remodel by MHG Contracting. Custom white shaker cabinets, quartz counters, farmhouse sink, and a family-sized island.",
     imagePath: "/images/projects/kitchen-01.jpg",
     galleryImages: Array.from({ length: 8 }, (_, i) => `/images/projects/gallery/kitchen-01/${i + 1}.jpg`),
     featured: true,
@@ -95,9 +92,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "This chef-inspired kitchen features professional-grade appliances, a custom range hood, and a waterfall edge quartz island. Warm wood beams and a spacious dining area make this the heart of the home.",
     shortDescription: "Professional-grade appliances with warm wood beams and a waterfall island.",
-    metaDescription: "Chef-inspired kitchen renovation in West Windsor, NJ by MHG Contracting. Pro-grade appliances, custom range hood, waterfall quartz island, and warm wood beams.",
-    location: "West Windsor, NJ",
-    year: "2024",
+    metaDescription: "Chef-inspired kitchen renovation by MHG Contracting. Pro-grade appliances, custom range hood, waterfall quartz island, and warm wood beams.",
     imagePath: "/images/projects/kitchen-02.jpg",
     galleryImages: Array.from({ length: 8 }, (_, i) => `/images/projects/gallery/kitchen-02/${i + 1}.jpg`),
     featured: true,
@@ -109,11 +104,9 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "spa-inspired-master-bath",
     type: "bathroom",
     description:
-      "A luxurious master bathroom renovation featuring a freestanding soaking tub, frameless glass walk-in shower with custom tile work, heated floors, and a double vanity with undermount sinks. Every detail was chosen to create a serene, spa-like retreat.",
-    shortDescription: "Freestanding tub, walk-in shower, and heated floors.",
-    metaDescription: "Spa-inspired master bathroom remodel in Hamilton, NJ by MHG Contracting. Freestanding soaking tub, frameless walk-in shower, heated floors, double vanity.",
-    location: "Hamilton, NJ",
-    year: "2024",
+      "A luxurious master bathroom renovation featuring a freestanding soaking tub, frameless glass walk-in shower with custom tile work, and a double vanity with undermount sinks. Every detail was chosen to create a serene, spa-like retreat.",
+    shortDescription: "Freestanding tub, walk-in shower and double vanity.",
+    metaDescription: "Spa-inspired master bathroom remodel by MHG Contracting. Freestanding soaking tub, frameless walk-in shower, double vanity.",
     imagePath: "/images/projects/bath-01.jpg",
     galleryImages: Array.from({ length: 8 }, (_, i) => `/images/projects/gallery/bath-01/${i + 1}.jpg`),
     featured: true,
@@ -127,9 +120,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A compact yet elegant guest bathroom makeover with floor-to-ceiling subway tile, a floating vanity, and a frameless glass shower enclosure. Smart storage solutions maximize every inch of space.",
     shortDescription: "Floating vanity and floor-to-ceiling subway tile.",
-    metaDescription: "Contemporary guest bath remodel in Lawrenceville, NJ by MHG Contracting. Floor-to-ceiling subway tile, floating vanity, and a frameless glass shower enclosure.",
-    location: "Lawrenceville, NJ",
-    year: "2023",
+    metaDescription: "Contemporary guest bath remodel by MHG Contracting. Floor-to-ceiling subway tile, floating vanity, and a frameless glass shower enclosure.",
     imagePath: "/images/projects/bath-02.jpg",
     galleryImages: Array.from({ length: 8 }, (_, i) => `/images/projects/gallery/bath-02/${i + 1}.jpg`),
     featured: false,
@@ -143,9 +134,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "A full basement finishing project that transformed an unfinished space into a multi-zone entertainment area. Features include a home theater, a wet bar with custom cabinetry, a game area, and a guest bedroom with an en-suite bathroom.",
     shortDescription: "Home theater, wet bar, and guest suite in one stunning space.",
-    metaDescription: "Finished basement in Princeton, NJ by MHG Contracting. Multi-zone entertainment suite with home theater, custom wet bar, game area, and en-suite guest bedroom.",
-    location: "Princeton, NJ",
-    year: "2024",
+    metaDescription: "Finished basement by MHG Contracting. Multi-zone entertainment suite with home theater, custom wet bar, game area, and en-suite guest bedroom.",
     imagePath: "/images/projects/basement-01.jpg",
     galleryImages: Array.from({ length: 2 }, (_, i) => `/images/projects/gallery/basement-01/${i + 1}.jpg`),
     featured: true,
@@ -157,11 +146,9 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "whole-home-transformation",
     type: "full-renovation",
     description:
-      "A comprehensive whole-home renovation of a 1970s colonial. The project included opening up the main floor plan, renovating all three bathrooms, updating the kitchen, installing new hardwood floors throughout, and modernizing every system in the home.",
+      "A comprehensive whole-home renovation of a colonial home. The project included opening up the main floor plan, renovating all three bathrooms, updating the kitchen, installing new hardwood floors throughout, and modernizing every system in the home.",
     shortDescription: "Complete colonial renovation from top to bottom.",
-    metaDescription: "Whole-home renovation of a 1970s colonial in Hamilton, NJ by MHG Contracting. Opened floor plan, kitchen, 3 baths, hardwood floors, and full systems modernized.",
-    location: "Hamilton, NJ",
-    year: "2023",
+    metaDescription: "Whole-home renovation of a colonial by MHG Contracting. Opened floor plan, kitchen, 3 baths, hardwood floors, and full systems modernized.",
     imagePath: "/images/projects/fullreno-01.jpg",
     galleryImages: Array.from({ length: 8 }, (_, i) => `/images/projects/gallery/fullreno-01/${i + 1}.jpg`),
     featured: true,
@@ -173,11 +160,9 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "sunroom-family-room-addition",
     type: "addition",
     description:
-      "A 400-square-foot sunroom and family room addition that expanded the living space with floor-to-ceiling windows, vaulted ceilings, and seamless indoor-outdoor flow. The addition includes radiant floor heating and built-in shelving.",
-    shortDescription: "Bright sunroom addition with vaulted ceilings and radiant heat.",
-    metaDescription: "400 sq ft sunroom and family room addition in West Windsor, NJ by MHG Contracting. Floor-to-ceiling windows, vaulted ceilings, radiant heat, built-in shelving.",
-    location: "West Windsor, NJ",
-    year: "2023",
+      "A sunroom and family room addition that expanded the living space with floor-to-ceiling windows, vaulted ceilings, and seamless indoor-outdoor flow. The addition includes built-in shelving.",
+    shortDescription: "Bright sunroom addition with vaulted ceilings.",
+    metaDescription: "Sunroom and family room addition by MHG Contracting. Floor-to-ceiling windows, vaulted ceilings, built-in shelving.",
     imagePath: "/images/projects/addition-01.jpg",
     galleryImages: Array.from({ length: 4 }, (_, i) => `/images/projects/gallery/addition-01/${i + 1}.jpg`),
     featured: false,
@@ -189,11 +174,9 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "custom-colonial-new-build",
     type: "new-construction",
     description:
-      "A ground-up custom colonial home build featuring 4 bedrooms, 3.5 bathrooms, a gourmet kitchen, and a finished basement. The home blends traditional architecture with modern amenities including a smart home system and energy-efficient construction.",
-    shortDescription: "4BR custom colonial with smart home technology.",
-    metaDescription: "Custom colonial new construction in Plainsboro, NJ by MHG Contracting. 4 bedrooms, 3.5 baths, gourmet kitchen, finished basement, and smart home systems.",
-    location: "Plainsboro, NJ",
-    year: "2024",
+      "A ground-up custom colonial home build with a large kitchen and a finished basement, blending traditional architecture with a modern interior.",
+    shortDescription: "Custom colonial built from the ground up.",
+    metaDescription: "Custom colonial new construction by MHG Contracting. Large kitchen, finished basement and traditional exterior.",
     imagePath: "/images/projects/newbuild-01.jpg",
     galleryImages: Array.from({ length: 6 }, (_, i) => `/images/projects/gallery/newbuild-01/${i + 1}.jpg`),
     featured: false,
@@ -205,11 +188,9 @@ export const portfolioProjects: PortfolioProject[] = [
     slug: "open-concept-kitchen-living",
     type: "full-renovation",
     description:
-      "A dramatic open-concept renovation that removed load-bearing walls (with proper engineering) to unite the kitchen, dining, and living areas. Features a dramatic 16-foot island, custom lighting, and wide-plank engineered hardwood.",
+      "A dramatic open-concept renovation that removed load-bearing walls (with proper engineering) to unite the kitchen, dining, and living areas. Features a large island, custom lighting, and wide-plank engineered hardwood.",
     shortDescription: "Load-bearing wall removal for dramatic open living.",
-    metaDescription: "Open-concept kitchen and living renovation in Yardley, PA by MHG Contracting. Load-bearing wall removal, 16 ft island, custom lighting, wide-plank hardwood.",
-    location: "Yardley, PA",
-    year: "2024",
+    metaDescription: "Open-concept kitchen and living renovation by MHG Contracting. Load-bearing wall removal, large island, custom lighting, wide-plank hardwood.",
     imagePath: "/images/projects/fullreno-02.jpg",
     galleryImages: Array.from({ length: 8 }, (_, i) => `/images/projects/gallery/fullreno-02/${i + 1}.jpg`),
     featured: false,
@@ -223,9 +204,7 @@ export const portfolioProjects: PortfolioProject[] = [
     description:
       "An expansive primary bathroom renovation featuring a custom-built walk-in shower with multiple shower heads, a soaking tub positioned beneath a picture window, and a spacious double vanity with premium fixtures throughout.",
     shortDescription: "Multi-head shower, soaking tub, and premium fixtures.",
-    metaDescription: "Luxury primary bath remodel in Hamilton, NJ by MHG Contracting. Custom multi-head walk-in shower, soaking tub under a picture window, spacious double vanity.",
-    location: "Hamilton, NJ",
-    year: "2024",
+    metaDescription: "Luxury primary bath remodel by MHG Contracting. Custom multi-head walk-in shower, soaking tub under a picture window, spacious double vanity.",
     imagePath: "/images/projects/bath-03.jpg",
     galleryImages: Array.from({ length: 2 }, (_, i) => `/images/projects/gallery/bath-03/${i + 1}.jpg`),
     featured: false,
@@ -241,50 +220,43 @@ export const services: Service[] = [
     name: "General Contracting",
     slug: "general-contracting",
     description:
-      "A general contractor is the one person who owns the whole job: the permits, the plumber, the electrician, the framer, the schedule, and the phone call when something goes sideways. Hire the wrong one and you get a half-gutted house, a crew that vanishes for three weeks, and a final bill that doubled. MHG Contracting is a licensed, insured general contractor based in Hamilton, NJ. We run remodels and builds across Mercer County and into Middlesex County and Bucks County, PA: kitchens, bathrooms, basements, additions, whole-home renovations, and ground-up construction. One contract. One crew lead you can actually reach. A written price and a schedule we hold to. When you search general contractor near me and want someone who manages the project instead of subbing it out and disappearing, that is us.",
+      "A general contractor owns the whole job: the plan, the permits, the trades, the schedule and the phone call when something turns up behind a wall. MHG Contracting is a family-owned contractor in Hamilton, NJ, registered with the New Jersey Division of Consumer Affairs (HIC #13VH13286900), with a crew of seven plus subcontractors. It runs kitchens, bathrooms, basements, additions, whole-home renovations and new construction within about 25 minutes of Hamilton. One contract, one team to call.",
     shortDescription:
-      "Licensed, insured general contractor for remodels and builds across Central NJ.",
+      "One contract for the whole job, from a family-owned contractor in Hamilton, NJ.",
     seoTitle: "General Contractor in Central NJ | MHG Contracting",
     seoDescription:
-      "Licensed general contractor near Hamilton, Princeton, Central NJ. Kitchens, baths, additions, whole-home remodels. One crew, written pricing. (609) 712-2474.",
+      "Family-owned general contractor in Hamilton, NJ (HIC #13VH13286900). Kitchens, baths, basements, additions and new homes. Free estimates: (609) 712-2474.",
     icon: "home",
     scopeItems: [
-      "Licensed, insured general contracting (NJ HIC registered)",
-      "Permit pulling and township inspections across Mercer County",
       "Kitchen and bathroom remodeling",
-      "Basement finishing and below-grade build-outs",
-      "Home additions and second-story builds",
-      "Whole-home and full-house renovations",
+      "Basement finishing",
+      "Home additions",
+      "Whole-home renovations",
       "New home construction",
-      "Subcontractor management (plumbing, electrical, HVAC)",
-      "Structural changes and load-bearing wall removal",
-      "Written fixed-price estimates and project scheduling",
+      "Coordinating plumbing, electrical and HVAC subcontractors",
+      "Structural changes, with an engineer where walls move",
+      "Permit applications and inspection scheduling",
     ],
     faqs: [
       {
-        question: "Are you a licensed general contractor in NJ?",
+        question: "Is MHG Contracting registered in New Jersey?",
         answer:
-          "Yes. MHG Contracting is registered with the NJ Division of Consumer Affairs as a Home Improvement Contractor and carries full liability and workers comp insurance. Ask any contractor for their HIC number and proof of insurance before you sign anything. If they hesitate, walk away.",
+          "Yes. MHG Contracting (Malik Holding Group LLC) is registered with the New Jersey Division of Consumer Affairs as a home improvement contractor, #13VH13286900. You can look it up in the state's License Verification System at newjersey.mylicense.com.",
       },
       {
-        question: "What does a general contractor do that I can't do myself?",
+        question: "What does a general contractor do?",
         answer:
-          "We coordinate every trade, pull the permits, schedule the inspections, and stand behind the whole job. On a Hamilton or Princeton remodel that means one contract instead of chasing a separate plumber, electrician, and tile setter, and one person accountable when the township inspector shows up.",
+          "It plans the job, applies for the permits, hires and schedules the licensed trades, books the inspections, and is the one party responsible to you under one contract. On a kitchen or bathroom that means one call instead of a separate plumber, electrician and tile setter.",
       },
       {
-        question: "Do you serve my town?",
+        question: "What towns do you work in?",
         answer:
-          "We work across Mercer County (Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, East Windsor), Plainsboro in Middlesex County, and Yardley across the river in Bucks County, PA. Call (609) 712-2474 and we will tell you honestly if your project is in our range.",
+          "MHG works within about 25 minutes of its Hamilton office: Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville and East Windsor in Mercer County, Plainsboro in Middlesex County, and Yardley, PA. Call (609) 712-2474 if you are not sure.",
       },
       {
-        question: "How do you keep a project from dragging on for months?",
+        question: "How do you price a project?",
         answer:
-          "Before demo we hand you a written schedule with real milestones. The same crew lead runs your job from start to finish and updates you as it moves. We don't start five jobs at once and stretch one crew across all of them, which is why so many remodels stall.",
-      },
-      {
-        question: "How do you price a remodel or build?",
-        answer:
-          "Free in-home estimate, then a written fixed price broken down by trade. You approve it before we start. Any change gets quoted and signed off before we do the work, so the final number matches what you agreed to. No surprise line items at the end.",
+          "Every project starts with a phone call and a free visit to your home, then a written estimate. You go through it together, settle the scope and finishes, and the plan, budget and schedule are set before work starts.",
       },
     ],
   },
@@ -293,57 +265,47 @@ export const services: Service[] = [
     name: "Kitchen Renovations",
     slug: "kitchen-renovations",
     description:
-      "Search kitchen remodeling near me around Hamilton and you get a wall of contractors who go quiet the day after they cash your deposit. We are the family-run crew that shows up. MHG has remodeled kitchens across Hamilton, Princeton, West Windsor, Lawrenceville, and Plainsboro, from a $30,000 cabinet-and-counter refresh to a full gut that moves the sink, opens a wall into the dining room, and lands a 10-foot quartz island. You get a written fixed price before demo starts, a start date we hold, and the same crew lead on site every day. No surprise change orders. No crew you have never met walking through your front door.",
+      "MHG Contracting remodels kitchens around Hamilton, NJ, from a refresh that keeps the layout to a full remodel that moves the sink, opens a wall or adds an island. Every kitchen starts with a free visit to your home and a written estimate, and the plan, budget and schedule are set before demolition. For what kitchen remodels cost, see the kitchen cost guide.",
     shortDescription:
-      "Custom cabinetry, countertops, and full layout redesigns.",
+      "Cabinets, countertops, islands and full layout changes.",
     seoTitle: "Kitchen Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Kitchen remodel contractors in Hamilton, Princeton, Central NJ. Custom cabinets, quartz counters, fixed written pricing. Free estimate: (609) 712-2474.",
+      "Kitchen remodeling in Hamilton, Princeton and Central NJ from a family-owned contractor. Cabinets, counters, islands, layout changes. Free estimates.",
     icon: "kitchen",
     costGuideSlug: "kitchen-remodel-cost",
-    costGuideLabel: "See real kitchen remodel costs in NJ",
+    costGuideLabel: "See what kitchen remodels cost in NJ",
     scopeItems: [
-      "Custom cabinetry design and installation",
-      "Countertop fabrication (quartz, granite, marble)",
-      "Kitchen island construction",
-      "Backsplash tile installation",
+      "Cabinet design and installation",
+      "Countertops (quartz, granite, marble)",
+      "Kitchen islands",
+      "Backsplash tile",
       "Plumbing and fixture upgrades",
-      "Electrical updates and lighting design",
-      "Flooring replacement",
-      "Appliance integration",
-      "Pantry and storage solutions",
-      "Open concept wall removal (with structural engineering)",
+      "Electrical and lighting",
+      "Flooring",
+      "Appliance installation",
+      "Pantry and storage",
+      "Wall removal for open layouts, with an engineer",
     ],
     faqs: [
       {
         question: "How much does a kitchen remodel cost in NJ?",
         answer:
-          "Cosmetic refresh kitchens (new cabinets, counters, flooring, same footprint) run $25,000 to $45,000 in Central NJ. Mid-range renovations with semi-custom cabinets, an island, and quartz counters are our most common project at $55,000 to $95,000. Full gut and reconfigure projects with custom cabinetry and structural changes run $110,000 to $225,000+. We break down where every dollar goes in our /blog/kitchen-remodel-cost guide.",
+          `Nationally, the median major kitchen remodel was ${money(HOUZZ.kitchenSmall.median)} for kitchens under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} for larger ones in 2025, according to the 2026 U.S. Houzz & Home Study. The kitchen cost guide has the Middle Atlantic figures and what moves the price.`,
       },
       {
-        question: "How long does a kitchen renovation take?",
+        question: "Do I need a permit for a kitchen remodel?",
         answer:
-          "A typical kitchen renovation takes 6-10 weeks depending on scope. Custom cabinetry can add 4-6 weeks to the timeline for fabrication. We provide a detailed schedule before work begins.",
+          "Not to replace cabinets or flooring, which is ordinary maintenance under N.J.A.C. 5:23-2.7. Moving the sink, running gas or adding circuits needs a construction permit.",
       },
       {
         question: "Can you work with my existing layout?",
         answer:
-          "Absolutely. We can refresh your kitchen within the existing footprint or completely reimagine the layout. We'll discuss all options during your free estimate.",
+          "Yes. A kitchen can be refreshed in its current footprint or reworked completely. Both options come up at the free estimate.",
       },
       {
-        question: "Do you handle permits?",
+        question: "Do you remodel kitchens in my town?",
         answer:
-          "Yes, we handle all necessary permits for plumbing, electrical, and structural work. Permit requirements vary by municipality, and we know the local codes in Hamilton, Princeton, and the surrounding areas.",
-      },
-      {
-        question: "Do you do kitchen remodeling near me in Central NJ?",
-        answer:
-          "If you are in Mercer County, yes. We remodel kitchens in Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, and East Windsor, plus Plainsboro in Middlesex County and Yardley across the river in Bucks County, PA. Call (609) 712-2474 and we will tell you straight if your town is in our range.",
-      },
-      {
-        question: "Who actually shows up to run my kitchen job?",
-        answer:
-          "The same crew lead, every day, start to finish. You are not handed off to a rotating cast of subs you have never met. One person owns your schedule, answers your questions, and is accountable when the inspector comes through.",
+          "MHG works within about 25 minutes of Hamilton: Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville and East Windsor in Mercer County, Plainsboro in Middlesex County, and Yardley, PA. Call (609) 712-2474.",
       },
     ],
   },
@@ -352,52 +314,47 @@ export const services: Service[] = [
     name: "Bathroom Renovations",
     slug: "bathroom-renovations",
     description:
-      "Most bathroom remodels fail in the parts you never see. Waterproofing skipped behind the tile. A fan that vents into the attic instead of outside. A shower pan sloped the wrong way. Two years later the grout turns black and the subfloor goes soft. MHG builds bathrooms in Hamilton, Princeton, Lawrenceville, and across Mercer County that hold up, because we waterproof the full shower assembly, vent every fan through the roof, and slope pans to drain. Whether it is a 2-week powder room or a master bath with a curbless walk-in shower, heated tile floors, and a double vanity, you get one crew, a firm written price, and a finish date we commit to before we swing a hammer.",
+      "MHG Contracting remodels bathrooms around Hamilton, NJ, from powder rooms to primary baths with walk-in showers, heated floors and double vanities. The parts you never see decide how long a bathroom lasts: the shower waterproofing, the slope to the drain and a fan that vents outside. Every bathroom starts with a free visit to your home and a written estimate. For what bathroom remodels cost, see the bathroom cost guide.",
     shortDescription:
-      "From powder rooms to spa-like master bathrooms.",
+      "From powder rooms to primary baths with walk-in showers.",
     seoTitle: "Bathroom Remodeling Central NJ | MHG Contracting",
     seoDescription:
-      "Bathroom remodeling contractor in Hamilton, Princeton, Central NJ. Walk-in showers, custom tile, real waterproofing. Free estimate: (609) 712-2474.",
+      "Bathroom remodeling in Hamilton, Princeton and Central NJ from a family-owned contractor. Walk-in showers, tile, vanities, heated floors. Free estimates.",
     icon: "bathroom",
     costGuideSlug: "bathroom-remodel-cost",
-    costGuideLabel: "See real bathroom remodel costs in NJ",
+    costGuideLabel: "See what bathroom remodels cost in NJ",
     scopeItems: [
-      "Custom tile showers and tub surrounds",
-      "Vanity design and installation",
-      "Freestanding and built-in tub installation",
+      "Tile showers and tub surrounds",
+      "Vanities",
+      "Freestanding and built-in tubs",
       "Frameless glass shower enclosures",
-      "Heated floor systems",
-      "Plumbing rough-in and fixture installation",
-      "Ventilation and moisture control",
-      "Lighting design and installation",
-      "Accessible/ADA-compliant designs",
-      "Waterproofing and substrate preparation",
+      "Heated floors",
+      "Plumbing rough-in and fixtures",
+      "Ventilation",
+      "Lighting",
+      "Accessible layouts",
+      "Shower waterproofing",
     ],
     faqs: [
       {
-        question: "How long does a bathroom renovation take?",
-        answer:
-          "Most bathroom renovations are completed in 3-6 weeks. Smaller powder rooms may take 2-3 weeks, while master bathrooms with custom tile work typically require 4-6 weeks.",
-      },
-      {
-        question: "Can you add a bathroom where one doesn't exist?",
-        answer:
-          "Yes, we can add bathrooms in basements, under stairs, or other areas of your home. This involves running plumbing lines, which we handle from start to finish.",
-      },
-      {
-        question: "What about heated floors?",
-        answer:
-          "Heated floors are one of our most popular upgrades. We install electric radiant heating under tile, which is energy efficient and adds significant comfort, especially during New Jersey winters.",
-      },
-      {
-        question: "Do you do bathroom remodeling near me in Central NJ?",
-        answer:
-          "If you are in Mercer County, yes. We remodel bathrooms in Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, and East Windsor, plus Plainsboro in Middlesex County and Yardley, PA. Call (609) 712-2474 for a free in-home estimate.",
-      },
-      {
         question: "How much does a bathroom remodel cost in NJ?",
         answer:
-          "A small bathroom or powder room in Central NJ typically runs $12,000 to $20,000. A full hall or guest bath with new tile, tub, vanity, and fixtures lands around $25,000 to $40,000. Master baths with a curbless walk-in shower, heated floors, and a double vanity generally run $45,000 to $100,000 and up depending on tile and fixtures. You get a written breakdown before any work begins.",
+          `Nationally, the median major primary bath remodel was ${money(HOUZZ.bathSmall.median)} for rooms under 100 square feet and ${money(HOUZZ.bathLarge.median)} for larger ones in 2025, according to the 2026 U.S. Houzz & Home Study. The bathroom cost guide has the Middle Atlantic figure and what moves the price.`,
+      },
+      {
+        question: "Do I need a permit for a bathroom remodel?",
+        answer:
+          "A like-for-like fixture swap is ordinary maintenance under N.J.A.C. 5:23-2.7. Moving a drain, adding circuits or changing the layout needs a construction permit.",
+      },
+      {
+        question: "Can you add a bathroom where there isn't one?",
+        answer:
+          "Yes, in a basement, under stairs or in other space, as long as the plumbing can reach it. New plumbing needs a permit and a licensed plumber.",
+      },
+      {
+        question: "Do you remodel bathrooms in my town?",
+        answer:
+          "MHG works within about 25 minutes of Hamilton: Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville and East Windsor in Mercer County, Plainsboro in Middlesex County, and Yardley, PA. Call (609) 712-2474.",
       },
     ],
   },
@@ -406,52 +363,47 @@ export const services: Service[] = [
     name: "Basement Finishing",
     slug: "basement-finishing",
     description:
-      "Central Jersey sits on a high water table, and most of the finished basements we get called to fix started with someone skipping the vapor barrier or under-sizing the sump pump. Six months in, the carpet smells and the drywall starts to bow at the base. MHG finishes basements in Hamilton, Princeton, and across Mercer County the way they should be built the first time: interior perimeter drain where the lot calls for it, a sump system sized to the actual water load, a real vapor barrier under the subfloor, and a code-compliant egress window if you want the extra bedroom to count on your appraisal. Home theaters, in-law suites, home gyms, wet bars, we build all of it, but the waterproofing and code work happen before a single stud goes up.",
+      "MHG Contracting finishes basements around Hamilton, NJ: family rooms, home gyms, guest suites, bathrooms and wet bars. Moisture gets solved before a single stud goes up, because finishing over a damp wall traps it. A basement bedroom also needs an emergency escape opening under the New Jersey edition of the International Residential Code. Every basement starts with a free visit and a written estimate.",
     shortDescription:
-      "Waterproofed, code-compliant basements, not finishes over a moisture problem.",
+      "Moisture solved first, then framing, finishes and code items like egress.",
     seoTitle: "Basement Finishing Central NJ | MHG Contracting",
     seoDescription:
-      "Basement finishing contractor in Hamilton, Princeton, Central NJ. Real waterproofing, egress windows, in-law suites, home theaters. (609) 712-2474.",
+      "Basement finishing in Hamilton, Princeton and Central NJ: moisture work, egress windows, bathrooms, family rooms. Family-owned contractor. Free estimates.",
     icon: "basement",
     costGuideSlug: "basement-finishing-cost",
-    costGuideLabel: "See real basement finishing costs in NJ",
+    costGuideLabel: "See what basement finishing costs in NJ",
     scopeItems: [
-      "Interior perimeter drain and sump system design",
-      "Vapor barrier and moisture management",
+      "Moisture assessment, drains and sump systems",
+      "Vapor barriers",
       "Framing and insulation",
-      "Drywall installation and finishing",
+      "Drywall",
       "Flooring (LVP, carpet, tile)",
-      "Bathroom rough-in and build-out",
-      "Wet bar and kitchenette construction",
-      "Home theater pre-wiring and installation",
-      "Code-compliant egress window installation",
-      "Custom built-ins, storage, and electrical design",
+      "Basement bathrooms",
+      "Wet bars and kitchenettes",
+      "Home theater wiring",
+      "Egress windows",
+      "Built-ins and storage",
     ],
     faqs: [
       {
-        question: "Is waterproofing included?",
+        question: "Is moisture work part of the job?",
         answer:
-          "We assess moisture conditions before starting every basement project. If your basement needs an interior drain, a sump system, or a vapor barrier, it's in the scope from day one. A dry basement is the foundation of a quality finish, not an upsell we add after something fails.",
+          "It is assessed first on every basement. If the space needs a drain, a sump or a vapor barrier, that goes into the scope before any finishing.",
       },
       {
         question: "Do I need an egress window?",
         answer:
-          "If your basement will have a bedroom, building code requires an egress window or door for emergency exit. We handle the permitting and installation as part of the project, and it's what lets that room count as a legal bedroom on your appraisal.",
+          "If the basement will have a bedroom, yes. Section R310 of the New Jersey edition of the International Residential Code requires an emergency escape and rescue opening for basement sleeping rooms.",
       },
       {
-        question: "Can I add a bathroom in my basement?",
+        question: "Do I need a permit to finish a basement?",
         answer:
-          "Yes. We can add a full or half bathroom. If your home doesn't have a below-grade rough-in, we can break the concrete and run new plumbing lines.",
+          "Yes. Framing, wiring and plumbing all need a construction permit under N.J.A.C. 5:23-2.14.",
       },
       {
-        question: "Do you finish basements near me in Central NJ?",
+        question: "Do you finish basements in my town?",
         answer:
-          "Yes. We finish basements in Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville, and East Windsor, plus Plainsboro in Middlesex County and Yardley across the river in Bucks County, PA. Call (609) 712-2474 and we'll tell you honestly if your basement is a fit.",
-      },
-      {
-        question: "What happens if my basement already has a moisture problem?",
-        answer:
-          "We fix it before we build anything. That means grading and drainage outside, an interior perimeter drain and sump system if the water table calls for it, and a real vapor barrier under the subfloor. Finishing over an active leak just hides it until the drywall bows and the mold shows up.",
+          "MHG works within about 25 minutes of Hamilton: Hamilton, Princeton, West Windsor, Lawrenceville, Ewing, Hopewell, Pennington, Robbinsville and East Windsor in Mercer County, Plainsboro in Middlesex County, and Yardley, PA. Call (609) 712-2474.",
       },
     ],
   },
@@ -460,40 +412,39 @@ export const services: Service[] = [
     name: "Full Home Renovations",
     slug: "full-home-renovations",
     description:
-      "When one room isn't enough, we take on whole-home transformations. Our full renovation service covers everything - structural changes, system upgrades (HVAC, electrical, plumbing), interior finishes, and everything in between. We manage the entire project so you have one team and one point of contact.",
+      "When one room isn't enough, MHG Contracting takes on the whole house: structural changes, heating and cooling, electrical and plumbing, and the finishes in every room. You have one contract and one team to call, and the licensed trades are coordinated in the right order. Every project starts with a free visit and a written estimate.",
     shortDescription:
-      "Comprehensive whole-home transformations.",
+      "Whole-house renovations under one contract.",
     seoTitle: "Full Home Renovations Central NJ | MHG Contracting",
     seoDescription:
-      "Whole-home renovations in Hamilton, Princeton, Central NJ. Structural, HVAC, electrical, plumbing, and finishes from one team. Free estimate: (609) 712-2474.",
+      "Whole-home renovations in Hamilton, Princeton and Central NJ: structure, systems and finishes under one contract. Family-owned contractor. Free estimates.",
     icon: "home",
     scopeItems: [
-      "Structural modifications and engineering",
-      "Full interior demolition and rebuild",
-      "HVAC system upgrades",
-      "Electrical panel upgrades and re-wiring",
-      "Plumbing system updates",
+      "Structural changes, with an engineer",
+      "Interior demolition and rebuild",
+      "Heating and cooling updates",
+      "Electrical panel upgrades and rewiring",
+      "Plumbing updates",
       "Flooring throughout",
-      "Kitchen and bathroom renovation (included)",
+      "Kitchens and bathrooms",
       "Interior and exterior painting",
-      "Window and door replacement",
-      "Energy efficiency improvements",
+      "Windows and doors",
     ],
     faqs: [
       {
         question: "Can I stay in my home during a full renovation?",
         answer:
-          "It depends on the scope. For major renovations involving plumbing or HVAC shutdowns, we recommend arranging temporary housing. For phased projects, we can work room by room so you stay comfortable.",
+          "It depends on the scope. A phased job can keep a working kitchen or bathroom available. A full gut usually means living somewhere else for part of the project.",
       },
       {
-        question: "How do you handle subcontractors?",
+        question: "Who does the electrical and plumbing work?",
         answer:
-          "We manage all subcontractors - plumbers, electricians, HVAC techs - directly. You deal with us and only us. All subs are licensed, insured, and vetted by our team.",
+          "Licensed trades. New Jersey requires a licensed electrical contractor for electrical work (N.J.S.A. 45:5A-9) and a licensed master plumber for plumbing (N.J.S.A. 45:14C-12.3). MHG coordinates them under your contract.",
       },
       {
         question: "What does a full renovation cost?",
         answer:
-          "Full renovation costs vary widely based on home size and scope. We provide detailed, transparent estimates broken down by trade. Schedule a free estimate and we'll walk through your home together.",
+          "It depends on the house and the scope. The full home renovation cost guide builds the number room by room from published data. Your estimate is free.",
       },
     ],
   },
@@ -502,40 +453,39 @@ export const services: Service[] = [
     name: "Additions",
     slug: "additions",
     description:
-      "Need more space? We design and build home additions that blend seamlessly with your existing architecture. From family rooms and sunrooms to second-story additions, we handle the entire process - architectural planning, engineering, permitting, and construction.",
+      "MHG Contracting builds home additions around Hamilton, NJ: family rooms, sunrooms, primary suites and second stories. An addition means foundation, framing, a roof that ties into the old one, siding that matches, and heating, wiring and plumbing for the new space, plus the permit and any zoning approval. Every addition starts with a free visit and a written estimate.",
     shortDescription:
-      "Seamless home additions that match your existing style.",
+      "Additions built to tie into the house you have.",
     seoTitle: "Home Additions Central NJ | MHG Contracting",
     seoDescription:
-      "Home additions in Hamilton, Princeton, and Central NJ. Family rooms, sunrooms, second-story builds designed to match your home. Free estimate: (609) 712-2474.",
+      "Home additions in Hamilton, Princeton and Central NJ: family rooms, sunrooms, primary suites and second stories. Family-owned contractor. Free estimates.",
     icon: "addition",
     scopeItems: [
-      "Architectural design and planning",
-      "Structural engineering",
+      "Plans with a licensed architect or engineer",
       "Foundation and framing",
-      "Roofing integration",
-      "Exterior siding matching",
+      "Roof tie-in",
+      "Siding and trim to match",
       "Interior finishing",
-      "HVAC extension",
-      "Electrical and plumbing for new space",
-      "Permit management",
+      "Heating and cooling for the new space",
+      "Electrical and plumbing",
+      "Permit applications",
       "Site work and grading",
     ],
     faqs: [
       {
-        question: "Will an addition match my existing home?",
+        question: "Will an addition match my house?",
         answer:
-          "That is our goal with every addition. We carefully match rooflines, siding, trim, and architectural details so the addition looks like it was always part of the home.",
+          "That is the goal: rooflines, siding, trim and window styles chosen to match what is there. It gets planned before the permit drawings are final.",
       },
       {
-        question: "How long does an addition take?",
+        question: "Do I need zoning approval for an addition?",
         answer:
-          "Most additions take 3-6 months from groundbreaking to completion. Timeline depends on size, complexity, and permitting. We provide a realistic schedule upfront.",
+          "Only if the addition breaks the town's zoning rules, such as setbacks or lot coverage. Then the owner applies to the zoning board of adjustment for a variance under N.J.S.A. 40:55D-70, before the construction permit.",
       },
       {
-        question: "Do you handle the architectural drawings?",
+        question: "What does an addition cost?",
         answer:
-          "Yes, we work with licensed architects to create plans that meet your needs and local building codes. Architectural fees are included in our project estimate.",
+          "It depends on size, foundation and what goes in it. The home addition cost guide has the Middle Atlantic Cost vs. Value figure. Your estimate is free.",
       },
     ],
   },
@@ -544,76 +494,39 @@ export const services: Service[] = [
     name: "New Construction",
     slug: "new-construction",
     description:
-      "Build the home you have always envisioned. Our new construction service takes you from an empty lot to a finished, move-in ready home. We partner with top architects and handle every phase - site prep, foundation, framing, systems, finishes, and landscaping.",
+      "MHG Contracting builds new homes around Hamilton, NJ, from site work and foundation through framing, systems and finishes. A new home also means zoning, permits and a certificate of occupancy before you move in. It starts the same way as any MHG project: a conversation, a site visit and a written estimate.",
     shortDescription:
-      "Custom homes built from the ground up.",
+      "New homes, from site work to finishes.",
     seoTitle: "New Home Construction Central NJ | MHG Contracting",
     seoDescription:
-      "Custom new home construction in Hamilton, Princeton, and Central NJ. Site prep through finishes managed by one team. Free consultation: (609) 712-2474.",
+      "New home construction in Hamilton, Princeton and Central NJ from a family-owned contractor: site work, foundation, framing, systems and finishes.",
     icon: "construction",
     scopeItems: [
       "Site preparation and excavation",
-      "Foundation construction",
-      "Structural framing",
-      "Roofing and exterior envelope",
-      "HVAC, electrical, and plumbing systems",
-      "Insulation and energy efficiency",
-      "Interior finishing and trim",
-      "Kitchen and bathroom build-out",
-      "Landscaping and hardscaping",
+      "Foundation",
+      "Framing",
+      "Roofing and exterior",
+      "Heating and cooling, electrical and plumbing",
+      "Insulation",
+      "Interior finishes and trim",
+      "Kitchens and bathrooms",
       "Final inspections and certificate of occupancy",
     ],
     faqs: [
       {
-        question: "How long does it take to build a new home?",
+        question: "What does it cost to build a new home?",
         answer:
-          "A typical custom home build takes 10-14 months from breaking ground. This does not include the pre-construction phase (design, permitting) which can take an additional 2-4 months.",
+          `Nationally, builders reported an average construction cost of about ${money(NAHB.perSqft)} per square foot in 2024, before the lot, financing, overhead and profit, according to the NAHB. The new home cost guide explains what that leaves out.`,
       },
       {
         question: "Do you build on my lot?",
         answer:
-          "Yes, we build on lots you already own or can help you evaluate lots you are considering. We assess soil conditions, setbacks, and utility access before you commit.",
-      },
-      {
-        question: "What is included in your new construction service?",
-        answer:
-          "Everything. From the foundation to the final coat of paint, including all mechanical systems, fixtures, finishes, and landscaping. We deliver a fully finished, move-in ready home.",
+          "Yes, on a lot you own. Setbacks, utilities and access get checked on the site visit before anything is drawn.",
       },
     ],
   },
 ];
 
-// ─── Testimonials ───────────────────────────────────────
-
-export const testimonials: Testimonial[] = [
-  {
-    id: "testimonial-1",
-    name: "Sarah & Michael R.",
-    location: "Princeton, NJ",
-    projectType: "kitchen",
-    quote:
-      "The MHG team completely transformed our kitchen. From the initial design meeting to the completed project, they were professional, communicative, and meticulous. The quality of the craftsmanship is outstanding - our neighbors keep asking for their number.",
-    rating: 5,
-  },
-  {
-    id: "testimonial-2",
-    name: "David & Jennifer L.",
-    location: "Hamilton, NJ",
-    projectType: "basement",
-    quote:
-      "We wanted to turn our unfinished basement into a space our family could actually use. MHG delivered beyond our expectations. The home theater is incredible, and the wet bar is now our favorite spot for entertaining. They treated our home like it was their own.",
-    rating: 5,
-  },
-  {
-    id: "testimonial-3",
-    name: "The Patel Family",
-    location: "West Windsor, NJ",
-    projectType: "full-renovation",
-    quote:
-      "Our whole-home renovation was a huge undertaking, but MHG made it manageable. The team was on-site almost every day, and they kept us updated throughout the entire process. The finished result is stunning - it feels like a brand new home.",
-    rating: 5,
-  },
-];
 
 // ─── Team Members ───────────────────────────────────────
 
@@ -621,36 +534,36 @@ export const teamMembers: TeamMember[] = [
   {
     id: "team-1",
     name: "Shahzeb Malik",
-    title: "Co-Owner & Founder",
-    bio: "With a hands-on approach and deep knowledge of residential construction, Shahzeb oversees every project to ensure it meets MHG's standards. His commitment to quality craftsmanship and personal service is at the core of everything we build.",
+    title: "Co-Owner",
+    bio: "Co-owner of MHG Contracting and the first call for new projects and estimates.",
     imagePath: "/images/team/shahzeb.jpg",
   },
   {
     id: "team-2",
     name: "Shahmi Malik",
-    title: "Co-Owner & Founder",
-    bio: "Shahmi brings a sharp eye for design and an unwavering focus on client satisfaction to every project. Together with Shahzeb, he ensures that MHG's family-owned values are present in every home we touch.",
+    title: "Co-Owner",
+    bio: "Co-owner of MHG Contracting and Shahzeb's brother. Google reviewers mention him by name for managing their projects.",
     imagePath: "/images/team/shahmi.jpg",
   },
   {
     id: "team-3",
     name: "Bear",
     title: "Team Lead",
-    bio: "A trusted member of the MHG crew, Bear leads job site operations with precision and pride. Clients know they're in good hands when Bear is on-site.",
+    bio: "Team lead on the MHG crew.",
     imagePath: "/images/team/bear.jpg",
   },
   {
     id: "team-4",
     name: "Pedro",
     title: "Team Lead",
-    bio: "Pedro's attention to detail and years of hands-on experience make him an invaluable part of every build. He takes ownership of each project from start to finish.",
+    bio: "Team lead on the MHG crew.",
     imagePath: "/images/team/pedro.jpg",
   },
   {
     id: "team-5",
     name: "Juan",
     title: "Team Lead",
-    bio: "Juan brings skill and dedication to every job site. His craftsmanship speaks for itself - and his clients know they can count on him to get it done right.",
+    bio: "Team lead on the MHG crew.",
     imagePath: "/images/team/juan.jpg",
   },
 ];
@@ -670,21 +583,21 @@ export const processSteps: ProcessStep[] = [
     number: "01",
     title: "Free Consultation",
     description:
-      "It starts with a phone call to hear about your project, followed by an in-person visit to assess your space and provide an honest estimate. No pressure, no obligations - just a real conversation about what's possible.",
+      "It starts with a phone call to hear about your project and set up a visit. At your house we walk the space, and then you get a written preconstruction estimate. The estimate is free.",
   },
   {
     id: "step-2",
     number: "02",
     title: "Design & Planning",
     description:
-      "We invest 2-3 weeks in detailed design work - drawings, renderings, and material selections - so you can visualize the finished result before we break ground. For larger projects, you receive a week-by-week schedule so there are never any surprises.",
+      "You go through the estimate with us and settle the scope and finishes. After the deposit, the plan, budget and schedule are finalized before any work starts.",
   },
   {
     id: "step-3",
     number: "03",
     title: "Build & Craft",
     description:
-      "Our skilled team brings the plan to life. We keep you informed with regular updates and maintain a clean, respectful worksite throughout the entire build process.",
+      "MHG's crew and its licensed subcontractors build it, with week-by-week progress updates, and a final walkthrough with you before the last payment.",
   },
 ];
 

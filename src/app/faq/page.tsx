@@ -1,6 +1,6 @@
+import Breadcrumbs from "@/components/seo/Breadcrumbs";
 import type { Metadata } from "next";
 import FAQContent from "./FAQContent";
-import SeoPrerender from "@/components/seo/SeoPrerender";
 import { getAllFAQItems } from "@/lib/faq-data";
 import { buildBreadcrumbSchema, buildSeoMetadata } from "@/lib/seo-utils";
 
@@ -38,15 +38,8 @@ export default function FAQPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageJsonLd) }}
       />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
-      />
-      <SeoPrerender>
-        <h2>Frequently Asked Questions - MHG Contracting Home Renovation in Central NJ</h2>
-        <p>Answers to the questions we get most often from homeowners considering a kitchen renovation, bathroom remodel, basement finishing project, home addition, or new construction build in Hamilton, Princeton, West Windsor, Lawrenceville, Plainsboro, Yardley PA, and throughout Central New Jersey.</p>
-      </SeoPrerender>
       <FAQContent />
+      <Breadcrumbs schema={breadcrumbJsonLd} />
     </>
   );
 }

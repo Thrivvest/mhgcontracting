@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import EventTracker from "@/components/analytics/EventTracker";
 import StickyMobileCTA from "@/components/layout/StickyMobileCTA";
 import MobileEstimateSheet from "@/components/layout/MobileEstimateSheet";
+import { siteGraph } from "@/lib/schema";
 import "./globals.css";
 
 // ─── Font Configuration ─────────────────────────────────
@@ -104,182 +105,6 @@ export const viewport: Viewport = {
   themeColor: "#2D3380",
 };
 
-// ─── JSON-LD Structured Data ────────────────────────────
-
-const SERVICE_AREA_CITIES = [
-  { name: "Hamilton", state: "NJ" },
-  { name: "Princeton", state: "NJ" },
-  { name: "West Windsor", state: "NJ" },
-  { name: "Lawrenceville", state: "NJ" },
-  { name: "Plainsboro", state: "NJ" },
-  { name: "Robbinsville", state: "NJ" },
-  { name: "Pennington", state: "NJ" },
-  { name: "Hopewell", state: "NJ" },
-  { name: "Ewing", state: "NJ" },
-  { name: "East Windsor", state: "NJ" },
-  { name: "Yardley", state: "PA" },
-];
-
-const SERVICE_OFFERINGS = [
-  { name: "General Contracting", slug: "general-contracting" },
-  { name: "Kitchen Renovations", slug: "kitchen-renovations" },
-  { name: "Bathroom Renovations", slug: "bathroom-renovations" },
-  { name: "Basement Finishing", slug: "basement-finishing" },
-  { name: "Full Home Renovations", slug: "full-home-renovations" },
-  { name: "Home Additions", slug: "additions" },
-  { name: "New Construction", slug: "new-construction" },
-];
-
-const jsonLd = {
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "https://mhgcon.com/#website",
-      url: "https://mhgcon.com",
-      name: "MHG Contracting",
-      description:
-        "Family-owned general contractor in Hamilton NJ. Kitchen, bathroom, basement, addition, and new construction services across Central NJ.",
-      publisher: { "@id": "https://mhgcon.com/#organization" },
-      inLanguage: "en-US",
-    },
-    {
-      "@type": "Organization",
-      "@id": "https://mhgcon.com/#organization",
-      name: "MHG Contracting",
-      alternateName: ["MHG Construction", "Malik Holding Group", "MHG"],
-      legalName: "Malik Holding Group LLC DBA MHG Contracting",
-      url: "https://mhgcon.com",
-      logo: "https://mhgcon.com/images/logo/mhg-logo-web.png",
-      foundingLocation: { "@type": "Place", name: "Hamilton, NJ" },
-      contactPoint: {
-        "@type": "ContactPoint",
-        telephone: "+1-609-712-2474",
-        contactType: "customer service",
-        email: "shahzeb@mhgcon.com",
-        areaServed: "US",
-        availableLanguage: "English",
-      },
-      knowsAbout: [
-        "Kitchen renovation",
-        "Bathroom remodeling",
-        "Basement finishing",
-        "Home additions",
-        "Full home renovation",
-        "New residential construction",
-        "Custom cabinetry",
-        "Tile installation",
-        "Residential general contracting",
-        "Mercer County NJ building permits",
-        "Central New Jersey home renovation",
-      ],
-      sameAs: [
-        "https://instagram.com/mhgcontracting",
-        "https://facebook.com/mhgcontracting",
-        "https://www.houzz.com/professionals/general-contractors/mhg-contracting-pfvwus-pf~566670827",
-      ],
-    },
-    {
-      "@type": "GeneralContractor",
-      "@id": "https://mhgcon.com/#localbusiness",
-      name: "MHG Contracting",
-      image: "https://mhgcon.com/images/og-image.jpg",
-      telephone: "(609) 712-2474",
-      email: "shahzeb@mhgcon.com",
-      url: "https://mhgcon.com",
-      address: {
-        "@type": "PostalAddress",
-        streetAddress: "2145 Nottingham Way",
-        addressLocality: "Hamilton",
-        addressRegion: "NJ",
-        postalCode: "08619",
-        addressCountry: "US",
-      },
-      geo: {
-        "@type": "GeoCoordinates",
-        latitude: 40.2354,
-        longitude: -74.6914,
-      },
-      hasMap: "https://www.google.com/maps/search/?api=1&query=MHG+Contracting+2145+Nottingham+Way+Hamilton+NJ",
-      areaServed: SERVICE_AREA_CITIES.map((c) => ({
-        "@type": "City",
-        name: c.name,
-        containedInPlace: { "@type": "State", name: c.state === "NJ" ? "New Jersey" : "Pennsylvania" },
-      })),
-      hasOfferCatalog: {
-        "@type": "OfferCatalog",
-        name: "MHG Contracting Services",
-        itemListElement: SERVICE_OFFERINGS.map((s) => ({
-          "@type": "Offer",
-          itemOffered: {
-            "@type": "Service",
-            name: s.name,
-            url: `https://mhgcon.com/services/${s.slug}`,
-            provider: { "@id": "https://mhgcon.com/#localbusiness" },
-            areaServed: SERVICE_AREA_CITIES.map((c) => c.name),
-          },
-          areaServed: SERVICE_AREA_CITIES.map((c) => `${c.name}, ${c.state}`),
-          availability: "https://schema.org/InStock",
-        })),
-      },
-      makesOffer: SERVICE_OFFERINGS.map((s) => ({
-        "@type": "Offer",
-        itemOffered: {
-          "@type": "Service",
-          name: s.name,
-          url: `https://mhgcon.com/services/${s.slug}`,
-        },
-      })),
-      priceRange: "$$",
-      aggregateRating: {
-        "@type": "AggregateRating",
-        ratingValue: "4.9",
-        reviewCount: "28",
-        bestRating: "5",
-        worstRating: "1",
-      },
-      openingHoursSpecification: {
-        "@type": "OpeningHoursSpecification",
-        dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
-        opens: "07:00",
-        closes: "18:00",
-      },
-    },
-    {
-      "@type": "Person",
-      "@id": "https://mhgcon.com/#founder",
-      name: "Shahzeb Malik",
-      jobTitle: "Owner",
-      worksFor: { "@id": "https://mhgcon.com/#organization" },
-      affiliation: { "@id": "https://mhgcon.com/#organization" },
-      knowsAbout: [
-        "Residential general contracting",
-        "Kitchen renovation",
-        "Bathroom remodeling",
-        "Basement finishing",
-        "Home additions",
-        "Construction project management",
-        "Mercer County NJ building codes",
-      ],
-      hasOccupation: {
-        "@type": "Occupation",
-        name: "General Contractor",
-        occupationLocation: {
-          "@type": "City",
-          name: "Hamilton",
-          containedInPlace: { "@type": "State", name: "New Jersey" },
-        },
-      },
-      address: {
-        "@type": "PostalAddress",
-        addressLocality: "Hamilton",
-        addressRegion: "NJ",
-        addressCountry: "US",
-      },
-    },
-  ],
-};
-
 // ─── Root Layout ────────────────────────────────────────
 
 export default function RootLayout({
@@ -307,7 +132,7 @@ export default function RootLayout({
         />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteGraph) }}
         />
       </head>
       <body>
