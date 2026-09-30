@@ -67,7 +67,7 @@ export const GUIDES: Record<string, BlogPost> = {
     content: `
 <p><strong>A full midrange bathroom remodel in the Middle Atlantic region, which includes Hamilton, costs about ${money(CVV.bath.jobCost)}, ${CVV_CITE}. Nationally, homeowners spent a median of ${money(HOUZZ.bathSmall.median)} on a major remodel of a small bathroom (under 100 square feet) and ${money(HOUZZ.bathLarge.median)} on a larger one in 2025, according to the ${HOUZZ_STUDY}.</strong></p>
 
-<p>Those are the most reliable public numbers for a bathroom near Hamilton. Nobody publishes a Hamilton-only survey, and any contractor quoting you "the Hamilton average" is quoting their own jobs. Below is what the surveys say, what pushes a bathroom above or below them, and how the permit side works in Hamilton Township.</p>
+<p>Those are the most reliable public numbers for a bathroom remodel anywhere in New Jersey, Hamilton included. Nobody publishes a Hamilton-only or a New Jersey-only survey, and any contractor quoting you "the average" is quoting their own jobs. Below is what the surveys say, what pushes a bathroom above or below them, and how the permit side works in Hamilton Township.</p>
 
 <h2>What bathroom remodels cost in 2025</h2>
 <p>The ${HOUZZ_STUDY} asked U.S. homeowners what they spent on bathroom projects in 2025. It counts a "major" primary bath remodel as one that replaced at least the vanity, countertops and toilet.</p>
@@ -125,6 +125,10 @@ ${PROCESS}
       {
         question: "How much does a small bathroom remodel cost in Hamilton, NJ?",
         answer: `A major remodel of a primary bath under 100 square feet had a median cost of ${money(HOUZZ.bathSmall.median)} in 2025, and the top 10% spent ${money(HOUZZ.bathSmall.p90)} or more (${HOUZZ_STUDY}). Guest bath projects of any scope had a median of ${money(HOUZZ_ROOM_MEDIAN.guestBath)}.`,
+      },
+      {
+        question: "How much does a bathroom remodel cost in NJ?",
+        answer: `No survey publishes a New Jersey-only figure, so the closest reliable numbers are regional and national. In the Middle Atlantic region, which includes New Jersey, a midrange bathroom remodel costs about ${money(CVV.bath.jobCost)}, ${CVV_CITE}. Nationally, the 2025 median for a major remodel was ${money(HOUZZ.bathSmall.median)} under 100 square feet and ${money(HOUZZ.bathLarge.median)} for larger bathrooms (${HOUZZ_STUDY}).`,
       },
       {
         question: "Does a bathroom remodel pay off when you sell?",
@@ -617,6 +621,7 @@ ${officesTable()}
 <p>If you want to see how MHG works, call <a href="${business.phoneHref}">${business.phone}</a> or <a href="/contact">ask for a free in-home estimate</a>. Our process is on the <a href="/process">process page</a>.</p>
 `,
     faqs: [
+      { question: "How do I choose a contractor in New Jersey?", answer: "Check three things before you sign: the contractor's home improvement registration in the state's License Verification System (N.J.S.A. 56:8-138), a certificate for the liability insurance the law requires (N.J.S.A. 56:8-142), and a written contract with everything N.J.S.A. 56:8-151 and N.J.A.C. 13:45A-16.2 require." },
       { question: "How do I check a contractor's license in NJ?", answer: "Search the business in the Division of Consumer Affairs License Verification System at newjersey.mylicense.com. Home improvement contractor businesses must register every year (N.J.S.A. 56:8-138) and show the number on their ads, contracts and vehicles (N.J.S.A. 56:8-144)." },
       { question: "What insurance does a NJ contractor need?", answer: `Commercial general liability insurance of at least ${money(NJ_HIC_MIN_LIABILITY)} per occurrence (N.J.S.A. 56:8-142), with a copy of the certificate included in the contract (N.J.S.A. 56:8-151).` },
       { question: "Can I cancel a home improvement contract in NJ?", answer: "Yes, for any reason, before midnight of the third business day after you receive your copy, by written notice sent by registered or certified mail or delivered in person (N.J.S.A. 56:8-151)." },
