@@ -60,7 +60,7 @@ export const GUIDES: Record<string, BlogPost> = {
     title: "What Does a Bathroom Remodel Cost in Hamilton, NJ? (2026)",
     date: "September 28, 2026",
     excerpt: "What published surveys say a bathroom remodel costs near Hamilton, what moves the price in an older Mercer County house, and how permits and timing work.",
-    metaDescription: `Bathroom remodel cost near Hamilton, NJ: Houzz 2026 medians of ${k(HOUZZ.bathSmall.median)} to ${k(HOUZZ.bathLarge.median)} for a major primary bath, plus permits, timing and what moves the price.`,
+    metaDescription: `Bathroom remodel cost in NJ: ${k(HOUZZ.bathSmall.median)} to ${k(HOUZZ.bathLarge.median)} median (Houzz 2026) for a small vs. full remodel near Hamilton, plus permits, timing and what moves the price.`,
     category: "Bathroom",
     readTime: "6 min read",
     sources: ["houzz", "cvv", "acs", "njConstructionOffices", "njPermits", "njOrdinaryMaintenance", "epaRrp"],
@@ -82,11 +82,11 @@ export const GUIDES: Record<string, BlogPost> = {
 <p>Smaller jobs pull the averages down a lot. Counting every bathroom project of any size, the median spend in 2025 was ${money(HOUZZ_ROOM_MEDIAN.primaryBath)} for a primary bath and ${money(HOUZZ_ROOM_MEDIAN.guestBath)} for a guest bath, according to the same study. Those medians include refreshes like a new vanity and paint.</p>
 <p>For our region specifically, a midrange bathroom remodel costs about ${money(CVV.bath.jobCost)}, ${CVV_CITE}. That report prices a defined job: updating a 5-by-7-foot bathroom with a new tub and tile surround, toilet, vanity, tile floor and fixtures.</p>
 
-<h2>Small bathroom remodel cost</h2>
-<p>For a bathroom under 100 square feet, the median major remodel (at least a new vanity, countertop and toilet) cost ${money(HOUZZ.bathSmall.median)} in 2025, and the top 10% of homeowners spent ${money(HOUZZ.bathSmall.p90)} or more (${HOUZZ_STUDY}). A lighter refresh costs less: the median guest bathroom project of any scope was ${money(HOUZZ_ROOM_MEDIAN.guestBath)}. A powder room with no tub or shower usually sits at the low end, because it has the least tile and plumbing.</p>
+<h2>Small bathroom remodel cost in NJ</h2>
+<p>For a bathroom under 100 square feet, the median major remodel (at least a new vanity, countertop and toilet) cost ${money(HOUZZ.bathSmall.median)} in 2025, and the top 10% of homeowners spent ${money(HOUZZ.bathSmall.p90)} or more (${HOUZZ_STUDY}). No survey breaks that figure out for New Jersey alone, but it is the closest published number for a small bathroom here. A lighter refresh costs less: the median guest bathroom project of any scope was ${money(HOUZZ_ROOM_MEDIAN.guestBath)}. A powder room with no tub or shower usually sits at the low end, because it has the least tile and plumbing.</p>
 
-<h2>Full bathroom remodel cost</h2>
-<p>A full bathroom has a tub or shower, a toilet and a vanity. The closest published figure is the midrange bathroom remodel in the Remodeling 2025 Cost vs. Value Report: a new tub with a tile surround, toilet, vanity, tile floor and fixtures in a 5-by-7-foot room. It costs about ${money(CVV.bath.jobCost)} in the Middle Atlantic region, ${CVV_CITE}. Larger primary bathrooms with a separate shower and a double vanity run higher: the median major remodel of a bathroom 100 square feet or larger was ${money(HOUZZ.bathLarge.median)} in 2025 (${HOUZZ_STUDY}).</p>
+<h2>Full bathroom remodel cost in NJ</h2>
+<p>A full bathroom has a tub or shower, a toilet and a vanity. The closest published figure for New Jersey is the midrange bathroom remodel in the Remodeling 2025 Cost vs. Value Report for the Middle Atlantic region, which New Jersey sits in: a new tub with a tile surround, toilet, vanity, tile floor and fixtures in a 5-by-7-foot room, at about ${money(CVV.bath.jobCost)}, ${CVV_CITE}. Larger primary bathrooms with a separate shower and a double vanity run higher: the median major remodel of a bathroom 100 square feet or larger was ${money(HOUZZ.bathLarge.median)} nationally in 2025 (${HOUZZ_STUDY}).</p>
 
 <h2>What moves the price of a bathroom</h2>
 <ul>
@@ -125,6 +125,10 @@ ${PROCESS}
       {
         question: "How much does a small bathroom remodel cost in Hamilton, NJ?",
         answer: `A major remodel of a primary bath under 100 square feet had a median cost of ${money(HOUZZ.bathSmall.median)} in 2025, and the top 10% spent ${money(HOUZZ.bathSmall.p90)} or more (${HOUZZ_STUDY}). Guest bath projects of any scope had a median of ${money(HOUZZ_ROOM_MEDIAN.guestBath)}.`,
+      },
+      {
+        question: "What does a bathroom remodel cost in New Jersey?",
+        answer: `No survey publishes a New Jersey-only figure. For the Middle Atlantic region, which New Jersey sits in, a midrange full bathroom remodel costs about ${money(CVV.bath.jobCost)}, ${CVV_CITE}. Nationally, the 2025 median major primary bath remodel was ${money(HOUZZ.bathSmall.median)} for a small bathroom under 100 square feet and ${money(HOUZZ.bathLarge.median)} for a larger one (${HOUZZ_STUDY}).`,
       },
       {
         question: "Does a bathroom remodel pay off when you sell?",
