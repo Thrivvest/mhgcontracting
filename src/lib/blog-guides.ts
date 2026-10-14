@@ -56,37 +56,37 @@ const notOurPrices = (what: string) =>
 export const GUIDES: Record<string, BlogPost> = {
   "bathroom-remodel-cost": {
     slug: "bathroom-remodel-cost",
-    seoTitle: "Average Bathroom Remodel Cost in Hamilton, NJ (2026)",
-    title: "What Does a Bathroom Remodel Cost in Hamilton, NJ? (2026)",
+    seoTitle: "Bathroom Remodel Cost Hamilton, NJ (Small, Full, Average)",
+    title: "Small, Full, and Average Bathroom Remodel Costs in Hamilton, NJ (2026)",
     date: "September 28, 2026",
-    excerpt: "What published surveys say a bathroom remodel costs near Hamilton, what moves the price in an older Mercer County house, and how permits and timing work.",
-    metaDescription: `Bathroom remodel cost near Hamilton, NJ: Houzz 2026 medians of ${k(HOUZZ.bathSmall.median)} to ${k(HOUZZ.bathLarge.median)} for a major primary bath, plus permits, timing and what moves the price.`,
+    excerpt: "What published surveys say a small, full, or average bathroom remodel costs near Hamilton, what moves the price in an older Mercer County house, and how permits and timing work.",
+    metaDescription: "See 2026 bathroom remodel costs near Hamilton, NJ by size: small, full, and average, plus what moves the price and permit rules.",
     category: "Bathroom",
     readTime: "6 min read",
     sources: ["houzz", "cvv", "acs", "njConstructionOffices", "njPermits", "njOrdinaryMaintenance", "epaRrp"],
     content: `
 <p><strong>A full midrange bathroom remodel in the Middle Atlantic region, which includes Hamilton, costs about ${money(CVV.bath.jobCost)}, ${CVV_CITE}. Nationally, homeowners spent a median of ${money(HOUZZ.bathSmall.median)} on a major remodel of a small bathroom (under 100 square feet) and ${money(HOUZZ.bathLarge.median)} on a larger one in 2025, according to the ${HOUZZ_STUDY}.</strong></p>
 
-<p>Those are the most reliable public numbers for a bathroom near Hamilton. Nobody publishes a Hamilton-only survey, and any contractor quoting you "the Hamilton average" is quoting their own jobs. Below is what the surveys say, what pushes a bathroom above or below them, and how the permit side works in Hamilton Township.</p>
+<p>Those are the most reliable public numbers for a bathroom near Hamilton. Nobody publishes a Hamilton-only survey, and any contractor quoting you "the Hamilton average" is quoting their own jobs. Below is the breakdown by small, full and average scope, what pushes a bathroom above or below those figures, and how the permit side works in Hamilton Township.</p>
 
-<h2>What bathroom remodels cost in 2025</h2>
-<p>The ${HOUZZ_STUDY} asked U.S. homeowners what they spent on bathroom projects in 2025. It counts a "major" primary bath remodel as one that replaced at least the vanity, countertops and toilet.</p>
+<h2>What bathroom remodels cost in 2025, by size</h2>
+<p>The ${HOUZZ_STUDY} asked U.S. homeowners what they spent on bathroom projects in 2025. It counts a "major" primary bath remodel as one that replaced at least the vanity, countertops and toilet. A small bathroom remodel is the under-100-square-foot row below; a full remodel of a larger primary bath is the second row.</p>
 <div class="cost-table-wrap"><table class="cost-table">
-<caption>Major primary bathroom remodels, U.S., 2025 (${HOUZZ_STUDY})</caption>
+<caption>Small vs. full primary bathroom remodels, U.S., 2025 (${HOUZZ_STUDY})</caption>
 <thead><tr><th>Bathroom size</th><th>Median spend</th><th>Top 10% spent</th></tr></thead>
 <tbody>
-<tr><td>Under 100 sq ft</td><td>${money(HOUZZ.bathSmall.median)}</td><td>${money(HOUZZ.bathSmall.p90)} or more</td></tr>
-<tr><td>100 sq ft or more</td><td>${money(HOUZZ.bathLarge.median)}</td><td>${money(HOUZZ.bathLarge.p90)} or more</td></tr>
+<tr><td>Small (under 100 sq ft)</td><td>${money(HOUZZ.bathSmall.median)}</td><td>${money(HOUZZ.bathSmall.p90)} or more</td></tr>
+<tr><td>Full / larger (100 sq ft or more)</td><td>${money(HOUZZ.bathLarge.median)}</td><td>${money(HOUZZ.bathLarge.p90)} or more</td></tr>
 </tbody>
 </table></div>
 <p>Smaller jobs pull the averages down a lot. Counting every bathroom project of any size, the median spend in 2025 was ${money(HOUZZ_ROOM_MEDIAN.primaryBath)} for a primary bath and ${money(HOUZZ_ROOM_MEDIAN.guestBath)} for a guest bath, according to the same study. Those medians include refreshes like a new vanity and paint.</p>
 <p>For our region specifically, a midrange bathroom remodel costs about ${money(CVV.bath.jobCost)}, ${CVV_CITE}. That report prices a defined job: updating a 5-by-7-foot bathroom with a new tub and tile surround, toilet, vanity, tile floor and fixtures.</p>
 
-<h2>Small bathroom remodel cost</h2>
-<p>For a bathroom under 100 square feet, the median major remodel (at least a new vanity, countertop and toilet) cost ${money(HOUZZ.bathSmall.median)} in 2025, and the top 10% of homeowners spent ${money(HOUZZ.bathSmall.p90)} or more (${HOUZZ_STUDY}). A lighter refresh costs less: the median guest bathroom project of any scope was ${money(HOUZZ_ROOM_MEDIAN.guestBath)}. A powder room with no tub or shower usually sits at the low end, because it has the least tile and plumbing.</p>
+<h2>Small bathroom remodel cost in Hamilton</h2>
+<p>For a small bathroom remodel near Hamilton, the closest public figure is for a bathroom under 100 square feet: the median major remodel (at least a new vanity, countertop and toilet) cost ${money(HOUZZ.bathSmall.median)} in 2025, and the top 10% of homeowners spent ${money(HOUZZ.bathSmall.p90)} or more (${HOUZZ_STUDY}). A lighter refresh costs less: the median guest bathroom project of any scope was ${money(HOUZZ_ROOM_MEDIAN.guestBath)}. A powder room with no tub or shower usually sits at the low end, because it has the least tile and plumbing.</p>
 
-<h2>Full bathroom remodel cost</h2>
-<p>A full bathroom has a tub or shower, a toilet and a vanity. The closest published figure is the midrange bathroom remodel in the Remodeling 2025 Cost vs. Value Report: a new tub with a tile surround, toilet, vanity, tile floor and fixtures in a 5-by-7-foot room. It costs about ${money(CVV.bath.jobCost)} in the Middle Atlantic region, ${CVV_CITE}. Larger primary bathrooms with a separate shower and a double vanity run higher: the median major remodel of a bathroom 100 square feet or larger was ${money(HOUZZ.bathLarge.median)} in 2025 (${HOUZZ_STUDY}).</p>
+<h2>Full bathroom remodel cost in Hamilton</h2>
+<p>A full bathroom remodel near Hamilton covers a room with a tub or shower, a toilet and a vanity. The closest published figure is the midrange bathroom remodel in the Remodeling 2025 Cost vs. Value Report: a new tub with a tile surround, toilet, vanity, tile floor and fixtures in a 5-by-7-foot room. It costs about ${money(CVV.bath.jobCost)} in the Middle Atlantic region, ${CVV_CITE}. Larger primary bathrooms with a separate shower and a double vanity run higher: the median major remodel of a bathroom 100 square feet or larger was ${money(HOUZZ.bathLarge.median)} in 2025 (${HOUZZ_STUDY}).</p>
 
 <h2>What moves the price of a bathroom</h2>
 <ul>
