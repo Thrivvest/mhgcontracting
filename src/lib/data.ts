@@ -4,7 +4,13 @@
  * Facts about MHG come from the intake form (2026-03-28), GBP and
  * data/business.ts. Dollar figures only via data/costs.ts.
  */
-import { HOUZZ, NAHB, money } from "@/data/costs";
+import { BATH_BUDGET_QUESTION, CVV, CVV_CITE, HOUZZ, HOUZZ_ROOM_MEDIAN, HOUZZ_YEAR, HOUZZ_STUDY, NAHB, money } from "@/data/costs";
+import { business } from "@/data/business";
+import { HOUSING, PERMIT_OFFICES, townHousing, townOffices } from "@/data/sources";
+
+// Hamilton facts for the hub pages' local sections (Census ACS, DCA roster).
+const HAM_HOUSING = townHousing("hamilton-nj")!;
+const HAM_OFFICE = townOffices("hamilton-nj")[0];
 
 // ─── Types ──────────────────────────────────────────────
 
@@ -43,6 +49,12 @@ export interface Service {
   seoDescription?: string;
   costGuideSlug?: string;
   costGuideLabel?: string;
+  /** Hero H1 when it should differ from `name` (keyword-led, e.g. "Bathroom Remodeling in NJ"). */
+  h1?: string;
+  /** Keyword headings for the template's overview, scope and FAQ sections. */
+  headings?: { overview?: string; scope?: string; faqs?: string };
+  /** Extra visible sections (HTML, internal links only), rendered after the scope list. */
+  sections?: { heading: string; html: string }[];
 }
 
 export interface FAQ {
@@ -316,10 +328,34 @@ export const services: Service[] = [
     description:
       "MHG Contracting remodels bathrooms around Hamilton, NJ, from powder rooms to primary baths with walk-in showers, heated floors and double vanities. The parts you never see decide how long a bathroom lasts: the shower waterproofing, the slope to the drain and a fan that vents outside. Every bathroom starts with a free visit to your home and a written estimate. For what bathroom remodels cost, see the bathroom cost guide.",
     shortDescription:
-      "From powder rooms to primary baths with walk-in showers.",
-    seoTitle: "Bathroom Remodeling Central NJ | MHG Contracting",
+      "From powder rooms to primary baths with walk-in showers, built by a family-owned contractor in Hamilton.",
+    seoTitle: "Bathroom Remodeling NJ | Hamilton Bathroom Contractor | MHG",
     seoDescription:
-      "Bathroom remodeling in Hamilton, Princeton and Central NJ from a family-owned contractor. Walk-in showers, tile, vanities, heated floors. Free estimates.",
+      "Bathroom remodeling in NJ from a family-owned Hamilton contractor: walk-in showers, tile, vanities, heated floors. NJ HIC #13VH13286900. Free estimates.",
+    h1: "Bathroom Remodeling in NJ",
+    headings: {
+      overview: "Bathroom remodeling from a Hamilton, NJ contractor",
+      scope: "What a bathroom remodel with MHG covers",
+      faqs: "Bathroom remodeling questions from NJ homeowners",
+    },
+    sections: [
+      {
+        heading: "Bathroom remodeling in Hamilton and nearby NJ towns",
+        html: `<p>MHG Contracting works out of ${business.address.street} in Hamilton and remodels bathrooms within about ${business.radiusMinutes} minutes of the shop. Most of that area is older housing. In Hamilton Township the median home was built in ${HAM_HOUSING.medianYearBuilt}, and ${HAM_HOUSING.pctBuiltBefore1980}% of homes were built before 1980, according to the Census American Community Survey (${HOUSING.years}).</p><p>Age matters for a bathroom. In a house built before 1978, a remodel that disturbs painted surfaces beyond small repair areas falls under the EPA's lead paint rule (40 CFR 745), which sets lead-safe work practices. <a href="/answers/lead-paint-rules-renovation-nj">Read how the lead paint rules apply in NJ</a>, or see <a href="/services/bathroom-renovations/hamilton-nj">bathroom remodeling in Hamilton</a> for the local page.</p>`,
+      },
+      {
+        heading: "What a bathroom remodel costs in NJ",
+        html: `<p>It depends on the scope. Counting everything from a refresh to a full gut, the median spend on a primary bathroom was ${money(HOUZZ_ROOM_MEDIAN.primaryBath)} and on a guest bathroom ${money(HOUZZ_ROOM_MEDIAN.guestBath)} in ${HOUZZ_YEAR}, according to the ${HOUZZ_STUDY} (Houzz). For a major primary bath remodel, where at least the vanity, countertops and toilet are replaced, the medians were ${money(HOUZZ.bathSmall.median)} under 100 square feet and ${money(HOUZZ.bathLarge.median)} for larger rooms.</p><p>Closer to home, a midrange bathroom remodel costs about ${money(CVV.bath.jobCost)} in the Middle Atlantic region and recoups about ${CVV.bath.recouped}% of that at resale, ${CVV_CITE}. MHG prices every bathroom after a free visit to your home. The <a href="/blog/bathroom-remodel-cost">bathroom remodel cost guide</a> covers what moves the number, and <a href="/answers/remodel-resale-value-nj">this answer</a> compares resale payback across projects.</p>`,
+      },
+      {
+        heading: "Walk-in showers, tubs and accessible layouts",
+        html: `<p>The work runs from tile showers and tub surrounds to freestanding tubs, frameless glass enclosures and accessible layouts. Walk-in showers are the most common ask; <a href="/blog/walk-in-shower-installation-nj">walk-in shower installation in NJ</a> covers the options. Whatever the finish, the parts behind the tile decide how long it lasts: waterproofing under the shower, slope to the drain and a fan that vents outside.</p>`,
+      },
+      {
+        heading: "Permits for a bathroom remodel in Hamilton Township",
+        html: `<p>Swapping a vanity, toilet or faucet in the same spot is ordinary maintenance and needs no permit (N.J.A.C. 5:23-2.7). Moving a drain, adding a circuit or changing the layout needs a construction permit (N.J.A.C. 5:23-2.14). In Hamilton that goes to the ${HAM_OFFICE.municipality} construction office at ${HAM_OFFICE.street}, ${HAM_OFFICE.phone} (New Jersey DCA roster, as of ${PERMIT_OFFICES.asOf}). Once work starts, the town performs a requested inspection within three business days (N.J.A.C. 5:23-2.18). See <a href="/answers/building-permit-time-hamilton-nj">how long a permit takes in Hamilton</a>.</p>`,
+      },
+    ],
     icon: "bathroom",
     costGuideSlug: "bathroom-remodel-cost",
     costGuideLabel: "See what bathroom remodels cost in NJ",
@@ -347,6 +383,11 @@ export const services: Service[] = [
           "A like-for-like fixture swap is ordinary maintenance under N.J.A.C. 5:23-2.7. Moving a drain, adding circuits or changing the layout needs a construction permit.",
       },
       {
+        question: `Is ${money(BATH_BUDGET_QUESTION)} enough to remodel a bathroom?`,
+        answer:
+          `It can cover a smaller job. The median spend on a guest bathroom was ${money(HOUZZ_ROOM_MEDIAN.guestBath)} in ${HOUZZ_YEAR}, while major primary bath remodels had a median of ${money(HOUZZ.bathSmall.median)} for rooms under 100 square feet, according to the ${HOUZZ_STUDY} (Houzz).`,
+      },
+      {
         question: "Can you add a bathroom where there isn't one?",
         answer:
           "Yes, in a basement, under stairs or in other space, as long as the plumbing can reach it. New plumbing needs a permit and a licensed plumber.",
@@ -365,10 +406,34 @@ export const services: Service[] = [
     description:
       "MHG Contracting finishes basements around Hamilton, NJ: family rooms, home gyms, guest suites, bathrooms and wet bars. Moisture gets solved before a single stud goes up, because finishing over a damp wall traps it. A basement bedroom also needs an emergency escape opening under the New Jersey edition of the International Residential Code. Every basement starts with a free visit and a written estimate.",
     shortDescription:
-      "Moisture solved first, then framing, finishes and code items like egress.",
-    seoTitle: "Basement Finishing Central NJ | MHG Contracting",
+      "Moisture solved first, then framing, finishes and code items like egress, from a family-owned contractor in Hamilton.",
+    seoTitle: "Basement Finishing & Remodeling NJ | MHG, Hamilton",
     seoDescription:
-      "Basement finishing in Hamilton, Princeton and Central NJ: moisture work, egress windows, bathrooms, family rooms. Family-owned contractor. Free estimates.",
+      "Basement finishing and remodeling in NJ from a family-owned Hamilton contractor: moisture work first, egress windows, bathrooms, wet bars. Free estimates.",
+    h1: "Basement Finishing in NJ",
+    headings: {
+      overview: "Basement finishing from a Hamilton, NJ contractor",
+      scope: "What our basement finishing covers",
+      faqs: "Basement finishing questions from NJ homeowners",
+    },
+    sections: [
+      {
+        heading: "Finishing basements in Hamilton and nearby NJ towns",
+        html: `<p>MHG Contracting works out of ${business.address.street} in Hamilton and finishes basements within about ${business.radiusMinutes} minutes of the shop. The houses here are older than most people expect. In Hamilton Township the median home was built in ${HAM_HOUSING.medianYearBuilt}, and ${HAM_HOUSING.pctBuiltBefore1960}% were built before 1960, according to the Census American Community Survey (${HOUSING.years}). Whatever the age of the foundation, every basement starts with a moisture assessment, because finishing over a damp wall traps the water behind new drywall.</p><p>See <a href="/services/basement-finishing/hamilton-nj">basement finishing in Hamilton</a> for the local page, or pick your town from the list below.</p>`,
+      },
+      {
+        heading: "What it costs to finish a basement in NJ",
+        html: `<p>A basement remodel costs about ${money(CVV.basement.jobCost)} in the Middle Atlantic region, which includes New Jersey, and recoups about ${CVV.basement.recouped}% of that at resale, ${CVV_CITE}. Your number depends on what goes in: a bathroom, a wet bar, egress windows and any moisture work all add to it. MHG prices every basement after a free visit. The <a href="/blog/basement-finishing-cost">basement finishing cost guide</a> breaks it down, and <a href="/answers/remodel-resale-value-nj">this answer</a> compares resale payback across projects.</p>`,
+      },
+      {
+        heading: "Bedrooms, ceiling height and egress windows",
+        html: `<p>A basement bedroom needs an emergency escape and rescue opening, usually an egress window, under section R310 of the New Jersey edition of the International Residential Code. Habitable basement space needs a ceiling of at least 7 feet, and beams, ducts and pipes may hang down to 6 feet 4 inches (section R305). <a href="/answers/basement-bedroom-requirements-nj">What a basement bedroom needs in NJ</a> covers the full list.</p>`,
+      },
+      {
+        heading: "Permits, inspections and property taxes in Hamilton",
+        html: `<p>Framing, wiring and plumbing in a basement need a construction permit (N.J.A.C. 5:23-2.14). In Hamilton the application goes to the ${HAM_OFFICE.municipality} construction office at ${HAM_OFFICE.street}, ${HAM_OFFICE.phone} (New Jersey DCA roster, as of ${PERMIT_OFFICES.asOf}). The office has 20 business days to act on a complete application (N.J.A.C. 5:23-2.16), and inspections, such as rough wiring and plumbing before the walls close, happen within three business days of a request (N.J.A.C. 5:23-2.18). See <a href="/answers/building-permit-time-hamilton-nj">how long a permit takes in Hamilton</a>.</p><p>A finished basement adds living space, so it can raise your assessment. New Jersey's added assessment law (N.J.S.A. 54:4-63.3) lets the assessor bill a prorated added assessment from the first of the month after the work is done. <a href="/answers/renovation-property-taxes-nj">Will a renovation raise your property taxes</a> explains how it works.</p>`,
+      },
+    ],
     icon: "basement",
     costGuideSlug: "basement-finishing-cost",
     costGuideLabel: "See what basement finishing costs in NJ",
@@ -394,6 +459,16 @@ export const services: Service[] = [
         question: "Do I need an egress window?",
         answer:
           "If the basement will have a bedroom, yes. Section R310 of the New Jersey edition of the International Residential Code requires an emergency escape and rescue opening for basement sleeping rooms.",
+      },
+      {
+        question: "How much does it cost to finish a basement in NJ?",
+        answer:
+          `A basement remodel costs about ${money(CVV.basement.jobCost)} in the Middle Atlantic region, which includes New Jersey, ${CVV_CITE}. MHG prices each basement after a free visit, since a bathroom, a wet bar or egress windows change the scope.`,
+      },
+      {
+        question: "Does a finished basement increase property taxes in NJ?",
+        answer:
+          "It can, because it adds living space. Under N.J.S.A. 54:4-63.3 the tax assessor can bill a prorated added assessment from the first of the month after the work is completed. Your municipal assessor makes the call.",
       },
       {
         question: "Do I need a permit to finish a basement?",

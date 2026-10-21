@@ -85,7 +85,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
             </Link>
           </FadeIn>
           <LineReveal trigger="load" delay={0.3}>
-            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">{service.name}</h1>
+            <h1 className="font-heading text-4xl md:text-6xl lg:text-7xl font-bold text-white leading-[1.05]">{service.h1 ?? service.name}</h1>
           </LineReveal>
           <FadeIn delay={0.6}>
             <p className="font-body text-white/80 text-lg md:text-xl mt-4 md:mt-6 max-w-xl leading-relaxed">{service.shortDescription}</p>
@@ -100,7 +100,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <div>
               <FadeIn>
-                <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary mb-6">Overview</h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary mb-6">{service.headings?.overview ?? "Overview"}</h2>
                 <p className="font-body text-text-secondary text-lg leading-relaxed">{service.description}</p>
                 {service.costGuideSlug && (
                   <Link
@@ -126,7 +126,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       <section className="py-24 md:py-32 px-6 lg:px-10 bg-background-alt">
         <div className="max-w-[1400px] mx-auto">
           <LineReveal className="mb-12">
-            <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">What&apos;s Included</h2>
+            <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">{service.headings?.scope ?? "What's Included"}</h2>
           </LineReveal>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {service.scopeItems.map((item, index) => (
@@ -145,12 +145,26 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
         </div>
       </section>
 
+      {/* Local detail sections (cost, permits, town facts) */}
+      {service.sections && service.sections.length > 0 && (
+        <section className="pt-10 md:pt-14 px-6 lg:px-10">
+          <div className="blog-content max-w-[800px] mx-auto font-body text-lg leading-relaxed text-text-secondary">
+            {service.sections.map((s) => (
+              <div key={s.heading}>
+                <h2>{s.heading}</h2>
+                <div dangerouslySetInnerHTML={{ __html: s.html }} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
+
       {/* FAQs */}
       {service.faqs.length > 0 && (
         <section className="py-24 md:py-32 px-6 lg:px-10">
           <div className="max-w-[800px] mx-auto">
             <LineReveal className="mb-12">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">Frequently Asked Questions</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">{service.headings?.faqs ?? "Frequently Asked Questions"}</h2>
             </LineReveal>
             <div className="space-y-6">
               {service.faqs.map((faq, index) => (
@@ -162,7 +176,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
                 </FadeIn>
               ))}
             </div>
-            <SourcesList sources={citedSources(service.description, ...service.faqs.map((f) => f.answer))} />
+            <SourcesList sources={citedSources(service.description, ...(service.sections ?? []).map((s) => s.html), ...service.faqs.map((f) => f.answer))} />
           </div>
         </section>
       )}
@@ -264,7 +278,7 @@ export default function ServiceDetail({ service }: ServiceDetailProps) {
       <section className="py-24 md:py-32 px-6 lg:px-10" style={{ backgroundColor: "#2D3380" }}>
         <div className="max-w-[900px] mx-auto text-center">
           <LineReveal className="mb-6">
-            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white leading-[1.1]">Ready to Start Your {service.name.replace("s", "")} Project?</h2>
+            <h2 className="font-heading text-4xl md:text-5xl font-bold text-white leading-[1.1]">Ready to Start Your {service.name.replace(/s$/, "")} Project?</h2>
           </LineReveal>
           <FadeIn delay={0.2}>
             <p className="font-body text-white/60 text-lg mb-10">Schedule your free consultation today.</p>

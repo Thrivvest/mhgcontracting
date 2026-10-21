@@ -99,6 +99,9 @@ export const CVV_COPYRIGHT =
 export const KITCHEN_MEDIANS = `${money(HOUZZ.kitchenSmall.median)} for kitchens under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} for larger ones`;
 export const BATH_MEDIANS = `${money(HOUZZ.bathSmall.median)} for primary baths under 100 square feet and ${money(HOUZZ.bathLarge.median)} for larger ones`;
 
+/** Budget named in a common search question ("Is $10,000 enough to remodel a bathroom?"); a question, not a price claim. */
+export const BATH_BUDGET_QUESTION = 10000;
+
 /** Last time the figures above were checked against their sources. */
 export const COSTS_CHECKED = '2026-09-28';
 
