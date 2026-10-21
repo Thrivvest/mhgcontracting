@@ -489,8 +489,8 @@ ${PROCESS}
 <h2>What that means for common projects</h2>
 <ul>
 <li><strong>Kitchen.</strong> New cabinets, counters and flooring alone are ordinary maintenance. Moving the sink, running gas or adding circuits needs a permit. See <a href="/blog/kitchen-remodel-cost">kitchen remodel cost</a>.</li>
-<li><strong>Bathroom.</strong> Swapping a vanity or toilet in place is ordinary maintenance. Moving a drain, as a tub-to-shower conversion often does, needs a permit. See <a href="/blog/bathroom-remodel-cost">bathroom remodel cost</a>.</li>
-<li><strong>Basement.</strong> Framing, wiring and plumbing all need permits. See <a href="/blog/basement-finishing-cost">basement finishing cost</a>.</li>
+<li><strong>Bathroom.</strong> Swapping a vanity or toilet in place is ordinary maintenance. Moving a drain, as a tub-to-shower conversion often does, needs a permit. See <a href="/blog/bathroom-remodel-cost">bathroom remodel cost</a>, or <a href="/services/bathroom-renovations">bathroom remodeling in Hamilton</a>.</li>
+<li><strong>Basement.</strong> Framing, wiring and plumbing all need permits. See <a href="/blog/basement-finishing-cost">basement finishing cost</a>, or <a href="/services/basement-finishing">basement finishing in Hamilton</a>.</li>
 <li><strong>Addition.</strong> Always needs a permit, and zoning approval if it breaks setbacks or lot coverage. See <a href="/blog/home-additions-cost-mercer-county-nj">home addition cost</a>.</li>
 </ul>
 

@@ -55,7 +55,7 @@ export default function AboutContent() {
           </LineReveal>
           <FadeIn delay={0.6}>
             <p className="font-body text-white/50 text-xl mt-6 max-w-xl leading-relaxed">
-              MHG Contracting is a family-owned general contracting company serving Central New Jersey, specializing in kitchen renovations, bathroom remodels, basement finishing, home additions, and new construction.
+              MHG Contracting is a family-owned general contracting company serving Central New Jersey, specializing in kitchen renovations, <Link href="/services/bathroom-renovations" className="text-white underline underline-offset-2 hover:text-white/80">bathroom remodels</Link>, <Link href="/services/basement-finishing" className="text-white underline underline-offset-2 hover:text-white/80">basement finishing</Link>, home additions, and new construction.
             </p>
           </FadeIn>
         </div>
