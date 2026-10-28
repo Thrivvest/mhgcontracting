@@ -68,7 +68,7 @@ export const AREA_PAGES: AreaPage[] = [
     state: "NJ",
     title: "Kitchen Renovations in Princeton, NJ | MHG Contracting",
     h1: "Kitchen Renovations in Princeton, NJ",
-    relatedPortfolioSlugs: ["modern-farmhouse-kitchen", "traditional-chefs-kitchen"],
+    relatedPortfolioSlugs: ["open-concept-kitchen-living", "modern-farmhouse-kitchen"],
     relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-renovation-timeline-nj"],
   },
   {

@@ -15,7 +15,8 @@ import { company } from "@/lib/constants";
 import LeadForm from "@/components/sections/LeadForm";
 import HeroActions from "@/components/sections/HeroActions";
 import SourcesList from "@/components/sections/SourcesList";
-import { getServiceBySlug } from "@/lib/data";
+import { getProjectBySlug, getServiceBySlug } from "@/lib/data";
+import { BLOG_POSTS } from "@/lib/blog-data";
 import { serviceNoun, townFaqs, townIntro } from "@/lib/town-page";
 import { townOffices } from "@/data/sources";
 
@@ -47,6 +48,14 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
   const intro = townIntro(page);
   const { faqs, sources } = townFaqs(page);
   const offices = townOffices(page.citySlug);
+
+  // Related portfolio projects and guides (website SEO standard 4.3: pages link sideways)
+  const relatedProjects = page.relatedPortfolioSlugs
+    .map((slug) => getProjectBySlug(slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
+  const relatedPosts = page.relatedBlogSlugs
+    .map((slug) => BLOG_POSTS.find((post) => post.slug === slug))
+    .filter((p): p is NonNullable<typeof p> => Boolean(p));
 
   // Other services in the same city (for cross-linking)
   const otherServicesInCity = getAreaPagesByCity(page.citySlug).filter(
@@ -176,6 +185,71 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
           <SourcesList sources={sources} />
         </div>
       </section>
+
+      {/* Related: finished projects and guides (website SEO standard 4.3) */}
+      {(relatedProjects.length > 0 || relatedPosts.length > 0) && (
+        <section className="py-20 md:py-28 px-6 lg:px-10">
+          <div className="max-w-[1200px] mx-auto">
+            {relatedProjects.length > 0 && (
+              <div className={relatedPosts.length > 0 ? "mb-16" : ""}>
+                <LineReveal className="mb-10">
+                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">
+                    Recent {serviceNoun(page.serviceSlug)} projects
+                  </h2>
+                </LineReveal>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  {relatedProjects.map((project, i) => (
+                    <FadeIn key={project.slug} delay={i * 0.06}>
+                      <Link
+                        href={`/portfolio/${project.slug}`}
+                        className="group block rounded-lg border border-border overflow-hidden hover:shadow-md transition-all duration-300"
+                      >
+                        <img
+                          src={project.imagePath}
+                          alt={project.title}
+                          className="w-full h-56 object-cover"
+                          loading="lazy"
+                        />
+                        <div className="p-5">
+                          <h3 className="font-heading text-lg font-semibold text-text-primary group-hover:text-primary transition-colors duration-200">
+                            {project.title}
+                          </h3>
+                          <p className="font-body text-text-light text-sm mt-1">{project.shortDescription}</p>
+                        </div>
+                      </Link>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            {relatedPosts.length > 0 && (
+              <div>
+                <LineReveal className="mb-10">
+                  <h2 className="font-heading text-3xl md:text-4xl font-bold text-text-primary">
+                    Helpful guides
+                  </h2>
+                </LineReveal>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  {relatedPosts.map((post, i) => (
+                    <FadeIn key={post.slug} delay={i * 0.06}>
+                      <Link
+                        href={`/blog/${post.canonicalSlug ?? post.slug}`}
+                        className="block p-6 border border-border rounded-lg hover:border-primary/30 hover:shadow-md transition-all duration-300 group"
+                      >
+                        <h3 className="font-heading text-lg font-semibold text-text-primary group-hover:text-primary transition-colors duration-200">
+                          {post.title}
+                        </h3>
+                        <p className="font-body text-text-light text-sm mt-1">{post.excerpt}</p>
+                      </Link>
+                    </FadeIn>
+                  ))}
+                </div>
+              </div>
+            )}
+          </div>
+        </section>
+      )}
 
       {/* Cross-linking: Other services in same city */}
       {otherServicesInCity.length > 0 && (
