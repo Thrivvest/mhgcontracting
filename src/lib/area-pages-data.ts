@@ -429,12 +429,12 @@ export const AREA_PAGES: AreaPage[] = [
   // ─── Kitchen: Robbinsville ──────────────────────────────
   {
     serviceSlug: "kitchen-renovations",
-    serviceName: "Kitchen Renovations",
+    serviceName: "Kitchen Remodel Contractors",
     citySlug: "robbinsville-nj",
     cityName: "Robbinsville",
     state: "NJ",
-    title: "Kitchen Remodeling in Robbinsville, NJ | MHG Contracting",
-    h1: "Kitchen Remodeling in Robbinsville, NJ",
+    title: "Kitchen Remodel Contractors in Robbinsville, NJ",
+    h1: "Kitchen Remodel Contractors in Robbinsville, NJ",
     relatedPortfolioSlugs: ["open-concept-kitchen-living", "modern-farmhouse-kitchen"],
     relatedBlogSlugs: ["kitchen-remodel-cost", "kitchen-renovation-timeline-nj"],
   },
