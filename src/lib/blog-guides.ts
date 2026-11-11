@@ -143,16 +143,16 @@ ${PROCESS}
 
   "kitchen-remodel-cost": {
     slug: "kitchen-remodel-cost",
-    seoTitle: `Kitchen Remodel Cost in NJ (2026): ${k(HOUZZ.kitchenSmall.median)} to ${k(HOUZZ.kitchenLarge.median)} Median`,
-    title: "What Does a Kitchen Remodel Cost in New Jersey? (2026)",
+    seoTitle: `Average Kitchen Remodel Cost in NJ (2026): ${k(HOUZZ.kitchenSmall.median)} to ${k(HOUZZ.kitchenLarge.median)}`,
+    title: "What's the Average Kitchen Remodel Cost in New Jersey? (2026)",
     date: "September 28, 2026",
-    excerpt: "What published surveys say a kitchen remodel costs in New Jersey, minor versus major, resale, and what moves the price in an older Central NJ house.",
-    metaDescription: `Kitchen remodel cost in NJ: Houzz 2026 medians of ${k(HOUZZ.kitchenSmall.median)} to ${k(HOUZZ.kitchenLarge.median)} for a major remodel, Middle Atlantic resale data, permits and timing.`,
+    excerpt: "What published surveys say the average kitchen remodel costs in New Jersey, minor versus major, resale, and what moves the price in an older Central NJ house.",
+    metaDescription: `Average kitchen remodel cost in NJ: Houzz 2026 medians of ${k(HOUZZ.kitchenSmall.median)} to ${k(HOUZZ.kitchenLarge.median)} for a major remodel, Middle Atlantic resale data, permits and timing.`,
     category: "Kitchen",
     readTime: "7 min read",
     sources: ["houzz", "cvv", "acs", "njConstructionOffices", "njPermits", "njOrdinaryMaintenance", "epaRrp"],
     content: `
-<p><strong>Nationally, homeowners spent a median of ${money(HOUZZ.kitchenSmall.median)} on a major kitchen remodel under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} on a larger one in 2025, according to the ${HOUZZ_STUDY}. In the Middle Atlantic region, which includes New Jersey, a midrange major kitchen remodel costs about ${money(CVV.majorKitchen.jobCost)}, ${CVV_CITE}.</strong></p>
+<p><strong>Nationally, the average major kitchen remodel cost homeowners a median of ${money(HOUZZ.kitchenSmall.median)} for one under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} for a larger one in 2025, according to the ${HOUZZ_STUDY}. In the Middle Atlantic region, which includes New Jersey, a midrange major kitchen remodel costs about ${money(CVV.majorKitchen.jobCost)}, ${CVV_CITE}.</strong></p>
 
 <p>Those are the best public numbers for a New Jersey kitchen. No survey publishes a New Jersey-only kitchen figure. Here is what the surveys measure, what moves a kitchen up or down, and what Central New Jersey's older housing adds to the picture.</p>
 
@@ -169,8 +169,8 @@ ${PROCESS}
 <p>Counting kitchen projects of every scope, including refreshes that kept the cabinets, the median spend in 2025 was ${money(HOUZZ_ROOM_MEDIAN.kitchen)} (same study).</p>
 <p>For our region, a midrange minor kitchen remodel (new cabinet fronts, counters, sink, appliances and flooring in a 200-square-foot kitchen) costs about ${money(CVV.minorKitchen.jobCost)}, and a midrange major remodel with new cabinets and an island costs about ${money(CVV.majorKitchen.jobCost)}, ${CVV_CITE}.</p>
 
-<h2>What should you budget for a kitchen remodel in New Jersey?</h2>
-<p>Start from the scope. For a refresh that keeps the cabinet boxes and layout, the Middle Atlantic benchmark is about ${money(CVV.minorKitchen.jobCost)}; for a full remodel with new cabinets and an island, about ${money(CVV.majorKitchen.jobCost)}, ${CVV_CITE}. Then hold back a contingency for what turns up once walls and floors are open, which is more likely in an older house.</p>
+<h2>What's the average cost of a kitchen remodel, by scope</h2>
+<p>Start from the scope. For a refresh that keeps the cabinet boxes and layout, the Middle Atlantic average is about ${money(CVV.minorKitchen.jobCost)}; for a full remodel with new cabinets and an island, about ${money(CVV.majorKitchen.jobCost)}, ${CVV_CITE}. Then hold back a contingency for what turns up once walls and floors are open, which is more likely in an older house.</p>
 <p>Four ways to keep the number in check:</p>
 <ul>
 <li><strong>Keep the layout.</strong> Leaving the sink, range and walls where they are avoids new plumbing, gas and structural work.</li>
@@ -750,7 +750,7 @@ ${officesTable()}
 <p>New Jersey requires a home improvement contract to state the dates or time period for starting and finishing the work, and any change to them has to be in writing (N.J.A.C. 13:45A-16.2).</p>
 
 <h2>Plan it with MHG</h2>
-<p>MHG sets your schedule while the plan and budget are finalized, before work starts, and walks you through progress week by week. See the <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a>, or <a href="/contact">ask for a free estimate</a>.</p>
+<p>MHG sets your schedule while the plan and budget are finalized, before work starts, and walks you through progress week by week. See the <a href="/blog/kitchen-remodel-cost">average kitchen remodel cost guide</a>, or <a href="/contact">ask for a free estimate</a>.</p>
 `,
     faqs: [
       { question: "How long does a kitchen remodel take?", answer: `Kitchen projects averaged ${HOUZZ_TIME.kitchen.plan} months of planning and ${HOUZZ_TIME.kitchen.build} months of construction across the U.S. in 2025 (${HOUZZ_STUDY}), including do-it-yourself work.` },

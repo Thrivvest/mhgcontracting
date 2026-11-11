@@ -83,7 +83,7 @@ export const BLOG_POSTS: BlogPost[] = [
 
 <h2>One regional note</h2>
 
-<p>Your kitchen should fit your life and your house, not someone else's trend list. For the budget side, see the <a href="/blog/kitchen-remodel-cost">kitchen remodel cost guide</a>.</p>
+<p>Your kitchen should fit your life and your house, not someone else's trend list. For the budget side, see the <a href="/blog/kitchen-remodel-cost">average kitchen remodel cost guide</a>.</p>
 
 <p>Want to talk about what would work in your home? Call MHG Contracting at <a href="tel:+16097122474">(609) 712-2474</a> or <a href="/contact">book a free estimate</a>.</p>
 `,
