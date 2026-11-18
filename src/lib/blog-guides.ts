@@ -300,7 +300,7 @@ ${PROCESS}
 <p><strong>No survey publishes one price for a whole-home renovation, because the scope varies too much. For scale: the median U.S. renovating household spent ${money(HOUZZ_HOUSEHOLD.median)} across all its 2025 projects and the top 10% spent ${money(HOUZZ_HOUSEHOLD.p90)} or more, according to the ${HOUZZ_STUDY}.</strong></p>
 
 <h2>Build the number room by room</h2>
-<p>A whole-home project is a set of room projects plus the systems that tie them together. The Middle Atlantic figures from the Remodeling 2025 Cost vs. Value Report give a starting point for the biggest rooms: a midrange major kitchen remodel costs about ${money(CVV.majorKitchen.jobCost)}, a midrange bathroom remodel about ${money(CVV.bath.jobCost)}, and a basement remodel about ${money(CVV.basement.jobCost)}, ${CVV_CITE}.</p>
+<p>A whole-home project is a set of room projects plus the systems that tie them together. The Middle Atlantic figures from the Remodeling 2025 Cost vs. Value Report give a starting point for the biggest rooms: a midrange major kitchen remodel costs about ${money(CVV.majorKitchen.jobCost)}, a midrange bathroom remodel about ${money(CVV.bath.jobCost)}, a basement remodel about ${money(CVV.basement.jobCost)}, and if the project adds square footage, a primary suite addition about ${money(CVV.primarySuite.jobCost)}, ${CVV_CITE}. See <a href="/blog/home-additions-cost-mercer-county-nj">how much an addition costs in NJ</a> for the per-square-foot number.</p>
 <p>A house that needs a kitchen, two baths and a finished basement adds up quickly. Then come the parts no single room owns:</p>
 <ul>
 <li><strong>Electrical service.</strong> An older panel may not carry a new kitchen and added circuits.</li>
@@ -346,7 +346,7 @@ ${PROCESS}
 
 <h2>Cost by project</h2>
 <p>Nationally, the median major kitchen remodel was ${money(HOUZZ.kitchenSmall.median)} under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} for larger kitchens in 2025, and the median major primary bath remodel was ${money(HOUZZ.bathSmall.median)} under 100 square feet and ${money(HOUZZ.bathLarge.median)} for larger rooms (${HOUZZ_STUDY}).</p>
-<p>For the full detail on each: <a href="/blog/kitchen-remodel-cost">kitchen remodel cost</a>, <a href="/blog/bathroom-remodel-cost">bathroom remodel cost</a>, <a href="/blog/basement-finishing-cost">basement finishing cost</a> and <a href="/blog/home-additions-cost-mercer-county-nj">home addition cost</a>.</p>
+<p>For the full detail on each: <a href="/blog/kitchen-remodel-cost">kitchen remodel cost</a>, <a href="/blog/bathroom-remodel-cost">bathroom remodel cost</a>, <a href="/blog/basement-finishing-cost">basement finishing cost</a> and <a href="/blog/home-additions-cost-mercer-county-nj">how much an addition costs in NJ</a>.</p>
 
 <h2>Hamilton's housing shapes the budget</h2>
 <p>${HAMILTON.geography} has about ${HAMILTON.housingUnits.toLocaleString("en-US")} homes. The median home was built in ${HAMILTON.medianYearBuilt}, ${HAMILTON.pctBuiltBefore1980}% were built before 1980, and ${HAMILTON.pctSingleFamilyDetached}% are single-family detached houses, according to the Census Bureau's American Community Survey (${HOUSING.release}).</p>
@@ -369,20 +369,22 @@ ${PROCESS}
 
   "home-additions-cost-mercer-county-nj": {
     slug: "home-additions-cost-mercer-county-nj",
-    seoTitle: "Home Addition Cost in NJ (2026): Mercer County Guide",
-    title: "What Does a Home Addition Cost in Mercer County, NJ? (2026)",
+    seoTitle: "How Much Does a Home Addition Cost in NJ? (2026)",
+    title: "How Much Does a Home Addition Cost in NJ?",
     date: "September 28, 2026",
-    excerpt: "What published data says a home addition costs in our region, what drives the price, zoning and permits in Mercer County, and resale.",
-    metaDescription: "Home addition cost in Mercer County, NJ: the Middle Atlantic Cost vs. Value figure, what drives the price, zoning, permits and resale value.",
+    excerpt: "What published data says a home addition costs in New Jersey, the per-square-foot number, what drives the price, zoning and permits in Mercer County, and resale.",
+    metaDescription: "How much does an addition cost in NJ? The Middle Atlantic Cost vs. Value figure, cost per square foot, what drives the price, zoning and permits.",
     category: "Additions",
     readTime: "6 min read",
     sources: ["cvv", "nahb", "njPermits", "njZoningVariance", "njConstructionOffices"],
     content: `
-<p><strong>A midrange primary suite addition in the Middle Atlantic region costs about ${money(CVV.primarySuite.jobCost)}, ${CVV_CITE}. Smaller additions cost less. Size, the foundation, the roof tie-in and whether the addition carries plumbing decide where yours lands.</strong></p>
+<p><strong>No survey publishes a New Jersey-only figure for a home addition. The closest public number is the Middle Atlantic region's midrange primary suite addition, about ${money(CVV.primarySuite.jobCost)}, ${CVV_CITE}. Smaller additions cost less. Size, the foundation, the roof tie-in and whether the addition carries plumbing decide where yours lands.</strong></p>
 
 <h2>What that figure covers</h2>
 <p>The Cost vs. Value report prices a defined job: a 24-by-16-foot primary bedroom suite over a crawlspace, with a walk-in closet, a soaking tub, a separate shower and a double vanity. A single-room bump-out without plumbing costs less. A two-story addition or one with a kitchen costs more.</p>
-<p>For another yardstick, builders reported an average construction cost of about ${money(NAHB.perSqft)} per square foot for new single-family homes in ${NAHB.year}, according to the NAHB's Cost of Constructing a Home survey. Additions often cost more per square foot than new homes, because the new work has to tie into an existing house.</p>
+
+<h2>Addition cost per square foot in NJ</h2>
+<p>No survey breaks out a per-square-foot figure for additions alone. The nearest public yardstick: builders reported an average construction cost of about ${money(NAHB.perSqft)} per square foot for new single-family homes in ${NAHB.year}, according to the NAHB's Cost of Constructing a Home survey. An addition typically runs higher than that per-foot number, not lower, because the new space has to tie into an existing foundation, roofline and siding instead of starting from a clean slab.</p>
 
 <h2>What drives addition costs</h2>
 <ul>
@@ -405,7 +407,8 @@ ${PROCESS}
 <p>More on <a href="/services/additions">home additions with MHG</a> and <a href="/blog/permits-nj">New Jersey permits</a>.</p>
 `,
     faqs: [
-      { question: "How much does a home addition cost in NJ?", answer: `No survey publishes a New Jersey-only figure. A midrange primary suite addition in the Middle Atlantic region costs about ${money(CVV.primarySuite.jobCost)}, ${CVV_CITE}.` },
+      { question: "How much does an addition cost in NJ?", answer: `No survey publishes a New Jersey-only figure. A midrange primary suite addition in the Middle Atlantic region costs about ${money(CVV.primarySuite.jobCost)}, ${CVV_CITE}.` },
+      { question: "How much does a home addition cost per square foot in NJ?", answer: `No survey breaks out additions on their own. Nationally, builders reported an average construction cost of about ${money(NAHB.perSqft)} per square foot for new homes in ${NAHB.year} (NAHB Cost of Constructing a Home survey), and an addition usually runs higher than that because it has to tie into an existing house.` },
       { question: "Do I need a variance to build an addition in NJ?", answer: "Only if the addition breaks the town's zoning rules, such as setbacks or lot coverage. Then the owner applies to the zoning board of adjustment for a variance under N.J.S.A. 40:55D-70." },
       { question: "Does an addition add value to a home?", answer: `Some. A midrange primary suite addition recoups about ${CVV.primarySuite.recouped}% of its cost at resale in the Middle Atlantic region, ${CVV_CITE}.` },
       { question: "Are these MHG's prices?", answer: notOurPrices("addition") },
