@@ -146,8 +146,8 @@ export function townFaqs(p: TownInput): { faqs: TownFaq[]; sources: Source[] } {
     ...(housing ? [{ question: `How old are the homes in ${p.cityName}?`, answer: housing.text }] : []),
     { question: `How long does a ${noun} take?`, answer: time.text },
     {
-      question: `Does MHG Contracting work in ${p.cityName}?`,
-      answer: `Yes. MHG is based in ${business.address.city}, NJ and works within about ${business.radiusMinutes} minutes of the office, which includes ${p.cityName}. Call ${business.phone} or send the form on this page for a free estimate.`,
+      question: `Is MHG Contracting a ${noun} contractor near ${p.cityName}?`,
+      answer: `Yes. MHG Contracting is a ${noun} contractor based in ${business.address.city}, NJ, working within about ${business.radiusMinutes} minutes of the office, which includes ${p.cityName}. Call ${business.phone} or send the form on this page for a free estimate.`,
     },
   ];
   const seen = new Set<string>();
