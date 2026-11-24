@@ -48,9 +48,14 @@ export default function LineReveal({
     if (typeof window === "undefined") return;
     if (!containerRef.current) return;
 
-    registerGSAP();
-
     const el = containerRef.current;
+
+    // Phones: text already on screen at first paint stays put. Re-hiding it
+    // on hydration delayed the largest paint (Lighthouse 2026-11-24).
+    const touch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    if (touch && el.getBoundingClientRect().top < window.innerHeight) return;
+
+    registerGSAP();
 
     // Create GSAP context for scoped cleanup
     ctxRef.current = gsap.context(() => {

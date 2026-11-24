@@ -9,6 +9,7 @@
  * Generous padding, underline hover animations on links.
  */
 
+import Image from "next/image";
 import Link from "next/link";
 import { company, navLinks, serviceAreas } from "@/lib/constants";
 import { business } from "@/data/business";
@@ -29,9 +30,11 @@ export default function Footer() {
         <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-8">
           {/* Logo (white version) */}
           <Link href="/" className="flex items-center group" aria-label="MHG Contracting Home">
-            <img
+            <Image
               src="/images/logo/mhg-logo-web.png"
               alt="MHG Contracting"
+              width={60}
+              height={40}
               className="h-10 w-auto brightness-0 invert"
             />
           </Link>

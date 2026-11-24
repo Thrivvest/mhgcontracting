@@ -8,6 +8,7 @@
  * First tile uses a vertical-friendly image.
  */
 
+import Image from "next/image";
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -80,11 +81,12 @@ export default function FeaturedProjects() {
                   {/* Project card */}
                   <div className="relative w-full h-full">
                     {/* Use vertical-friendly image for first tile, project image for rest */}
-                    <img
+                    <Image
                       src={index === 0 ? FIRST_TILE_IMAGE : project.imagePath}
                       alt={project.title}
-                      className="absolute inset-0 w-full h-full object-cover"
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 1400px) 50vw, 700px"
+                      className="object-cover"
                     />
                     {/* Bottom gradient overlay for text readability */}
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />

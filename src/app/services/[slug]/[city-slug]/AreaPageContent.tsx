@@ -7,6 +7,7 @@
  * Follows the ServiceDetail component pattern.
  */
 
+import Image from "next/image";
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -72,12 +73,13 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
       {/* Hero */}
       <section className="relative flex items-end pt-28 pb-12 md:min-h-[60vh] md:items-center md:pt-20 md:pb-0 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src={`/images/services/${heroType}-hero.jpg`}
             alt={page.h1}
-            className="w-full h-full object-cover"
-            loading="eager"
-            fetchPriority="high"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/55" />
         </div>
@@ -204,11 +206,13 @@ export default function AreaPageContent({ page }: AreaPageContentProps) {
                         href={`/portfolio/${project.slug}`}
                         className="group block rounded-lg border border-border overflow-hidden hover:shadow-md transition-all duration-300"
                       >
-                        <img
+                        <Image
                           src={project.imagePath}
                           alt={project.title}
+                          width={600}
+                          height={224}
+                          sizes="(max-width: 640px) 100vw, 580px"
                           className="w-full h-56 object-cover"
-                          loading="lazy"
                         />
                         <div className="p-5">
                           <h3 className="font-heading text-lg font-semibold text-text-primary group-hover:text-primary transition-colors duration-200">

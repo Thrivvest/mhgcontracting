@@ -4,7 +4,7 @@
  * Facts about MHG come from the intake form (2026-03-28), GBP and
  * data/business.ts. Dollar figures only via data/costs.ts.
  */
-import { BATH_BUDGET_QUESTION, CVV, CVV_CITE, HOUZZ, HOUZZ_ROOM_MEDIAN, HOUZZ_YEAR, HOUZZ_STUDY, NAHB, money } from "@/data/costs";
+import { BATH_BUDGET_QUESTION, CVV, CVV_CITE, HOUZZ, HOUZZ_ROOM_MEDIAN, HOUZZ_TIME, HOUZZ_YEAR, HOUZZ_STUDY, NAHB, money } from "@/data/costs";
 import { business } from "@/data/business";
 import { HOUSING, PERMIT_OFFICES, townHousing, townOffices } from "@/data/sources";
 
@@ -279,10 +279,34 @@ export const services: Service[] = [
     description:
       "MHG Contracting remodels kitchens around Hamilton, NJ, from a refresh that keeps the layout to a full remodel that moves the sink, opens a wall or adds an island. Every kitchen starts with a free visit to your home and a written estimate, and the plan, budget and schedule are set before demolition. For what kitchen remodels cost, see the kitchen cost guide.",
     shortDescription:
-      "Cabinets, countertops, islands and full layout changes.",
-    seoTitle: "Kitchen Remodeling Central NJ | MHG Contracting",
+      "Cabinets, countertops, islands and full layout changes, built by a family-owned contractor in Hamilton.",
+    seoTitle: "Kitchen Remodeling NJ | Hamilton Kitchen Contractor | MHG",
     seoDescription:
-      "Kitchen remodeling in Hamilton, Princeton and Central NJ from a family-owned contractor. Cabinets, counters, islands, layout changes. Free estimates.",
+      "Kitchen remodeling in NJ from a family-owned Hamilton contractor serving Mercer County and Central Jersey: cabinets, counters, islands. Free estimates.",
+    h1: "Kitchen Remodeling in NJ",
+    headings: {
+      overview: "Kitchen remodeling from a Hamilton, NJ contractor",
+      scope: "What a kitchen remodel with MHG covers",
+      faqs: "Kitchen remodeling questions from NJ homeowners",
+    },
+    sections: [
+      {
+        heading: "Kitchen remodeling in Hamilton and Mercer County",
+        html: `<p>MHG Contracting works out of ${business.address.street} in Hamilton and remodels kitchens within about ${business.radiusMinutes} minutes of the shop, which covers most of Mercer County plus Plainsboro and Yardley, PA. Most of that area is older housing. In Hamilton Township the median home was built in ${HAM_HOUSING.medianYearBuilt}, and ${HAM_HOUSING.pctBuiltBefore1980}% of homes were built before 1980, according to the Census American Community Survey (${HOUSING.years}).</p><p>Age matters for a kitchen. Opening a wall in an older house can turn up wiring, venting or framing that changes the plan, and in a house built before 1978, work that disturbs painted surfaces beyond small repair areas falls under the EPA's lead paint rule (40 CFR 745). <a href="/answers/lead-paint-rules-renovation-nj">Read how the lead paint rules apply in NJ</a>, or see <a href="/services/kitchen-renovations/hamilton-nj">kitchen remodeling in Hamilton</a> for the local page.</p>`,
+      },
+      {
+        heading: "What a kitchen remodel costs in NJ",
+        html: `<p>It depends on the scope. Counting everything from a refresh to a full gut, the median spend on a kitchen was ${money(HOUZZ_ROOM_MEDIAN.kitchen)} in ${HOUZZ_YEAR}, according to the ${HOUZZ_STUDY} (Houzz). For a major remodel, where at least all cabinets and appliances are replaced, the medians were ${money(HOUZZ.kitchenSmall.median)} under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} for larger kitchens.</p><p>Closer to home, a midrange minor kitchen remodel costs about ${money(CVV.minorKitchen.jobCost)} in the Middle Atlantic region and a midrange major kitchen remodel about ${money(CVV.majorKitchen.jobCost)}, ${CVV_CITE}. MHG prices every kitchen after a free visit to your home. The <a href="/blog/kitchen-remodel-cost">average kitchen remodel cost guide</a> covers what moves the number, and <a href="/answers/remodel-resale-value-nj">this answer</a> compares resale payback across projects.</p>`,
+      },
+      {
+        heading: "Small kitchen refresh or full kitchen remodel",
+        html: `<p>A small kitchen remodel keeps the cabinet boxes and the layout and changes what you see and touch: doors, counters, backsplash, sink, faucet, lighting and appliances. A full kitchen remodel replaces the cabinets and can move the sink, open a wall or add an island; walls come out only with an engineer's sign-off. Keeping plumbing, gas and walls where they are is the biggest single lever on a kitchen budget.</p><p>Plan for the whole job, not just the build. Homeowners spent an average of ${HOUZZ_TIME.kitchen.plan} months planning a kitchen remodel and ${HOUZZ_TIME.kitchen.build} months building it in ${HOUZZ_YEAR}, according to the ${HOUZZ_STUDY}. <a href="/blog/kitchen-renovation-timeline-nj">How long a kitchen remodel takes in NJ</a> walks through each stage, and the <a href="/portfolio/open-concept-kitchen-living">open concept kitchen</a> in our portfolio shows a full layout change.</p>`,
+      },
+      {
+        heading: "Permits for a kitchen remodel in Hamilton Township",
+        html: `<p>Replacing cabinets, counters or flooring in place is ordinary maintenance and needs no permit (N.J.A.C. 5:23-2.7). Moving the sink, running a new gas line, adding circuits or removing a wall needs a construction permit (N.J.A.C. 5:23-2.14). In Hamilton that goes to the ${HAM_OFFICE.municipality} construction office at ${HAM_OFFICE.street}, ${HAM_OFFICE.phone} (New Jersey DCA roster, as of ${PERMIT_OFFICES.asOf}). Once work starts, the town performs a requested inspection within three business days (N.J.A.C. 5:23-2.18). See <a href="/answers/building-permit-time-hamilton-nj">how long a permit takes in Hamilton</a>.</p>`,
+      },
+    ],
     icon: "kitchen",
     costGuideSlug: "kitchen-remodel-cost",
     costGuideLabel: "See the average kitchen remodel cost in NJ",
@@ -308,6 +332,11 @@ export const services: Service[] = [
         question: "Do I need a permit for a kitchen remodel?",
         answer:
           "Not to replace cabinets or flooring, which is ordinary maintenance under N.J.A.C. 5:23-2.7. Moving the sink, running gas or adding circuits needs a construction permit.",
+      },
+      {
+        question: "How much does a small kitchen remodel cost in NJ?",
+        answer:
+          `A midrange minor kitchen remodel, which keeps the cabinet boxes and layout, costs about ${money(CVV.minorKitchen.jobCost)} in the Middle Atlantic region, which includes New Jersey, ${CVV_CITE}. MHG prices each kitchen after a free visit.`,
       },
       {
         question: "Can you work with my existing layout?",

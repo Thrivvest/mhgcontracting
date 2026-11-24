@@ -8,6 +8,7 @@
  * "View All Posts →" link at bottom. FadeIn throughout.
  */
 
+import Image from "next/image";
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -53,11 +54,13 @@ export default function BlogPreview() {
               >
                 <article className="bg-white rounded-lg overflow-hidden border border-border h-full flex flex-col hover:shadow-md transition-shadow duration-300">
                   {/* Featured image */}
-                  <div className="aspect-[16/10] overflow-hidden">
-                    <img
+                  <div className="aspect-[16/10] overflow-hidden relative">
+                    <Image
                       src={post.image}
                       alt={post.title}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      fill
+                      sizes="(max-width: 768px) 100vw, 460px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                   </div>
 

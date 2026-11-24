@@ -8,6 +8,7 @@
  * Desktop: pinned scroll wipe. Mobile: stacked cards.
  */
 
+import Image from "next/image";
 import Link from "next/link";
 import { getFeaturedProjects } from "@/lib/data";
 import ScrollSlider from "@/components/animations/ScrollSlider";
@@ -31,10 +32,12 @@ export default function PortfolioSlider() {
     >
       {/* Background image */}
       <div className="absolute inset-0">
-        <img
+        <Image
           src={project.imagePath}
           alt={project.title}
-          className="w-full h-full object-cover"
+          fill
+          sizes="100vw"
+          className="object-cover"
         />
       </div>
 

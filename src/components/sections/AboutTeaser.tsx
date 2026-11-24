@@ -7,6 +7,8 @@
  * CTA link. Right: placeholder image area. All FadeIn on scroll.
  */
 
+import Image from "next/image";
+import { googleRating } from "@/data/business";
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -71,19 +73,21 @@ export default function AboutTeaser() {
           <div className="lg:col-span-2">
             <FadeIn delay={0.3}>
               <div className="aspect-[16/10] lg:aspect-[3/4] rounded-lg overflow-hidden relative">
-                <img
+                <Image
                   src="/images/projects/fullreno-01.jpg"
                   alt="MHG Contracting - Luxury home renovation"
-                  className="w-full h-full object-cover"
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover"
                 />
                 {/* Overlay with stat */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 <div className="absolute bottom-0 left-0 p-8">
                   <span className="block font-heading text-white/80 text-6xl font-bold leading-none mb-2">
-                    10+
+                    {googleRating.rating}
                   </span>
                   <span className="block font-body text-white/60 text-sm tracking-wide">
-                    Years of Experience
+                    On {googleRating.count} Google Reviews
                   </span>
                 </div>
               </div>

@@ -10,6 +10,7 @@
  */
 
 import { useState, useEffect, useCallback, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { navLinks, type NavLink } from "@/lib/constants";
@@ -241,11 +242,12 @@ interface MHGLogoProps {
 function MHGLogo({ scrolled }: MHGLogoProps) {
   return (
     <div className="flex items-center">
-      <img
+      <Image
         src="/images/logo/mhg-logo-web.png"
         alt="MHG Contracting"
-        width={140}
+        width={84}
         height={56}
+        priority
         className={`h-10 sm:h-14 w-auto transition-all duration-300 ${
           scrolled ? "" : "brightness-0 invert"
         }`}

@@ -29,14 +29,9 @@ export default function Hero() {
     const isMobile = "ontouchstart" in window || navigator.maxTouchPoints > 0;
     const section = sectionRef.current;
 
-    if (isMobile) {
-      section.style.opacity = "0";
-      requestAnimationFrame(() => {
-        section.style.transition = "opacity 0.3s ease-out";
-        section.style.opacity = "1";
-      });
-      return;
-    }
+    // Mobile: no entrance effect. Hiding the hero until hydration pushed the
+    // largest paint past 8 s on a throttled phone (Lighthouse 2026-11-24).
+    if (isMobile) return;
 
     registerGSAP();
 

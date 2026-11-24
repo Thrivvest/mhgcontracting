@@ -43,12 +43,17 @@ export default function FadeIn({
   useEffect(() => {
     if (typeof window === "undefined") return;
     const touch = "ontouchstart" in window || navigator.maxTouchPoints > 0;
+    // Already on screen at first paint: stay visible. Hiding it on hydration
+    // and fading it back in delayed the largest paint on phones.
+    if (touch && ref.current && ref.current.getBoundingClientRect().top < window.innerHeight) {
+      setIsVisible(true);
+    }
     setIsMobile(touch);
   }, []);
 
   // Mobile: lightweight IntersectionObserver
   useEffect(() => {
-    if (!isMobile || !ref.current) return;
+    if (!isMobile || isVisible || !ref.current) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
@@ -62,7 +67,7 @@ export default function FadeIn({
 
     observer.observe(ref.current);
     return () => observer.disconnect();
-  }, [isMobile]);
+  }, [isMobile, isVisible]);
 
   // Desktop: GSAP ScrollTrigger
   useEffect(() => {

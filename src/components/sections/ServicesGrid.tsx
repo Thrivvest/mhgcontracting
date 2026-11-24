@@ -8,6 +8,7 @@
  * FadeIn stagger 0.1s.
  */
 
+import Image from "next/image";
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -93,11 +94,12 @@ export default function ServicesGrid() {
                 <div className="rounded-lg border border-border bg-white hover:shadow-lg hover:-translate-y-1 transition-all duration-300 overflow-hidden">
                   {/* Service image thumbnail */}
                   <div className="aspect-[16/9] overflow-hidden relative">
-                    <img
+                    <Image
                       src={SERVICE_IMAGES[service.icon] || SERVICE_IMAGES.home}
                       alt={service.name}
-                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                      loading="lazy"
+                      fill
+                      sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 460px"
+                      className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent" />
                   </div>

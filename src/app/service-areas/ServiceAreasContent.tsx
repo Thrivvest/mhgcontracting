@@ -6,6 +6,7 @@
  * Displays all 6 service areas with links to each service × city page.
  */
 
+import Image from "next/image";
 import Link from "next/link";
 import LineReveal from "@/components/animations/LineReveal";
 import FadeIn from "@/components/animations/FadeIn";
@@ -27,12 +28,13 @@ export default function ServiceAreasContent() {
       {/* Hero */}
       <section className="relative min-h-[60vh] flex items-center pt-20 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/services/bathroom-hero.jpg"
             alt="MHG Contracting service areas"
-            className="w-full h-full object-cover"
-            loading="eager"
-            fetchPriority="high"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover"
           />
           <div className="absolute inset-0 bg-black/55" />
         </div>

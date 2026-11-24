@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import LineReveal from "@/components/animations/LineReveal";
@@ -163,12 +164,13 @@ export default function ContactContent() {
       {/* Hero */}
       <section className="relative flex items-end pt-28 pb-10 md:min-h-[60vh] md:pb-16 px-6 lg:px-10 overflow-hidden">
         <div className="absolute inset-0">
-          <img
+          <Image
             src="/images/projects/fullreno-01-1.jpg"
             alt="Contact MHG Contracting"
-            className="w-full h-full object-cover object-center"
-            loading="eager"
-            fetchPriority="high"
+            fill
+            priority
+            sizes="100vw"
+            className="object-cover object-center"
           />
           <div className="absolute inset-0 bg-black/65" />
         </div>
@@ -478,12 +480,13 @@ export default function ContactContent() {
               <div className="space-y-8">
 
                 {/* Project image */}
-                <div className="aspect-[16/10] overflow-hidden">
-                  <img
+                <div className="aspect-[16/10] overflow-hidden relative">
+                  <Image
                     src="/images/projects/gallery/kitchen-02/1.jpg"
                     alt="MHG Contracting - recent project"
-                    className="w-full h-full object-cover"
-                    loading="lazy"
+                    fill
+                    sizes="(max-width: 1024px) 100vw, 40vw"
+                    className="object-cover"
                   />
                 </div>
 
