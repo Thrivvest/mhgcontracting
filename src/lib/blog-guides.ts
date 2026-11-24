@@ -206,7 +206,7 @@ ${housingTable(MERCER_TOWNS, `Housing age near Hamilton (Census ${HOUSING.releas
 <h2>How MHG prices your kitchen</h2>
 <p>MHG Contracting is a family-owned contractor at ${business.address.street} in Hamilton. Every kitchen gets a free in-home estimate, and the process runs like this:</p>
 ${PROCESS}
-<p>See finished kitchens in the <a href="/portfolio">portfolio</a>, or read about <a href="/services/kitchen-renovations">kitchen renovations with MHG</a>.</p>
+<p>See finished kitchens in the <a href="/portfolio">portfolio</a>, or read about <a href="/services/kitchen-renovations">kitchen renovations with MHG</a>. We also work as <a href="/services/kitchen-renovations/robbinsville-nj">kitchen remodeling contractors in Robbinsville</a> and build <a href="/services/kitchen-renovations/princeton-nj">open concept kitchens in Princeton</a>.</p>
 `,
     faqs: [
       {
@@ -216,6 +216,10 @@ ${PROCESS}
       {
         question: "What should I budget for a kitchen remodel in New Jersey?",
         answer: `Budget by scope. A midrange minor kitchen remodel costs about ${money(CVV.minorKitchen.jobCost)} in the Middle Atlantic region and a midrange major one about ${money(CVV.majorKitchen.jobCost)}, ${CVV_CITE}. Add a contingency for surprises behind the walls in an older house.`,
+      },
+      {
+        question: "What are some tips for sticking to a kitchen remodel budget in NJ?",
+        answer: `Keep the sink, range and walls where they are to avoid new plumbing, gas and structural work. Choose cabinets, counters and appliances before demolition starts so the job does not stall. Spend on what you touch every day, the cabinets, sink, faucet and range, and save on what is easy to change later, like paint and backsplash. New Jersey also requires any home improvement contract over ${money(NJ_WRITTEN_CONTRACT_OVER)} to be written and signed before work starts (N.J.S.A. 56:8-151).`,
       },
       {
         question: "What does a high-end kitchen remodel cost?",
