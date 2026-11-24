@@ -285,7 +285,7 @@ export const services: Service[] = [
       "Kitchen remodeling in Hamilton, Princeton and Central NJ from a family-owned contractor. Cabinets, counters, islands, layout changes. Free estimates.",
     icon: "kitchen",
     costGuideSlug: "kitchen-remodel-cost",
-    costGuideLabel: "See what kitchen remodels cost in NJ",
+    costGuideLabel: "See the average kitchen remodel cost in NJ",
     scopeItems: [
       "Cabinet design and installation",
       "Countertops (quartz, granite, marble)",
