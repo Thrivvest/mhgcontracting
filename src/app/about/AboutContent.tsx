@@ -98,7 +98,11 @@ export default function AboutContent() {
                 <p className="font-body text-text-secondary text-lg leading-relaxed">
                   Based in Hamilton, NJ, MHG Contracting serves homeowners throughout Central New Jersey,
                   from Princeton and West Windsor to Lawrenceville, Plainsboro, and Yardley, PA. Every
-                  project starts with a free in-home estimate.
+                  project starts with a free in-home estimate; see published{" "}
+                  <Link href="/blog/home-remodeling-cost-hamilton-nj" className="text-primary underline underline-offset-2 hover:text-primary/80">
+                    Hamilton home remodeling prices
+                  </Link>{" "}
+                  by project type first if you want a ballpark.
                 </p>
               </FadeIn>
             </div>

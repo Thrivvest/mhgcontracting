@@ -341,15 +341,22 @@ ${PROCESS}
     title: "What Does Home Remodeling Cost in Hamilton, NJ? (2026)",
     date: "September 28, 2026",
     excerpt: "Published 2026 cost figures for the projects Hamilton homeowners ask about most, plus the facts about Hamilton's housing and permit office that shape a remodel here.",
-    metaDescription: "Home remodeling cost in Hamilton, NJ: published 2026 figures for kitchens, baths, basements and additions, plus Hamilton housing data and permits.",
+    metaDescription: "Home remodeling cost and prices in Hamilton, NJ: published 2026 figures for kitchens, baths, basements and additions, plus housing data and permits.",
     category: "Remodeling",
     readTime: "5 min read",
     sources: ["houzz", "cvv", "acs", "njConstructionOffices", "njPermits", "epaRrp"],
     content: `
 <p><strong>In the Middle Atlantic region, a midrange bathroom remodel costs about ${money(CVV.bath.jobCost)}, a midrange minor kitchen remodel about ${money(CVV.minorKitchen.jobCost)}, a basement remodel about ${money(CVV.basement.jobCost)} and a midrange primary suite addition about ${money(CVV.primarySuite.jobCost)}, ${CVV_CITE}. No survey publishes Hamilton-only figures.</strong></p>
 
-<h2>Cost by project</h2>
-<p>Nationally, the median major kitchen remodel was ${money(HOUZZ.kitchenSmall.median)} under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} for larger kitchens in 2025, and the median major primary bath remodel was ${money(HOUZZ.bathSmall.median)} under 100 square feet and ${money(HOUZZ.bathLarge.median)} for larger rooms (${HOUZZ_STUDY}).</p>
+<h2>Home remodeling prices by project</h2>
+<p>Nationally, the median major kitchen remodel was ${money(HOUZZ.kitchenSmall.median)} under 200 square feet and ${money(HOUZZ.kitchenLarge.median)} for larger kitchens in 2025, and the median major primary bath remodel was ${money(HOUZZ.bathSmall.median)} under 100 square feet and ${money(HOUZZ.bathLarge.median)} for larger rooms (${HOUZZ_STUDY}). The Middle Atlantic region's job-cost prices, ${CVV_CITE}:</p>
+<ul>
+<li>Minor kitchen remodel: about ${money(CVV.minorKitchen.jobCost)}</li>
+<li>Major kitchen remodel: about ${money(CVV.majorKitchen.jobCost)}</li>
+<li>Bathroom remodel: about ${money(CVV.bath.jobCost)}</li>
+<li>Basement remodel: about ${money(CVV.basement.jobCost)}</li>
+<li>Primary suite addition: about ${money(CVV.primarySuite.jobCost)}</li>
+</ul>
 <p>For the full detail on each: <a href="/blog/kitchen-remodel-cost">kitchen remodel cost</a>, <a href="/blog/bathroom-remodel-cost">bathroom remodel cost</a>, <a href="/blog/basement-finishing-cost">basement finishing cost</a> and <a href="/blog/home-additions-cost-mercer-county-nj">how much an addition costs in NJ</a>.</p>
 
 <h2>Hamilton's housing shapes the budget</h2>
@@ -365,6 +372,7 @@ ${PROCESS}
 `,
     faqs: [
       { question: "How much does home remodeling cost in Hamilton, NJ?", answer: `It depends on the project. For the Middle Atlantic region, a midrange bathroom remodel costs about ${money(CVV.bath.jobCost)} and a midrange minor kitchen remodel about ${money(CVV.minorKitchen.jobCost)}, ${CVV_CITE}.` },
+      { question: "What are home remodeling prices in Hamilton, NJ by project?", answer: `For the Middle Atlantic region, ${CVV_CITE}: a minor kitchen remodel runs about ${money(CVV.minorKitchen.jobCost)}, a major kitchen remodel about ${money(CVV.majorKitchen.jobCost)}, a bathroom remodel about ${money(CVV.bath.jobCost)}, a basement remodel about ${money(CVV.basement.jobCost)} and a primary suite addition about ${money(CVV.primarySuite.jobCost)}. No survey publishes Hamilton-only prices.` },
       { question: "How old are the houses in Hamilton, NJ?", answer: `The median home in ${HAMILTON.geography} was built in ${HAMILTON.medianYearBuilt}, and ${HAMILTON.pctBuiltBefore1980}% were built before 1980 (Census ${HOUSING.release}).` },
       { question: "Where do I get a building permit in Hamilton Township?", answer: `From the ${HAMILTON_OFFICE.municipality} construction office at ${HAMILTON_OFFICE.street}, ${HAMILTON_OFFICE.phone} (New Jersey DCA roster, as of ${PERMIT_OFFICES.asOf}).` },
       { question: "Are these MHG's prices?", answer: notOurPrices("project") },
